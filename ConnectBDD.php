@@ -1,7 +1,11 @@
 <?php
-//	exit("L'intégralité des sites Neamar est en maintenance pour quelques minutes. Nous serons de retour pour 15h !");
-	@ini_set('default_charset', 'ISO-8859-1');
-	//Fichier assez utile :-)
-	mysql_connect("db1182.1and1.fr", "dbo222432208", strrev("Wypx4xsD")); // Connexion à MySQL légèrement sécurisée.
-	mysql_select_db("db222432208"); // Sélection de la base de données
+//  exit("L'intégralité des sites Neamar est en maintenance pour quelques minutes. Nous serons de retour pour 15h !");
+  @ini_set('default_charset', 'ISO-8859-1');
+  error_reporting(E_ALL ^ E_DEPRECATED);
+
+  $url = parse_url(getenv("DATABASE_URL"));
+  //Fichier assez utile :-)
+  mysql_connect($url["host"] . ":" . $url["port"], $url["user"], $url["pass"]); // Connexion à MySQL légèrement sécurisée.
+  mysql_select_db("omnilogie"); // Sélection de la base de données
+  mysql_set_charset('latin1');
 ?>
