@@ -1,0 +1,85 @@
+Étudiant fraîchement émoulu, vous voilà placé face à la terrible réalité : vos notes ne sont pas vraiment vos notes ; elles sont élastiques et malléables, modifiables à volonté par le corps enseignant.
+Le but avoué est d'\b{harmoniser} (le mot est lâché) les résultats, pour que toutes les classes aient la même moyenne, indépendamment du prof ou de l'interro.
+Autrement dit, si votre prof note super large, vous allez voir votre note baisser ; mais si votre interro était infaisable, votre note montera de façon à ce que les deux classes soient comparables entre elles et qu'il n'y ait (en théorie) pas d'injustices.
+
+Petite introduction à la magie qui permet de faire "ça"...
+
+\section{Caractériser l'échantillon}
+Avant toute chose, définissons deux grandeurs mathématiques qui nous serviront pour la suite : la \b{moyenne} et \b{l'écart type}.
+
+\subsection{La moyenne}
+Premier outil : \b{la moyenne}. Vous la connaissez \i{a priori} tous ; elle caractérise "moyennement" l'échantillon.
+
+On la définit comme "la somme des éléments divisés par le nombre d'éléments" ; autrement dit $m = \frac{\sum_{i=1}^n x_i}{n}$.
+
+Malheureusement, cette information ne caractérise pas assez bien un échantillon.
+Par exemple, prenons trois classes différentes de trois élèves.
+\item Dans la première classe, tout le monde a eu 10.
+\item Dans la deuxième, le premier a eu 0, le second 10 et le troisième 20.
+\item Dans la troisième, le premier a eu 9, le second 10 et le troisième 11.
+
+La moyenne de la première classe sera $\frac{10 + 10 + 10}{3} = 10$, celle de la seconde classe $\frac{0 + 10 + 20}{3} = 10$ et celle de la troisième $\frac{9 + 10 + 11}{3} = 10$. Hé oui, c'est la même moyenne alors que les notes sont radicalement différentes ! Il nous faut donc un indicateur complémentaire pour mesurer cette \b{dispersion} des données \b{autour} de la moyenne.
+
+\subsection{L'écart type}
+Dans les trois cas, la moyenne était pareil, mais la \b{dispersion} (l'étalement) des notes variait : nulle dans le premier cas, immense dans le deuxième et faible dans le troisième.
+Afin de quantifier ces "écarts à la moyenne", on peut utiliser l'\b{écart type pour mesurer la dispersion}.
+L'idée de la formule est de calculer \quote{la moyenne des écarts à la moyenne} (relisez la phrase pour comprendre).
+Sauf que ! Ce qui nous intéresse, ce n'est pas les écarts signés (avec le signe) : que l'on soit un point au-dessus ou un point au-dessous de la moyenne, la dispersion est la même (ce n'est pas 1 et -1, mais 1 et 1). Il faut donc prendre la valeur absolue : $|x - m|$.
+On appelera cet indicateur l'\b{écart type}, noté $\sigma$ (la lettre grecque \i{sigma}).
+En pratique, l'opération valeur absolue n'est pas très facile à manipuler quand on fait des opérations dessus : on lui a donc préféré la formule suivante, plus complexe mais aussi plus fonctionnelle :
+
+$$\sigma = \sqrt{\sum_{i=1}^n \frac{(x_i-m)^2}{n-1}} $$
+
+Si on y réfléchit, l'idée est la même : on met au carré puis on applique la fonction racine carrée, partant du principe que $\sqrt{x^2} = |x|$. Attention cependant à ne pas distribuer la racine carrée dans la somme, c'est une erreur !
+
+Reprenons nos exemples.
+Dans le premier cas, on obtient $\sigma = \sqrt{\frac{(10-10)^2 + (10-10)^2 + (10-10)^2}{2}} = 0$ : logique, les données sont toutes identiques.
+Dans le second cas, $\sigma = \sqrt{\frac{(0-10)^2 + (10-10)^2 + (20-10)^2}{2}} = 10$. L'écart type est très fort !
+Dernier cas, $\sigma = \sqrt{\frac{(9-10)^2 + (10-10)^2 + (11-10)^2}{2}} = 1$.
+
+\section{Harmonisation des notes}
+Maintenant que nous sommes mathématiquement au point, voyons comment harmoniser nos notes.
+\subsection{Pourquoi ne pas harmoniser uniquement la moyenne ?}
+Le but de l'harmonisation va être de rendre similaire tous les échantillons : même moyenne et même écart type.
+Si il ne fallait harmoniser que la moyenne, la transposition serait évidente : il suffirait d'ajouter à chaque note l'écart entre la moyenne obtenue et la moyenne voulue. Cependant, ce ne serait pas très juste... le meilleur serait proportionnellement lésé !
+La preuve : prenons une classe qui a eu $8$ de moyenne à une interrogation (écart type de $5$) ; le moins bon a eu $1$ et le meilleur $15$. La moyenne voulue est $12$, on ajoute donc $12 - 8 = 4$ points à tout le monde. Le minorant a alors la note de $5$, et la majorant $19$. Ça vous paraît bien ? Pas moi ; le moins bon a multiplié sa note par $5$, le meilleur par $1.2$ ! Il y a clairement arnaque, et mieux vaut être dans les mauvais pour voir ses points apparaître avec cette méthode !
+
+Voilà pourquoi on harmonise à la fois la moyenne, mais aussi l'écart type.
+
+\subsection{Le principe}
+Dans la suite de l'article, je noterai $x$ la note de l'étudiant, $m$ la moyenne originale, $\sigma$ l'écart type original, $x'$ la note harmonisée, $m'$ la moyenne voulue, $\sigma'$ l'écart type voulu.
+
+Réfléchissons maintenant à la réalisation de notre calcul.
+Intuitivement, on veut que :
+\begin{itemize}
+\li Si l'écart type est faible :
+	\item les très bons doivent être avantagés : ils ont réussi à être bien au-delà de la masse !
+	\item les très mauvais doivent être enfoncés : pas de pitié dans ce monde, ils ont été mauvais alors que la masse était moyenne.
+\li Si l'écart type est fort :
+	\item les très bons doivent être désavantagés : ils sont plusieurs à avoir été bons, pourquoi les encenser ?
+	\item les très mauvais doivent être avantagés : beaucoup ont eu une mauvaise note, l'interro devait être dure.
+\end{itemize}
+
+Comment réaliser ça ? Tout d'abord, on veut travailler par rapport aux écarts à la moyenne (signés cette fois, on veut savoir si la note est bonne ou mauvaise), on aura donc $x - m$ dans la formule. Ensuite, ce qui nous intéresse n'est pas la note absolue, mais la note relative à l'écart type - si elle est normale ou exceptionnelle -, on va donc diviser notre écart par l'écart type : $\frac{x - m}{\sigma}$. Une valeur de $0$ indique une note moyenne, $-1$ une note "dans la moyenne basse" et $1$ une note "dans la moyenne haute", et ainsi de suite.
+
+La suite ? On veut conserver un rapport constant entre les deux échantillons (les bons restent bons, les mauvais restent mauvais : il serait tout à fait illogique que la note harmonisée d'un bon devienne moins bien que la note harmonisée d'un mauvais), il suffit donc d'indiquer l'égalité entre les deux expressions :
+
+$$\frac{x - m}{\sigma} = \frac{x' - m'}{\sigma'}$$
+
+On peut extraire $x'$ de cette formule pour obtenir la relation qui nous intéresse : $x' = \frac{\sigma'}{\sigma} (x - m) + m'$.
+Et voilà le travail !
+
+\subsection{Exemples}
+Pour ces exemples, on fixera la moyenne voulue $m'$ à 12 et l'écart type $\sigma'$ à 2 (valeurs les plus fréquemment utilisées).
+
+\begin{itemize}
+\li $x = 13$, $m = 10$, $\sigma = 1$, un intervalle assez resserré (écart type faible) et une bonne note. $x' = \frac{2}{1} (13 - 10) + 12 = 18$. L'écart type faible a énormément avantagé l'étudiant !
+\li $x = 15$, $m = 10$, $\sigma = 5$, excès inverse : un écart type énorme indiquant de grosses disparités. $x' = \frac{2}{5} (15 - 10) + 12 = 14$.
+Cette fois, l'harmonisation s'est faite au détriment de l'étudiant.
+\li $x = 1$, $m = 3$, $\sigma = .5$, une interrogation catastrophique. $x' = \frac{2}{.5} (1 - 3) + 12 = 4$.
+\li $x = 3$, $m = 3$, $\sigma = .5$, même interrogation que précédemment. $x' = \frac{2}{.5} (3 - 3) + 12 = 12$. Comme on le voit, si on a exactement la moyenne à l'interrogation, on aura exactement la moyenne à l'harmonisation.
+\li $x = 2$, $m = 3$, $\sigma = .5$, toujours la même interrogation... $x' = \frac{2}{.5} (2 - 3) + 12 = 8$.
+ \end{itemize}
+
+Il est intéressant de noter que si la moyenne et l'écart type sont faibles - donc si la granularité des données, ou plus exactement la plage de valeurs couverte, est minime - alors des écarts faibles entre deux notes peuvent aboutir à des notes harmonisées très différentes. Il suffit de regarder les trois derniers exemples pour s'en convaincre : un petit point de différence original s'est traduit par quatre points de différence une fois harmonisé.
+Conclusion ? Ne dénigrez pas le bla-bla et le bavardage dans vos copies : un demi point peut devenir votre meilleur ami !

@@ -1,0 +1,10 @@
+<?php
+echo preg_replace_wb('#\\\\emph{(.+)}#isU','<em>$1</em>','\\emph{Hello {there} !}'); //<em>Hello {there} !</em>
+
+$Balise=array
+(
+	'#\\\\emph{(.+)}#isU'=>'<em>$1</em>',
+	'#\\\\big{(.+)}#isU'=>'<big>$1</big>',
+	'#\\\\acronym\[(.+)\]{(.+)}#isU'=>'<acronym title="$1">$2</acronym>',//Acronym. Please note interlaced [] aren't treated on this article
+);
+echo preg_replace_wb(array_keys($Balise),array_values($Balise),'The \\emph{\\acronym[Federal Bureau of Investigation]{F.\\big{B}.I.}} killed me.');//. Output : The <i><acronym title="Federal Bureau of Investigation">F.<big>B</big>.I.</acronym></i> killed me.

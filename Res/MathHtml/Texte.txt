@@ -1,0 +1,303 @@
+\begin{abstract}
+Les webmasters de site Web le savent bien : dès que l'on souhaite dépasser le cap des équations mathématiques de base du type \textss{12x + 5}, HTML montre rapidement ses limites.
+
+Pourquoi ? Parce que HTML n'a pas été crée pour mettre en forme des articles mathématiques, mais pour présenter du contenu. Implicitement, il était considéré que les thèses mathématiques resteraient cantonnées aux fichiers PDF générés avec LaTeX. Mais avec la démocratisation des pages Web, ceci devint rapidement un manque ; le \acronym[World Wide Web Consortium]{W3C} tenta de réagir en proposant \l[http://www.w3.org/Math/]{MathML} en 2001, mais la formule ne convainquit pas : peu de support de la part des navigateurs, et impossible d'écrire "à la main" une formule : il faut très rapidement un logiciel spécialisé pour gérer la \i{verbosité} du langage.
+Alors que faire ? Abandonner les mathématiques ? Attendre le support global de MathML ? Il y a une solution plus simple...
+\end{abstract}
+
+\quickref{Ce tutoriel part du principe que vous maitrisez déjà PHP.}
+\section{LaTeX}
+LaTeX est un système de composition de documents extrêmement utilisé dans le milieu scientifique, car il intègre des outils poussés de mise en page et une gestion des formules mathématiques.
+
+Quel rapport avec les sites Web ? De nombreux débrouillards ont eu l'idée d'utiliser LaTeX pour générer des formules, puis d'enregistrer en image le résultat. C'est ce que nous allons utiliser pour la suite de cette partie.
+
+\subsection{Comment ça marche ?}
+L'internaute fait une requête vers un script CGI qui se charge de compiler la formule et de la rendre sous forme d'image. Le problème ? De nombreuses personnes n'ont pas la possibilité d'installer des applications CGI sur leurs serveurs - nous verrons \ref[La_base]{plus tard} comment y remédier. Une fois l'image générée, il suffit de l'envoyer au client avec la balise \textss{img} habituelle.
+Pour le webmaster, deux solutions :
+\item écrire directement son code HTML avec un lien vers les images ;
+\item développer un "mini langage" qui intègre les mathématiques : par exemple, les intégrer dans une balise \b{virtuelle} <math>, et avant d'envoyer la page au client, remplacer toutes ces balises par des images. Cette seconde solution est plus propre et plus agréable, d'autant plus qu'elle permet d'améliorer la sémantique de votre code.
+
+\subsection{Syntaxe}
+La syntaxe LaTeX n'est pas extrêmement compliquée, et vous pourrez l'apprendre en quelques lignes. Nous n'en parlerons pas sur cette page, jettez un coup d'oeil \l[http://www.maths.adelaide.edu.au/anthony.roberts/LaTeX/ltxmaths.html]{sur cette page} pour en savoir plus ; mais sachez que le peu que nous aborderons ici devrait suffire pour vos besoins. Et pour en voir plus, regardez \l[/Res/Maple]{cette aide mémoire Maple} avec un bon assortiment de formules.
+
+\subsection{Que choisir ?}
+Deux \i{parsers} sont particulièrement connus.
+
+\begin{enumerate}
+\li \l[http://www.ctan.org/tex-archive/support/mimetex/]{Mimetex.cgi} : la solution la plus répandue. Elle a l'avantage de gérer complétement le LaTeX (y compris les symboles spéciaux et les matrices). En contrepartie, elle est relativement lente... et son rendu n'est pas particulièrement agréable (\ref[Comparatif]{voir le comparatif}).
+\li \l[http://www.mathtran.org/]{Mathtran} : moins connue, cette solution ne gère que le TeX. Il est donc impossible (à moins de ruser - cf. \ref[Pour_aller_plus_loin]{Pour aller plus loin}) d'avoir des "blackboard letter" (les lettres utilisées pour représenter les ensembles : $\mathbb{R}$ par exemple), des matrices, ou des intégrales fermées. En revanche, cette solution a l'avantage de fournir des images beaucoup plus propres qui s'intégreront mieux dans vos pages.
+\end{enumerate}
+
+\subsubsection{Comparatif}
+\begin{tabular}
+Mimetex & \image[Mimetex]{/Res/MathHtml/Images/mimetex.gif} & Plus complet, moins beau.\\
+Mathtran & \image[Mathtran]{/Res/MathHtml/Images/mathtran.png} & Plus beau, moins complet.
+\end{tabular}
+
+\subsection{Installation}
+Vous avez fait votre choix entre les deux parsers ? Parfait !
+Si vous avez un serveur dédié, il ne vous reste plus qu'à installer le script. Je ne détaille pas ici ; partant du principe que si vous avez un serveur dédié vous savez l'utiliser !
+
+Sinon, deux choix :
+\item Mettre les liens de vos images vers un site externe que vous \i{exploiterez} pour générer vos images. D'accord, c'est faisable... mais ce n'est pas très sympa pour le site que vous "exploitez", surtout si vous avez plusieurs images par page et un site fréquemment visité ! Imaginez le pauvre webmaster qui voit ses ressources serveur disparaitre pour générer des images sur votre site...
+\item Mettre les mains à la pâte.
+
+\subsubsection{La base}
+\i{Dans l'exemple qui suit, j'ai choisi d'utiliser mathtran. Si cela ne vous plait pas, vous n'avez qu'à changer l'URL à la ligne CURLOPT_URL !}
+
+Vous l'imaginez bien, il n'y a pas de solutions miracle, et il va falloir exploiter au moins une fois quelqu'un.
+Nous allons donc demander au serveur "exploité" de nous générer l'image. Puis nous la mettrons en cache "local", et à la prochaine demande nous pourrons la ressortir sans avoir à repasser par le site externe !
+\begin[php]{code}
+<?php
+//Informer que l'on va envoyer une image.
+header('Content-type: image/gif');
+
+//Calculer un identifiant unique pour la reqûete, dont le nom pourra être stocké sous forme de fichiers (difficile de faire un fichier \frac{1}{\pi}.png !)
+$Unique_ID='Cache/i_' . md5($_GET['m']) . '.gif';
+
+//Si le fichier n'est pas en cache, le charger sur le site de mathtran :
+if(!is_file($Unique_ID))
+{
+	// 1 - Téléchargement de l'image
+
+	//CURL est une librairie PHP qui permet de télécharger un fichier depuis un serveur distant.
+	$DL = curl_init();
+	curl_setopt($DL, CURLOPT_URL, 'mathtran.org/cgi-bin/mathtran?;tex=' . rawurlencode($_GET['m']));//L'URL à télécharger
+	curl_setopt($DL, CURLOPT_RETURNTRANSFER, 1);
+	file_put_contents($Unique_ID,curl_exec($DL));//Enregistrer le contenu de l'image dans notre fichier local.
+	curl_close($DL);
+}
+
+//Puis renvoyer l'image depuis le cache.
+readfile($Unique_ID);
+\end{code}
+\i{NOTA} : nous utilisons \lien[http://fr.php.net/curl]{CURL} qui est la méthode la plus souple et qui a le plus de chances d'être autorisée chez votre hébergeur. Vous pouvez aussi passer par \textss{fopen},\textss{file_get_contents}, ... si le gestionnaire d'URL est activé.
+~
+
+À chaque fois que vous voudrez afficher une image, vous devrez donc faire appel à votre script\footnote{Rappelons aussi que vous pouvez écrire vos codes directement et les transformer en balises images avec une expression régulière. \l[/Res/RegexpWithBraces/]{Si vous optez pour une solution avec des accolades, consultez cette page}.} :
+\begin[HTML]{code}
+<img src="/TEX.php?m=\frac{1}{2 \times \pi}" alt="1/(2*pi)" />
+\end{code}
+
+Et le résultat :
+\image[1/(2*pi)]{/Res/MathHtml/Images/12pi.png}
+
+Parfait ? Pas tellement...
+
+\item L'image est un peu rachitique, vous ne trouvez pas ? On va donc rajouter un \verbatim{\displaystyle{}} autour de la formule : \textss{\verbatim{tex=\displaystyle{' . rawurlencode(\$_GET['m']) . '}}}. Le displaystyle indique à LaTeX que l'on veut récupérer l'image "en bloc", et pas en style "inline". Ce dernier style est pratique pour les présentations, puisqu'il s'intègre bien à la ligne sans la déformer ; mais il s'avère quand même moins lisible. Cette fois, l'image est mieux : $\frac{1}{2 \times \pi}$.
+\item On n'a pas de transparence... regardez la première image : elle a un fond blanc. Cela risque de gêner si vous avez une image d'arrière plan... voyons comment améliorer cela.
+
+\subsubsection{Transparence}
+Il va falloir utiliser la libraire GD (incluse par défaut avec PHP) pour corriger ce problème et rendre les pixels blancs transparents. Voilà la nouvelle version de votre parser :
+\begin[php]{code}
+<?php
+header('Content-type: image/gif');
+$Unique_ID='Cache/img_' . md5($_GET['m'] . '.gif');
+
+if(!is_file($Unique_ID))
+{
+	// 1 - Téléchargement de l'image
+	$DL = curl_init();
+	curl_setopt($DL, CURLOPT_URL, 'mathtran.org/cgi-bin/mathtran?;tex=\displaystyle{' . rawurlencode($_GET['m']) . '}');
+	curl_setopt($DL, CURLOPT_RETURNTRANSFER, 1);
+	file_put_contents($Unique_ID,curl_exec($DL));
+	curl_close($DL);
+
+	// 2 - Transparence
+	$Original = imagecreatefrompng($Unique_ID);//L'image originale...
+	$W=imagesx($Original);//Et ses dimensions (Width et Height)
+	$H=imagesy($Original);
+	$Transparente = imagecreatetruecolor($W,$H);//L'image que l'on va créer avec transparence
+	$Blanc = imagecolorallocate($Transparente,255,255,255);.
+	imagecolortransparent($Transparente,$Blanc);//Le blanc doit être transparent
+	imagecopy($Transparente,$Original,0,0,0,0,$W,$H);//Copier l'original sur notre image transparente...
+
+	imagepng($Transparente,$Unique_ID);//Et enregistrer le résultat.
+	imagedestroy($Transparente);
+	imagedestroy($Original);
+}
+
+readfile($Unique_ID);
+
+\end{code}
+Et le rendu : $\frac{1}{2 \times \pi}$. Cette fois, c'est bien ce que l'on souhaitait !
+
+En fait, cela rend bien sur ce site... mais si vous le faites sur votre site, vous allez avoir un problème de positionnement : le bas de l'image sera alignée avec le bas de votre texte, ce qui aura pour effet de décaler les barres de fraction vers le haut. Heureusement, il suffit de peu de choses pour améliorer ça...
+\begin[CSS]{code}
+/*Si vos images sont toutes de la forme <img src="..." alt="..." class="TexPic" />*/
+.TexPic
+{
+	margin:3px 0;/*Décoller l'images des lignes supérieures et inférieures*/
+	vertical-align:middle;/*La centrer par rapport à la ligne d'écriture*/
+}
+\end{code}
+
+Avant de continuer, quelques exemples de réalisation :
+\begin{tabular}
+\verbatim{Formule : \lim_{x \rightarrow \infty} \frac1x\;=0} & Rendu : $ \lim_{x \rightarrow \infty} \frac1x\;=0$ \\
+\verbatim{Formule : \sum_{n=0}^{\infty} \frac{1}{n!}\;=e^1} & Rendu : $\sum_{n=0}^{\infty} \frac{1}{n!}\;=e^1$ \\
+\verbatim{Formule :  f(a)+\frac{f'(a)}{1!}(x-a)+\frac{f''(a)}{2!}(x-a)^2+\frac{f^{(3)}(a)}{3!}(x-a)^3+\cdots } & Rendu : $ f(a)+\frac{f'(a)}{1!}(x-a)+\frac{f''(a)}{2!}(x-a)^2+\frac{f^{(3)}(a)}{3!}(x-a)^3+\cdots $
+\end{tabular}
+
+Nous avons donc fini la première partie de ce tutorial : un outil pour afficher les maths. Mais ce n'est pas encore parfait !
+
+\section{Un peu de sémantique}
+Ça y est, nous avons un script fonctionnel... mais peut être un peu compliqué. En effet, nous aurons rarement besoin d'image : une grande partie des équations peut être affichée directement, sans utiliser d'images ! Quelques exemples ? $U_{n+1}=U_n + U_{n-1}$, ou $\alpha x^2 + \beta x + \gamma = 0$ \small{(testez en sélectionnant, il ne s'agit pas d'images)}... mais comment reconnaitre les équations qui peuvent être affichées sous forme de texte ?
+
+\subsection{Est-ce vraiment utile ?}
+Avant de nous avancer, peut être faut-il expliquer en quoi il est intéressant de passer par du texte :
+\item D'abord, c'est moins lourd à charger pour vos visiteurs. Les images ont leur poids, et ralentissent le chargement complet de la page ;
+\item Ensuite, c'est plus accessible. Je ne rentrerais pas dans les détails de l'accessibiltié et de la sémantique dans cet article car il y aurait des pages à rédiger, mais comprenez que pour un aveugle (ou plus prosaïquement pour Google) du texte est plus clair qu'une image, aussi jolie soit-elle.
+\item Enfin, le texte peut être zoomé dézoomé, renvoyé à la ligne... contrairement à une image.
+
+\subsection{Comment faire ?}
+Nous allons maintenant supposer que vos textes sont rédigés dans un format proche du HTML, et que vous avez sélectionné la balise <math> pour entourer vos formules (c'est le cas sur Wikipedia). Voici un texte d'exemple :
+
+\begin[html]{code}
+Soit <math>n</math> un entier naturel non nul, <math>k</math> est un <math>n</math>-nombre de Kaprekar dans la base <math>a</math> si et seulement s'il existe deux entiers naturels <math>u</math> quelconque et <math>0 \leq; v \leq; a^n</math> tels que <math>k^2 = u.a^n + v</math> et <math>k = u + v</math>.
+\end{code}
+
+... associé à une fonction de conversion math/image :
+\begin[PHP]{code}
+<?php
+function ParseMath($buffer)
+{
+	//Fonction appelée à la fin de l'éxecution du script si on a demandé à utiliser les balises mathématiques.
+	//Remplace toutes les balises math par des images à l'aide d'une expression régulière.
+	return preg_replace('#\<math\>(.+)\<\/math\>#isU', '<img class="TextPic" src="$1" alt="$1" />',$buffer);
+}
+\end{code}
+
+Notre rendu sera alors :
+Soit $n~$ un entier naturel non nul, $k~$ est un $n~$-nombre de Kaprekar dans la base $a~$ si et seulement s'il existe deux entiers naturels $u~$ quelconque et $0 \leq v \leq a^n~$ tels que $k^2 = u.a^n + v~$ et $k = u + v~$.
+
+Que d'images inutiles !
+Nous allons donc passer en textuel toutes les formules qui n'utilisent pas de balises (signalées par un anti-slash). Rajoutons aussi un support des puissances et des exposants, et quelques formules basiques qui peuvent facilement être rendues en HTML (attention, le niveau du code augmente) :
+\begin[PHP]{code}
+<?php
+
+function ParseMath($buffer)
+{
+	//Fonction appelée à la fin de l'éxecution du script si on a demandé à utiliser les balises mathématiques.
+	return preg_replace_callback('#\<math\>(.+)\<\/math\>#isU', 'RegexpCallback',$buffer);
+}
+
+function RegexpCallback($Partie)
+{
+	$Partie=str_replace(array('&lt;','&gt;'),array('<','>'),$Partie);
+
+
+	//On va tenter d'afficher le TeX en HTML s'il n'y a que des symboles conventionnels et simples (pas de \frac) :
+	//Liste de symboles TeX que l'on peut rendre en html :
+	$TexHtml=array(
+		'\\alpha'=>'&alpha;',
+		'\\beta'=>'&beta;',
+		'\\gamma'=>'&gamma;',
+		'\\delta'=>'&delta;',
+		'\\epsilon'=>'&epsilon;',
+		'\\zeta'=>'&zeta;',
+		'\\eta'=>'&eta;',
+		'\\theta'=>'&theta;',
+		'\\iota'=>'&iota;',
+		'\\kappa'=>'&kappa;',
+		'\\lambda'=>'&lambda;',
+		'\\mu'=>'&mu;',
+		'\\omicron'=>'&omicron;',
+		'\\pi'=>'&pi;',
+		'\\rho'=>'&rho;',
+		'\\sigma'=>'&sigma;',
+		'\\tau'=>'&tau;',
+		'\\phi'=>'&phi;',
+		'\\chi'=>'&chi;',
+		'\\psi'=>'&psi;',
+		'\\omega'=>'&omega',
+		'\\infty'=>'&infin;',
+		'\\,'=>'&nbsp;',
+		'\\;'=>'&nbsp;',
+		'\\ldots'=>'...',
+		'\\leq'=>'&le;',
+		'\\le'=>'&le;',
+		'\\geq'=>'&ge;',
+		'\\ge'=>'&ge;',
+		'\\%'=>'%',
+		'<'=>'&lt;',
+		'>'=>'&gt;',
+		'\\times'=>'&times;',//signe de multiplication
+		'\\pm'=>'&plusmn;',//Plus ou moins
+
+		'\\mathbb{N}'=>'&#x2115;',
+		'\\mathbb{Z}'=>'&#x2124;',
+		'\\mathbb{Q}'=>'&#x211A;',
+		'\\mathbb{R}'=>'&#x211D;',
+		'\\mathbb{C}'=>'&#x2102;',
+	);
+
+	$TryHTML=str_replace(array_keys($TexHtml),array_values($TexHtml),$Partie[1]);//Effectuer le remplacement dans la formule de toutes les balises connues.
+
+	if(strpos($TryHTML,'\\')===false && $TryHTML{strlen($TryHTML)-1}!='~')//'//Si il ne reste plus de balises (signalées par un \ ) c'est que l'on peut rendre la formule en texte.
+	{//On peut afficher comme du HTML, alors on en profite :) Penser quand même à gérer exposants et indices (signalés par ^ et _).
+		$TryHTML=preg_replace('#_{(.+)}#U','<sub>$1</sub>',$TryHTML);
+		$TryHTML=preg_replace('#_(.)#U','<sub>$1</sub>',$TryHTML);
+
+		$TryHTML=preg_replace('#\^{(.+)}#U','<sup>$1</sup>',$TryHTML);
+		$TryHTML=preg_replace('#\^(.)#U','<sup>$1</sup>',$TryHTML);
+		return '<span class="TexTexte">' . $TryHTML . '</span>';
+	}
+	else
+	{//sinon, afficher l'image.
+		if($Partie[1]{strlen($Partie[1])-1}=='~')
+			$Partie[1]=substr($Partie[1],0,-1);//Lire le paragpraphe "pour aller plus loin" pour comprendre cette partie.
+		return '<img src="http://neamar.fr/Latex/TEX.php?m=' . rawurlencode(str_replace(' ','\,',$Partie[1])) . '" alt="' . htmlentities($Partie[1]) . '" class="TexPic" />';
+	}
+}
+
+?>
+
+\end{code}
+
+Et cette fois il n'y a plus aucune image :
+Soit $n$ un entier naturel non nul, $k$ est un $n$-nombre de Kaprekar dans la base $a$ si et seulement s'il existe deux entiers naturels $u$ quelconque et $0 \leq v \leq a^n$ tels que $k^2 = u.a^n + v$ et $k = u + v$.
+
+Pensez à rajouter des règles dans votre CSS :
+\begin[css]{code}
+/*Comme précédemment :*/
+.TexPic
+{
+	margin:3px 0;/*Décoller l'images des lignes supérieures et inférieures*/
+	vertical-align:middle;/*La centrer par rapport à la ligne d'écriture*/
+}
+
+/*Les mathématiques "inline"*/
+.TexTexte
+{
+	white-space:nowrap;
+	font-style:italic;
+	font-size:0.9em;
+	color:rgb(30,30,30);
+}
+
+.TexTexte sub
+{
+	font-size:.75em;
+}
+
+\end{code}
+
+\section{Pour aller plus loin}
+Comme je l'ai dit plus haut, par défaut mathtran ne gère pas les matrices et les lettres "blackboard" (bref, les ajouts LaTeX) : nous allons voir comment les ajouter.
+Nous verrons aussi comment régler certains problèmes qui peuvent apparaitre une fois le module sémantique installé.
+
+\subsection{Blackboard}
+Il n'y a malheureusement pas de miracles : si la formule est trop complexe, on ne la récupérera pas. Mais si elle est simple, on peut l'utiliser en texte - voir le code plus haut qui donne les caractères unicode des lettres communes. Et on peut donc écrire "$\mathbb{N}$ est l'ensemble des naturels, $\mathbb{R}$ celui des réels.".
+
+\subsection{Matrice}
+En LaTeX, il est commun d'utiliser \textss{\verbatim{\left(\begin{array}{cc} 0&0&0\\0&0&0\\0&0&4\end{array}\right)}} pour définir une matrice. Mathtran le permet, mais pas avec cette syntaxe : il faut donc marquer \textss{\verbatim{ \left[\matrix{0 & 0 & 0 \cr 0 & 0 & 0 \cr 0 & 0 & 4}\right]}} pour obtenir un résultat proche.
+$$\left[\matrix{0 & 0 & 0 \cr 0 & 0 & 0 \cr 0 & 0 & 4}\right]$$
+
+\subsection{Éléments chimiques}
+Vous aurez peut être noté une condition bizarre dans le code précédent : \textss{\verbatim{$TryHTML{strlen($TryHTML)-1}!='~')}}.
+En fait, c'est pour permettre le forcage du rendu en image, qui est nécessaire pour pallier à certaines déficiences du HTML.
+Imaginons par exemple l'écriture d'un symbole chimique - au hasard, l'hélium : $^2_1He$. Eh oui, HTML ne met pas les sup et sub les uns en dessous des autres... il faut donc forcer l'image. Pour cela, j'ai choisi (comme Wikipedia) de mettre un tilde à la fin de la formule : il n'est pas affiché, mais force la génération de l'image même si le contenu pourrait en théorie être un texte : $^2_1He~$.
+
+\section{Conclusion}
+Voilà qui clôt ce rapide tutoriel. Vos questions sont les bienvenues, vous pouvez \l[http://neamar.fr/Mail.php]{me contacter}.

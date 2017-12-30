@@ -1,0 +1,23 @@
+[OK] Episode 1 => Raph
+[OK] Episode 2 => Draceinerre
+[OK] Episode 3 => Neamar
+[OK] Episode 4 => Lagile
+[OK] Episode 5 => Tanguy
+[OK] Episode 6 => Raph
+[OK] Episode 7 =>the lonesome jarjar
+[OK] Episode 8 => Tanguy
+[OK] Episode 9 => Raph
+[OK] Episode 10 => Lagile
+[OK] Episode 11 => Neamar
+[OK] Episode 12 => Raph
+[OK] Episode 13 => Raph
+[OK] Episode 14 => the lonesome jarjar
+[OK] Episode 15 => DarkRaptor
+     Episode 16 => DarkRaptor
+[OK] Episode 17 => the lonesome jarjar
+     Episode 18 => greo
+
+[OK] Joyeux Noyel => Raph
+[OK] unkalatapunktuach => Raph
+[OK] BA => Raph
+[OK] petite pub bonus => Raph

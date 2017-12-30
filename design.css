@@ -1,0 +1,219 @@
+/* Le corps principal du document. */
+#Main
+{
+	position:absolute;
+	top:65px;
+}
+
+#Main ul ol
+{
+	list-style-type:decimal;
+	list-style-image:url("");
+}
+
+#Main ol ol
+{
+	list-style-type:upper-roman;
+	list-style-image:url("");
+}
+
+#Main ol ol ol
+{
+	list-style-type:lower-alpha;
+	list-style-image:url("");
+}
+
+#Flotteur
+{
+	float:right;
+	border:1px solid black;
+	margin:4px;
+	padding:4px;
+	width:200px;
+}
+
+h3
+{
+	margin: auto;
+	font-variant:small-caps;
+	text-decoration:underline;
+	margin-top:50px;
+}
+
+a
+{
+	text-decoration: none;
+	color: #851e1e;
+}
+table a
+{
+	color:red;
+	font-variant:small-caps;
+}
+a:hover
+{
+	color:blue;
+	text-decoration: underline;
+}
+a img
+{
+	border:none;
+}
+
+caption /* Titre du tableau */
+{
+	margin: auto; /* Centre le titre du tableau */
+	font-family: Arial, Times, "Times New Roman", serif;
+	font-weight: bold;
+	font-size: 1.2em;
+	color: #009900;
+	margin-bottom: 20px; /* Pour éviter que le titre ne soit trop collé au tableau en-dessous */
+}
+
+table
+{
+	margin: auto;
+	border: 4px inset black;
+	border-collapse: collapse;
+}
+
+th
+{
+	background-color:rgb(255,202,149);
+	background-image:url("http://neamar.fr/Pics/CSS/tile.jpg");
+	color: white;
+	font-size: 1.1em;
+}
+
+td /* Les cellules normales */
+{
+	border: 1px solid rgb(79,129,189);
+	font-family: "Comic Sans MS", "Trebuchet MS", Times, "Times New Roman", serif;
+	text-align: center;
+	padding: 5px;
+}
+
+/*/////////////////////////////
+Les couleurs des tableaux
+////////////////////////////*/
+.blanc
+{
+	background-color:white;
+	color:black;
+}
+
+.bleu
+{
+	background-color:rgb(211,223,238);
+	color:black;
+}
+
+.or
+{
+	background-color:yellow;
+	color:black;
+}
+
+.rouge
+{
+	background-color:red;
+	color:black;
+}
+
+.blanc:hover
+{
+	background-color:rgb(111,245,71);
+}
+
+.bleu:hover
+{
+	background-color:rgb(111,245,71);
+}
+
+.or:hover
+{
+	background-color:rgb(111,245,71);
+}
+
+.Icone
+{
+	width:75px;
+}
+
+.infos
+{
+	color:rgb(128,128,128);
+	font-weight:lighter;
+	font-size:75%;
+}
+
+/*Les mathématiques "inline"*/
+.TexTexte
+{
+	white-space:nowrap;
+	font-style:italic;
+	font-size:0.9em;
+	color:rgb(30,30,30);
+}
+
+.TexTexte sub
+{
+	font-size:.75em;
+}
+
+.TexPic
+{
+	vertical-align:middle;
+}
+
+.petitTexte
+{
+	font-size:.7em;
+}
+
+/* Pourles infobulles : */
+a.infobulle
+{
+   position: relative;
+   color: black;
+   text-decoration: none;
+   border-bottom: 1px gray dashed; /* on souligne le texte */
+}
+a.infobulle span
+{
+   display: none; /* on masque l'infobulle */
+}
+a.infobulle:hover
+{
+   background: none; /* correction d'un bug IE */
+   z-index: 500; /* on définit une valeur pour l'ordre d'affichage */
+
+   cursor: help; /* on change le curseur par défaut en curseur d'aide */
+}
+a.infobulle:hover span
+{
+   display: inline; /* on affiche l'infobulle */
+   background-image:url('http://neamar.fr/Pics/infobulle.png');
+   width:266px;
+   padding-top:43px;
+   padding-left:5px;
+   height:64px;
+   position: absolute;
+   top: 5px; /* on positionne notre infobulle */
+   left: -20px;
+}
+a.IMG_Interactive img
+{
+	margin:16px;
+	width:64px;
+}
+a.IMG_Interactive img:hover
+{
+	margin:0px;
+	width:80px;
+}
+
+table li
+{
+	text-align:left;
+}

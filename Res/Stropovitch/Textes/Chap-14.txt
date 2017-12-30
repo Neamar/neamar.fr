@@ -1,0 +1,502 @@
+<i>Nous prîmes l'habitude Hama et moi de manger ensemble le soir. Je pensais avoir droit à d'âpres négociations avec Ondraïev, mais il n'en fut rien. Il s'en réjouit grandement, même. Il n'attendait que cela, une occasion de se dégager des responsabilités que lui avaient données Velen, pour pouvoir passer des soirées avec ses collègues.
+
+Il n'y avait rien de bien exceptionnel à faire dans l'Exodar en matière de dîner. Nous étions rationnés, d'une part. Et puis la nourriture n'était pas très variée. Les chasseurs, au moment du départ, avaient parcouru Nagrand en toute hâte, en capturant la quasi-intégralité des troupeaux de sabots-fourchus et de talbuks. Nous avions ainsi le lait et la viande. Quant aux fruits, des parterres de vignes telaari ceignaient les différents halls. La magie des Naarus préservait nos bêtes et nos arbres des maladies. Pour l'eau, celle invoquée par les mages était trop pure, et en prévision de cela, avant de partir, ils avaient ouvert un portail dans une rivière souterraine de Nagrand. Ainsi l'eau était apportée directement de la rivière dans l'Exodar via un second portail établi dans le vaisseau, maintenu sans discontinuer par des mages qui se relayaient. Il en était de même pour l'air. Plusieurs gigantesques portails à plusieurs endroits du vaisseau faisaient office de bouches d'aération. La magie donnait vraiment des possibilités illimitées.
+
+Pour égayer un peu l'éternel steak de talbuk et l'éternel bol de raisins, j'avais donc apporté un peu de gâteries invoquées par Ondraïev (qui m'avait bien caché ce talent l'enflure, "pour ne pas faire de moi un enfant gâté" soi-disant, ben voyons...), en l'occurrence des roulés à la canelle, sa spécialité. Ce n'était pas nourrissant mais l'artifice était parfait. Hama était ravie.
+Ses parents, tous deux hauts dignitaires de la Main, ne comprenaient pas ce qui se passait. Leur fille avait vécu dans une bulle jusque là. Admirée mais jalousée ou considérée comme inaccessible, elle n'avait toujours eu comme réelle compagnie que celle de Darotân et de ses deux sbires. La voir parler avec un rustre réputé être le seul disciple d'Arcân le Sans-Lumière, ce qui impliquait aux yeux de la bonne société qu'il avait à peu près tous les pires défauts et pas la moindre qualité compensatoire, c'était inexplicable. Et puis évidemment le fait que je sois muet ne les aidait pas à comprendre. La patience dont faisait preuve Hama en me regardant écrire pour la moindre remarque les ébahissait.
+
+
+Elle me demanda à brûle-pourpoint le second soir si ça m'était arrivé d'écrire des poèmes. Apparemment cette question la démangeait depuis la veille, où elle avait déploré le manque de sensibilité flagrant de la quasi-totalité de nos camarades. J'hésitai puis répondis par l'affirmative. Elle prit une mine heureuse, me pris par la main et m'entraîna dans son univers - sa chambre séparée du reste du monde par de lourds rideaux, chose qui n'est absolument pas pratiquée par notre peuple. Elle se coupait complètement de la lumière des cristaux et s'éclairait à la bougie.
+
+Elle me fit découvrir un trésor. Elle écrivait depuis petite des poèmes longs et magnifiques. Elle avait lu toute la bibliothèque de Kalten. Des livres sur Argus elle tirait des vers nostalgiques sur un paradis terrestre perdu. Elle chantait la féerie d'un monde enchanté, où l'horizon souriait, où les arbres se penchaient vers les passants, où les montagnes échangeaient des cantiques. Des livres sur la corruption d'Archimonde et Kil'Jaeden et le premier exil, elle tirait des vers tragiques sur la trahison d'un idéal, la grandeur de Velen dans la souffrance, la perte de l'espoir et la peur de la fin du monde. De Draénor, elle chantait les vallées et les rivières, les peuples pacifiques, la paix du ciel et de la nature. Elle savait également l'art de l'épopée, en contant la résistance âpre mais vaine de notre peuple contre les démons et les orcs corrompus. Là elle chantait le sang, elle chantait le sifflement des lames et les échos des sorts, la fumée des brasiers et le silence des ruines, les cris et les larmes, la danse de la vie et de la mort. Et pour ce nouvel exil elle se refusait aux pleurs. Elle chantait les Naarus et la Lumière, elle chantait l'espoir, la foi et l'amour.
+
+Quand elle psalmodiait doucement ses vers en s'accompagnant d'une cithare, je sortais du temps. C'était un enchantement comme jamais je n'aurais imaginé en vivre. J'avais en même temps l'impression d'être indigne de telles faveurs. Mais elle faisait ces merveilles avec tant de simplicité et de modestie, qu'elle ouvrit de grands yeux quand je lui fis part de ma honte. "Darotân a toujours trouvé mes oeuvres médiocres et sans intérêt", confia-t-elle. "Je pensais bien que ce ne devait pas être si mauvais, mais es-tu sûr que tu ne tombes pas dans l'excès inverse ?" demanda-t-elle ensuite avec un sourire ému. Je défaillais régulièrement d'un trop-plein d'émerveillement. Elle riait parfois de mes mines atterrées. Elle ne me croyait pas quand je disais manquer de m'évanouir devant tant de beauté, de talent et de sensibilité. Elle était devenue à mes yeux plus divine que les naarus.
+
+Elle me demanda tous les jours de lui présenter mes propres vers. Je repoussai longtemps, mais dus m'exécuter. Ce fut avec grande honte que je lui tendis un soir une liasse d'extraits recopiés - les manuscrits originaux étant illisibles. Elle m'arracha le tout des mains avec un gloussement de triomphe et lut à voix haute.
+
+\begin{verse}
+"Mon rire est plein de pleurs et mes larmes ricanent.
+Je suis celui qui crie dans le vent boursouflé
+Où le Néant chantait des cantiques profanes,
+Où les morts lancinants me donnaient des soufflets".
+\end{verse}
+
+Elle leva des sourcils incompréhensifs.
+
+\begin{verse}
+"Je suis un lourd chaos boitant sur ses chevilles.
+Mes mains furent brûlées par un fleuve de plomb ;
+Elles creusent la terre où dorment les charmilles,
+Mais ne peuvent sentir ni saisir de bourgeons."
+\end{verse}
+
+Elle était émue.
+
+
+\begin{verse}
+"Je fus le noir souci des orgues infernales :
+Elles hurlaient parfois et roucoulaient toujours.
+Dites-moi la beauté des ombres sépulcrales
+Pour que leur fils revienne en leurs froides amours"
+\end{verse}
+
+Elle pleurait. Elle me rendit la liasse et me prit dans ses bras.
+
+Tout était dans la même veine. Mais comment lui dire... Je ne savais comment décrire les sensations qui accompagnaient mes jours depuis mon immolation. Une angoisse permanente m'étreignait le coeur. Une peur ancrée profondément en moi, qui troublait mes pensées, hantait mes nuits. Une souffrance perpétuelle dans mon âme, comme un crissement discontinu de griffes sur une table de verre. Et puis cette solitude terrible, insupportable, que la compagnie pince-sans-rire d'Ondraïev n'effaçait jamais. Cette suspicion et ce mépris permanents dans les regards des autres. Hama pensait que je ne m'en préoccupais pas, mais c'était inexact. Je voulais au plus profond de moi n'accorder d'importance qu'aux jugements de Velen et d'Arcân. Mais je n'y suis jamais parvenu. Avec mon maître et le Prophète, je gardais une distance infranchissable, celle du respect infini que je leur devais. L'âme torturée et le coeur vide, je luttais tous les jours contre la folie. J'en obtenais un recul permanent sur ce qui se passait autour de moi. Tout tournait comme dans une pièce de théâtre. Le vrombissement dans mon crâne me distrayait sans cesse, me tirait un peu en marge de la réalité, juste ce qu'il fallait pour être étranger aux autres. Les considérer, silencieux, analyser leurs manèges quotidiens. Etre là dans l'indifférence et la pénombre. Et écouter son coeur gémir faiblement.
+
+Mais tout changea. Nous devînmes inséparables. Elle me fit beaucoup lire. Je fus initié à son monde, un monde où tout sentiment est un poème, toute sensation une note de cithare. Je naviguais donc entre deux univers contraires, le sien le soir et celui d'Arcân le jour. Je lui demandai une fois si cela ne la dérangeait pas de fréquenter un guerrier inapte à la magie et à la Lumière - et dont l'éducation était entièrement à faire. Elle me répondit mystérieusement, gênée. "Je ne vois pas pourquoi ta voie me dérangerait. La sensibilité, ce n'est pas la voie choisie qui la crée ; la lecture, tous également peuvent la pratiquer, et elle embellit le coeur de chacun sans distinction ; et il y a des avantages à toutes les disciplines". Des avantages... "Au fait, dit-elle en se forçant à adopter un ton anodin, je n'ai toujours pas pu assister à un de tes entraînements, et justement Kalten est convoqué avec les autres maîtres par O'ros demain après-midi. Il n'y a comme toujours qu'Arcân, en tant que Sans-Lumière, qui est dispensé des réunions générales - car elles sont sacrées. C'est une excellente occasion, non ?" Elle vint donc. Et je crus comprendre.
+
+Hama adorait les exercices qu'Arcân m'imposait. Elle admirait la force et l'endurance déployées. Elle nous dévorait des yeux quand nous nous affrontions dans des fracas assourdissants de lames et des expressions terribles sur le visage. Elle scrutait le jeu des muscles dans les mouvements. Je compris de quels avantages elle parlait. Aussi contradictoire que cela puisse paraître, la douce et cultivée Hama, nourrie de poésie, chanteuse d'espoir et de foi, se mordait la lèvre inférieure devant les deux mâles les plus musclés du vaisseau. Et c'est toute chose qu'elle m'accueillit à la fin du cours, ravie, des étoiles dans les yeux, la voix traînante. J'en restai complètement perplexe.
+Arcân me fit un clin d'oeil d'un air goguenard quand nous repartîmes. Il ajouta un signe de main assez explicite. J'en rougis presque.
+Chez elle, il n'y avait personne. La réunion durait, et ses parents, en tant que hauts dignitaires de la Main d'Argus, y étaient conviés. Elle me guida nonchalamment dans sa chambre, comme d'habitude. Sauf qu'elle resta debout et posa une main sur ma chemise encore moite de sueur. Elle trembla de nervosité et nos yeux se rencontrèrent. Son regard était coupable, et demandait l'indulgence. Elle avait peur de ce que je pouvais penser. Elle continua pourtant, avec toujours l'air de demander pardon.
+Elle glissa sa main sous la chemise et me carressa le torse lentement, en frissonnant. Je sentis son désir. Une pulsion me prit. D'un bras je la saisis à la taille, la soulevai et l'embrassai longuement et fiévreusement.
+Quand je la lâchai, ses jambes ne la tinrent pas. Elle s'étendit mollement.
+Il était temps de bouleverser définitivement ma vie. D'en changer le thème, comme d'un poème. Les sensations s'enchaînèrent en douces notes de cithare, et le lendemain j'en fis des mots.
+
+\begin{verse}
+La lueur des bougies semble être une complice,
+Tant elle correspond à nos tacites voeux ;
+
+Contempler ton grand corps m'est alors un délice,
+Et mon regard intense en est l'ardent aveu.
+
+Ta frayeur est légère, et ton rire adorable,
+Lorsqu'un élan soudain me projette sur toi,
+Et dans cet océan de chaleur malléable
+J'enivre tous mes sens en invincible émoi.
+
+Mon esprit devient flou, les mots l'ont déserté.
+J'ai laissé sur le seuil mes pensées pour autrui.
+
+Un éternel présent porte notre unité :
+Ce despote, le Temps, a pris congé sans bruit.
+
+Mes lèvres et mes mains te veulent tout entière,
+Je presse et je pétris, je caresse et je mords.
+Mes baisers font frémir l'étendue de ta chair.
+La chaleur de ta peau irradie tout mon corps.
+
+L'amour et le désir conjuguent en nos coeurs
+Une force infinie qu'ils tiennent l'un de l'autre,
+
+Et dans le tourbillon d'une commune ardeur,
+Nous sentons l'absolu, et nous le faisons nôtre.
+\end{verse}
+</i>
+
+~~
+Stropovitch, sous les yeux étonnés de ses compagnons d'armes, amena doucement Hama contre lui et disparut avec elle dans sa chambre, fermant la porte à double tour.
+
+Il ne lui posa de questions. Elle avait disparu au moment où le vaisseau s'était écrasé, et avait été portée au nombre des victimes. Elle était vivante, c'était la seule chose qui comptait. Elle non plus ne dit rien. Elle se pelotonna contre lui et le sentit s'endormir dans leur bulle de tendresse. Elle promena sa main longtemps sur le grand corps du guerrier, pensive.
+
+Au milieu de la nuit, les cors retentirent. La garnison du Bastion et l'unité d'élite se rassemblèrent sur la place centrale. Stropovitch et Hama s'éveillèrent et échangèrent un long regard, où ils se dirent tout leur amour. Elle le regarda s'équiper. Il sortit de la pièce sans se retourner.
+
+~~
+Donjon du Bastion, salle du commandant.
+"Non, dit sèchement Darotân.
+- Mais il a parfaitement accompli sa mission à Kil'Sorrow, insista Gunny. Je réponds de lui, il est absolument fiable, et c'est le meilleur.
+- L'assassinat du chef est une méthode éprouvée et extrêmement efficace contre les gangr'orcs, ajouta Danath Trollbane, commandant en chef du Bastion. Ils sont tellement bêtes que le chef est le plus souvent le seul cerveau, le seul stratège, la seule réelle source de commandement. Laissons le dénommé Farôn infiltrer sa hutte et lui régler son compte. Le nombre de pertes sera réduit de moitié par rapport à une offensive normale.
+- C'est moi qui dirige cette opération, trancha Darotân. D'après votre propre rapport, Lieutenant-Commandant Bearstrength, sa mission à Kil'Sorrow s'est soldée par un échec, et sans ce Joannes Bluemill l'armée régulière aurait eu un Nathrezim à Auchindoun. De plus, j'ai horreur de ce genre de procédés. C'est une guerre sainte, je vous le rappelle. Et comme l'a si bien prouvé Joannes, la Lumière n'a pas besoin de ruses ignobles pour triompher.
+- Certes, mais comme je vous le disais, répéta doucement Danath, ce n'est pas tant une question de victoire que de nombre de morts. Si nous décapitons l'armée ennemie, leur défense deviendra désorganisée et hésitante. Sans vouloir vous contredire mon Maréchal, la guerre sainte sera celle menée au Temple Noir. Epargnons autant d'hommes que nous le pourrons en vue de l'affrontement final.
+- Rappelez-moi comment un orc devient un gangr'orc, Commandant Trollbane ?
+- Par l'injection de sang de démon dans leurs veines, mon Maréchal.
+- Eh bien lutter contre les puissances démoniaques est une mission sacrée. En avant, nous avons perdu assez de temps".
+
+~~
+Pour mener à bien cette opération, Darotân avait sous ses ordres pas moins d'un millier d'hommes. Ils étaient tous réunis en cercle sur la place du Bastion. Le paladin fit sécarter la foule pour rejoindre le centre, et expliqua la bataille d'une voix forte et claire, une main dans son dos cambré, l'autre traçant des signes sur le sol au moyen d'un long bâton.
+
+"Alors comme vous le savez déjà, cette opération est l'échauffement avant le nettoyage de la Citadelle. La victoire sera écrasante, mais toute erreur vous coûtera un peu des précieuses forces que vous devez conserver pour la suite. C'est pourquoi je la dirige personnellement.
+
+La forteresse de Zeth'Gor est la dernière base du clan orc de l'Orbite-Sanglante, maintenant réduit à une bande de brutes écervelées. Elle est très grande et contient, d'après les renseignements établis par nos griffonniers, environ cinq cents orcs. Ce sera donc du un contre deux - notre avantage est énorme. De plus, la seule difficulté pour nous sera ces six tours de garde, quatre contre le rempart sud - c'est-à-dire deux de chaque côté de la porte - et deux autres, plus petites, encadrant la hutte du chef, qui est attenante au rempart nord. Nous ne savons par quel miracle, ces bêtes sont équipées d'armes à feu, et en font usage avec une certaine efficacité. Leurs fusiliers sont nombreux et tireront à travers des meurtrières. Il faudra donc concentrer la puissance de feu des mages sur l'entrée pour envahir la forteresse le plus vite possible. Une fois à l'intérieur, les tours seront la priorité. Je laisserai vos supérieurs directs expliquer à chaque régiment son rôle spécifique. Les griffonniers n'ont pas repéré d'enceinte interne, mais la grande hutte sera très certainement cernée de barricades à notre arrivée. Une fois les troupes neutralisées, ce sera encore une fois aux mages de réduire en cendres leurs fortifications improvisées. Restera à nettoyer. Le mot d'ordre : aucun rescapé, aucun prisonnier. Si vous avez des questions, posez-les à vos chefs en route. Nous sommes partis".
+
+~~
+De la fenêtre de l'auberge, Hama regardait Darotân. Calmement. Elle maîtrisait parfaitement sa haine. Son visage était sans expression.
+
+Un gnome à l'âge indéfinissable, aux yeux caves soulignés de cernes noires et la peau très blanche, s'approcha d'elle. Il caressa sa fine barbichette noire et s'adressa à elle en démonique.
+
+"J'ai senti une présence démoniaque particulière cette nuit dans ta chambre, dit-il d'un air finaud. T'essaierais-tu en cachette à exercer mon art ?
+- Je ne l'ai pas invoqué, répondit-elle dans la même langue. C'est un ancien amour perdu et retrouvé.
+- Oh, voilà qui est étonnant ! La sombre et impitoyable Hama ! Des sentiments ! - il ricana. Tu ne pouvais en effet aimer qu'un démon.
+- Ce n'est pas un démon.
+- Ah bon ? C'est bien étrange alors, fit-il incrédule. Je peux tenter de l'asservir, ainsi nous serons fixés.
+
+- Essaie et tu es mort, dit-elle d'un ton neutre, les yeux toujours fixés sur le paladin.
+- Quel dommage, fit-il, sincèrement déçu. Dans tous les cas, je suis venu t'informer, puisque tu n'as pas daigné te présenter, que notre unité ne partait pas à Zeth'Gor, mais faisait partie des forces désignées pour assurer la protection du Bastion. En bref, on va s'ennuyer. Cela me manque de jouer avec les âmes de pauvres mortels incapables d'opposer la moindre résistance...
+- En même temps, dit Hama avec un sourire diabolique, m'en prendre aux âmes des gangr'orcs m'a lassée. Je me demande comment crie celle d'un vilain petit gnome lorsqu'on la plie lentement jusqu'à la rompre..."
+
+Le démoniste miniature ne trouva pas la plaisanterie à son goût. Il redescendit en soupirant, perdu dans d'obscures pensées. Il s'arrêta cependant à mi-chemin et demanda : "C'est cet amant qui t'a mise sur la voie de l'Ombre ?
+- Non. En fait..., ajouta-t-elle après un long moment d'hésitation, il me croit prêtresse de la Lumière."
+
+Le gnome éclata d'un grand rire moqueur. Il en avait les larmes aux yeux. "Et il va réagir comment quand il va voir ce que tu es devenue ? fit-il avec des yeux brillants de sarcasme.
+- Je n'en ai absolument aucune idée", dit-elle en soupirant et en détournant ses yeux tristes de la fenêtre, d'où l'on pouvait voir l'armée partir vers Zeth'Gor.
+
+~~
+Sous les pas de l'armée la terre sèche et rouge de la Péninsule s'effritait et se tassait. Les craquelures du sol se comblaient d'une fine poussière. La troupe marchait dans une nuée hostile. Le sable soulevé pénétrait les poumons et torturait les yeux. Tous étaient silencieux. Le plan de bataille exposé par Darotân était trop simple. Personne n'osait croire que tout allait se dérouler aussi aisément. Les combattants, l'air grave, se préparaient mentalement à l'apparition de difficultés inattendues.
+
+"C'est ce soir", entendit Stropovitch.
+
+Farôn venait d'apparaître à sa droite. L'elfe parla de façon décontractée et nette. Il savait l'art de ne se faire entendre que d'une seule personne.
+
+"Cette bataille va nécessairement être plus difficile que prévu. L'armée ne pourra pas enchaîner sur la Citadelle avant demain."
+
+Le draeneï écoutait avec attention, le visage impassible.
+
+"La Péninsule est parcourue de dunes et de crevasses. Nous aurions pu nous dissimuler à la vue de la Forteresse jusqu'à l'approcher de trois cents mètres. Là, ils vont nous repérer à plus d'un kilomètre, puisque Darotân nous fait marcher à découvert. Les orcs vont avoir au moins un quart d'heure de préparation avant que nous n'atteignions les murs. Il n'y a rien qui puisse justifier une attaque à l'aube si l'ennemi nous accueille préparé."
+
+
+Stropovitch fronça un sourcil d'un demi-millimètre.
+
+"Cette nuit je donnerai rendez-vous à Darotân à l'extérieur du Bastion, en prétextant vouloir lui faire mon rapport sur la mission qu'il m'a donnée - t'assassiner. Nous serons deux à l'accueillir. J'effacerai les traces."
+
+C'était clair et concis.
+
+"Danath ouvrira une enquête immédiate mais ne pourra pas retarder l'attaque de la Citadelle, car ce serait désobéir aux lois de la guerre-éclair édictées par le Conseil. Comme je me serai arrangé pour ne laisser aucun indice, cette première enquête ne donnera rien. En revanche, une seconde sera certainement ouverte après la guerre. Si tu veux jouer la prudence, il serait sage de "disparaître" dans une bataille entretemps. Je t'arrangerai le coup si tu fais ce choix."
+
+Stropovitch sourit. Il était hors de question qu'il abandonne la guerre ou se terre quelque part dans la honte et le déshonneur. Il venait de retrouver Hama. Mais justement, il ne pouvait rester près d'elle pour l'instant.
+
+Il se devait d'offrir à leur amour un monde pacifié.
+
+
+Il serra les poings. Jusqu'à présent il s'était battu sans but réel. Revoir Hama avait instillé dans son coeur un formidable espoir. Un espoir d'avenir, de bonheur. De rédemption.
+
+Et tous ceux qui se dressaient encore entre lui et cet avenir, il était, plus que jamais, prêt à en faire de la charpie, et de la charpie bien lisse, bien homogène, écrasée et malaxée avec art et application.
+
+Au détour d'une dune, Zeth'Gor apparut au loin.
+
+~~
+Les gangr'orcs de la forteresse divisaient la "nuit", si l'on pouvait parler de nuit dans la Péninsule, en quatre tours de garde, chacun assuré par une équipe de dix orcs chapeautée par un sous-officier.
+
+On arrivait à la fin du dernier tour. Le sous-officier monta mollement, en bâillant, les marches de l'escalier de bois menant au sommet de la tour ouest. Il saisit l'embouchure de la grande corne qui s'y trouvait, prit une profonde inspiration et souffla.
+
+
+Au sein de la caserne, d'où sortaient des odeurs de bête et des ronflements sonores, les hamacs remuèrent en grommelant. Et il en sortit par chapelets des gangr'orcs aux yeux rouges bouffis de sommeil.
+
+Gorzu, lui, se rendormit aussitôt. Il avait un peu trop profité la veille au soir de la réserve secrète d'eau-de-vie de pomme de Chundrak, apportée d'Azeroth sous le manteau par des messagers zélés.
+
+Le sous-officier entra dans la pièce et distribua généreusement des coups de matraque dans les hamacs encore occupés, dans un concert de grognements de douleur et de protestations. Quand il vit Gorzu ronfler béatement, la bouche grande ouverte et l'haleine nauséabonde, la lueur rouge de ses yeux s'alluma, et il le rossa avec délectation.
+
+C'est donc recouvert d'hématomes que Gorzu se traîna à son poste cinq minutes plus tard - l'entrée même du camp. Ses camarades de corvée rirent et se moquèrent de leurs voix bourrues en le voyant grimacer à chaque mouvement. La journée commençait bien.
+
+Pour le coup, il se posa la question "Pourquoi ?" Et il se figea. Depuis qu'on lui avait injecté du sang de démon dans les veines, il était, comme ses camarades, devenu beaucoup plus fort et endurant, sa peau s'était endurcie, mais il ne se posait plus de questions. Les jours se succédaient rythmés par la corne, et il obéissait par instinct à toute personne qui lui était donnée comme chef et qui le rosserait en cas d'impair.
+
+Mais là, sous l'influence de l'alcool qui sait, il venait de se demander, en un éclait d'intelligence, pourquoi en fait il devait faire ça tous les jours. Cependant l'éclair avait été fugace, et il restait là, bouche bée, un filet de bave au menton, incapable de réfléchir à la question qui flottait, floue, dans sa conscience. Il sentit confusément qu'il était devenu idiot. Des bribes de souvenirs de sa vie passée lui revinrent. Il avait perdu quelque chose. Son identité, en fait, mais ce mot ne lui vint pas. Son regard se voila d'une grande tristesse. Ses trois compagnons de garde le fixèrent, incompréhensifs, avec des grognements interrogateurs.
+
+
+Soudain quelque chose capta l'attention de Gorzu. Une perturbation dans l'horizon. Une étoile qui clignotait. Une ombre sur la grande ombre du ciel.
+
+Il s'aplatit au sol et y colla son oreille. Un millier d'hommes. A trois kilomètres.
+
+Il voulut crier l'alerte mais se ravisa. Ses camarades ne comprenaient rien à son comportement.
+
+Il alla prévenir discrètement ses supérieurs. Les gangr'orcs s'organisèrent tranquillement pendant une demie-heure.
+
+~~
+L'armée parvint à quelques dizaines de mètres des remparts de Zeth'Gor.
+
+
+Elle reçut un formidable accueil.
+
+Des dizaines de gangr'orcs apparurent sur les toits des tours de garde. Une clameur s'éleva de l'ensemble du camp orc. Des rugissements de défi. Longs, et joyeux. Sur les toits des tours, les archers dansaient ! et hurlaient et riaient en direction des Alliés. Ils leur dispensèrent généreusement des gestes grossiers et provocateurs.
+
+Puis la clameur se fit chant martial. De l'autre côté de la grande porte, des centaines d'orcs martelèrent de leurs pieds le sol et émirent en cadence des sons rauques et puissants. Les secousses de la terre firent vibrer les coeurs des Alliés, et le chant enflamma leur ardeur. Les draeneïs, nains, humains, gnomes et elfes répondirent de toute leur âme à cette provocation, avec rage et fureur. Le ton était donné. L'atmosphère se chargea des grondements des poitrines. L'air pulsait.
+
+Darotân fit sonner la charge. Les archers ennemis sautèrent à l'intérieur des tours par les trappes des toits et commencèrent derechef à cribler les Alliés de pluies de flèches, qui allèrent ricocher sur les armures ou pénétrer les chairs. Des cris de douleur aigüe fusèrent des rangs. Cela embrasa la colère de l'armée, qui répondit à ces cris par d'autres, qui s'amplifièrent et résonnèrent et couvrirent le chant des orcs. La bataille était déclenchée sous le signe du massacre impitoyable.
+
+Les archers alliés décochèrent des flèches enflammées sur les tours, mais elles avaient été enduites de substance ignifuge. De plus, elles étaient renforcées et les orcs tiraient depuis des meurtrières.
+
+Les mages arrivés à portée réduisirent en cendres volatiles la grande porte. L'armée s'engouffra dans le camp emportée par un élan incontrôlable.
+
+
+Elan qui se brisa sur des barricades qui n'avaient rien d'improvisé. Ces dernières formaient un demi-cercle autour de la grande porte. En avant des barricades, une forêt de lourdes lances de bois brut enfoncées profondément dans le sol empalèrent la première ligne d'hommes qui, poussée par l'arrière, avait été incapable de s'arrêter à temps.
+
+Les orcs savaient que les Alliés briseraient en quelques secondes les barrières à grand renfort de magie. Ils ne leur laissèrent même pas ce répit.
+
+Les archers des tours troquèrent leurs arcs contre de lourds fusils à gros calibre. Ils firent pleuvoir la mort sur les rangs de leurs ennemis. En même temps, de façon synchronisée, l'armée orc, regroupée derrière les barricades ainsi que sur les toits des bâtiments qui entouraient la place centrale du camp, balança par quintaux des grenades explosives et des seaux d'acide.
+
+Et surtout, tout en perpétrant ce massacre unilatéral et foudroyant, ils chantaient toujours de leurs voix rauques, la lueur de leurs yeux flamboyant de plaisir, un sourire carnassier aux lèvres. Et ils martelaient le sol de leurs pieds en accompagnement.
+
+Pour les Alliés ce fut comme le chant qui accompagne les damnés sur le chemin de leurs supplices éternels, au plus profond des Enfers.
+
+Les explosions déchiquetaient les corps et faisaient voler membres et viscères. En quelques instants tous les vivants étaient recouverts des lambeaux des corps des morts. L'armée alliée baigna dans le sang et devint écarlate.
+
+
+L'acide traversait les armures et les chairs, torturant leurs victimes de souffrances inouïes. Les hommes furent plongés dans un concert d'outre-tombe, de cris horribles et d'explosions assourdissantes, le tout martelé furieusement par l'ennemi, instillant dans les coeurs un sentiment d'inéluctable.
+
+~~
+Le gnome démoniste arriva complètement essoufflé dans la chambre d'Hama. Cette dernière était en pleine méditation au milieu d'un cercle d'Imprégnation de l'Ombre.
+
+Un cercle entouré de bougies. Elle préférait toujours garder ses volets fermés et s'éclairer ainsi.
+
+Elle ouvrit les yeux pour lui décocher un regard terrible. Elle détestait être dérangée dans une méditation, et avait déjà tué pour ça.
+
+"Qu'y a-t-il Akmar ? demanda-t-elle d'une voix profonde et menaçante.
+
+- Je suis désolé Hama, mais il y a urgence, dit le gnome, nous sommes attaqués par une grande armée".
+La draeneï se leva d'un bond et sortit de l'auberge à la vitesse d'une bourrasque d'ombre. Les forces de protection du Bastion se réunissaient, paniquées, sur la place. Elle parcourut du regard la Péninsule.
+
+"Impossible..." murmura-t-elle.
+
+Vomie par la Citadelle que l'on croyait abandonnée, une masse d'orcs et de monstres noircissait le Chemin de la Gloire et montait vers le Bastion via une crevasse.
+
+Il y avait là peu d'ennemis - quelques centaines - mais dotés à première vue d'une grande puissance. Car il ne s'agissait pas seulement d'Orcs. Il y avait également des démons, des Gangregardes en grand nombre, des Ered'ruins aussi.
+
+Soudain le bâtiment à la droite d'Hama explosa.
+
+
+Une pluie de météores s'abattit sur le Bastion. Les tours, l'auberge, la caserne, le donjon, la forge, l'armurerie, les remparts, tout fut criblé d'énormes boules incandescentes, transformant en quelques instants la forteresse en ruines et incendies. Les combattants achevèrent de s'affoler. Les officiers hurlaient en vain.
+
+Les météores étaient une invocation à grande échelle. Les boules se révélèrent être des rocs animés d'un feu jaune surnaturel. Qui s'assemblèrent. Des ruines sortirent des dizaines d'Infernaux.
+
+Akmar rejoignit Hama en courant. "C'est l'apocalypse ! hurla-t-il. Il faut fuir, dépêche-toi ! Tous les traînards vont y rester ! C'est perdu d'avance !
+- Crois-tu que les démons épargnent les fuyards, Akmar ? répondit-elle calmement.
+- Oh non..." pensa tout haut Akmar.
+
+Hama était recouverte d'une légère fumée noire. La lueur de ses yeux s'était éteinte - inversée, plus exactement. Ses orbites semblaient vides. Elle communiquait directement avec le plan de l'Ombre. Sa peau devenait transparente. Son visage perdit toute expression.
+
+"Arrête ça ! cria Akmar. L'Ombre n'est pas un jeu, Hama ! Pourquoi crois-tu que nous autres démonistes nous contentons de la manipuler, sans nous laisser envahir par elle ? Tu ne peux pas impunément te laisser posséder ainsi ! Un jour tu te dissoudras complètement en elle, Hama ! Tu m'entends ? Hama !"
+
+
+Il était trop tard. La draeneï n'était plus qu'une grande ombre, partagée entre deux plans de réalité. Elle se retourna et avança lentement vers la place où la garnison alliée, réunie, luttait contre les Infernaux. Au passage, elle posa une main sur l'épaule du gnome éperdu. Une main qui avait perdu tout poids. Une main qui n'était plus qu'une caresse froide.
+
+"J'ai parfaitement conscience du danger, chuchota-t-elle. Mais je ne peux pas me permettre de mourir aujourd'hui.
+- Tu ne comprends pas, gémit Akmar. Quoi que tu fasses, nous allons mourir".
+Hama regarda dans la même direction que le gnome. L'armée de démons atteignait les portes - déjà ouvertes par les Infernaux. A vue d'oeil, elle était cinq fois plus nombreuse que la garnison alliée.
+"Il semble en effet, répondit-elle calmement. Après tout, tu avais raison ce matin. Le bonheur et l'amour ne sont pas faits pour moi. Il fallait que l'on vienne me les voler au moment où ils me revenaient".
+
+Une ombre ne pleure pas.
+
+Elle s'abandonna à la puissance.
+
+
+Ce jour fut un jour funeste qui engendra bien des larmes.
+
+~~
+Gunny débarrassa rageusement son visage des tripes d'elfe qui s'y étaient violemment plaquées. Il cligna des yeux déjà cernés de sang à demi séché et hurla à l'oreille de Darotân : "La retraite ! Il faut sonner la retraite !
+- La Lumière ne recule pas ! hurla le paladin en retour. Les mages, réduisez-moi cette barricade en cendres !"
+
+Le nain frappa du pied sur le sol, furieux, et courut en arrière. Le vacarme causé par les explosions était assourdissant. Des gouttes d'acide atterrirent sur sa barbe et mangèrent la moitié d'une tresse - ce qui acheva de l'enrager.
+
+"Dix hommes avec moi ! hurla-t-il. Dehors ! Suivez-moi !"
+
+Il parvint à s'extirper du massacre. Une quinzaine d'hommes l'avait suivi. Ils coururent vers les engins de siège abandonnés en marge du Chemin de la Gloire.
+
+
+"Fait chier ! lâcha-t-il en crachant une glaire sanguinolente. Salopards d'orcs, vais leur montrer ce que c'est des explosions moi".
+
+
+Les mages incendièrent les forêts de pieux et les barricades. Ils allaient enfin pouvoir se sortir du traquenard, mettre à bas les tours et avancer.
+
+Mais là l'improbable se produisit.
+
+Les orcs avaient prévu un système de défense inédit. Ils avaient creusé à même un petit cratère situé à cinq cents mètres au sud-ouest de la forteresse et installé un complexe de rigoles en khorium pur. Ils avaient envoyé un soldat se poster près des vannes, situées au niveau du cratère, et venaient de lui donner le signal. Un torrent de lave fluide se déversa, guidé par un large canal qui débouchait directement dans le camp, et se ramifiait au niveau de la barricade en cours de destruction.
+
+Le torrent s'élargit donc et se déversa depuis la ligne de front en direction des Alliés.
+
+
+Deux lignes d'hommes brûlèrent dans d'atroces souffrances avant que le phénomène ne soit remarqué. La lave saisissait les pieds et faisait tomber dans des cris horribles les pauvres combattants, qui ne tardaient pas à y mourir.
+
+"Retraite ! hurla Darotân. Retraite !"
+
+La fuite avait déjà commencé. Une fuite éperdue et générale.
+
+Une seule personne faisait encore face à la chape de lave qui, rapidement, se dirigeait vers elle.
+
+Thiwwina - qui, tirant un petit bout de langue, se retroussait les manches. "Ok, fit-elle joyeusement, c'est un défi c'est ça ? Eh bien c'est parti".
+
+Elle s'entoura d'une barrière magique puissante la protégeant des flèches et des explosions. Elle ferma les yeux, fit le vide en elle.
+
+
+
+<i>Vingt-et-un.</i>
+Farôn, armé de son arbalète, visait un à un les lanceurs de grenades perchés sur les toits des bâtiments de l'autre côté de la barricade.
+
+<i>Vingt-deux.</i>
+Il était plaqué contre le rempart nord, près des débris de la grande porte, se cachait à chaque carreau tiré, et ne réapparaissait que pour tirer le suivant.
+
+<i>Vingt-trois.</i>
+
+Une marée hurlante soudain ressortit en trombe et dans le plus complet désordre. Il attendit à l'abri, en chargeant calmement le carreau suivant.
+Il se retourna et vit la gnomette debout, immobile.
+
+Le spectacle était horrible. La terre était imbibée de sang. Et recouverte de cadavres affreusement déchiquetés. Des corps bougeaient encore ; certains soldats rampaient même vers l'extérieur, traînant un ou plusieurs moignons en guise de membres. Il ne sortait de l'ensemble qu'un concert confus de gémissements, de râles et de cris. Le tout martelé en fond par le chant martial des orcs et, commençant à retentir et à s'enfler, leurs longs et puissants beuglements de victoire.
+
+<i>Vingt-quatre.</i>
+Il rechargea de nouveau, en jetant cette fois un oeil du côté de l'armée. Cette dernière se rassemblait à deux cents mètres de là. Les officiers haranguaient les combattants. Il fallait se ressaisir, soigner rapidement les blessés. Danath s'approcha de Darotân. Il lui proposa de passer par ailleurs, de pratiquer une brèche dans le mur sud et de s'y engouffrer.
+Le paladin était fébrile, ne savait que faire. Il piétinait de rage en regardant la lave, incapable de prendre une décision.
+
+<i>Comme d'habitude en cas d'imprévu, il n'y a plus rien à tirer de lui. C'est ce qui a coûté la vie à mon frère.</i>
+
+
+Farôn se retourna encore. Et son visage exprima - chose rare - l'étonnement.
+
+Des éclairs environnaient Thiwwina. Elle avait rouvert les yeux, et ils étaient bleu orage. Elle se concentrait à l'extrême. Dans ses mains, des tourbillons de magie brute condensée. L'air vibrait autour d'elle. Les orcs des toits et des tours avaient abandonné l'idée de la tuer. Les bombes et les balles ne traversaient pas son bouclier. Tous regardaient, impuissants.
+La lave avançait rapidement, fine couche fluide, recouvrant de rouge flamboyant le rouge ocre de la terre ensanglantée.
+
+<i>Vingt-cinq.</i>
+Farôn sourit et se tourna de nouveau.
+<i>A ce que je vois, ça va pas tarder à barder.</i>
+
+
+Il remarqua les airs ahuris de l'armée. Tous les regards des Alliés étaient également fixés sur Thiwwina. Farôn, tout en tendant la corde de l'arbalète au moyen de sa manivelle, pouvait entendre le sifflement de l'air qui tournait en cyclone autour de la gnomette. Des éclairs arcaniques la parcouraient, dans un grondement terrible.
+
+Il se retourna et sursauta.
+Un cri suraigu déchira l'air.
+
+La lave atteignit les pieds de Thiwwina.
+La mage balança soudain une bourrasque de gel devant elle. D'une puissance phénoménale.
+
+Le flot de feu gela. En quelques secondes il s'arrêta, durcit, noircit et même se recouvrit de cristaux de givre. La vague de froid se communiqua aux rigoles et au canal qui sous l'effet du gel foudroyant se fissurèrent ! bien qu'ils soient faits du métal le plus dur de l'Outreterre.
+
+
+Le cri suraigu ne s'arrêtait pas. Les combattants des deux côtés, fascinés, les tympans vibrant douloureusement, observaient.
+
+Thiwwina était au centre d'un typhon de magie bleu électrique. On ne distinguait nettement d'elle au milieu des éclairs que ses yeux, qui émettaient un bleu encore plus clair, plus intense.
+
+Elle leva la main génératrice de cataclysme.
+
+Le cône de tempête s'éleva du sol et se déchaîna contre les restes calcinés de la barricade.
+Tout s'envola, soldats et débris. Tous les orcs qui étaient à moins de cinquante mètres d'elle gelèrent intégralement et instantanément, ainsi que toute matière molle ou organique, le bois, les tissus, les cuirs. Les gangr'orcs, leurs armes et des tonnes de matériaux divers furent violemment projetés et allèrent se pulvériser en fine poussière gelée contre les murs des bâtiments entourant la place centrale.
+
+Elle leva encore un peu le bras, pour le mettre totalement à l'horizontale. Portée maximale.
+
+
+Le cri ne s'était toujours pas arrêté.
+Une onde de choc parcourut le camp, soulevant le sable en un brouillard surnaturel. Thiwwina ajoutait un dernier regain d'énergie à son cône de mort.
+
+Le vent s'empara du sable et le gela. La place centrale fut engloutie totalement sous une tempête de sable destructrice, qui transformait à son tour en poussière de glace tout ce qu'elle touchait. Les gangr'orcs, surpris, n'eurent pas même le temps de crier avant de se dissoudre littéralement dans la tempête et de la nourrir de leurs corps. Les silhouettes des baraquements s'effacèrent également progressivement, rongées en une minute par le fléau gelé. Lequel s'apaisa enfin. Le sable resta en suspens en l'air, comme le temps s'arrêtant après l'apocalypse.
+
+Le cri s'arrêta. Le cyclone entourant la mage se dissipa. Avec le bouclier.
+
+Farôn réagit immédiatement. Il fit un pas et fut derrière elle. Il disparut en l'emportant dans ses bras.
+Il réapparut près de la grande porte, à l'extérieur.
+
+Thiwwina était livide. Ses grands yeux, de nouveau noisette, peinaient à rester ouverts. Elle respirait difficilement.
+
+Mais elle souriait.
+"Vous pouvez les écraser désormais, dit-elle faiblement d'une voix brisée. Qui c'est la meilleure ?
+- C'est toi", répondit tendrement l'elfe, comme on parle à un enfant.
+Elle perdit connaissance, son beau sourire aux lèvres.
+
+~
+Sûr de la victoire, et convaincu d'investir un bastion déjà abandonné par des troupes en fuite - ce qui n'était pas loin d'être le cas -, le chef de l'armée d'orcs et de démons qui avait jailli par surprise de la Citadelle, un gangr'orc particulièrement massif, du genre à être devenu chef de régiment à coups de poing, débarqua dans la place à la tête de ses hommes. Parmi les décombres fumants, la silhouette austère d'Hama se découpait - seule, telle une âme en peine.
+
+Il sourit de toutes ses dents - qu'il avait fort épaisses. Sa bouche s'ouvrit pour ordonner joyeusement le massacre des survivants, mais à la place elle s'étira et resta bée, tandis que ses yeux louchaient et que son visage pâlissait. Il tomba à genoux, suffoquant. Il pleura du sang. Les veines de son crâne chauve apparurent, sombres - sa tête vibrait de souffrance. Il eut un hoquet, et s'effondra enfin tout à fait, avec l'expression du plus profond désespoir.
+
+La silhouette se dressait toujours. Un léger coup de vent balaya la fumée qui l'environnait.
+
+
+Hama regardait l'armée, fixement, calmement.
+
+Derrière elle, la garnison finissait de démanteler les Infernaux. Le plus gros de la troupe arrivait à la rencontre des ennemis. Lesquels, après quelques secondes d'incompréhension et de stupeur, se ressaisirent.
+
+"<i>Faites-moi de la charpie de ces être dégénérés</i>, beugla en démonique un Ered'ruin carapaçonné. <i>Il ne doit rien rester de cette minable petite forteresse</i>.
+- <i>Je me vois dans l'obligation de contrecarrer ces projets</i>", lui répondit la draeneï ténébreuse dans le même langage.
+
+
+Le démon fronça les sourcils. Un ennemi connaissant le démonique, voilà qui ne lui plaisait pas. La garnison achevait de s'organiser derrière elle. Les archers et lanceurs de sorts se dissimulèrent derrière des pans de mur effondrés. Les combattants de contact firent un demi-cercle autour d'elle.
+
+"<i>Vous feriez mieux de vous rendre</i>, cria le démon qui semblait définitivement s'être improvisé chef à la place de l'ancien. <i>Les forces sont trop inégales. Toi, femelle</i>, ajouta-t-il à l'intention d'Hama, <i>ton art m'intéresse, je veux bien te donner une chance de rejoindre nos rangs.</i>
+- <i>En effet, si je vous rejoignais, la bataille serait plus équitable</i>, rétorqua l'ombre en souriant. <i>Mais pardonnez mon manque de fair-play, je préfère rester dans le camp des vainqueurs</i>".
+
+
+Sa voix, malgré l'ironie, était si froide, et résonnait si étrangement dans l'espace, que l'Ered'ruin se surprit à frissonner en l'entendant. Ses épais sourcils se froncèrent davantage.
+
+Il hurla l'ordre d'attaque.
+
+~~
+"C'était quoi ça ? cria Darotân.
+- Qu'importe, répondit Danath, profitons-en, attaquons sans tarder, achevons d'enfoncer leurs lignes et finissons-en.
+- Depuis quand les mages sont-ils capables de faire ça ?" continua de hurler le paladin, complètement fou. Il venait de voir quelqu'un de possiblement plus puissant que lui. Il était en plein drame existentiel, en plein déchirement intérieur. Il regardait la nuée glaciale dans laquelle était plongée Zeth'Gor, hagard, rageur, fulminant, niant.
+
+
+Danath ne perdit pas une seconde et fit charger l'armée. Si Darotân était dans l'incapacité de commander, il le ferait à sa place. La priorité était la victoire. Le paladin suivit la troupe, perdu dans de furieuses pensées.
+
+L'atmosphère était fraîche, mais le brouillard se dissipait très lentement. Les Alliés se ruèrent en avant, emplissant l'espace. Ce n'est qu'arrivés à un mètre de la barricade suivante qu'ils la remarquèrent.
+
+Les gangr'orcs avaient prévu un second renforcement, un demi-cercle bien plus imposant que le premier, qui empruntait ce qui constituait les artères principales du camp en temps normal. Les tours à l'ouest et l'est restaient hors de portée tant qu'on n'avait pas passé la seconde barrière, de même que la hutte du chef au sud.
+
+Du côté orc, on se remettait à grand'peine de l'étonnement suscité par Thiwwina. C'était Gorzu qui haranguait ses propres chefs, pour les réveiller de leur torpeur. De dépit, il hurlait des ordres de partout. Et dans le désarroi général, il fut écouté. Leur seule chance de salut était de faire de nouveau une surprise sanglante aux Alliés, avant qu'ils ne détruisent ces ultimes fortifications, ce qu'ils allaient faire dans la minute, le temps que les mages se placent et que la brume se dissipe encore un peu.
+
+Les orcs des tours, toujours à l'abri derrière leurs meurtrières, reprirent leurs esprits en entendant les ordres. Ils saisirent des flèches spéciales, et les tirèrent un peu au petit bonheur dans la nuée, par dizaines. Les filets qui y étaient accrochés se détachèrent et se déployèrent à mi-course, empêtrant les Alliés par groupes de trois ou quatre. Ces derniers émirent des clameurs diverses. Les orcs postés en retrait près de la hutte du chef firent couler doucement sous les pieds de leurs ennemis, par le même système de rigoles se terminant en deltas, quelques hectolitres d'alcool.
+
+Danath comprit immédiatement et hurla la retraite. Il avait fait une erreur en comptant sur l'effet de surprise engendré par l'exploit inouï de la gnomette.
+
+
+Au moment même où le commandant en chef Trollbane ordonna la retraite, Gorzu, qui avait vaillamment contourné la brume au risque de se faire repérer, avait atteint l'entrée de la forteresse, et tirait sur un levier dissimulé un peu en retrait de la grande porte. Il s'égosilla en donnant le signal - et se mit à tourner frénétiquement, à deux bras, une énorme manivelle du lourd mécanisme attenant au levier.
+
+Au moment du signal, les archers des tours avaient déjà les flèches enflammées encochées. Ils les tirèrent dans l'agglomérat des Alliés hurlant, empêtrés dans leurs filets. La plupart avaient échappé au piège immobilisant - ils coururent vers la grande porte et virent avec des yeux horrifiés une imposante herse d'acier s'élever doucement du sol en lieu et place de l'entrée, conçue pour coller au rempart nord sur une largeur double à celle de la porte, afin d'être sûr de couvrir l'éventuelle brèche pratiquée. La herse était grillagée de lames tranchantes, décourageant toute escalade.
+
+Mais de fait elle le fut, escaladée, en une seconde par une silhouette fugace, qui était demeurée en retrait dehors.
+
+Gorzu la vit, tournant toujours sa manivelle comme un forcené. Il eut un pressentiment. Il entendit la seconde suivante une voix lui murmurer à l'oreille : "Dis-moi, tu crois que je trouverai tout seul comment marche cette jolie machine ?"
+
+Une dague se planta dans sa nuque et fit le tour de la gorge, en une rotation d'une netteté et d'une précision chirurgicales.
+
+Derrière eux l'armée alliée fut plongée dans une mer de flammes et de cris d'horreur et de souffrance.
+
+
+Quelques dernières connexions se firent dans le cerveau de Gorzu. Il se demanda... pourquoi il avait lutté. Mais il n'était plus temps de chercher des réponses. Il mourut en versant une larme.
+
+~~
+Joannes, debout et immaculé dans la tourmente, pria.
+
+Comme beaucoup, il n'avait été atteint ni par les filets ni par les flammes. L'attaque était puissante mais rien n'était terminé.
+
+Du moins, si le soutien demandé lui était accordé.
+
+Son voeu fut exaucé. Il sourit et rouvrit les yeux. La Lumière lui avait manifestement fait une grâce toute particulière pour cette guerre sainte.
+
+
+Il parcourut lentement les rangs, et toucha de ses mains les combattants immobilisés qui mouraient en s'époumonant dans les flammes - lesquelles semblaient se dissiper à son passage.
+
+Ceux qui étaient touchés étaient instantanément et complètement régénérés. Leur peau guérissait intégralement, même les cicatrices disparaissaient. Toute douleur cessait, et la plupart s'affaissaient momentanément, hébétés. Mieux, toute peur, tout désespoir s'envolaient. Il instaurait d'autorité et d'un seul geste la paix dans les corps et les âmes. Le feu brûlait les filets et libérait leurs prisonniers. La Lumière donnait une seconde chance aux Alliés. Les soigneurs encore en vie s'activaient dans les rangs.
+
+Joannes frémit en voyant un draeneï massif tituber, à moitié brûlé, un bras ruisselant de sang, l'autre arrachant une à une trois flèches plantées dans le dos. Stropovitch, démontrant encore une fois sa force d'âme exceptionnelle, continuait de marcher vers l'ennemi, avec des blessures qui auraient directement cloué dans un cercueil le plus vigoureux des combattants.
+
+Il posa doucement la main sur le grand corps haletant. Le guerrier s'arrêta mais n'accorda pas un seul regard au paladin. Ses yeux étaient fixés sur la barricade - ou plutôt sur ceux qu'il y avait derrière, comme s'il pouvait les voir. Des yeux...
+
+Joannes fronça les sourcils.
+
+Rouge sang.
+
+
+Régénéré, le draeneï s'ébroua violemment et reprit sa marche. Une marche conquérante et furieuse. Il sembla à Joannes que sur son passage les flammes... étaient comme absorbées dans le corps du guerrier. Le paladin continua son oeuvre salvatrice d'un air soucieux.
+
+Il fallait neutraliser les archers des tours. S'ils avaient en réserve de quoi réitérer, c'en était fini d'eux. La Lumière avait beau l'habiter, il sentait ses forces diminuer.
+
+Comme pour exaucer son souhait, la tour la plus à l'est fut pulvérisée par une explosion assourdissante, laissant les Alliés comme les orcs complètement ébahis.
+
+~~
+"Har har harrrrrrrrr, en plein dans le mille !"
+
+Gunny était hilare. "Allez, tir suivant !" Quatre hommes placèrent un tronc sur la baliste - que les connaissances de l'ingénieur et leurs muscles avaient réparée en quelques minutes avec des bricoles récupérées à côté. Deux autres soufflèrent comme des forçats pour tendre la corde.
+
+
+Le nain pendant ce temps préparait déjà le troisième carreau - en l'occurrence un morceau d'un autre engin de siège abandonné au bord du Chemin de la Gloire. Il fixa solidement la charge au bout du rondin, un explosif spécial qu'il réservait pour de meilleures occasions, et qu'il avait mis au point juste avant le déclenchement de la guerre-éclair. C'était de la puissance à l'état pur, de très faibles quantités suffisaient pour réduire une de ces tours en miettes. Heureusement il ne se déplaçait jamais sans le matériel nécessaire pour fabriquer rapidement quelques ogives.
+
+Une fois la corde tendue, il passa derrière la baliste et visa soigneusement. Il libéra la corde. Le carreau géant fila comme une fusée et pulvérisa la seconde tour est dans un grondement qui provoqua une secousse du sol. Même à cette distance, on pouvait voir les cadavres de gangr'orcs s'éparpiller dans les airs en délicates arabesques de viscères au milieu des débris de bois. "Har har haaaar, fit Gunny, j'leur avais bien dit que j'leur montrerais, à ces enflures ! Allez, chargez le troisième suppositoire !"
+
+Il prépara le quatrième et dernier rondin en chantonnant dans sa barbe : "Tu l'as voulu, tu l'as eu..."
+
+~~
+<i>Il me fait bien rire l'elfe. J'étais stratège et mesuré c'est ça ? Respectueux et respectable ? Je change, c'est ça, je me pervertis ?</i>
+
+
+Le bleu de sa peau se fonça - elle devint violette.
+
+<i>Je ne suis pas en duel là. Ici c'est le massacre, qu'importe si je fais preuve de sauvagerie, je ne fais que répondre à la leur.</i>
+
+Ses yeux lancèrent des flammes. Il parvint devant les fortifications sud, celles qui bordaient la grande hutte.
+
+<i>Je maîtrise. Je peux le faire. Je dois cesser de réfréner, je prends plus de risques en me contenant qu'en contrôlant le flux. Et puis...</i>
+
+Le feu qui achevait de brûler l'alcool lécha la peau de ses jambes, la parcourut, enveloppa doucement son corps, amoureusement.
+
+
+<i>CE MISERABLE RAMASSIS DE BOIS DOIT BRULER, AINSI QUE TOUS CEUX DERRIERE, TOUS, ILS DOIVENT SOUFFRIR ET MOURIR</i>.
+
+Il ouvrit la bouche et cracha de longues flammes démoniaques, des flammes surnaturelles, qui réduisirent instantanément en fines cendres volatiles une partie de la barricade. Stropovitch, les poings serrés férocement sur les gardes de ses épées, emprunta le chemin pratiqué, en laissant dans la suie de profondes empreintes fumantes de sabot.
+
+Une silhouette fière et massive le regarda s'éloigner, puis lui emboîta le pas avec détermination, en sortant de son dos une énorme masse à deux mains étincelante. L'expression de Darotân était étrange. Il avait le sourire d'un fou, un sourire de défi et d'envie de massacre, mais en même temps les dents serrées et grinçantes d'un combattant indécis et angoissé.
+
+Derrière, sur la place centrale, les Alliés rassemblaient leurs forces. La brume glissait en direction de la grande hutte, masquant aux autres le départ impulsif et irréfléchi des deux draeneïs. Les soldats faisaient éclater cris de joie, applaudissements généreux et rires nerveux et sonores à chaque nouvelle tour qui explosait. Seul Joannes, l'air sombre, ne parvenait plus à détourner ses yeux du sud, saisi d'un formidable pressentiment.

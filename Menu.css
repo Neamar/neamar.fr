@@ -1,0 +1,177 @@
+body
+{
+	background:transparent url("http://neamar.fr/Pics/CSS/fond2.jpg") repeat scroll;
+	font-size:80%;
+}
+
+/*Le menu */
+
+#menu
+{
+	background:transparent url("http://neamar.fr/Pics/CSS/tile.png") repeat-x;
+	position:fixed;
+	top:0;
+	left:0;
+	height:36px;
+	width:100%;
+	z-index:1000;
+}
+
+/* Les conteneurs */
+#menu dl
+{
+	float:left;
+	width:18%;
+	padding:0;
+	margin:0;
+}
+
+/* Le caption du menu*/
+#menu dl dt
+{
+	cursor: pointer;
+	text-align:center;
+	width:130px;
+	background:url("http://neamar.fr/Pics/CSS/menu.png") no-repeat right 2px;
+}
+#menu dl:hover dt
+{
+	background-image:url("http://neamar.fr/Pics/CSS/menu_hover.png");
+}
+
+#menu dl .Single_Item
+{
+	background-image:url("");
+	margin-top:0;
+}
+#menu dl:hover .Single_Item
+{
+	background-image:url("http://neamar.fr/Pics/CSS/single_menu_hover.png");
+}
+
+/* Les liens */
+#menu dl dt a, #menu dl dd a
+{
+	display:block;
+	padding:0;
+	margin:0;
+	padding-top:8px;
+	font-weight:bold;
+	text-decoration:none;
+	font-family: verdana,arial,sans-serif;
+	color:white;
+	height:28px;
+}
+#menu dl dd a
+{
+	font-weight:normal;
+	height:1em;
+}
+
+/* Le contenu du menu */
+#menu dl dd
+{
+	display:none;
+	margin: 0;
+	padding: 0;
+	padding-bottom:1px;
+	width:259px;
+}
+#menu dl:hover dd
+{
+	display:block;
+}
+
+/* Les élements internes */
+#menu dl dd ul
+{
+	list-style-type: none;
+	list-style-position:outside;
+	padding:0;
+	margin:0;
+	opacity:0.9;
+}
+
+/* Encore... */
+#menu dl dd li
+{
+	margin:0;
+	padding-left:5px;
+	height:22px;
+	background-color:rgb(101,155,177);
+	background-image:url("http://neamar.fr/Pics/CSS/sous_menu_bleu.png");
+}
+#menu dl dd li:hover
+{
+	background-color:rgb(75,143,0);
+	background-image:url("http://neamar.fr/Pics/CSS/sous_menu_bleu_hover.png");
+	padding-left:25px;
+	opacity:1;
+	width:234px;
+}
+
+/* Les améliorations graphiques : le conteneur de fin de liste */
+#menu dl dd ul .fin_liste
+{
+	background-image:url("http://neamar.fr/Pics/CSS/sous_menu_bleu_fin.png");
+	height:14px;
+	background-color:transparent;
+}
+#menu dl dd ul .fin_liste:hover
+{
+	background-image:url("http://neamar.fr/Pics/CSS/sous_menu_bleu_fin.png");
+	background-color:transparent;
+}
+
+/* Les sous-sous-menus, rarement utilisés */
+#menu dl dd li ul
+{
+	border:1px solid black;
+	border-top:0px;
+	display:none;
+	position:relative;
+	left:150px;
+	top:-21px;
+	width:228px;
+}
+#menu dl dd li:hover ul
+{
+	display:block;
+}
+
+#menu dl dd li li
+{
+	background-image:url("http://neamar.fr/Pics/CSS/sous_menu_bleu_reversed_tiny.png");
+}
+
+#menu #PayPal
+{
+	display:none;
+	opacity:0.2;
+	filter:alpha(opacity=20);
+}
+#menu:hover  #PayPal
+{
+	display:block;
+}
+#menu #PayPal:hover
+{
+	opacity:1;
+}
+
+#menu #GoogleSearch
+{
+	opacity:0.2;
+	filter:alpha(opacity=20);
+}
+#menu #GoogleSearch:hover
+{
+	opacity:1;
+}
+
+
+#Main
+{
+	position:absolute;
+	top:65px;
+}

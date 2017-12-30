@@ -1,0 +1,4 @@
+AuthName "Pages d'administration protégée"
+AuthType Basic
+AuthUserFile "/homepages/38/d222425658/htdocs/lib/cron/.htpasswd"
+Require valid-user

@@ -1,0 +1,20 @@
+/*Si vos images sont toutes de la forme <img src="..." alt="..." class="TexPic" />*/
+.TexPic
+{
+	margin:3px 0;/*Décoller l'images des lignes supérieures et inférieures*/
+	vertical-align:middle;/*La centrer par rapport à la ligne d'écriture*/
+}
+
+/*Les mathématiques "inline"*/
+.TexTexte
+{
+	white-space:nowrap;
+	font-style:italic;
+	font-size:0.9em;
+	color:rgb(30,30,30);
+}
+
+.TexTexte sub
+{
+	font-size:.75em;
+}

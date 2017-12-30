@@ -1,0 +1,50 @@
+<?php
+function preg_replace_wb($pattern,$replacement,&$subject)
+{
+	preg_match_all($pattern,$subject,$MatchingString,PREG_SET_ORDER);//$MatchingString now hold all strings matching $pattern.
+
+	$SVGReplacement=$replacement;
+	foreach($MatchingString as $Result)
+	{//For each result :
+		$replacement=$SVGReplacement;
+		foreach($Result as $n=>$Match)
+		{//And for each capturing parenthesis
+			if($n>0 && strpos($Match,'{')!==false)
+			{//There is at least one brace in our string, we'll need to improve the regexp.
+				$InitialMatch=$Match;
+				$Offset=strpos($subject,$Match,strpos($subject,$Result[0])) + 1;//Switch the cursor to the beginning of our string in the whole $subject.
+				$Start=$Offset - 1;//$Offset start right after the brace : for \i{something}, $Offset is on the "s" and $Start on the "{".
+				$Size=strlen($subject)-1;//We need to compute it every time cause every match may change the size of our string.
+				$NestingLevel=0;//How deep are we ?
+
+				while($NestingLevel>=0)
+				{//Browse the string, looking for braces...
+					$Open=strpos($subject,'{',$Offset);//Find the next opening brace
+					$Close=strpos($subject,'}',$Offset);//Find the next closing
+					if($Close!==false && ($Open===false || $Close<$Open))//Closest brace is a closing one.
+					{
+						$NestingLevel--;
+						$Offset=$Close+1;//Move the cursor to it's new position
+					}
+					elseif($Open!==false && ($Close===false || $Open<$Close))//Closest brace is an opening one
+					{
+						$NestingLevel++;
+						$Offset=$Open+1;//Move the cursor to it's new position
+					}
+					elseif($Open===false && $Close==false)
+						break;//Uh oh... something is wrong !
+				}
+				$Offset--;
+
+				if($NestingLevel>=0)
+					exit("Not enough braces, at least one closing brace seems to be missing");
+
+				$Match=substr($subject,$Start,$Offset-$Start);//Replace the regexp Match with the real Match we just computed.
+				$Result[0]=str_replace($InitialMatch,$Match,$Result[0]);//Change the whole match to reflect our new choice.
+			}
+			$replacement=str_replace('$' . $n,$Match,$replacement);//Compute $replacement string.
+		}
+		$subject=str_replace($Result[0],$replacement,$subject);//Replace in subject with computed $replacement.
+	}
+	return $subject;
+}

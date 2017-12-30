@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" android:orientation="vertical" android:id="@+id/GlobalLayout">
+
+<!-- Disclamer -->
+<!--<TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/disclamer"/>-->
+
+<!-- Destinataire -->
+<TextView android:id="@+id/Destinataire_TV" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/DestinataireCaption"></TextView>
+<AutoCompleteTextView android:id="@+id/Destinataire_ET" android:hint="@string/DestinataireDefaut" android:layout_width="fill_parent" android:layout_height="wrap_content"></AutoCompleteTextView>
+
+
+<!--  Message -->
+<TextView android:id="@+id/Message_TV" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/MessageCaption"></TextView>
+<EditText android:id="@+id/Message_ET" android:layout_height="wrap_content" android:hint="@string/MessageDefaut" android:layout_width="fill_parent" android:maxLength="160"></EditText>
+
+<!-- Répétitions -->
+<TextView android:id="@+id/Repetitions_TV" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/RepetitionsCaption"></TextView>
+<Spinner android:id="@+id/Repetitions_S" android:layout_width="fill_parent" android:layout_height="wrap_content" android:drawSelectorOnTop="true" android:prompt="@string/RepetitionsCaption" />
+
+
+<!-- Go ! -->
+<LinearLayout android:layout_height="wrap_content" android:id="@+id/CenterStart" android:orientation="horizontal" android:layout_width="fill_parent" android:gravity="center">
+	<ImageButton android:id="@+id/Go_B" android:layout_height="wrap_content" android:src="@android:drawable/ic_media_play" android:layout_width="wrap_content" android:layout_gravity="center"></ImageButton>
+</LinearLayout>
+<ProgressBar android:id="@+id/Progress_PB" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?android:attr/progressBarStyleHorizontal"></ProgressBar>
+
+</LinearLayout>

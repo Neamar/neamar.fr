@@ -1,0 +1,15 @@
+# On utilise PHP5 pour les classes...
+AddType x-mapp-php5 .php
+AddHandler x-mapp-php5 .php
+
+ErrorDocument 404 /Erreur.php?Erreur=404
+ErrorDocument 403 /Erreur.php?Erreur=403
+ErrorDocument 500 /Erreur.php?Erreur=500
+
+<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf)$">
+	Header set Expires "Thu, 15 Apr 2015 20:00:00 GMT"
+</FilesMatch>
+
+RedirectPermanent /OT2J/online.php http://neamar.fr/Res/OT2J
+RedirectPermanent /Retrospective2008.php http://blog.neamar.fr/component/content/article/5-looking-back/30-retrospective-2007-2008-neamar
+RedirectPermanent /Retrospective2009.php http://blog.neamar.fr/component/content/article/5-looking-back/37-retrospective-2008-2009-neamar

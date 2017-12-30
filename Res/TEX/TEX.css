@@ -1,0 +1,27 @@
+/* Feuille de style permettant de récupérer directement un maximum d'informations lors de la conversion. */
+
+/* Les éléments par défaut : */
+p
+{
+	text-indent:4em;
+}
+
+p.block_math
+{
+	text-align:center;/* $$ */
+}
+
+.underline
+{
+	text-decoration:underline;
+}
+
+/* Les environnements prédéifnis */
+.abstract
+{
+}
+.abstract_title
+{
+	font-weight:bolder;
+	text-align:center;
+}

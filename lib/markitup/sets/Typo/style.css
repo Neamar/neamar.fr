@@ -1,0 +1,209 @@
+/* Options de premier niveau */
+.markItUp .typo_gras a{
+	background-image:url(images/bold.png);
+}
+.markItUp .typo_italique a{
+	background-image:url(images/italic.png);
+}
+
+.markItUp .typo_couleurs a{
+	background-image:url(images/colors/color.png);
+}
+
+/* Liste des couleurs */
+.markItUp .typo_couleur_bleu a{
+	background-image:url(images/colors/tag_blue.png);
+}
+
+.markItUp .typo_couleur_orange a{
+	background-image:url(images/colors/tag_orange.png);
+}
+
+.markItUp .typo_couleur_vert a{
+	background-image:url(images/colors/tag_green.png);
+}
+
+.markItUp .typo_couleur_jaune a{
+	background-image:url(images/colors/tag_yellow.png);
+}
+
+.markItUp .typo_couleur_rose a{
+	background-image:url(images/colors/tag_pink.png);
+}
+
+.markItUp .typo_couleur_violet a{
+	background-image:url(images/colors/tag_purple.png);
+}
+
+.markItUp .typo_couleur_rouge a{
+	background-image:url(images/colors/tag_red.png);
+}
+
+
+/* Liste des balises de mise en forme */
+.markItUp .typo_MEF a{
+	background-image:url(images/size/size.png);
+}
+
+.markItUp .typo_tailles a{
+	background-image:url(images/size/size.png);
+}
+
+.markItUp .typo_gros a{
+	background-image:url(images/size/big.png);
+}
+
+.markItUp .typo_petit a{
+	background-image:url(images/size/small.png);
+}
+
+.markItUp .typo_ss a{
+	background-image:url(images/sans-serif.png);
+}
+
+.markItUp .typo_ms a{
+	background-image:url(images/monospace.png);
+}
+
+.markItUp .typo_exposant a{
+	background-image:url(images/up.png);
+}
+
+.markItUp .typo_indice a{
+	background-image:url(images/down.png);
+}
+
+/* Titres et sous titre */
+.markItUp .typo_introsection a{
+	background-image:url(images/section/intro_section.png);
+}
+
+.markItUp .typo_section a{
+	background-image:url(images/section/section.png);
+}
+
+.markItUp .typo_subsection a{
+	background-image:url(images/section/subsection.png);
+}
+
+.markItUp .typo_subsubsection a{
+	background-image:url(images/section/subsubsection.png);
+}
+
+
+
+.markItUp .typo_quote a{
+	background-image:url(images/quote.png) !important;
+}
+
+.markItUp .typo_century a{
+	background-image:url(images/century.png);
+}
+
+.markItUp .typo_footnote a{
+	background-image:url(images/footnote.png);
+}
+
+.markItUp .typo_mathematiques a{
+	background-image:url(images/mathematiques.png) !important;
+}
+
+
+/* Deuxième section */
+.markItUp .typo_image a{
+	background-image:url(images/image.png);
+}
+.markItUp .typo_lien a{
+	background-image:url(images/link.png);
+}
+
+/* Troisième section */
+.markItUp .typo_item a{
+	background-image:url(images/item.png);
+}
+
+/* Plus d'options */
+.markItUp .typo_plus a{
+	background-image:url(images/plus.png);
+}
+
+.markItUp .typo_trait a{
+	background-image:url(images/trait.png);
+}
+
+.markItUp .typo_trait_court a{
+	background-image:url(images/trait_court.png);
+}
+
+.markItUp .typo_verbatim a{
+	background-image:url(images/verbatim.png) !important;
+}
+
+.markItUp .typo_typographie a{
+	background-image:url(images/typographie.png);
+}
+
+/* Les environnements */
+.markItUp .typo_environnements a{
+	background-image:url(images/env/env.png);
+}
+
+.markItUp .typo_itemize a{
+	background-image:url(images/env/itemize.png);
+}
+
+.markItUp .typo_enumerate a{
+	background-image:url(images/env/enumerate.png);
+}
+
+.markItUp .typo_li a{
+	background-image:url(images/env/item.png);
+}
+
+.markItUp .typo_chart a{
+	background-image:url(images/env/chart.png);
+}
+
+.markItUp .typo_table a{
+	background-image:url(images/env/table.png);
+}
+
+.markItUp .typo_column a{
+	background-image:url(images/env/column.png);
+}
+
+.markItUp .typo_code a{
+	background-image:url(images/env/code.png);
+}
+
+.markItUp .typo_indente a{
+	background-image:url(images/env/indented.png);
+}
+
+.markItUp .typo_preparser a{
+	background-image:url(images/env/preparser.png);
+}
+
+.markItUp .typo_replace a{
+	background-image:url(images/env/replace.png);
+}
+
+.markItUp .typo_replacepp a{
+	background-image:url(images/env/replacepp.png);
+}
+
+/* Affichage de l'aperçu */
+
+.markItUp .typo_help a {
+	background-image:url(images/help.png);
+}
+
+.markItUp .typo_preview a {
+	background-image:url(images/preview.png);
+}
+
+.typo_visible
+{
+	display:inline !important;
+	padding-left:18px !important;
+}

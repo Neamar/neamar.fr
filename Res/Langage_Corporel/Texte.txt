@@ -1,0 +1,117 @@
+DISCLAMER : Cette liste n'est qu'une aide à la lecture corporelle. Notons qu'un bon interlocuteur pourra falsifier chacune de ces postures, et que certaines d'entre elles peuvent être dûes à des problèmes corporels (mal au dos, torticolis, ambylopie, troubles anxieux...)
+
+\section{Duperies}
+\subsection{Lire le mensonge}
+\begin{enumerate}
+\li Répétition de mots similaires dans plusieurs phrases
+\li Volume de la voix qui monte
+\li Yeux du menteur restants vissés sur ceux de son interlocuteur - une façon de voir si le récepteur a cru au mensonge
+\li Clignements d'yeux répétitifs
+\li Aucun clignement d'yeux (plus fiable que le critère précédent)
+\li Yeux qui regardent en haut à gauche (peut aussi signifier que le sujet cherche à répondre de façon créative)
+\end{enumerate}
+
+
+\subsection{Lire celui qui ne se croit pas lui même}
+\begin{enumerate}
+\li Expressions asymètriques (un côté du visage exprime la tristesse, l'autre reste neutre)
+\li Caresses de la main avec son pouce
+\end{enumerate}
+
+
+\subsection{Lire celui qui ne vous croit pas}
+\begin{enumerate}
+\li Se touche la face pendant la conversation.
+\end{enumerate}
+
+
+
+
+\section{Dans un débat}
+\subsection{Lire l'opposition}
+\begin{enumerate}
+\li Croisements de bras. Peut aussi indiquer que la personne a froid ! Dans un débat amical, peut signifier que la personne a des pensées profondes et souhaite établir une barrière inconsciente entre ses interlocuteurs et lui.
+\li Absence de contacts visuels.
+\li La combinaison des bras croisés avec un contact oculaire permanent peut signifier que la personne est gênée, ou souhaite intervenir.
+\li Regards allant d'un oeil à l'autre, puis à votre front : l'interlocuteur prend une position autoritaire.
+\li Regards allant d'un oeil à l'autre, puis à votre nez : l'interlocuteur pense que la conversation est "à armes égales" et qu'aucun des deux parties n'a la supériorité.
+\li Expression faciale "neutre" : hostilité.
+\end{enumerate}
+
+\subsection{Lire un problème mineur}
+\begin{enumerate}
+\li La combinaison des bras croisés avec un contact oculaire permanent lors d'un débat peut signifier que la personne est gênée, ou souhaite intervenir.
+\li Regards francs, mains grattant le menton ou touchant l'oreille : votre interlocuteur ne vous croit pas.
+\li Sautes d'attentions de votre interlocuteur, yeux qui regardent "ailleurs" pour de longues durées : il ne vous croit pas.
+\li La tête penche d'un côté : il a besoin de plus d'informations (peut aussi indiquer un problème mineur, (voir aussi cf. \ref[Lire l'ennui]{Lire l'ennui}) (les chiens font de même)
+\end{enumerate}
+
+\subsection{Lire l'ennui}
+\begin{enumerate}
+\li La tête penche d'un côté (voir aussi cf. \ref[Lire un problème mineur]{Lire un problème mineur})
+\li Les yeux sont plantés dans le locuteur, mais "n'ont pas le focus" (sont ailleurs).
+\end{enumerate}
+
+\subsection{Lire le soutien}
+\begin{enumerate}
+\li Contact oculaire prolongé. Attention, peut aussi signifier que votre adversaire n'a pas assez confiance en vous et préfère ne pas vous quitter des yeux. De même, si la personne joue avec quelque chose, son attention est sûrement ailleurs.
+\li Posture franche, maintien et écoute corrects.
+\end{enumerate}
+
+\section{Lire une émotion forte}
+\begin{enumerate}
+\li Plissements du front
+\end{enumerate}
+
+\subsection{Lire l'amour}
+\begin{enumerate}
+\li \i{Nota} : l'amour (et l'interêt sexuel) est souvent exprimé non à partir du corps, mais à partir des paroles.
+\li Regards brefs, puis rapides échanges d'oeillades.
+\li Regards allant d'un oeil à l'autre, puis à la bouche.
+\li Grands gestes exagérés
+\li Copie du langage corporel et des mouvements
+\li Croisements de jambes
+\li Genoux pointant vers l'être aimé
+\li Jeux avec les cheveux
+\li Pupilles dilatés (aussi signes de peur, colère ou excitement)
+\end{enumerate}
+
+\subsection{Lire le dégoût}
+\begin{enumerate}
+\li Moue explicite
+\end{enumerate}
+
+
+\subsection{Lire la résolution}
+\begin{enumerate}
+\li "Applaudir" des mains, ou les rejoindre comme pour prier
+\end{enumerate}
+
+
+\section{Lire un état d'esprit}
+\begin{enumerate}
+\li Mains sur les genous : prêt à toute éventualité
+\li Mains sur les côtes : impatience
+\li Mains derrière le dos (style militaire) : self-contrôle
+\li Un pied sur le bras d'une chaise : indifférence
+\li Jambes et pieds pointés dans la même direction : le direction sur laquelle est l'attention.
+\li Bras croisés : subversion (cf. Débats) ;
+\li Rotations du bassin
+\li Ajustements des vêtements
+\li Plus complexe, dilatation de la pupille.
+\end{enumerate}
+
+
+\section{Mettre quelqu'un à l'aise}
+\begin{enumerate}
+\li Copier son langage corporel et sa position physique
+\end{enumerate}
+
+~~~~
+
+
+Références :
+\item \l[http://en.wikipedia.org/wiki/Eye_contact]{Eye contact} ;
+\item \l[http://en.wikipedia.org/wiki/Body_language]{Body language} ;
+\item \l[http://en.wikipedia.org/wiki/Facial_Action_Coding_System]{Facial Action Coding System} ;
+\item \l[http://en.wikipedia.org/wiki/Microexpressions]{Micro-expressions}.

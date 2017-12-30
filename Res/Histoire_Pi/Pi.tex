@@ -1,0 +1,101 @@
+Un verset peu connu de la Bible affirme la chose suivante :
+
+\begin[1 Rois, 7-23]{quote}
+ Il fit aussi une mer de fonte qui avait dix coudées d'un bord à l'autre ; ronde tout autour, de cinq coudées de haut ; et un cordon de trente coudées l'environnait tout autour.
+\end{quote}
+
+Le même verset peut être trouvé dans le second livre des Chroniques, \l[http://mar.saintebible.com/2_chronicles/4.htm]{chapitre 4 verset 2}. Il intervient dans la liste des spécifications du grand temple de Salomon, construit en 950 avant J.-C. L'intérêt du passage ? Il affirme que $\pi = 3$. Ce qui n'est pas une valeur très correcte bien évidemment, même pour l'époque puisque les Égyptiens utilisaient la valeur $\frac{25}{8} \sim 3.125$ et les Mésopotamiens $\sqrt{10} \sim 3.162$ à une époque bien antérieure. À la décharge des architectes de Salomon, signalons qu'il s'agissait d'une oeuvre d'art très large pour lequel un haut degré de précision géométrique était inatteignable ; \l[http://www-groups.dcs.st-and.ac.uk/~history/Extras/Graf_theory.html]{d'autres interprétations} permettent quant à elles d'augmenter significativement la précision annoncée.
+
+L'idée que le ratio entre la circonférence d'un cercle et son diamètre soit constant est connu depuis des temps immémoriaux. Les premières approximations connues de $\pi$ - parmi lesquelles la valeur "biblique" de 3 - étaient très certainement obtenues par la mesure. Dans un \l[http://fr.wikipedia.org/wiki/Papyrus_Rhind]{papyrus Égyptien} daté de 1650 av. J.-C, on trouve la valeur de $4 \times (\frac{8}{9})^2$ comme approximation pour $\pi$.
+
+Le premier calcul théorique de la constante semble provenir d'Archimède de Syracuse, qui obtint l'inégalité :
+
+$$\frac{223}{71} < \pi < \frac{22}{7}$$
+
+Avant de donner l'idée de la preuve, notons la sophistication requise pour un tel calcul sur une inégalité. Archimède savait - ce que beaucoup de notre monde actuel ignorent encore - que $\pi$ ne valait pas exactement $\frac{22}{7}$, et n'affirma jamais avoir trouvé la véritable valeur. Si l'on prend la moyenne de ces deux bornes, on obtient $3.148$, soit une erreur de $0.0002$.
+
+\image[Calcul de pi par la méthode d'Archimède]{Images/Archimede.jpeg}
+
+Voilà l'intuition d'Archimède : considérons un cercle de rayon 1, dans lequel on inscrit le polygone régulier de $3 \times 2^{n-1}$ côtés et de demi-périmètre $b_n$, et circonscrit un autre polygone régulier de $3 \times 2^{n-1}$ côtés et de demi-périmètre $a_n$.
+Vous trouverez ici le diagramme explicatif pour le cas $n = 2$.
+Cette procédure définit une séquence croissante $b_1, b_2, b_3,\ldots$ et une séquence décroissante $a_1, a_2, a_3,\ldots$ de telle façon que les deux séquences aient pour limite $\pi$ quand on crée un polygone avec une infinité de côtés.
+En utilisant la notation trigonométrique, on peut voir que les demis-périmètres sont donnés par les relations $a_n = K\tan(\frac{\pi}{2K})$ et $b_n=K\sin(\frac{\pi}{K})$ pour $K = 3 \times 2^{n-1}$.
+De la même façon, nous avons $a_{n+1}=2K\tan(\frac{\pi}{2K})$ et $b_{n+1} = 2K\sin(\frac{\pi}{2K})$.
+
+Trigonométriquement, on prouve alors facilement que $\frac{1}{a_n} + \frac{1}{b_n} = \frac{2}{a_{n+1}}$ (1) et $a_{n+1}b_n = b_{n+1}^2~$ (2).
+
+Archimède, en commençant par $a_1 = 3\tan(\frac{\pi}{3}) = 3\sqrt{3}$ et $b_1 = 3\sin(\frac{\pi}{3}) = \frac{3\sqrt{3}}{2}$ calcula $a_2$ en utilisant (1), puis $b_2$ avec (2), et ainsi de suite jusqu'à obtenir $a_6$ et $b_6$, en concluant alors $b_6 < \pi < a_6$.
+
+Notez bien que l'usage de la trigonométrie ici est anachronique : Archimède n'avait pas l'avantage de notre notation algébrique et trigonométrique et dut calculer (1) et (2) par des moyens purement géométriques. Ajoutons qu'il n'avait même pas l'avantage de la base 10, et qu'en conséquence le calcul de $a_6$ et $b_6$ était loin d'être trivial. Bref, c'est un miracle d'imagination et de calcul, et il ne faut pas se demander "pourquoi s'est-il arrêté à 6 ?", mais "comment est-il arrivé à 6 ?"
+
+À part ces problèmes "matériels", il n'y a aucune raison pour ne pas continuer. De nombreuses personnes l'ont fait ; citons entres autres :
+
+\begin{tabular}
+\caption Découvertes de pi par la méthode d'Archimède
+\head
+Découvreur & Date & Résultat
+\body
+Ptolemée & vers -150 & $3.1416$ \\
+Zu Chongzhi & -430-501 &	$\frac{355}{113}$ \\
+al-Khwarizmi & vers  800 &	$3.1416$ \\
+al-Kashi & vers 1430 &	14 décimales \\
+Viète & 1540-1603 &	9 décimales \\
+Roomen & 1561-1615 &	17 décimales \\
+Van Ceulen & vers 1600 &	35 décimales
+\end{tabular}
+
+À l'exception de Zu Chongzhi pour lequel on ne connaît rien et dont il semble peu probable qu'il ait eu vent des travaux d'Archimède, aucun développement théorique ne fut apporté dans ces améliorations, simplement plus d'huile de coude dans le calcul. On peut remarquer comme l'élite du calcul passe de l'Europe vers l'Est avec le temps : Al-Kwarizmi vivait à Bagdad et donna son nom aux algorithmes\footnote{Ce qui explique pourquoi on écrit "algorithme" et pas "algorythme".}, tandis que le titre de son livre \i{al jabr} donna notre mot \i{algèbre}. Al-Kashi vivait plus à l'Est, en Samarkand, tandis que Zu Chongzhi - faut-il le préciser ? - vivait en Chine.
+
+La renaissance européenne apporta enfin un nouveau monde mathématique. Parmi les premiers effets, on trouve l'émergence de formules mathématiques permettant le calcul de $\pi$. L'une des premières vient de Wallis (1616-1703) :
+
+$$\frac{\pi}{2} = \frac{2}{1}\times\frac{2}{3}\times\frac{4}{3}\times\frac{4}{5}\times\frac{6}{5}\times\frac{6}{7}\times \frac{8}{7}\times\frac{8}{9}\times\ldots$$
+
+Et l'une des plus connues :
+$$\frac{\pi}{4} = 1 - \frac13 + \frac15 -\frac17 + \ldots$$
+Formule souvent attribuée à Leibniz (1646-1716), même si elle semble avoir été découverte par James Gregory (1638-1675).
+
+Ces deux formules sont particulièrement étonnantes, puisque qu'elles font émerger pi - nombre "géométrique" - de sommes arithmétiques. Ces égalités sont les précurseurs de l'émerveillement qui naîtra plus tard envers les calculs infinis et qui font la richesse des mathématiques modernes (séries, développement limités).
+
+Cela dit, aucune de ces formules n'est utile pour calculer $\pi$ : dans la série de Gregory par exemple, pour obtenir 4 décimales correctes il faut une erreur inférieure à $0.00005 =  \frac{1}{20000}$ ce qui nécessite donc la sommation de 10000 termes. Cependant, Gregory montra la formule plus générale du développement limité d'arc-tangente pour $x$ entre $-1$ et $1$ :
+$$\tan^{-1}(x) = x - \frac{x^3}{3} + \frac{x^5}{5} - \ldots$$
+
+Formule de laquelle résulte incidemment la première lorsqu'on remplace $x$ par $1$. L'astuce va être d'utiliser le fait que $\tan^{-1}(\frac{1}{\sqrt{3}}) = \frac{\pi}{6}$ ce qui permet alors d'écrire :
+$$\frac{\pi}{6} = \frac{1}{\sqrt{3}} (1 - \frac{1}{3 \times 3^1} + \frac{1}{5 \times 3^2} - \frac{1}{7 \times 3^3} + \ldots)$$
+Cette série converge bien plus rapidement : le dixième terme est $\frac{1}{19 \times 3^9\sqrt{3}}$, qui est inférieur à $0.00005$ et nous assure alors que nous avons quatre décimales correctes après le neuvième terme.
+On peut faire encore mieux en remarquant que $\frac{\pi}{4} = \tan^{-1}(\frac12) + \tan^{-1}(\frac13)$ et en calculant avec la formule précédente les développements de $\tan^{-1}(\frac12)$ et $\tan^{-1}(\frac13)$.
+
+On obtiendra évidemment une convergence extrêmement rapide si on pouvait obtenir une formule du type $\frac{\pi}{4} = \tan^{-1}(\frac{1}{a}) + \tan^{-1}(\frac{1}{b})$ avec $a$ et $b$ très grands. Et fort heureusement, en 1706 Machin trouva une formule de ce genre : $\frac{\pi}{4} = 4\tan^{-1}(\frac{1}{5}) + \tan^{-1}(\frac{1}{239})$. Il n'y a pas de réelles difficultés à prouver cette formule\footnote{Si on sait prouver la première formule avec $\frac12$ et $\frac13$, c'est la même chose avec plus de chiffres !}, en revanche en avoir l'idée est un autre problème !
+
+Avec une telle formule disponible, la seule difficulté devint l'ennui du calcul. Faut-il le préciser ? certaines personnes ne furent pas rebutées par la vaste quantité de temps demandée par le calcul et continuèrent le calcul \i{ad lib}. L'un d'eux, un anglais nommé Shank, utilisa la formule de Machin pour calculer $\pi$ avec 707 décimales, publiant le résultat de ce pensum en 1873. Shanks obtint ainsi l'immortalité... pour une raison que nous détaillerons après.
+
+Voici un rapide sommaire des améliorations :
+\begin{tabular}
+1699 & Sharp utilisa le résultat de Gregory pour obtenir 71 décimales. \\
+1701 & Machin améliora la formule et obtint ainsi 100 décimales, les suivants utiliseront sa formule. \\
+1719 & de Lagny trouva 112 décimales. \\
+1789 & Vega obtint 126 nombres.\\
+1794 & Vega toujours, 136.\\
+1841 & Rutherford, 152.\\
+1853 & Rutherford, 440.\\
+1873 & Shanks, 707... dont 527 de corrects !
+\end{tabular}
+
+Shanks savait que $\pi$ est irrationnel, puisque cela avait été prouvé en 1761 par Lambert. Peu après son calcul, Lindemann montra que $\pi$ est transcendant, autrement dit que $\pi$ n'est la solution d'aucune équation polynomiale avec des c\oefficients réels - ce qui prouva aussi que le problème de la quadrature du cercle était impossible ; aucune construction à la règle et au compas ne pouvant donner un carré d'aire égale à un cercle.
+
+Peu après le calcul de Shanks - encore ! - une curiosité statistique fut constatée par de Morgan, qui remarqua que dans les derniers chiffres parmi les 707 on trouvait très peu de 7. De Morgan mentionna le problème dans son \i{Budget des paradoxes} en 1872, et cela resta une curiosité jusqu'en 1945, quand Ferguson découvrit que Shanks avait fait une erreur dans la 528\up{ème} décimale, après laquelle tous les résultats étaient \b{faux} !
+
+En 1949, un ordinateur fut utilisé pour calculer $\pi$ avec une précision de 2000 décimales. Dans son résultat - et dans tout ceux qui suivirent - le nombre de 7 ne varia pas significativement, et la séquence obtenue a jusqu'ici passée tous les tests statistiques pour l'aléatoire.
+
+~~~~
+Avant de conclure, un mot sur l'origine du symbole $\pi$.
+Oughtred, en 1647, utilisa le symbole $\frac{d}{\pi}$ pour indiquer le rapport entre le diamètre d'un cercle et sa circonférence. Gregory, en 1697, utilisa $\frac{\pi}{r}$ pour indiquer le rapport entre la circonférence d'un cercle et son rayon. Le premier à utiliser $\pi$ dans son sens actuel fut un mathématicien du nom de Jones, qui dit en 1706 que $3.14159\ldots = \pi$. Euler adopta le symbole avec le succès qu'on lui connaît !
+
+Pour terminer l'article sur une note plus humoristique, citons l'expérience de Buffon : si l'on a une grille constituée de lignes parallèles séparées par une distance d'une unité et que l'on fait tomber une épingle de longueur $k < 1$ sur cette grille, la probabilité que l'épingle tombe sur une ligne est de $\frac{2k}{\pi}$. Quelques personnes ont donc tenté de calculer $\pi$ en lançant des épingles ; le résultat le plus remarquable étant celui de Lazzerini (1901) qui fit 34080 lancers pour obtenir $\pi = \frac{355}{113} = 3.1415929$. Ce résultat est suspicieusement précis pour une méthode aléatoire, et il y a effectivement un truc que l'on remarque avec le nombre d'expériences : Kendall et Moran commentèrent ainsi qu'une bonne valeur pouvait être obtenue en stoppant l'expérience au moment optimal (biais expérimental important).
+Toujours sur la même expérience, Grindgeman se moqua de Lazzerini en utilisant une épingle de taille bien choisie $k = 0.7857$ et en faisant deux lancers pour toucher la ligne une fois, obtenant alors $2 \times \frac{0.7857}{\pi} = \frac12$ soit une valeur incroyablement précise de $\pi = 3.1428$.
+
+De nombreuses questions restent ouvertes concernant pi :
+\item Est-ce que chacun des chiffres apparaît une infinité de fois dans $\pi$ ?
+\item Dans l'expansion décimale de pi, peut-on trouver mille zéros consécutifs ?
+\item Est-ce que chaque chiffre apparaît aussi souvent que les autres ?
+\item Est-ce que chaque séquence de chiffres apparaît aussi souvent que les autres ?
+\item Et bien plus encore !

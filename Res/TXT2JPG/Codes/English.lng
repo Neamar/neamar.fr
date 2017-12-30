@@ -1,0 +1,387 @@
+; .ini file, ; is a remark.
+; The file contains 3 sections: [FormData], [Strings] and [Message]
+; [FormData] => Default value for the controls. You can add some line. You can add properties; they will be taken into account if the control accepts the property.
+; [Strings] => Every string the program will need while. Max size: 512 chars.
+; [Message] =>Every single tooltip displayed by the software;
+;
+; You can create new languages files simply by naming them <language name>.ini and pasting the file in the Lang folder. He will be automatically detected at startup.
+; In such a case, send me a mail and join it your language file ! neamart@yahoo.fr
+
+;{ENGLISH}, created by NEAMAR - corrected by Y-God - 22/DEC/07
+
+[FormData]
+; This part contains all the hard-coded information: they are the default value for controls.
+
+; Etiquette controls are the most commons labels you'll find; they are often associated with option button
+etiquette|0|Caption=Source file / URL :
+etiquette|1|Caption=Folder's name:
+etiquette|2|Caption=Application's closing
+etiquette|3|Caption=Size
+etiquette|4|Caption=Save As :
+etiquette|5|Caption=Use a background picture
+etiquette|6|Caption=Modify the pics dimensions
+etiquette|6|ToolTipText=Modify the pics dimensions so that if fits the player's screen
+etiquette|7|Caption=Convert 'on the fly'
+etiquette|7|ToolTipText=Quicker conversion, but less aesthetical
+etiquette|8|Caption=Height:
+etiquette|9|Caption=Width:
+etiquette|10|Caption=Save as *.jpg
+etiquette|10|ToolTipText=Encode as JPG (longer, but recommended if your firmware doesn't convert it automatically).
+etiquette|11|Caption=Quality: 80%
+etiquette|12|Caption=Cover only
+etiquette|12|ToolTipText=Use this picture only for the first picture: it'll be considered as a cover, not as a background picture.
+etiquette|13|Caption=Left Margin:000px
+etiquette|14|Caption=Right Margin:000px
+etiquette|15|Caption=Loading...
+etiquette|16|Caption=Put the mouse pointer over an image to get a description.
+etiquette|17|Caption=Red background
+etiquette|18|Caption=Green Background
+etiquette|19|Caption=Blue background
+etiquette|20|Caption=Orientation
+etiquette|21|Caption=Network Name
+etiquette|22|Caption=Use Clear Type
+etiquette|22|ToolTipText=This option won't work if you're not using a background picture.
+etiquette|23|Caption=Default path:
+etiquette|24|Caption=Menu's slide
+etiquette|24|ToolTipText=Makes a rapid transition when you swap menus. Can be deactivated if your computer is old, or if you want to gain more speed.
+etiquette|25|Caption=Priority:
+etiquette|25|ToolTipText=Sets process priority (affect converting speed)
+etiquette|26|Caption=Bottom Margin:000px
+etiquette|27|Caption=Top Margin:000px
+etiquette|28|Caption=Use top and bottom margin
+etiquette|29|Caption=Write page number
+etiquette|30|Caption=Select some text, and make size-range with the left sliders.
+etiquette|31|Caption=Select the color for the first char, color of the last char, and click on Apply...
+etiquette|32|Caption=Your text's containing pictures! What are you willing to do?
+etiquette|33|Caption=Make no changes (no resize, picture larger than your player's screen will be cut)
+etiquette|34|Caption=Resize, if need be, but resize nothing but width.
+etiquette|35|Caption=Resize, if need be, width AND height.
+etiquette|36|Caption=Adapt text colors to the BG.
+etiquette|36|ToolTipText=Change the contrast between the background colors, and the text colors. BETA!
+etiquette|37|Caption=Language:
+etiquette|37|ToolTipText=Choose the language you want TXT2JPG to use
+etiquette|38|Caption=Split chapter
+etiquette|38|ToolTipText=Write the splitter-word. Each time the software will find this word, a new folder will be created. A common example of word will be 'Chapter'
+etiquette|39|Caption=Put a copy of the text in the output folder
+etiquette|39|ToolTipText=Create a copy of the text file in the output folder.
+etiquette|40|Caption=Search:
+etiquette|41|Caption=Replace by:
+
+; Plug choice controls are tabs title; they are displayed in the first row, right after the text, above the start button. The #4 button is displayed only when #1 is active.
+PlugChoice|0|Caption=Folder settings
+PlugChoice|1|Caption=Text enhancements
+PlugChoice|2|Caption=Margin / Advanced settings
+PlugChoice|3|Caption=TXT2JPG settings
+PlugChoice|4|Caption=Add-ins
+PlugChoice|5|Caption=Advanced Text Enhancements
+
+; Text enhancement settings are listed below
+Couleur|0|ToolTipText=Text color
+Couleur|1|ToolTipText=Highlighted text color
+Couleur|2|ToolTipText=Background color.
+MEF|0|ToolTipText=Bold
+MEF|1|ToolTipText=Italic
+MEF|2|ToolTipText=Underline
+MEF|3|ToolTipText=Strike
+MEF|4|ToolTipText=Lists
+CharMap|0|ToolTipText=See the special characters list
+Alignement|0|ToolTipText=Alignment
+Polices|0|Text=MS Sans Serif
+
+; Add-ins descriptions
+Modules|0|ToolTipText=This add-in convert a PowerPoint presentation to JPG pictures, with the right size for your player.
+Modules|1|ToolTipText=Create color range to use for your player's background.
+Modules|2|ToolTipText=Convert Gif files to AVI. NO ENGLISH SUPPORT!
+Modules|3|ToolTipText=The Gutenberg project is a website offering thousand of royalty free books. You can download them for free, as html, txt, rtf and doc.
+Modules|4|ToolTipText=Add-in for French speakers: thousands of jokes, hundreds of funny pictures....
+Modules|5|ToolTipText=Forthcoming add-in !
+ModulesWhat|0|Caption=Add-ins
+ModulesWhat|1|Caption=About
+WhatAbout|0|Text=Data are loading...
+
+;Right click menus
+Edition|0|Caption=Undo
+Edition|1|Caption=-
+Edition|2|Caption=Replace
+Edition|3|Caption=Search
+Edition|4|Caption=-
+Edition|5|Caption=Fitter tool
+Edition|6|Caption=Delete double new-line
+Edition|7|Caption=Font
+Edition|8|Caption=-
+Edition|9|Caption=Cut
+Edition|10|Caption=Copy
+Edition|11|Caption=Paste
+Edition|12|Caption=RTF=>TXT
+Edition|13|Caption=TXT=>RTF
+Edition|14|Caption=-
+Edition|15|Caption=Default settings
+Edition|16|Caption=-
+Edition|17|Caption=Horizontal line
+Edition|18|Caption=Alignment
+Edition|19|Caption=Toggle case
+Edition|20|Caption=New paragraph
+Edition|21|Caption=Superscript
+Edition|22|Caption=Subscript
+Align|0|Caption=Left alignment
+Align|1|Caption=Right alignment
+Align|2|Caption=Center
+
+;Bug toolbar, this toolbar is displayed when you launch the soft after a crash, or when you click on "Report a bug"
+Bug_Texte|0|CueBanner=A bug happened? Can you say a little more in order to improve future version
+Bug_Envoi|0|Caption=Send
+Bug_Rapport|0|Caption=Report a bug
+Bug_Rapport|0|ToolTipText=Click here if you came across a bug, or if you wish to make a proposition for the software.
+
+; The Search and replace tool bar (CTRL-F, CTRL-H) (see also etiquette|40 and etiquette|41)
+Rechercher_Suite|0|Caption=Next
+Rechercher_Close|0|ToolTipText=Close this toolbar
+
+; About the player
+Hauteur|0|Text = 240
+Largeur|0|Text = 320
+Defaut|0|ToolTipText=Save this player as my default player
+Swap|0|ToolTipText=Swap width and height (reverse display)
+Modeles|0|Text=<Player's Name>
+Marque|0|Text=<Player's Mark>
+
+; Program settings
+ChoosePic|0|Caption=Select back picture
+Enregistrer|0|ToolTipText=Save this as my new name
+Enregistrer|1|ToolTipText=Save as new root folder
+Browse3|0|ToolTipText=Select the root folder:
+Langue|0|ToolTipText=Select a language for the soft.
+
+; Button
+Abandon|0|Caption=UNDO?
+Annuler|0|Caption=Undo
+Start|0|Caption=Start
+Start|0|ToolTipText=Start converting right now!
+AppliquImage|0|Caption=Apply
+Appliquer|0|Caption=Apply
+
+; File picking
+Dest_Folder|0|CueBanner=Folder name
+Directory|0|Text=Directory
+Browse|0|ToolTipText=Browse
+
+; Melting pot
+VoirApercu|0|Caption=Watch preview
+KeyWord|0|CueBanner=Key Word
+Root|0|CueBanner=Root text
+UseTopAndBottomMargin|0|ToolTipText=Use top and bottom margin
+
+
+[Strings]
+; String list
+
+String 1=Please select the folder where all the pictures will be created.
+String 2=No, I’m not bugged ! I am working...
+
+; All the step of conversion
+String 3=Beginning...
+String 4=Copying file... (May take some minutes, don't click anywhere)
+String 5=Splitting file (%u)...
+String 6=Part #
+String 7=Resizing pictures...
+String 8=Priority is set to:
+String 9=You are using a background picture (%u)
+String 10=You are not using any background picture.
+String 11=Picture count will be (ESTIMATION):
+String 12=The amount of time required to complete this operation will vary depending on your settings and your computer.
+String 13=Converting text to bitmap...
+String 14=Unloading temporary files...
+String 15=Converting bitmap to jpg...
+String 16=Done, now closing application and loading your %u pictures.
+String 18=Searching for updates...
+
+; Message about Internet connection
+String 19=Downloading data...
+String 20=TXT2JPG cannot open an Internet connection. You will have to enter manually your player. Look your firewall options to correct this problem.
+
+; Messages about Word and IE automation
+String 21=Opening file...
+String 22=File now open, getting back all compatible data...
+String 23=Caution: Picture will make this step longer!
+String 24=File read. If nothing happen, right click on this text, and select 'Paste'.
+String 25=Automation is open...
+String 26=Reading the file...
+String 27=Page read...
+String 28=Parsing for data...
+String 29=When you are asked permission for clipboard, click OK.
+String 30=Automation closed, end of conversion! If nothing happen, right click on the text and select 'Paste'.
+
+; About PDF Files
+String 31=TXT2JPG is unable to open PDF files. However, you can use a website which will do the conversion for you. Do you want to do this conversion now?
+String 32=Media convert will be opened in your default browser....
+String 33=http://media-convert.us
+
+; About LRC files
+String 34=Converting back to text...
+String 35=This LRC files contain no title, please write it manually.
+String 36=No [ti:] found
+String 37=Invalid file. Try opening it as plain text?
+
+; URL for the default URL choice, but also where people will be redirected when a new version is available.
+String 38=http://neamar.free.fr/txt2jpg_en/txt2jpg.php
+
+String 47=....please wait....
+String 48=This file type is currently not supported...
+String 49=The background picture is bigger than your player screen. Resize it?
+String 50=Please confirm!
+String 52=Load a file
+
+; Do not change files pattern !
+String 53=BMP, JPG(*.bmp,*.jpg)|*.bmp;*.jpg|Bitmap Windows(*.bmp)|*.bmp|JPEG (*.jpg)|*.jpg|GIF (*.gif)|*.gif|
+String 51=Text, Enhanced Text and Lyrics (*.txt,*.rtf,*.doc,*.lrc)|*.txt;*.rtf;*.doc;*.lrc;*.docx|Plain text (*.txt)|*.txt|Enhanced text (*.rtf,*.doc,*.pdf)|*.rtf;*.doc;*.pdf;*.docx|Lyrics (*.lrc)|*.lrc|All files (*.*)|*.*
+String 58=BMP, JPG et GIF (*.bmp,*.jpg, *.gif)|*.bmp;*.jpg;*.gif|Bitmap Windows (*.bmp)|*.bmp|JPEG (*.jpg)|*.jpg|GIF (*.gif)|*.gif|
+
+
+String 54=Load a picture
+String 55=Thank you for your idea, I’ll try to think about it.
+String 56=Report a bug, make a suggestion...
+String 57=Can’t display special chars.
+
+String 59=Save as:
+String 60=Word:
+String 61=Split Chapter
+String 62=Write here the URL of your file. You'll need at least IE 4.5 for this to work.
+String 63=Download a webpage
+String 64=User Name:
+String 65=Graph : Windows XP, pack Vista Inspirat, Noia 2.0 Xtrême, Windows Vista, Windows Media Player, skinned Thunderbird, Neamar, Char map icon, free picture on the web.
+String 66=Features:
+String 67=Search
+String 68=Replace
+String 69=Applying filter...
+String 70=Text size (chars):
+String 71=Folder name
+String 72=<Player's Mark>
+
+; The string to add after the URL to get pages in the good language
+String 73=txt2jpg_en
+
+String 74=<Player's Name>
+String 76=Player's Model
+String 77=Player's Mark
+
+; %u : former player's name, %n : new player's name
+String 78=Do you really want to replace %u by %n
+String 80=Please confirm!
+
+String 81=Next one
+String 82=You don't have the bmp2jpg DLL. The software will download it automatically. If an error happens, look your firewall settings. Continue?
+String 83=DLL's missing
+String 84=Another instance is already launch! This session will auto destroy herself...click on fire to continue ?
+
+; Default background pictures
+String 86=Parchment
+String 87=Water
+String 88=Earth
+String 89=Esoteric
+String 90=Stars
+String 91=Wave
+String 92=Sky
+String 93=Peace
+String 94=Aqua Wave
+String 95=Cristal
+String 96=@More...
+
+
+String 98=A new version of TXT2JPG is available....
+String 99=New version!
+
+String 100=You have been using TXT2JPg for three times.
+String 101=During this time, you should have grown accustomed to the software. Could you take a rapid survey (10 questions) in order to improve futures versions?
+String 102=Loading....
+String 104=@Other...
+String 105=What is screen's height?
+String 106=Height
+String 107=What is screen's width?
+String 108=Width
+String 109=(Other...)
+String 110=What is your player mark? If it hasn't a name, write 'No Name'
+String 111=Which model do you own?
+String 112=You didn't have ConvertPowerPoint.exe. Download it?
+String 113=You didn't have the DLL bmp2jpg.dll. Download it?
+String 114=You didn't have Degrade.exe. Download it?
+String 115=Select your player, for Degrade.exe needs to know your screen size.
+String 116=You didn't have GIF2AVI.exe. Download necessary files?
+String 117=http://www.gutenberg.org/browse/languages/en
+String 118=WARNING: WITH THE REAL TIME PRIORITY? YOU ARE PLAYING WITH WILD FIRE; ONLY ONE PROCESS CAN HAVE THIS PRIORITY. THE SYSTEM MAY CRASH. BUT YOUR CONVERSION WILL BE QUICKER THAN EVER...
+String 119=Quality: (%u%)
+String 120=Press { %u } keys.
+
+[Message]
+; The tool tip messages
+; IMPORTANT : Title beginning with an "i" are temporary information tool tip : they will be displayed twice, and not anymore. Don’t change them...
+Msg 1=This plain text disappoint you ?
+Msg 2=If you want to keep then enhanced text (pictures, table...), open your browser, cut the text, paste it in Word, copy it from Word and eventually paste it here.
+Msg 3=Error!
+Msg 4=The following chars are not allowed:
+Msg 5=No selected text!
+Msg 6=Select some text from the left textbox in order to use this tool
+Msg 7=iOpen...
+Msg 8=Click to open a file on your HDD (*.txt,*.rtf,*.doc,*.lrc)
+Msg 9=iWant more than color range?
+Msg 10=You can use a background picture for the soft! (JPG/BMP/GIF)
+Msg 11=Unable to undo
+Msg 12=Possible reasons for this problem:
+Msg 13=iClick here!
+Msg 14=To make color range, click on both blackbox.
+Msg 15=iWrite here the file name
+Msg 16=Converted images will be saved in this folder, which will automatically pop-up once the conversion ended.
+Msg 17=iOpen...
+Msg 18=Clic to open an Internet filer, located either on your HDD or on the web (you will need IE 4.5 or later)
+Msg 19=iQuality
+Msg 20=Sets the output JPG quality. The bigger the quality is, the best the pictures are, and the biggest their sizes.
+Msg 21=Invalid root!
+Msg 22=This field let you select a root name for your pictures.
+Msg 23=iRoot field
+Msg 24=This field let you select a prefix name for your pictures. Converted pictures will be names <folder>\<prefix>XXXX.jpg, where XXXX stands for the number.
+Msg 25=iTop and bottom margin configured
+Msg 26=Each picture will inherit of your change (invisible in the text overview)
+Msg 27=iSplit the chapter
+Msg 28=This settings create sub folders in the main folder, each subfolder containing a chapter. This splitting takes place every time the software meets the word written in the right textbox.
+Msg 29=iPriority
+Msg 30=If you have really long text, you can gain some speed by setting the priority. I advise you to choose ABOVE_NORMAL_PRIORITY_CLASS.
+Msg 31=Replace successful
+Msg 32= matches found and replaced (case sensitive)
+Msg 33=iNetwork name
+Msg 34=This field let you choose the name that will be displayed when TXT2JPG download datas, such as the players list.
+Msg 35=iRoot field
+Msg 36=This field let you select the root for the converted picture. They will all be saved in this folder.
+Msg 37=No text selected!
+Msg 38=Select some text in the left textbox to use this tool
+Msg 39=Invalid file name!
+Msg 40=Windows disallow the use of this characters for folder name:  \ / : * ?  < >
+Msg 41=iSave in JPG
+Msg 42=Click here to save your pictures as a JPG file (default is BMP). I advise you to save in JPG, and to select a quality of 75%.
+Msg 43=Useless!
+Msg 44=There is no need to set the background color, since you are using a background picture. Setting the background color will be useless...
+Msg 45=Unable to do this!
+Msg 46=Text color and background color are the same one.
+
+Msg 49=Is downloading...
+Msg 50=Your DLL is downloading, please be patient...
+Msg 51=Can't find this picture!
+Msg 52=This picture does not exist anymore. Try another one
+Msg 53=File not allowed !
+Msg 54=You can use BMP,JPG ang GIF files.
+Msg 55=Welcome !
+Msg 56=Welcome to TXT2JPG. You are not speaking French? Click on this tab, and select your language.
+Msg 57=iEnable Page number
+Msg 58=Each page will wore a number and a progress bar. You can set the size of this information using the bottom margin slider.
+Msg 59=Invalid size
+Msg 60=This screen size does not exist, try another player.
+Msg 61=Player added
+Msg 62=Thanks for your contribution! Close the soft and launch it again to see your player in the list.
+Msg 63=An error occur!
+Msg 64=Your player setting might be misloaded. If the displayed data are not the correct one, launch again the program.
+Msg 65=Please confirm!
+Msg 66=This folder name is already existing. Existing files with the same pattern (%u/0XXXX.jpg) will be erased. You had better to change the name.
+Msg 67=iPut a copy of my file in the folder
+Msg 68=If you are editing your text with TXT2JPF, enable this option : a copy of your text file will be put with your images, and will open again the next time you launch TXT2JPG.
+Msg 69=iSave this Player
+Msg 70=Save the current player in memory, and select it as the default one for each projet.
+Msg 71=iBackground Picture
+MSg 72=The default background for your picture is the background-color. However, you can select a picture to use as basckground, or as cover.

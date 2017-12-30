@@ -1,0 +1,3 @@
+ErrorDocument 404 /Res/Life_Game/Images/LifeGameError.png
+ErrorDocument 300 /Res/Life_Game/Images/LifeGameError.png
+ErrorDocument 301 /Res/Life_Game/Images/LifeGameError.png

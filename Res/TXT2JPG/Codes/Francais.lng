@@ -1,0 +1,384 @@
+; Fichier au format .ini, un ; indique un commentaire
+; Le fichier se répartit en trois sections : [FormData], [Strings] et [Message]
+; [FormData] => L'emplacement ou le programme va chercher les informations des contrôles au démarrage. Il est possible de rajouter des lignes, elles seront prises en compte si le contrôle gère la propriété (exemple : rajouter un tooltiptext est possible pour tout les contrôles, rajouter un CueBanner est impossible pour un label.)
+; [Strings] => Tous les strings dont le programme va avoir besoin lors de son exécution. Taille Max : 512 caractères.
+; [Message] =>Tout les petits messages qui s'affichent sous forme d'info bulles.
+;
+;
+; Vous pouvez créer une nouvelle langue simplement en ajoutant un fichier <nom de la langue>.ini dans le répertoire Lang de l'application. Il sera automatiquement détecté au démarrage.
+; Dans ce cas là, n'hésitez pas à en faire profiter les autres : joignez le-moi par mail à neamart@yahoo.fr, et je l'inclurais dans la prochaine version. Merci !
+
+;{FRANCAIS}, crée par NEAMAR -16/DEC/07
+
+[FormData]
+; Cette section contient les informations "en dur" : ce sont les valeurs par défaut des contrôles.
+
+; Les contrôles étiquette sont tout les labels de type générique, ils sons souvent associés à des option buttons.
+etiquette|0|Caption=Fichier d'origine / URL :
+etiquette|1|Caption=Nom du répertoire :
+etiquette|2|Caption=Fermeture de l'application
+etiquette|3|Caption=Taille
+etiquette|4|Caption=Enregistrer sous :
+etiquette|5|Caption=Utiliser une image d'arrière plan
+etiquette|6|Caption=Redimensionner l'image...
+etiquette|6|Caption=Numériser 'à la volée'
+etiquette|7|Caption=Numériser à la volée.
+etiquette|7|ToolTipText=Numérisation plus rapide, mais moins jolie.
+etiquette|8|Caption=Hauteur :
+etiquette|9|Caption=Largeur :
+etiquette|10|Caption=Sauver en JPG
+etiquette|10|ToolTipText=Encoder en JPG (plus long, mais à utiliser si votre firmware ne convertit pas automatiquement).
+etiquette|11|Caption=Qualité : 80%
+etiquette|12|Caption=Couverture uniquement
+etiquette|12|ToolTipText=N'utiliser cette image que pour la première diapositive : il s'agira d'une couverture, et pas d'une image de fond.
+etiquette|13|Caption=Marge Gauche :000px
+etiquette|14|Caption=Marge Droite :000px
+etiquette|15|Caption=Chargement
+etiquette|16|Caption=Passez la souris sur un module...
+etiquette|17|Caption=Fond rouge
+etiquette|18|Caption=Fond vert
+etiquette|19|Caption=Fond bleu
+etiquette|20|Caption=Sens.
+etiquette|21|Caption=Nom sur le réseau :
+etiquette|22|Caption=Utiliser ClearType
+etiquette|22|ToolTipText=Cette option ne fonctionne pas si vous définissez une image d'arrière plan
+etiquette|23|Caption=Répertoire par défaut :
+etiquette|24|Caption=Slide des menus
+etiquette|24|ToolTipText=Marque une rapide transition lors du changement entre les menus. Peut être désactivée si votre ordinateur est vieux, ou si vous souhaitez gagner en rapidité d'utilisation.
+etiquette|25|Caption=Priorité :
+etiquette|25|ToolTipText=Définit la priorité du processus (vitesse d'encodage)
+etiquette|26|Caption=Marge du bas :000px
+etiquette|27|Caption=Marge du haut :000px
+etiquette|28|Caption=Utiliser les marge haut et bas
+etiquette|29|Caption=Numéroter page
+etiquette|30|Caption=Sélectionnez du texte, puis effectuez des dégradés de taille à partir des barres à gauche. ATTENTION : il est déconseillé de sélectionner plus d'une trentaine de caractères...
+etiquette|31|Caption=Sélectionnez la couleur à utiliser pour le premier caractère de la sélection, la couleur du dernier, puis appuyez sur Appliquer...
+etiquette|32|Caption=Votre texte contient des images ! Que souhaitez-vous en faire ?
+etiquette|33|Caption=Ne rien changer (aucun redimensionnement, les images dont la taille est supérieure à l'écran seront coupées)
+etiquette|34|Caption=Redimensionner les images dont la taille est supérieure à la taille de l'écran, sur la largeur uniquement.
+etiquette|35|Caption=Redimensionner sur hauteur ET largeur.
+etiquette|36|Caption=Adapter les couleurs au BG.
+etiquette|36|ToolTipText=Change le contraste de l'affichage pour améliorer la lisibilité. BETA !
+etiquette|37|Caption=Langue
+etiquette|37|ToolTipText=Choix d'une langue
+etiquette|38|Caption=Séparer les chapitres
+etiquette|38|ToolTipText=Marquez un mot. A chaque fois que le programme rencontrera ce mot, le dossier de destination changera automatiquement
+etiquette|39|Caption=Placer une copie du fichier dans le répertoire de sortie
+etiquette|39|ToolTipText=Placer une copie du fichier utilisé lors de la numérisation dans le répertoire où sont stockées les images
+etiquette|40|Caption=Rechercher :
+etiquette|41|Caption=Remplacer par :
+
+; Les contrôles PlugChoice sont les titres des onglets, qui apparaissent à droite du texte, dans la première colonne, au dessus du bouton démarrer. Le #4 n'apparait que lorsque #1 est activé.
+PlugChoice|0|Caption=Options de dossier
+PlugChoice|1|Caption=Mise en Forme
+PlugChoice|2|Caption=Marges / Options avancées
+PlugChoice|3|Caption=Options du programme
+PlugChoice|4|Caption=Modules
+PlugChoice|5|Caption=Mise en forme (avancé)
+
+; Les options de Mise en forme proposées sont les suivantes :
+Couleur|0|ToolTipText=Couleur du texte sélectionné
+Couleur|1|ToolTipText=Couleur de surlignement
+Couleur|2|ToolTipText=Couleur de fond
+MEF|0|ToolTipText=En gras
+MEF|1|ToolTipText=En italique
+MEF|2|ToolTipText=Souligné
+MEF|3|ToolTipText=Barré
+MEF|4|ToolTipText=Puces
+CharMap|0|ToolTipText=Liste des caractères spéciaux
+Alignement|0|ToolTipText=Alignement
+Polices|0|Text=MS Sans Serif
+
+;Les modules proposés ou plutôt leurs descriptions:
+Modules|0|ToolTipText=Permet de convertir un fichier diaporama PowerPoint en images JPG.
+Modules|1|ToolTipText=Crée des dégradés à mettre en fond d'écran de votre baladeur. Vous pouvez aussi vous servir des images comme fond de numérisation pour TXT2JPG
+Modules|2|ToolTipText=Convertir un fichier GIF au format AVI.
+Modules|3|ToolTipText=Le projet Gutenberg offre plusieurs milliers de livres libres de droit, dont quelques centaines en français. Ils sont téléchargeables au format texte, html ou doc.
+Modules|4|ToolTipText=Du même auteur :-) : L'éphéméride est un projet de base de données de blagues. Il contient plus de 1000 blagues, et plus de 500 images drôles.
+Modules|5|ToolTipText=En préparation…Ce sera la surprise !
+ModulesWhat|0|Caption=Modules
+ModulesWhat|1|Caption=A propos
+WhatAbout|0|Text=Chargement des données...
+
+; Les menus de clic droit (quand clic que le textbox ou sur alignement)
+Edition|0|Caption=Annuler
+Edition|1|Caption=-
+Edition|2|Caption=Remplacer
+Edition|3|Caption=Rechercher
+Edition|4|Caption=-
+Edition|5|Caption=Ajuster
+Edition|6|Caption=Suppr. dbl saut de ligne
+Edition|7|Caption=Police
+Edition|8|Caption=-
+Edition|9|Caption=Couper
+Edition|10|Caption=Copier
+Edition|11|Caption=Coller
+Edition|12|Caption=RTF=>TXT
+Edition|13|Caption=TXT=>RTF
+Edition|14|Caption=-
+Edition|15|Caption=Options par défaut
+Edition|16|Caption=-
+Edition|17|Caption=Barre horizontale
+Edition|18|Caption=Alignement
+Edition|19|Caption=Inverser la casse
+Edition|20|Caption=Nouveau paragraphe
+Edition|21|Caption=En exposant
+Edition|22|Caption=En indice
+Align|0|Caption=Aligné à gauche
+Align|1|Caption=Aligné à droite
+Align|2|Caption=Centré
+
+; La barre d'outil rapport de bug : (apparait quand le programme s'est mal fermé, ou quand on clique sur Signaler un bug)
+Bug_Texte|0|CueBanner=Un bug s'est produit ?! Pouvez-vous le décrire, afin d'améliorer les prochaines versions ?
+Bug_Envoi|0|Caption=Envoyer
+Bug_Rapport|0|Caption=Reporter un bug
+Bug_Rapport|0|ToolTipText=Cliquez ici si vous avez rencontré un bug, ou si bous souhaitez proposer une amélioration au programme
+
+; La barre d'outil Rechercher Remplacer (CTRL-F, CTRL-H dans le textbox) (voir aussi etiquette|40 et etiquette|41)
+Rechercher_Suite|0|Caption=Prochaine occurrence
+Rechercher_Close|0|ToolTipText=Fermer la barre de recherche
+
+;A propos du baladeur
+Hauteur|0|Text = 240
+Largeur|0|Text = 320
+Defaut|0|ToolTipText=Enregistrer ce baladeur comme mon baladeur par défaut
+Swap|0|ToolTipText=Intervertir largeur et hauteur (affichage dans l'autre sens)
+Modeles|0|Text=<Modele>
+Marque|0|Text=<Marque du Baladeur>
+
+; Options du programme
+ChoosePic|0|Caption=Sélectionner une image de fond
+Enregistrer|0|ToolTipText=Enregistrer comme nouveau nom
+Enregistrer|1|ToolTipText=Enregistrer comme nouveau répertoire
+Browse3|0|ToolTipText=Choix du dossier principal
+Langue|0|ToolTipText=Langage :
+
+;Boutons
+Abandon|0|Caption=ANNULER ?
+Annuler|0|Caption=Annuler
+Start|0|Caption=Commencer
+Start|0|ToolTipText=Lancer la numérisation !
+AppliquImage|0|Caption=Appliquer
+Appliquer|0|Caption=Appliquer
+
+;Choix d'un fichier
+Dest_Folder|0|CueBanner=Nom du dossier
+Directory|0|Text=Directory
+Browse|0|ToolTipText=Parcourir
+
+;Divers et varié
+VoirApercu|0|Caption=Voir un aperçu
+KeyWord|0|CueBanner=Mot Clé
+Root|0|CueBanner=Texte préfixe
+UseTopAndBottomMargin|0|ToolTipText=Autoriser l'utilisation des marges haut et bas
+
+
+[Strings]
+; La liste des strings utilisés dans le programme.
+
+String 1=Veuillez sélectionner le dossier dans lequel toutes les images seront crées.
+String 2=Non, je ne suis pas buggé ! Je travaille !
+
+; Tous les petits commentaires pendant la numérisation
+String 3=Initialisation...
+String 4=Copie du fichier... (Peut durer quelques minutes, ne pas bouger la souris)
+String 5=Hachage du fichier (%u)
+String 6=Partie n°
+String 7=Redimensionnements des images...
+String 8=La priorité est réglée à :
+String 9=Une image d'arrière plan est utilisée (%u)
+String 10=Aucune image d'arrière plan utilisée.
+String 11=Nombre d'images (ESTIMATION) :
+String 12=La durée de numérisation va dépendre de la taille du texte et des performances de votre ordinateur
+String 13=Transposition texte vers bitmap..
+String 14=Destruction des fichiers temporaires...
+String 15=Conversion en JPG...
+String 16=Finalisation, ouverture du dossier et fermeture de l’application ( %u images)
+String 18=Recherche de MAJ.....
+
+; Messages concernant la connexion Internet
+String 19=Téléchargement des données en cours...
+String 20=Impossible d'ouvrir une connexion Internet. Vous devrez entrer votre baladeur manuellement. Réglez les options de votre pare feu pour corriger le problème.
+
+; Messages concernant l'ouverture d'un document Word/IE via la méthode automation,
+String 21=Chargement du fichier en cours...
+String 22=Fichier ouvert, récupération des données... environ une minute pour 75 pages...
+String 23=ATTENTION : les images ralentissent énormément l'ensemble !
+String 24=Fichier récupéré. Si rien ne se passe, faites un clic droit sur ce texte, et sélectionnez copier.
+String 25=Automation ouvert...
+String 26=Récupération de la page...
+String 27=Page récupérée...
+String 28=Parsing des données...
+String 29=Cliquez sur oui lorsqu'une fenêtre vous demande l'accès au presse papier.
+String 30=Automation fermé, conversion terminée ! Si rien ne se passe, appuyez sur ctrl + V.
+
+; Concerne les fichiers PDF
+String 31=La lecture de fichiers PDF n'est pas faisable par TXT2JPG. Cependant, vous pouvez utiliser un site internet pour convertir ce fichier en fichier RTF. Effectuer la conversion ?
+String 32=La conversion va s'ouvrir sous Internet Explorer....
+String 33=http://media-convert.fr
+
+; Concerne les fichiers LRC :
+String 34=Passage en Texte ...
+String 35=Le fichier LRC ne contient pas le titre de la chanson dans ses balises. Veuillez l'entrez manuellement
+String 36=Aucune balise [ti:] détectée
+String 37=Fichier invalide. Tenter de l'ouvrir en mode texte ?
+
+; Adresse par défaut lors du choix d'une URL à télécharger, mais aussi URL vers laquelle sera affichée la dernière version.
+String 38=http://neamar.free.fr/txt2jpg/txt2jpg.php
+
+String 47=....patience....
+String 48=Ce type de fichier n'est pas pris en charge...
+String 49=L'image à mettre en filigrane est supérieure à la taille de l'écran du lecteur. La redimensionner ?
+String 50=Demande de confirmation !
+String 52=Charger un fichier
+
+; Ne pas changer les masques de fichiers...
+String 53=Fichiers BMP, JPG(*.bmp,*.jpg)|*.bmp;*.jpg|Fichiers Bitmap Windows(*.bmp)|*.bmp|Fichiers JPEG (*.jpg)|*.jpg|Fichiers GIF (*.gif)|*.gif|
+String 51=Fichier Texte, Texte mis en forme et Lyrics (*.txt,*.rtf,*.doc,*.lrc)|*.txt;*.rtf;*.doc;*.lrc;*.docx|Fichiers plain text (*.txt)|*.txt|Fichiers de texte mis en forme (*.rtf,*.doc,*.pdf)|*.rtf;*.doc;*.pdf;*.docx|Fichiers lyrics (*.lrc)|*.lrc|Tout les fichiers (*.*)|*.*
+String 58=Fichiers BMP, JPG et GIF (*.bmp,*.jpg, *.gif)|*.bmp;*.jpg;*.gif|Fichiers Bitmap Windows (*.bmp)|*.bmp|Fichiers JPEG (*.jpg)|*.jpg|Fichiers GIF (*.gif)|*.gif|
+String 54=Charger une image
+String 55=Merci pour votre idée, je tenterai de la traiter dans les plus brefs délais
+String 56=Rapporter un bug, faire une suggestion...
+String 57=Impossible d'afficher les caractères spéciaux !
+String 59=Sauver en tant que :
+String 60=Mot :
+String 61=Séparer les chapitres
+String 62=Entrez l'URL du fichier à télécharger. IE 5.0 min est requis pour le bon fonctionnement. Lorsque l'on vous posera la question, cliquez sur autoriser l'accès de cette page au presse papier.
+String 63=Téléchargement d'une page Web
+String 64=Nom d'utilisateur :
+String 65=Graphismes : Windows XP, pack Vista Inspirat, Noia 2.0 Xtrême, Windows Vista, Windows Media Player, ThunderBird skinné, Neamar, icone de Charmap, Images libres de droit sur Internet.
+String 66=Historique des versions :
+String 67=Rechercher
+String 68=Remplacer
+String 69=Application du filtre en cours...
+String 70=Taille du texte (caractères) :
+String 71=Nom du dossier
+String 72=<Marque du Baladeur>
+
+; Path à rajouter à neamar.free.Fr pour arriver sur les pages dans la bonne langue.
+String 73=txt2jpg
+String 74=<Modèle>
+String 76=Quel est le modèle du baladeur ?
+String 77=Quelle est la marque ?
+
+; %u : ancien modèle de baladeur, %n : nouveau modèle de baladeur
+String 78=Souhaitez vous vraiment remplacer %u par %n
+String 80=Confirmer le remplacement
+
+String 81=Suivant
+String 82=Vous ne disposez pas de la DLL bmp2jpg.dll. Le programme va la télécharger automatiquement. Si une erreur survient, vérifiez les options de votre pare feu. Continuer ?
+String 83=DLL manquante
+String 84=Une instance du programme est déjà lancée, cette session va donc s'auto détruire dans cinq secondes...éloignez vous de la bordure du quai s'il vous plait.
+
+; Les images d'arrière plan proposées par défaut.
+String 86=Parchemin
+String 87=Aquatique
+String 88=Terre
+String 89=Ésotérique
+String 90=Etoiles
+String 91=Ondes
+String 92=Ciel
+String 93=Paix
+String 94=Ondine
+String 95=Cristal
+String 96=Plus...
+
+
+String 98=Une nouvelle version de TXT2JPG est disponible....
+String 99=Nouvelle version !
+
+String 100=Vous utilisez TXT2JPG depuis 3 numérisations.
+String 101=Entre temps, peut être vous êtes vous fait une idée un peu avancée de ce logiciel. Pourriez vous répondre à un rapide sondage de quelques questions (une dizaine) afin d'améliorer les prochaines versions ?
+String 102=Chargement....
+String 104=@Autre...
+String 105=Quelle est la hauteur en pixel de l'écran ?
+String 106=Hauteur
+String 107=Quelle est la largeur en pixel de l'écran ?
+String 108=Largeur
+String 109=(Autres...)
+String 110=Quel est la marque de votre baladeur ? (Si votre baladeur n'a pas de marque, laissez le terme 'No Name')
+String 111=Quel est le modèle de baladeur ?
+String 112=Vous ne disposez pas du module ConvertPowerPoint.exe. Le télécharger ?
+String 113=Vous ne disposez pas de la DLL bmp2jpg.dll. La télécharger?
+String 114=Vous ne disposez pas du module Degrade.exe. Le télécharger ?
+String 115=Sélectionnez votre baladeur, car le programme Dégradé doit connaitre la taille de l'écran
+String 116=Vous ne disposez pas du module GIF2AVI.exe. Le télécharger, ainsi que ses dépendances  ?
+String 117=http://www.gutenberg.org/browse/languages/fr
+String 118=ATTENTION : AVEC LE NIVEAU REALTIME_PRIORITY_CLASS VOUS JOUEZ AVEC LE FEU. UN SEUL PROCESSUS PEUT AVOIR CETTE PRIORITE EN MEME TEMPS. IL SERA IMPOSSIBLE D'ARRETER LE LOGICIEL TANT QUE LA NUMERISATION NE SERA PAS TERMINEE. VOTRE SOURIS ET VOTRE CLAVIER NE BOUGERONT PLUS. En contrepartie, le programme numérisera les images plusieurs dizaines de fois plus vite.
+String 119=Qualité : (%u%)
+String 120=Appuyez  sur les touches { %u }.
+
+[Message]
+; Les messages qui s'affichent sous forme d'info bulles.
+; IMPORTANT : Les titres qui commencent par un i indiquent qu'il s'agit d'une information, l'info bulle ne sera affichée que deux fois, puis sera oubliée. Laissez les i là ou ils sont...
+Msg 1=Cette page ne vous plait pas ?
+Msg 2=Si vous souhaitez conserver les effets de style de la page (images-tableaux...), ouvrez IE, copiez la page, ouvrez Word, collez le texte, puis copier de nouveau et collez ici...
+Msg 3=Erreur !
+Msg 4=Les caractères suivants ne sont pas autorisés :
+Msg 5=Aucun texte sélectionné !
+Msg 6=Sélectionnez du texte dans l'aperçu pour utiliser cette option (max conseillé : 20 caractères)
+Msg 7=iOuvrir...
+Msg 8=Cliquez pour ouvrir un fichier Texte, Texte mis en forme et Lyrics (*.txt,*.rtf,*.doc,*.lrc)
+Msg 9=iFatigué des dégradés ?
+Msg 10=Vous pouvez utiliser une image de fond au format JPG/BMP/GIF non animé
+Msg 11=Impossible d'annuler
+Msg 12=Causes possibles de cette erreur :
+Msg 13=iCliquez ici !
+Msg 14=Cliquez ici pour créer des dégradés colorés !
+Msg 15=iMarquez ici le nom de fichier
+Msg 16=Les images crées seront automatiquement sauvegardés dans ce dossier, qui s'ouvrira automatiquement à la fin de la numérisation.
+Msg 17=iOuvrir...
+Msg 18=Vous devez cliquer içi pour ouvrir un fichier Internet sur le web, ou stocké sur votre disque dur (nécessite IE 5.5 ou supérieur)
+Msg 19=iQualité
+Msg 20=Réglez la qualité du JPG de sortie. Plus elle est proche de 100, meilleur est le résultat, mais plus il est lourd.
+Msg 21=Préfixe invalide !
+Msg 22=Ce champ permet de sélectionner un nom de préfixe pour les images.
+Msg 23=iChamp préfixe
+Msg 24=Ce champ permet de sélectionner un nom de préfixe pour les images. Les images obtenues auront un nom de la forme <dossier>\<préfixe>XXXX.jpg
+Msg 25=iLes marges Haut/Bas sont configurées
+Msg 26=Chaque image bénéficiera bien de vos modifications (non visibles sur l'aperçu)
+Msg 27=iDivision en chapitres
+Msg 28=Cette option crée des sous-dossiers à l'intérieur du dossier principal, chacun contenant un chapitre. La division en chapitre s'effectue chaque fois que le programme rencontre le terme marqué à droite, qui ne peut pas contenir du code RTF.
+Msg 29=iPriorité
+Msg 30=Si vous avez à numériser des textes longs, vous pouvez gagner en rapidité en réglant la priorité. Je conseille ABOVE_NORMAL_PRIORITY_CLASS !
+Msg 31=Remplacement terminé
+Msg 32= occurrences remplacées (en respectant la casse)
+Msg 33=iChamp Nom Réseau
+Msg 34=Ce champ vous permet de choisir le nom qui vous identifiera lors de vos connexions avec la base de données de baladeur, lors de rapport de bug....
+Msg 35=iChamp Base
+Msg 36=Ce champ permet d'indiquer l'arborescence par défaut où sont crées les dossiers de numérisation. Cliquez sur la loupe pour changer.
+Msg 37=Aucun texte sélectionné !
+Msg 38=Sélectionnez du texte dans l'aperçu pour utiliser cette option (max conseillé : 20 caractères).
+Msg 39=Nom de fichier invalide !
+Msg 40=Windows n'autorise pas la saisie des caractères suivants dans les noms de dossier :  \ / : * ?   < >
+Msg 41=iSauver en JPG
+Msg 42=Cliquez içi pour enregistrer ou non vos images au format JPG (le format par défaut est BMP). Je vous conseille d'activer cette option, et de régler la qualité à 75%.
+Msg 43=Inutile !
+Msg 44=Il est inutile de régler la couleur d'arrière plan, car vous utilisez déjà une image d'arrière plan. Régler la couleur n'aurait aucune utilité...
+Msg 45=Opération impossible
+Msg 46=La couleur de fond et la couleur de premier plan sont semblables.
+
+Msg 49=Téléchargement en cours...
+Msg 50=La DLL est en train d'être téléchargée...Merci de patienter ...
+Msg 51=Image introuvable !
+Msg 52=Ce fichier n'existe pas ou plus. Vérifiez de ne pas avoir commis d'erreurs.
+Msg 53=iImage d'arrière plan
+Msg 54=Ce champ permet de sélectionner une image jpg/bmp à utiliser en arrière plan du texte numérisé.
+Msg 55=Welcome !
+Msg 56=Welcome to TXT2JPG. You are not speaking French ? Click on this tab, and select your language.
+Msg 57=iActiver la pagination
+Msg 58=Si vous activez cette option, chaque page sera marquée de son numéro et d'une barre de progression. Vous pouvez régler la taille de ces informations à l'aide du curseur de marge du bas.7
+Msg 59=Dimensions invalides
+Msg 60=Ces dimensions ne sont pas correctes, choisissez un baladeur !
+Msg 61=Baladeur Ajouté
+Msg 62=Merci pour votre envoi ! Fermez le logiciel puis relancez-le pour prendre en compte !
+Msg 63=Une erreur est survenue !
+Msg 64=Les paramètres de votre baladeur ont peut être été mal chargés. Si les données affichées ne correspondent pas à votre baladeur, relancez le logiciel.
+Msg 65=Demande de confirmation !
+Msg 66=Le nom de répertoire existe déjà...Les fichier préexistants portant le même nom (%u/0XXXX.jpg) seront écrasés. Vous devriez changer de nom.
+Msg 67=iMettre une copie du fichier dans le...
+Msg 68=Si vous effectuez des modifications sur votre texte, cochez cette option. Cela sauvegardera vos changements dans le meme dossier que les images, et rouvrira votre projet au prochain démarrage.
+Msg 69=iEnregistrer ce baladeur
+Msg 70=Enregistre le baladeur en mémoire, et le sélectionnera par défaut pour chaque numérisation.
+Msg 71=iImage d'arrière plan
+Msg 72=Par défaut, le fond de chaque image sera de la couleur de fond selectionnée (blanc dans la majorité des cas). Cependant, vous pouvez aussi utiliser une image comme arrière-plan, ou simplement comme couverture.

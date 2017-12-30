@@ -1,0 +1,83 @@
+Array
+(
+    [REDIRECT_UNIQUE_ID] => WJSRgdTjHQoAABnf8rsAAAAJ
+    [REDIRECT_SCRIPT_URL] => /Res/Life_Game/Images/Aide.php
+    [REDIRECT_SCRIPT_URI] => http://neamar.fr/Res/Life_Game/Images/Aide.php
+    [REDIRECT_DOCUMENT_ROOT] => /kunden/homepages/38/d222425658/htdocs
+    [REDIRECT_UI_SUEXEC_DEFAULT_CHROOT_ID] => 6
+    [REDIRECT_UI_SUEXEC_FSTATD_UNIXSOCKET] => /run/ui-fstatd.suexec.socket
+    [REDIRECT_UI_SUEXEC_STATISTICS_UNIXSOCKET] => /homepages/sclientMF/http.sock.bin
+    [REDIRECT_DBENTRY_HOST] => neamar.fr
+    [REDIRECT_DBENTRY_VALUE] => /kunden/homepages/38/d222425658/htdocs:d0000#CPU 6 #MEM 10240 #CGI 90 #NPROC 12 #TAID 46917846 #LANG 2 #STAT 1 #CHROOT 7
+    [REDIRECT_DBENTRY_DOCROOT] => /kunden/homepages/38/d222425658/htdocs
+    [REDIRECT_DBENTRY_HASH] => d0000
+    [REDIRECT_DBENTRY__CPU] => 6
+    [REDIRECT_DBENTRY__MEM] => 10240
+    [REDIRECT_DBENTRY__CGI] => 90
+    [REDIRECT_DBENTRY__NPROC] => 12
+    [REDIRECT_DBENTRY__TAID] => 46917846
+    [REDIRECT_DBENTRY__LANG] => 2
+    [REDIRECT_DBENTRY__STAT] => 1
+    [REDIRECT_DBENTRY__CHROOT] => 7
+    [REDIRECT_DBENTRY] => /kunden/homepages/38/d222425658/htdocs:d0000#CPU 6 #MEM 10240 #CGI 90 #NPROC 12 #TAID 46917846 #LANG 2 #STAT 1 #CHROOT 7
+    [REDIRECT_HANDLER] => x-mapp-php5
+    [REDIRECT_STATUS] => 200
+    [UNIQUE_ID] => WJSRgdTjHQoAABnf8rsAAAAJ
+    [SCRIPT_URL] => /Res/Life_Game/Images/Aide.php
+    [SCRIPT_URI] => http://neamar.fr/Res/Life_Game/Images/Aide.php
+    [UI_SUEXEC_DEFAULT_CHROOT_ID] => 6
+    [DBENTRY_HOST] => neamar.fr
+    [DBENTRY_VALUE] => /kunden/homepages/38/d222425658/htdocs:d0000#CPU 6 #MEM 10240 #CGI 90 #NPROC 12 #TAID 46917846 #LANG 2 #STAT 1 #CHROOT 7
+    [DBENTRY_DOCROOT] => /kunden/homepages/38/d222425658/htdocs
+    [DBENTRY_HASH] => d0000
+    [DBENTRY__CPU] => 6
+    [DBENTRY__MEM] => 10240
+    [DBENTRY__CGI] => 90
+    [DBENTRY__NPROC] => 12
+    [DBENTRY__TAID] => 46917846
+    [DBENTRY__LANG] => 2
+    [DBENTRY__STAT] => 1
+    [DBENTRY__CHROOT] => 7
+    [DBENTRY] => /kunden/homepages/38/d222425658/htdocs:d0000#CPU 6 #MEM 10240 #CGI 90 #NPROC 12 #TAID 46917846 #LANG 2 #STAT 1 #CHROOT 7
+    [HTTP_HOST] => neamar.fr
+    [HTTP_ACCEPT] => */*
+    [HTTP_ACCEPT_LANGUAGE] => fr-FR
+    [HTTP_X_FLASH_VERSION] => 20,0,0,270
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+    [HTTP_CACHE_CONTROL] => max-stale=0
+    [HTTP_X_BLUECOAT_VIA] => 4cdd8e922645a710
+    [HTTP_X_IMFORWARDS] => 20
+    [PATH] => /bin:/usr/bin
+    [SERVER_SIGNATURE] => 
+    [SERVER_SOFTWARE] => Apache
+    [SERVER_NAME] => neamar.fr
+    [SERVER_ADDR] => 212.227.29.10
+    [SERVER_PORT] => 80
+    [REMOTE_ADDR] => 194.98.70.137
+    [DOCUMENT_ROOT] => /kunden/homepages/38/d222425658/htdocs
+    [REQUEST_SCHEME] => http
+    [CONTEXT_PREFIX] => /system-bin/
+    [CONTEXT_DOCUMENT_ROOT] => /kunden/usr/lib/cgi-bin/
+    [SERVER_ADMIN] => webmaster@neamar.fr
+    [SCRIPT_FILENAME] => /kunden/homepages/38/d222425658/htdocs/Res/Life_Game/Images/Aide.php
+    [REMOTE_PORT] => 49558
+    [REDIRECT_URL] => /Res/Life_Game/Images/Aide.php
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [REQUEST_METHOD] => GET
+    [QUERY_STRING] => 
+    [REQUEST_URI] => /Res/Life_Game/Images/Aide.php
+    [SCRIPT_NAME] => /Res/Life_Game/Images/Aide.php
+    [STATUS] => 200
+    [ORIG_PATH_INFO] => /Res/Life_Game/Images/Aide.php
+    [ORIG_PATH_TRANSLATED] => /kunden/homepages/38/d222425658/htdocs/Res/Life_Game/Images/Aide.php
+    [PHP_SELF] => /Res/Life_Game/Images/Aide.php
+    [REQUEST_TIME_FLOAT] => 1486131585.3392
+    [REQUEST_TIME] => 1486131585
+    [argv] => Array
+        (
+        )
+
+    [argc] => 0
+)

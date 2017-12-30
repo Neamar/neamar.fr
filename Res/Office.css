@@ -1,0 +1,18 @@
+body
+{
+	background: #88aad6 url("ImagesCSS/Fond.png") no-repeat fixed top left;
+}
+
+#Main
+{
+	background:white url('ImagesCSS/Abstract.jpg') no-repeat scroll right bottom;
+}
+
+#Sommaire
+{
+	background:rgb(57,97,140) url("ImagesCSS/Table.png") no-repeat top right;
+}
+#Sommaire:hover
+{
+	background:rgb(136,170,214);/*Ne plus afficher "Table des matières" */
+}

@@ -1,0 +1,24 @@
+<Files Stats.txt>
+deny from all
+</Files>
+<FilesMatch "\.css$">
+Header set Expires "Thu, 15 Apr 2020 20:00:00 GMT"
+</FilesMatch>
+
+
+# Le serveur doit suivre les liens symboliques :
+Options +FollowSymlinks
+
+# Activation du module de réécriture d'URL :
+RewriteEngine on
+
+#--------------------------------------------------
+# Règles de réécriture d'URL :
+#--------------------------------------------------
+
+# Enigmes :
+RewriteRule ^(.+)/-Stats$  /Res/Stats.php?For=$1 [L]
+
+#Faire attention à ne pas rediriger le fichier CSS du Typographe !
+RewriteRule Typo/([^T].+[^s]$) http://neamar.fr/Res/Typographe/$1 [L]
+RewriteRule Typo/$ http://neamar.fr/Res/Typographe/ [L]

@@ -1,0 +1,11 @@
+# Le serveur doit suivre les liens symboliques :
+Options +FollowSymlinks
+
+# Activation du module de réécriture d'URL :
+RewriteEngine on
+
+#--------------------------------------------------
+# Règles de réécriture d'URL :
+#--------------------------------------------------
+
+RewriteRule ^Fiche-(.+)-([1-9]+)-([a-zA-Z]+)$ /index.php?pseudo=$1&amp;age=$2&amp;nationalite=$3 [L]

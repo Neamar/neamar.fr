@@ -1,0 +1,10 @@
+#Sommaire, #Box, #Footer, iframe
+{
+	display:none;
+}
+
+body, #Main
+{
+	padding:5px;
+	margin:0;
+}

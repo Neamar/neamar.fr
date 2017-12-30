@@ -1,0 +1,172 @@
+Certains résultats issus de l'analyse des réseaux sociaux doivent être assimilés avant d'aborder le contenu de cette section. Ces résultats sont détaillés dans l'\l[#Annexe_nbsp___modélisation_des_réseaux_sociaux]{annexe de ce document}. On pourra rappeler ici quelques propriétés caractérisant les graphes représentants des réseaux sociaux :
+
+\item les degrés des noeuds du graphe suivent une distribution en loi de puissance ;
+\item le diamètre de ces graphes est généralement faible et en $O(\log n)$ ;
+\item le taux de clusterisation est élevé ;
+\item ces graphes deviennent de plus en plus denses et leur diamètre diminue avec le temps.\\
+
+~
+
+L'état de l'art pour la Fouille de Données dans les réseaux sociaux se divise en plusieurs axes principaux :
+
+\item prédiction de liens (pour améliorer l'efficacité du marketing viral par exemple) ;
+\item identification des acteurs importants et des experts ;
+\item extraction de communautés ;
+\item identification des rôles joués par les individus en fonction de leurs liens (\emph{link mining}) ;
+\item diffusion de l'information (diffusion des épidémies, contagion, etc.);
+\item recommandations et confiance ;
+\item recherche dans les réseaux sociaux (amélioration des algorithmes de routage, etc.) ;
+\item anonymisation et Vie Privée.
+
+Seuls les trois premiers points énumérés ci-dessus seront traités dans cette partie. On pourra noter que le dernier point fera l'objet d'une partie dédiée dans cette synthèse.
+
+\subsection{Prédiction de liens}
+
+Le problème de la prédiction de liens a été vu, pour l'instant, comme un problème de reconstitution de liens manquants sur un graphe. Il s'agit donc d'un procédé qui fait intervenir de l'apprentissage.
+
+\subsubsection{Modèle de prédiction selon la distance}
+
+L'approche de \cite{liben-nowell04} se base le principe que les liens se forment selon la distance topologique entre les deux noeuds du lien. Il s'agit donc pour eux d'une caractéristique de la topologie du graphe. Pour démontrer cela, ils ont effectué une simulation sur le réseau ArXiv en utilisant plusieurs méthodes de calcul de rang en se basant sur les données connues entre 1994 et 1996 et en essayant de prédire les liens apparus entre 1997 et 1999.
+
+\begin[\cite{liben-nowell04} Pour information, définition des différentes mesures ayant été comparées entre elles durant cette étude.]{figure}
+  \image[\cite{liben-nowell04} Pour information, définition des différentes mesures ayant été comparées entre elles durant cette étude.]{images/21.png}
+\end{figure}
+
+
+Les résultats obtenus ne sont pas satisfaisants (le meilleur d'entre eux est correct sur seulement 16% de ses prédictions) mais ceux-ci permettent clairement de montrer que la topologie des graphes joue quand même un rôle sur les liens entre les noeuds.
+
+\begin[\cite{liben-nowell04} Comparaison de la performance des mesures utilisées par rapport à une prédiction aléatoire et par rapport à une prédiction simplement basée sur la distance.]{figure}
+  \image[\cite{liben-nowell04} Comparaison de la performance des mesures utilisées par rapport à une prédiction aléatoire et par rapport à une prédiction simplement basée sur la distance.]{images/22a.png}
+\end{figure}
+\begin[\cite{liben-nowell04} Comparaison de la performance des mesures utilisées par rapport à une prédiction aléatoire et par rapport à une prédiction simplement basée sur la distance.]{figure}
+  \image[\cite{liben-nowell04} Comparaison de la performance des mesures utilisées par rapport à une prédiction aléatoire et par rapport à une prédiction simplement basée sur la distance.]{images/22b.png}
+\end{figure}
+
+
+\subsubsection{Modèle \emph{Hierarchical Random Graphs}}
+
+Parmi les modèles proposés pour modéliser un réseau social a été récemment proposé \emph{Hierarchical Random Graphs} par \cite{clauset08}. Ce modèle se base sur le principe que les réseaux sont organisés hiérarchiquement. Cette approche permet entre autres de retrouver les propriétés caractéristiques des réseaux sociaux que sont les lois de distribution des degrés, des coefficients de clusterisation élevés et des petits chemins.
+
+
+\begin[\cite{clauset08} À droite, un réseau dit hiérarchique avec son Hierarchical Random Graph. Le dendrogramme correspondant possède, pour chaque noeud, une probabilité p_r telle que les deux sous-arbres de ce noeud soient liés par un lien]{figure}
+  \image[\cite{clauset08} À droite, un réseau dit hiérarchique avec son Hierarchical Random Graph. Le dendrogramme correspondant possède, pour chaque noeud, une probabilité p_r telle que les deux sous-arbres de ce noeud soient liés par un lien]{images/23.png}
+\end{figure}
+
+Cette approche n'a néanmoins pas fait beaucoup de bruit dans la communauté puisque celle-ci n'en n'est qu'à ses débuts. Cependant, des tests de prédiction de liens ont été effectués et se sont révélés concluants.
+
+\begin[\cite{clauset08} Comparaisons des résultats des différentes mesures utilisées pour faire de la prédiction de liens. La méthode Hierarchical Random Graph est plutôt efficace en comparaison avec les autres.]{figure}
+  \image[\cite{clauset08} Comparaisons des résultats des différentes mesures utilisées pour faire de la prédiction de liens. La méthode Hierarchical Random Graph est plutôt efficace en comparaison avec les autres.]{images/24.png}
+\end{figure}
+
+\subsection{Identification des acteurs importants et des experts}
+
+L'identification des acteurs et des experts au sein d'un réseau social est un problème issu du fait que nous disposions d'un nombre important de données sur les liens entre les différents noeuds d'un graphe. Cette connaissance sur les relations entre les individus a amené les chercheurs à étendre les tâches de Fouilles de Données classiques puisqu'il est envisageable de faire des classifications à partir des liens que possède un noeud (et non plus à partir de ses attributs seuls) par exemple.
+
+\subsubsection{Identification des acteurs importants}
+
+Cette approche de déduire certaines propriétés d'un noeud à partir de ses liens se retrouve dans la théorie de \cite{kleinberg97}, où il identifie les noeuds dit hubs ainsi que ceux qui sont dits autorités. L'algorithme le plus connu du grand public concernant cet aspect de la recherche est certainement l'algorithme utilisé par Google, \emph{PageRank}, cité dans le document de \cite{brin99}.
+
+Cette importance peut également être mesurée par diverses mesures basées sur la centralité des noeuds (centralité vis-à-vis des degrés, de la proximité, etc.).
+
+\subsubsection{Identification des experts}
+
+Une identification des experts sur un domaine est également possible et a fait l'objet de plusieurs recherches. Ces identifications sont basées sur une analyse d'informations issues de publications ou d'échanges informatisés (mails) pour identifier les différents acteurs d'un document et en déduire leur expertise sur des domaines particuliers.
+
+Un exemple de recherches à ce sujet là est le travail de \cite{song05} qui utilise les citations d'un document pour construire le profil \emph{ExpertiseNet} d'un individu, constitué de plusieurs domaines dans lesquels l'individu en question est plus ou moins compétent. Cette compétence est ensuite quantifiée pour être restituée lors d'une requête.
+
+\begin[\cite{song05} Fonctionnement du système \emph{ExpertiseNet}.]{figure}
+  \image[\cite{song05} Fonctionnement du système \emph{ExpertiseNet}.]{images/25.png}
+\end{figure}
+
+
+\begin[\cite{song05} Résultats obtenus après une requête sur \emph{ExpertiseNet}. On notera que l'expertise d'un individu dans des domaines donnés est fonction du temps.]{figure}
+  \image[\cite{song05} Résultats obtenus après une requête sur \emph{ExpertiseNet}. On notera que l'expertise d'un individu dans des domaines donnés est fonction du temps.]{images/26a.png}
+\end{figure}
+\begin[\cite{song05} Résultats obtenus après une requête sur \emph{ExpertiseNet}. On notera que l'expertise d'un individu dans des domaines donnés est fonction du temps.]{figure}
+  \image[\cite{song05} Résultats obtenus après une requête sur \emph{ExpertiseNet}. On notera que l'expertise d'un individu dans des domaines donnés est fonction du temps.]{images/26b.png}
+\end{figure}
+
+Un autre exemple de système d'identification d'experts est proposé dans les travaux de \cite{li07}, sur l'\emph{Enterprise Oriented Search (EOS) Using Social Networks}, qui a amené à l'implémentation du moteur de recherche disponible à l'adresse suivante : \l[http://www.arnetminer.net]{http://www.arnetminer.net}, recensant des informations sur plus de 500 000 chercheurs dans le domaine de l'informatique et en bâtissant un réseau social basé sur leurs relations d'auteurs et de co-auteurs.
+
+\begin[Captures d'écran de l'outil ArnetMiner.]{figure}
+  \image[Captures d'écran de l'outil ArnetMiner.]{images/26y.png}
+\end{figure}
+\begin[Captures d'écran de l'outil ArnetMiner.]{figure}
+  \image[Captures d'écran de l'outil ArnetMiner.]{images/26z.png}
+\end{figure}
+
+L'algorithme utilisé pour l'EOS est basé sur les mêmes principes que pour les autres algorithmes de
+recherche d'experts, avec l'utilisation de deux sources ici : la DBLP pour le profil d'un chercheur et le
+Citeseer pour les classements de publications et de citations.
+
+\subsection{Extraction de communautés}
+
+Il est possible d'utiliser un nombre important d'algorithmes classiques de détection de groupes (qui ne seront pas abordés dans ce document), basés sur les procédés suivants :
+
+\item partitionnement de graphe (par coupures minimales)\footnote{Pour rappel, un partitionnement d'un graphe est tel que chaque noeud appartient à un, et un seul, cluster.} mais cela suppose de connaître à l'avance le nombre de partitions à réaliser ;
+\item clustering hiérarchique mais il s'agit d'une méthode en général coûteuse en $O(n^2\log n)$ et qui n'est bien sûr pas adaptée aux structures n'ayant pas de hiérarchie à la base ;
+\item clustering en partitions ($k$-means) mais comme pour les procédés de partitionnement de graphe, le nombre de partitions est à définir à l'avance ;
+\item clustering spectral utilisant les représentations matricielles des graphes ainsi que leurs propriétés (valeurs propres) pour définir les clusters pour lequel nous pourrons nous reporter à \cite{luxburg07}.
+
+Nous nous intéresserons ici à des méthodes adaptées à la topologie particulière des réseaux sociaux en lignes.
+
+\subsubsection{Algorithme de Girvan-Newman}
+
+Une nouvelle approche de détection de communautés a été proposée par \cite{girvan01}. Cet algorithme est basé sur la décomposition d'un graphe en enlevant un par un les liens ponts, ces derniers étant identifiés par leur mesure de \emph{betweeness}, à l'opposé des anciennes méthodes qui se contentaient de trouver les liens les plus forts.
+
+En effet, les liens ponts sont les liens séparant deux communautés. Ceux-ci peuvent être identifiés à l'aide d'une mesure de betweeness qui quantifie le nombre de courts chemins dans l'ensemble du graphe passants par ce lien. L'algorithme est donc le suivant :
+
+\begin{enumerate}
+\li calculer les valeurs de betweeness pour tous les liens ;
+\li enlever le lien qui a la plus grande valeur de betweeness (s'il y a égalité, en choisir un au hasard parmi les ex-æquo) ;
+\li refaire le calcul des valeurs de betweeness pour tous les liens restants ;
+\li répéter les étapes 2 et 3.
+\end{enumerate}
+
+\begin[\cite{girvan01} Application de l'algorithme de Givran-Newman sur le club de karaté de \cite{zachary77}. Mis à part le noeud 3, la classification correspond aux observations.]{figure}
+  \image[\cite{girvan01} Application de l'algorithme de Givran-Newman sur le club de karaté de \cite{zachary77}. Mis à part le noeud 3, la classification correspond aux observations.]{images/27.png}
+\end{figure}
+
+Cet algorithme a une complexité de $O(m^2n)$ ou de $O(n^3)$ dans le cas d'un graphe peu dense avec $m$ le nombre de liens et $n$ le nombre de noeuds, un graphe étant peu dense si $m \ll n$, ce qui est bien le cas avec les réseaux sociaux.
+
+\subsubsection{Algorithme de Newman}
+
+L'algorithme proposé par \cite{newman03} permet de détecter des communautés dans des très grands graphes efficacement. Cet algorithme se base sur la mesure de \emph{modularité} suivante : $Q = \sum_i (e_{ii} - a_i^2)$, avec $e_{ii}$ la proportion de liens internes à une communauté et $a_i = \sum_j (e_{ij})$ la proportion de liens faisant intervenir des noeuds de cette communauté avec des noeuds d'une autre communauté.
+
+Cette mesure de modularité doit être maximisée en utilisant l'algorithme glouton suivant :
+
+\begin{enumerate}
+\li isoler chaque noeud dans des communautés séparées ;
+\li calculer $\Delta Q$ pour chaque combinaison de communautés possibles ;
+\li fusionner les communautés ayant le plus haut incrément $\Delta Q$ ;
+\li répéter les étapes 2 et 3 jusqu'à avoir une valeur de la mesure $Q$ maximale.
+\end{enumerate}
+
+La complexité de cet algorithme est de $O((m + n) \times n)$ avec $m$ le nombre de liens et $n$ le nombre de noeuds ou de $O(n^2)$ dans le cas d'un graphe peu dense.
+
+\subsubsection{Amélioration de l'algorithme de Newman}
+
+Cet algorithme a été amélioré par \cite{clauset04} pour atteindre une complexité de $O(md \log n)$ avec $m$ le nombre de liens, $d$ la profondeur du dendrogramme décrivant les communautés et $n$ le nombre de noeuds. En sachant de plus qu'en général, $m \sim n$ et que $d \sim \log n$, on obtient une complexité de $O(n \log^2 n)$. Cette amélioration consiste juste en une meilleure gestion des données (par exemple, pas besoin de calculer $\Delta Q$ pour des communautés ne pouvant être fusionnées parce qu'il n'existe aucun pont ou meilleur suivi des $\Delta Q$ en utilisant un tas max).
+
+Un jeu de test a été constitué à partir des données d'Amazon d'août 2003, soit un graphe de 409 687 noeuds et de 2 464 630 liens. Ce graphe représente des produits vendus sur Amazon, liés entre eux par des liens, un lien existant entre A et B si B est souvent acheté par les acheteurs de A. Le temps de calcul n'est pas donné mais voici la division en communautés qui a été obtenue :
+
+\begin[\cite{clauset04} Résultats de l'étude avec à gauche la modularité Q que l'on fait augmenter et avec à droite la représentation finale du graphe.]{figure}
+  \image[\cite{clauset04} Résultats de l'étude avec à gauche la modularité Q que l'on fait augmenter et avec à droite la représentation finale du graphe.]{images/28a.png}
+\end{figure}
+\begin[\cite{clauset04} Résultats de l'étude avec à gauche la modularité Q que l'on fait augmenter et avec à droite la représentation finale du graphe.]{figure}
+  \image[\cite{clauset04} Résultats de l'étude avec à gauche la modularité Q que l'on fait augmenter et avec à droite la représentation finale du graphe.]{images/28b.png}
+\end{figure}
+
+\subsubsection{Détection de communautés superposées}
+
+L'ensemble des méthodes abordées jusqu'ici ne traitaient que de communautés ne pouvant être superposées. En réalité, de nombreux noeuds peuvent appartenir à plusieurs communautés en même temps. Cette problématique a été abordée dans les travaux de \cite{palla05} et a débouché sur la méthode de percolation des cliques\footnote{Pour rappel, une clique est un sous-graphe dont la particularité est qu'il existe un lien entre n'importe lequel des noeuds de ce sous-graphe.}.
+
+L'idée de cet algorithme est, à partir de $k$-cliques (des cliques avec $k$ noeuds), de construire petit à petit les communautés, considérées ici comme un ensemble de cliques. Cette union est alors définie comme étant une « communauté $k$-clique ». Nous pouvons préciser que l'union de deux $k$-cliques est réalisée si ces cliques sont dites adjacentes donc si elles partagent $k - 1$ noeuds.
+
+\begin[\cite{palla05} Superposition de communautés.]{figure}
+  \image[\cite{palla05} Superposition de communautés.]{images/29.png}
+\end{figure}
+
+\subsubsection{Détection de communautés dynamiques}
+
+Étant donné la non fiabilité actuelle et la marge d'amélioration possible des algorithmes de détection de communautés statiques, très peu de travaux sont entrepris dans le domaine de la détection des communautés évoluant dans le temps. Cette dynamique des communautés peut notamment s'exprimer par les phénomènes de croissance, de réduction, de fusion, de division, de naissance ou de mort de communautés.

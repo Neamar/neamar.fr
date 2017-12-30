@@ -1,0 +1,247 @@
+\begin[\cite{tossell06}]{quote}
+MySpace is doubly awkward because it makes public what should be private. It doesn't just create social networks, it anatomizes them. It spreads them out like a digestive tract on the autopsy table. You can see what's connected to what, who's connected to whom.
+\end{quote}
+
+L'analyse des réseaux sociaux est une problématique assez ancienne qui n'est pas née avec l'avènement des réseaux sociaux modernes tels que Facebook ou Twitter. En effet, l'analyse des données issues des relations sociales a occupé depuis plusieurs décennies de nombreux domaines tels que la sociologie, la psychologie ou encore l'anthropologie. Ces relations autrefois transparentes sont désormais rendues visibles grâce à l'informatique.
+
+On pourra notamment citer les travaux de \cite{zachary77}, suivant les relations existantes entre les 34 membres d'un club de karaté sur une période de 3 ans.
+
+On trouve notamment dans cet ouvrage un exemple de modélisation en graphe des réseaux sociaux, les \emph{individus} étant représentés par des \emph{noeuds}, les \emph{liens} entre ces individus étant représentés par des arêtes, lesdits noeuds et lesdites \emph{arêtes} pouvant avoir des attributs spécifiques.
+
+\begin[\cite{zachary77} Représentation graphique des relations sociales entre les 34 membres du club de karaté. Un lien existe entre deux membres si ceux-ci entretiennent des relations sociales en dehors du contexte du club de karaté.]{figure}
+  \image[\cite{zachary77} Représentation graphique des relations sociales entre les 34 membres du club de karaté. Un lien existe entre deux membres si ceux-ci entretiennent des relations sociales en dehors du contexte du club de karaté.]{images/01.png}
+\end{figure}
+
+Au cours de cette étude s'est déroulé un phénomène inattendu qui a été la division de ce club en deux à cause de divergences sur l'organisation du club. Zachary a alors remarqué que cette division s'est caractérisée par une coupure du graphe représentatif des membres du club par sa coupe minimale, séparant ainsi les personnes ayant des opinions différentes sur le problème\footnote{Ce résultat est bien évidemment spécifique à ce cas là et ne peut être généralisé sans précautions.}. Cette particularité illustre l'existence d'une clusterisation de ces graphes : les personnes se groupent en \emph{communautés}. Cette expérimentation a aussi mis en évidence la notion de \emph{hubs}, sur laquelle nous reviendrons plus tard.
+
+L'exemple donné ne traite que d'un graphe à petite échelle mais nous verrons qu'historiquement, deux axes de recherches sont apparus, pour l'étude de petits graphes par les scientifiques du domaine du social et par l'étude des propriétés des grands graphes.
+
+Aujourd'hui, il est beaucoup plus simple de récolter les données nécessaires pour réaliser les recherches. Celles-ci proviennent en général de trois catégories de sources : les réseaux sociaux (MySpace, Facebook, LiveJournal, Flickr, etc.), les réseaux de communication en ligne (e-mail et messagerie instantanée, blogs, e-commerce, etc.) et les réseaux de publications en ligne (arXiv, etc.).
+
+Contextualisons pour donner des exemples de dimensionnement. Dans les années 1970, l'étude portait sur des graphes de 34 noeuds sur 3 ans issus d'un club de karaté \cite{zachary77}. En 2005, ce sont 436 noeuds issus d'échanges mails entre chercheurs des HP Labs qui sont étudiés sur 3 mois \cite{adamic05}, puis 43 553 noeuds issus d'échanges mails sur une université pendant 1 an \cite{kossinets06}. D'autres recherches ont également portés sur des grands réseaux comme les travaux de \cite{liben-nowell05} traitant un réseau de 1 312 454 noeuds ou des travaux de \cite{leskovec07} qui ont révolutionné le domaine sur 240 millions d'individus, issus du réseau Microsoft Messenger.
+
+\begin[\cite{adamic05} Réseau d'échange mails entre les membres des HP Labs, les liens gris étant les liens hiérarchiques et les liens gris les échanges mails.]{figure}
+  \image[\cite{adamic05} Réseau d'échange mails entre les membres des HP Labs, les liens gris étant les liens hiérarchiques et les liens gris les échanges mails.]{images/02.png}
+\end{figure}
+
+Il est aussi à noter que la taille de ces graphes pose actuellement des problèmes en matière de stockage, surtout si ceux-ci sont dynamiques, jusqu'à représenter 100 GB de données par jour selon \cite{hofman09} pour des graphes de $10^7$ noeuds, $10^2$ liens par noeuds et en prenant les métadonnées rattachées aux noeuds et aux liens ainsi que le dynamisme du graphe.
+
+\begin[\cite{leskovec07} Utilisateurs du réseau Microsoft Messenger représentés géographiquement. La couleur est représentative de la densité à une position donnée.]{figure}
+  \image[\cite{leskovec07} Utilisateurs du réseau Microsoft Messenger représentés géographiquement. La couleur est représentative de la densité à une position donnée.]{images/03.png}
+\end{figure}
+
+Nous pouvons dès lors aller plus loin et essayer, dans un premier temps, de caractériser ces graphes pour ensuite essayer de retrouver ces comportements dans des modèles.
+
+\subsection{Propriétés des réseaux sociaux}
+
+\subsubsection{Vocabulaire}
+
+\textbf{Réseau social}
+Structure par laquelle des individus sont liés entre eux par un lien. Un tel réseau est généralement représenté par un graphe dont les noeuds sont les acteurs du réseau et dont les liens illustrent les relations entre ces acteurs.
+
+\textbf{Communautés, Clusters et Groupes}
+Une \emph{communauté} est un ensemble de noeuds ayant de nombreuses connexions entre eux mais ayant un très faible nombre de connexions vers l'extérieur.
+
+\begin[Communautés dans un graphe.]{figure}
+  \image[Communautés dans un graphe.]{images/04.png}
+\end{figure}
+
+Les communautés, aussi appelées \emph{modules}, ne sont pas à confondre avec les \emph{groupes}, ces derniers étant une caractéristique des noeuds. En effet, chaque noeud peut déclarer qu'il appartient à un ou plusieurs groupes (comme c'est le cas avec les groupes Facebook par exemple). Un groupe est donc constitué de membres adhérents et ne doit donc pas être confondu avec les communautés.
+
+Enfin, la différence entre la détection de communautés et le clustering consiste en ce que le premier cherche à diviser le graphe en des structures selon leurs connexions (c'est uniquement de la topologie) alors que le deuxième consiste en un regroupement de structures selon une mesure de similarité, mesure qui est à définir au préalable. Cependant, ces deux notions sont similaires et sont souvent confondues.
+
+\subsubsection{Loi de distribution des degrés}
+
+Tout d'abord, il faut savoir que les études sur les graphes de réseaux sociaux ont montré que ces graphes possèdent des caractéristiques particulières. L'une de ces caractéristiques est la loi de distribution des degrés de ces graphes.
+
+En effet, il a été observé par \cite{price65}\footnote{En l'occurrence, l'étude de \cite{price65} est basée sur les citations entre les documents de recherche de l'époque.} puis vérifié plus tard avec expérimentations que dans un graphe représentant les réseaux sociaux, les degrés des noeuds suivent une distribution de type \emph{loi de puissance}, de type $P(k) \propto k^{-\alpha}$ avec $k$ les degrés d'un noeud.
+
+\begin[\cite{price65} Distribution des degrés obtenue avec en abscisses k et en ordonnées P(k).]{figure}
+  \image[\cite{price65} Distribution des degrés obtenue avec en abscisses k et en ordonnées P(k).]{images/05.png}
+\end{figure}
+
+Ces graphes sont alors dits à « invariance d'échelle » et sont bien différents de la répartition classique des degrés d'un graphe totalement aléatoire qui, dans un tel cas, suit une distribution binomiale de type $P(k) = \binom{n}{k} p^k (1-p)^{n-k}$.
+
+D'une façon plus générale, les lois de puissance se retrouvent souvent dans les réseaux d'informations comme les degrés des routeurs Internet. On parle d'une distribution \emph{heavy-tailed} dont l'expression vérifie $\lim_{x \to \infty} e^{\lambda x} Pr[X>x] = \infty$, $\forall \lambda > 0$.
+
+\begin[\cite{leskovec08} Distribution des degrés dans le réseau social Flickr. Le graphique de droite reprend les données de celui de gauche sur des axes en log-log. Il y a bien une loi de puissance avec ici un coefficient $\alpha = 1,75$.]{figure}
+\image[\cite{leskovec08} Distribution des degrés dans le réseau social Flickr.]{images/06a.png} \image[Ce graphique reprend les données de celui de gauche sur des axes en log-log.]{images/06b.png}
+\end{figure}
+
+L'une des conséquences de cette loi de distribution des degrés est qu'environ 20 % des noeuds ont 80% des liens, donnant alors une importance capitale aux \emph{hubs} (noeuds ayant beaucoup de liens sortants) et aux autorités (noeuds ayant beaucoup de liens entrants). En effet, la conséquence de ce type de propriété est qu'une attaque sur seulement 5 % des noeuds préalablement bien choisis suffit à défaire le réseau selon \cite{jacomy09}.
+
+\begin[Différence entre un graphe aléatoire (avec une loi de distribution des degrés binomiale) et un graphe représentant un réseau social. On notera la présence de noeuds spéciaux appelés « hubs » et « autorités » sur lesquels on reviendra dans la suite de ce document.]{figure}[H]
+\image[Graphe aléatoire]{images/07a.png} \image[Graphe social]{images/07b.png}
+\end{figure}
+
+\subsubsection{Diamètre et « petit monde »}
+
+En plus de la loi de distribution des degrés, il a été vérifié par \cite{travers69} que les
+graphes ont, en général, un faible \emph{diamètre}, qui rappelons-le est la distance la plus longue de toutes
+les plus courtes distances d'un graphe. Cette théorie est plus connue sous le nom des « 6 degrés de
+séparation » et caractérise un réseau dans lequel il est possible de trouver un chemin très court entre
+toute paire de points, chemin trouvable sans même connaître le réseau dans sa totalité. En général,
+le diamètre d'un graphe représentant un « petit monde » ou d'un graphe aléatoire est de l'ordre de $O(\log n)$
+avec $n$ le nombre de noeuds du graphe.
+
+\begin[\cite{travers69} Longueur des chaînes complétées lors de l'expérience de Milgram, la moyenne étant ici de 6,2 étapes avant la réception finale.]{figure}
+  \image[\cite{travers69} Longueur des chaînes complétées lors de l'expérience de Milgram, la moyenne étant ici de 6,2 étapes avant la réception finale.]{images/08.png}
+\end{figure}
+
+Cette théorie se retrouve plus ou moins avec de vrais graphes tels que celui présenté par \cite{leskovec07}, présentant la répartition des distances sur le réseau Microsoft Messenger et qui représentée ci-dessous.
+
+\begin[\cite{leskovec07} « Degrés de séparation » observés sur le réseau Microsoft Messenger. La moyenne est ici de 6,6 étapes.]{figure}
+  \image[\cite{leskovec07} « Degrés de séparation » observés sur le réseau Microsoft Messenger. La moyenne est ici de 6,6 étapes.]{images/09.png}
+\end{figure}
+
+Une autre étude de \cite{mislove07} nous montre qu'en 2006/2007, le réseau YouTube avait un diamètre de 21 (1,1 millions d'utilisateurs, 4,9 millions de liens, longueur moyenne des chaînes de 5,10), que le réseau Flickr avait un diamètre de 27 (1,8 millions d'utilisateurs, 22 millions de liens, longueur moyenne des chaînes de 5,67) et que le réseau LiveJournal avait un diamètre de 20 (5,2 millions d'utilisateurs et 72 millions de liens, longueur moyenne des chaînes de 5,88).
+
+\subsubsection{Dynamique et évolution}
+Tout d'abord, en opposition à ce qui se croyait auparavant, \cite{leskovec05b} ont observé qu'a l'opposé de graphes « normaux », les graphes des réseaux sociaux devenaient de plus en plus denses avec l'augmentation des degrés des noeuds des graphes selon la loi de puissance suivante : $E(t) \propto N(t)^a$ avec $N(t)$ les noeuds au temps $t$, $E(t)$ les liens au temps $t$ et $a$ l'exposant de densification, $1 \leq a \leq 2$.
+
+\begin[\cite{leskovec05b} À gauche, augmentation du degré des noeuds et à droite, corrélation avec la loi de densification proposée. Cette étude a été réalisée à partir de quatre sources de données.]{figure}
+\image[Augmentation du degré des noeuds]{images/10a.png} \image[Corrélation]{images/10b.png}
+\end{figure}
+
+On pourra remarquer que la loi de densification présentée suppose que le nombre de liens augmente plus vite que le nombre de noeuds. Enfin, ceux-ci ont également observés une \emph{diminution du diamètre du graphe}.
+
+\begin[\cite{leskovec05b} Observation de la diminution du diamètre des graphes étudiés.]{figure}
+  \image[\cite{leskovec05b} Observation de la diminution du diamètre des graphes étudiés.]{images/11.png}
+\end{figure}
+
+\subsubsection{Clusterisation}
+
+Un réseau social se démarque également par son haut taux de clusterisation, qui peut se mesurer par la proportion de « mes » amis qui sont amis entre eux. Ce taux, pour un noeud $i$ est calculé de la manière suivante : $C_i = \frac{2e_i}{k_i(k_i - 1)}$, $C_i \in [0, 1]$ avec $e_i$ le nombre de liens entre les voisins de $i$ et avec $k_i$ le degré de $i$. Le taux de clusterisation peut également être calculé pour un graphe en effectuant la moyenne de tous les coefficients de chaque noeud, $C = \frac{1}{N}\sum_{i}^{N} C_i$.
+
+Ce haut taux se retrouve dans les études de \cite{newman03} et de \cite{newman01} à partir desquelles nous savons que pour un réseau d'auteurs d'articles de recherche en physique constitué de 52 909 noeuds le taux de clusterisation est de 56 %. Il en est de même pour un réseau d'acteurs de cinéma pour lequel ce taux atteint les 78 %. Ce clustering peut s'apparenter à des communautés d'individus.
+
+\begin[\cite{newman03} Quelques données sur divers réseaux sociaux.]{figure}
+  \image[\cite{newman03} Quelques données sur divers réseaux sociaux.]{images/12.png}
+\end{figure}
+
+Cette propriété de clustering peut être expliquée par la propriété de similarité (les amis de $x$ lui sont similaires) et par une transitivité de la similarité où si $x$ et $y$ sont amis avec $u$ alors $x$ et $u$ sont similaires, de même entre $y$ et $u$ d'où par transitivité $x$ et $y$ sont similaires ou encore $x$ et $y$ sont amis. Cette propriété est appelée \emph{homophily}.
+
+\subsection{Modélisation des réseaux sociaux}
+
+\begin[Mike Steuerwalt, NSF KDI Workshop, 1998]{quote}
+We want Kepler's Laws of Motion for the Web
+\end{quote}
+
+Les résultats détaillés précédemment sur la modélisation des réseaux sociaux ont été le fruit des recherches des dix dernières années. À l'heure des réseaux sociaux numériques, de nouveaux problèmes se posent, ce que nous allons voir dans la partie qui suit. Deux grands axes de recherche sont distinguables :
+
+\item Étude de la structure des réseaux sociaux (ce que nous allons traiter dans cette partie) ;
+\item Étude des propriétés et des motifs retrouvables dans les réseaux sociaux (traités dans la partie suivante).
+
+Les techniques habituellement utilisées pour faire de la Fouille de Données ne sont pas adaptées à la nature même des graphes représentant les réseaux sociaux. En effet, de nombreux obstacles rendent ces algorithmes inefficaces dont notamment ceux de la taille des graphes soumis (qui ne cesse d'augmenter de par la facilité d'acquisition des données) et de la dynamique de ces graphes.
+
+De plus, comme nous venons de le mentionner, l'aspect dynamique de ces réseaux sociaux soulève des problématiques jusqu'alors non abordées.
+
+Les modèles présentés dans la suite de cette synthèse ont tous été conçus dans le but de reproduire les mécanismes régissant les propriétés observées précédemment et ce afin de pouvoir « prédire » d'autres propriétés jusqu'alors insoupçonnées.
+
+\subsubsection{Modélisation de la structure d'un réseau social par génération aléatoire}
+Des modèles de réseaux sociaux ont été élaborés dans le but d'améliorer la compréhension globale de ces réseaux. Parmi ceux-ci nous pourrons citer celui de \cite{erdos60} qui est généré aléatoirement\footnote{Les liens du graphe sont créés entre des noeuds choisis aléatoirement.}. Un modèle aussi simple qui celui-là permet effectivement d'obtenir l'existence de courts chemins mais ne permet pas d'obtenir des degrés suivant la bonne distribution de degrés ni de retrouver une clusterisation caractéristique des petits mondes.
+
+En effet, nous pouvons rappeler que les graphes obtenus de cette manière ont des degrés suivant une distribution de type binomiale ce qui ne correspond pas à ce qui est caractéristique aux réseaux sociaux, même si leur diamètre est bien de l'ordre de $O(\log n)$.
+
+\subsubsection{Modélisation de la structure d'un réseau social par les « petits mondes »}
+
+Il a fallu attendre les modèles de \cite{watts98} générant des graphes avec de la clusterisation et un petit diamètre ainsi que le modèle de \cite{kleinberg00} qui permettent tous les deux de retrouver algorithmiquement les caractéristiques des petits mondes sur des graphes générés, c'est-à-dire les propriétés de petit diamètre et un taux de clusterisation élevée.
+
+\b{Modèle de Watts \& Strogatz}
+
+Le modèle de \cite{watts98} est présenté ci-dessous. Celui-ci consiste simplement, à partir d'un graphe régulier (un noeud est relié à ses $k$ voisins), de parcourir chacun des noeuds de ce graphe et de choisir, pour chaque noeud, un lien que l'on va, ou non, reconnecter avec une autre extrémité selon une probabilité $p$ à définir.
+
+\begin[\cite{watts98} À gauche, la construction du graphe selon le choix de $p$. À droite, l'équilibre entre  la longueur des cours chemins $L$ du graphe et son taux de clusterisation $C$. Pour rappel, $p$ doit être choisi tel que $L$ soit petit et que $C$ soit le plus grand possible.]{figure}
+\image[Choix de p]{images/13a.png} \image[Équilibre longueur / clusterisation]{images/13b.png}
+\end{figure}
+
+En effet, comme nous pouvons le voir sur la figure ci-dessus, les réseaux sociaux sont considérés comme ayant une structure à partir de laquelle on ajoute une perturbation aléatoire paramétré avec un certain coefficient $p$.
+
+De tels graphes ne sont cependant pas considérés comme des « petits mondes » puisque leur propriété de navigation n'est que très difficilement réalisable.
+
+\b{Modèle de Kleinberg}
+
+L'idée de \cite{kleinberg00} est de disposer $n$ individus sur une grille de dimension $k$ et de connecter chaque individu avec, d'une part, leurs voisins les plus proches mais aussi avec d'autres personnes éloignées avec la probabilité de $Pr[u \to v] \propto \frac{1}{d(u,v)^\alpha}$ si on observe le lien entre un noeud $u$ et un noeud distant $v$.
+
+\begin[\cite{kleinberg00} Construction d'un graphe selon le modèle présenté.]{figure}
+  \image[\cite{kleinberg00} Construction d'un graphe selon le modèle présenté.]{images/14.png}
+\end{figure}
+
+Kleinberg a démontré que si $\alpha \neq k$, alors il n'existe pas d'algorithme local permettant de trouver des courts chemins mais que si $\alpha = k$ (la dimension de la grille) alors il est possible de trouver de tels chemins en utilisant l'algorithme glouton suivant : si on veut atteindre une cible $c$ alors on doit choisir d'aller vers notre ami qui aime le plus $c$. Ces chemins ont alors une longueur de $O(\log^2 n)$. Cette différence d'avec le modèle de \cite{kossinets06} permet de retrouver l'effet des petits mondes : ces graphes sont dits \emph{routables}.
+
+Ces algorithmes de routage sont actuellement exploités dans les réseaux d'échanges Peer-to-Peer, comme celui de \cite{clarke00} qui est utilisé dans le réseau Freenet.
+
+\b{Adaptations de l'approche de Kleinberg}
+
+Même si l'approche de Kleinberg permet effectivement d'obtenir un effet de petit monde, celle-ci a échouée dans la modélisation des données d'un vrai réseau social tel que celui de LiveJournal comme l'ont montrés \cite{liben-nowell05}. Ces derniers ont effectivement montrés que la répartition en $Pr[u \to v] \propto d(u, v)^{-2}$ (la surface de la Terre est de dimension 2) n'est pas vérifiée, le théorème de Kleinberg ne se basant que sur une grille de répartition des noeuds uniformes.
+
+\begin[\cite{liben-nowell05} Non uniformité des positions géographiques des utilisateurs du réseau social LiveJournal. Les cercles bleues représentent des paliers de 50 000 individus.]{figure}
+  \image[\cite{liben-nowell05} Non uniformité des positions géographiques des utilisateurs du réseau social LiveJournal. Les cercles bleues représentent des paliers de 50 000 individus.]{images/15.png}
+\end{figure}
+
+L'aspect géographique des individus représentés par les noeuds du réseau a donc son importance, importance retrouvée dans les approches faisant intervenir les rangs entre deux noeuds en lieu et place des distances. On a alors $Pr[u \to v] \propto \frac{1}{rank_u(v)}$ avec $rank_u(v) = \left|\{n : d(u, n) < d(u, v)\}\right|$ et qui représente donc le nombre de noeuds séparant $u$ et $v$. Il a été démontré que cette approche basée sur le rang et donc sur la \emph{densité} permet d'obtenir, de la même manière que celle de \cite{kleinberg00}, des petits mondes avec des chemins de longueur en $O(\log^3 n)$ cette fois-ci.
+
+Il est également à noter que cette recherche a abouti sur une estimation de la probabilité que $u$ et $v$ soient amis suivante : $Pr[u \to v] = \epsilon + f(d(u, v))$ où $f(d(u, v))$ représente les amis géographiquement proches et où $\epsilon$ représentent les autres amis éloignés. Dans le cas de LiveJournal, cet $\epsilon$ représente 33 % des amis ce qui est non négligeable.
+
+\begin[\cite{liben-nowell05} Relation entre la probabilité d'être amis et le rang. On remarquera que la loi donnée ci-dessus avec les rangs est bien respectée.]{figure}
+  \image[\cite{liben-nowell05} Relation entre la probabilité d'être amis et le rang. On remarquera que la loi donnée ci-dessus avec les rangs est bien respectée.]{images/16.png}
+\end{figure}
+
+\b{Autres approches « petits mondes »}
+
+D'autres approches similaires à celles abordées précédemment ont été étudiées, toutes utilisant un graphe augmenté noté $(H, \phi)$, avec $H$ un graphe et $\phi_u(v)$ la probabilité qu'un noeud $v$ soit en lien avec un noeud $u$.
+
+\b{Autres approches issues d'autres domaines scientifiques}
+
+Pour sortir de l'approche « petits mondes », de nombreux autres modèles ont également été conçus pour représenter les réseaux sociaux. Ces modèles sont historiquement issus d'autres disciplines comme des Statistiques (p* Models \cite{wasserman96}, Stochastic Actor Oriented Model \cite{snijders05}, etc.), de la Sociologie, de la Physique (modèle d'Albert et de Barabási \cite{albert02}, etc.) ou des Mathématiques.
+
+\subsubsection{Modélisation de la dynamique et de l'évolution}
+
+Maintenant que des modèles sont capables de reproduire la structure globale d'un graphe représentant un réseau social, nous pouvons nous intéresser au côté dynamique derrière ces réseaux et notamment à ce qui se passe lors de l'ajout d'un nouveau noeud dans le graphe.
+
+\b{Approche guidée par la préférence}
+
+Dans le but d'obtenir une distribution des degrés qui suit une loi de puissance, les nouveaux noeuds arrivants ne peuvent pas avoir des degrés choisis sans précautions.
+
+Un modèle intéressant de \cite{price65} propose de réaliser des graphes tels que la probabilité d'avoir un lien entre un nouveau noeud $u$ et un noeud existant $v$ est lié au degré de la manière suivante : $Pr[u \to v] = \frac{deg(v)}{\sum_w deg(w)}$ avec $w$ les autres noeuds du graphe, $v$ y compris.
+
+Ce modèle est souvent appelé « le phénomène du riche qui devient de plus en plus riche » et permet bien de garder une loi de distribution des degrés en loi de puissance. Cette analogie peut être étendue aux travaux de recherches puisqu'effectivement, comme l'observe \cite{price65}, les chances de nouvelles citations d'un papier de recherches sont proportionnelles aux citations qu'il possède déjà.
+
+\begin[\cite{price65} Observations quant à la chance d'avoir de nouvelles citations selon les citations déjà possédées.]{figure}
+  \image[\cite{price65} Observations quant à la chance d'avoir de nouvelles citations selon les citations déjà possédées.]{images/17.png}
+\end{figure}
+
+D'autres modèles, tous basés sur le principe du guidage par la préférence, ont été conçus pour compléter ce modèle qui ne prend pas en compte plusieurs paramètres comme la topologie du graphe par exemple.
+
+\b{Modèle du feu de forêt}
+
+Le modèle dit du feu de forêt a été conçu par \cite{leskovec07}. Celui-ci est très simple mais permet de modéliser la dynamique d'un graphe de réseau social en le densifiant tout en réduisant son diamètre.
+
+L'algorithme est le suivant : pour chaque nouveau noeud $v$ qui arrive, choisir au hasard (loi uniforme) un noeud $w$ qui servira « d'ambassadeur ». À partir de ce noeud, déterminer au hasard un nombre de connexions entrantes et sortantes de $w$ et répéter ces étapes jusqu'à ce que le « feu » s'arrête. Cette approche est basée sur le principe que chaque nouveau noeud dispose d'un centre de gravité et que la probabilité que celui-ci soit liés à d'autres noeuds décroît selon la distance à laquelle les autres noeuds ce trouvent par rapport à ce centre. Le nouveau noeud $v$ est alors attaché à tous les noeuds ayant été touchés par le feu.
+
+\begin[\cite{leskovec05b} Densification et réduction du diamètre d'un graphe après l'ajout de nouveaux noeuds selon l'algorithme du feu de forêt.]{figure}
+  \image[\cite{leskovec05b} Densification et réduction du diamètre d'un graphe après l'ajout de nouveaux noeuds selon l'algorithme du feu de forêt.]{images/18.png}
+\end{figure}
+
+\b{Modèle basé sur les produits de Kronecker}
+
+Un nouveau modèle assez récent proposé par \cite{leskovec05a} et par \cite{leskovec10} permet de générer des graphes ayant des sous-graphes se répétant. En effet, les observations font part de parties de graphes qui se répètent d'où l'utilisation du produit de Kronecker pour générer de tels graphes. Pour rappel, le produit de Kronecker (noté $\otimes$) s'exprime de la façon suivante :
+$$ A \otimes B = \begin{bmatrix}a_{11}B & \cdots & a_{1n}B \\ \vdots & \ddots & \vdots \\ a_{m1}B & \cdots & a_{mn}B \end{bmatrix}$$
+
+Le résultat d'un produit de Kronecker peut alors s'assimiler à des matrices d'adjacences, dont la taille
+est continuellement en augmentation. Un graphe de Kronecker est alors défini de la manière suivante : $K_{1}^{[k]} = K_k = K_1 \otimes K_1 \otimes ... \otimes K_1 = K_{k-1} \otimes K_1$. La matrice $K_1$ sert à initialiser la génération et est dite matrice d'initialisation.
+
+\begin[\cite{leskovec10} Exemple de génération de matrices de Kronecker avec des matrices d'initialisations différentes.]{figure}
+  \image[\cite{leskovec10} Exemple de génération de matrices de Kronecker avec des matrices d'initialisations différentes.]{images/19.png}
+\end{figure}
+
+Le modèle de Kronecker nous permet de générer des graphes vérifiant la plupart des caractéristiques
+listées précédemment.
+
+\begin[\cite{leskovec10} Corrélation entre l'évolution du modèle basé sur le produit de Kronecker avec ce qui est observé.]{figure}
+  \image[\cite{leskovec10} Corrélation entre l'évolution du modèle basé sur le produit de Kronecker avec ce qui est observé.]{images/20.png}
+\end{figure}
+
+Le modèle de Kronecker nous offre un cadre permettant de nombreuses possibilités puisque celui-ci
+permet de faciliter les simulations d'algorithmes, de faire des prédictions, de détecter des anomalies
+et bien d'autres applications.

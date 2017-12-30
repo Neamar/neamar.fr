@@ -1,0 +1,42 @@
+\subsection{Solution n°10}
+Pour le profane, il est difficile de concevoir que l'on peut résoudre une telle affaire avec un simple graphe. Et pourtant !
+
+\image[Présence des différentes personnes à travers le temps]{Images/DensmorePresence.png}
+Analysons par exemple la boucle formée par 4, 5, 7 et 8 : un simple carré. Si on analyse finement ce graphique, on peut découvrir qu'il y a forcément quelqu'un qui s'est absenté parmi ces quatre personnes.
+Imaginons par exemple que 4 soit dans le salon dès le début. De deux choses l'une : soit 5 entre ensuite, soit 8 ; mais pas les deux en même temps puisque 5 n'a pas vu 8.
+
+\begin{enumerate}
+\li Premier cas : 5 entre et rejoint 4.
+4 est ensuite parti et 7 est rentré (5 et 7 se sont vus, mais pas 4 et 7). 5 est sorti, 8 est rentré (contact entre 7 et 8). Il reste une liaison à effectuer pour boucler la boucle : 4 et 8. Or 4 est sorti auparavant (et on sait qu'aucun lutin n'a fait plus d'un aller retour dans le salon le premier jour) : il y a donc eu une absence pendant laquelle il a pu avoir l'occasion d'effectuer son méfait.
+\li Deuxième cas : 8 entre et rejoint 4 tout au début.
+Cela revient au cas précédent : 8 voit 7 qui ne voit pas 4, donc 4 a dû s'absenter à un moment du salon avant de revenir.
+\end{enumerate}
+
+Peut-on pour autant en déduire que 4 est coupable ? Non, car ce raisonnement s'applique pour 4,5,7 et 8 : tout dépend de celui qui est là le premier. Comme nous n'avons pas d'information d'ordres, retenons simplement que le coupable appartient à l'ensemble $\{4,5,7,8\}$.
+
+On peut réduire cette liste de coupable en remarquant que cette disposition "en carré" s'applique aussi dans la boucle $5-6-7-8$ (même raisonnement). Les coupables potentiels sont donc à l'intersection de ces deux groupes (puisqu'on suppose qu'il n'y a qu'un seul coupable, il fait forcément partie des deux configurations) : $\{4,5,7,8\} \bigcap \{5,6,7,8\} = \{5,7,8\}$.
+
+Pour terminer, il va falloir identifier une nouvelle "boucle impossible". Après quelques tâtonnements, on s'aperçoit que le graphe formé par $\{5,1,2,3,4,6\}$ est lui aussi impossible. Le raisonnement est similaire : si 5 était là en premier, il y a vu 1 et 2. 5 et 1 sont ensuite sortis, et 2 a pu rencontrer 3 et 4. Cependant, 6 et 4 ont vus 5 : il faut donc que celui-ci se soit absenté pour aller dans la chambre voler le document. Encore une fois, le premier présent a pu dérober le document.
+
+Il ne reste plus qu'à déterminer l'intersection de tous ces coupables potentiels :
+$$\{4,5,7,8\} \bigcap \{5,6,7,8\} \bigcap  \{5,1,2,3,4,6\} = \{5\}$$
+
+En quelques secondes, Péage posa son énorme main sur le pauvre lutin n°5 qui frissonnait déjà, et le lança contre la dixième porte d'albâtre, qui s'entrouvrit devant lui. Rapidement, il fut absorbé dans un immense tourbillon. Avant que les lutins restants n'aient eu le temps de réagir, les portes 9 (en Palissandre) et 10 se refermèrent.
+
+L'ogre allait - enfin - pouvoir manger.
+
+
+
+
+
+
+
+Petite analyse de ce texte qui vient en complément \l[/Res/Enigmes]{d'une première saison parue l'année dernière}.
+Tout d'abord, sur la quantité : les énigmes et les solutions données sont plus courtes dans ce nouveau texte. Plusieurs raisons à cela : d'abord, des énigmes moins complexes, et aussi et surtout une histoire qui ne permet pas des écarts pour admirer la psychologie de l'acteur principal. La narration impersonnelle du second texte bloque énormément de possibilités, en particulier concernant le chemin cognitif à emprunter pour résoudre une énigme. Le lecteur attentif aura d'ailleurs noté que sur la fin, les énigmes sont expliquées de façon impersonnelles et omniscientes, ce qui donne une plus grande latitude et une meilleure qualité de narration au détriment de l'histoire. J'ai essayé de compenser ce défaut en personnifiant deux lutins, Tamarre et Tinnabule et en les affublant des stéréotypes "fort en maths" et "fort en logique". On pourra d'ailleurs discuter de la pertinence de ce choix (certains l'ont fait) et de la justesse de ce cliché (les logiciens n'aiment pas les maths, et \i{vice versa}) ; toujours est-il que ce raccourci m'a permis d'éclairer de différentes façons les énigmes selon leur type.
+
+Parlons de qualité maintenant. Avant de nous attarder sur les énigmes en elle-même, examinons l'hitoire "englobante" qui guide et introduit ces dix énigmes. Vous aurez noté que la trame narrative était plus inventive lors de la première saison (un pays mathématique...), et qu'elle structurait de façon plus stricte l'ensemble. En revanche, dans ce deuxième texte que vous venez de lire, la trame est beaucoup moins imaginative ; je dirais même qu'à part sa présentation dans la première énigme et le petit retournement dans la dernière étape, le scénario est presque inexistant. Il en va de même pour les transitions entre les énigmes, mieux trouvées lors de la première saison.
+Concernant les énigmes, certaines énigmes n'ont clairement rien à faire ni dans une histoire ni dans l'autre : je vise tout particulièrement l'histoire de l'héritage dans la première saison, et celle de Diophante dans ce texte. En revanche, les deux textes accueillent de superbes perles, et la position 10 est à chaque fois tenue par une énigme particulièrement complexe et sympathique.
+
+Que retenir ? Que j'ai voulu imiter les scénaristes d'Hollywood en tentant de transformer l'essai du premier texte. Comme à Hollywood, le nouveau résultat déçoit lorsqu'il est comparé au premier : scénario moins bien, énigmes moins bien, caractères moin attachants... je m'arrêterai donc sur ce second texte, pour ne pas refaire la même erreur mais aussi parce que j'arrive à bout des énigmes que je considère particulièrement jolies.
+Bonne continuation à chacun,
+Neamar
