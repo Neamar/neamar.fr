@@ -7,5 +7,9 @@ RewriteEngine on
 #--------------------------------------------------
 # Règles de réécriture d'URL :
 #--------------------------------------------------
-RewriteRule ^Story-(.+)$ /Res/DUCK/showOnly.php?h=$1
 RewriteRule ^-Stats$ /Res/Stats.php?For=DUCK [L]
+
+# Migrating to duck.neamar.fr
+RewriteRule ^Story-(.+)$  http://duck.neamar.fr/ [L]
+RewriteRule ^$ http://duck.neamar.fr/ [L]
+RewriteRule ^DUCK/(.+)$ http://duck.neamar.fr/images/$1 [L]
