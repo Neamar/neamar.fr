@@ -3,10 +3,7 @@ $Titre='Le jeu Icosien';
 $Box = array("Auteur" => "Neamar","Date" => "Juin 2010", "But" =>"Finir le jeu","Voir aussi"=>'<a href="../Compiler_AS3">Compiler l\'AS3</a>',"Voir aussi"=>'<a href="../Graphe">Jeux de graphe</a>');
 include('../header.php');
 
-if(isset($_GET['cn']))
-	$Flash ='http://games.mochiads.com/c/g/icosien_cn/IcosienNP.swf';
-else
-	$Flash = 'http://games.mochiads.com/c/g/icosien/IcosienNP.swf';
+$Flash ='/Res/Icosien/Icosien.swf';
 ?>
 <h1 style="text-align:center;"><img src="Images/assets/Icosien.png" alt="Le jeu icosien en Flash" class="nonflottant"/></h1>
 <h2>Le résultat</h2>
