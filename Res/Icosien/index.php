@@ -137,24 +137,6 @@ On retrouvera donc&nbsp;: </p>
 
 <h3>Remerciements</h3>
 <p>Merci à Licoti qui s'est beaucoup investi dans le jeu et qui a fait les graphismes, au Dr Goulu qui a bien participé aux tests, et à Yannish qui a aidé pour la traduction anglaise.</p>
-<h2>Mods</h2>
-
-<h2>Statistiques...</h2>
-<p>Nombre de joueurs : <?php
-function getLineCount($file)
-{
-	$lines = 0;
-
-	$fh = fopen($file, 'r');
-	while (!feof($fh))
-	{
-		fgets($fh);
-		$lines++;
-	}
-	return $lines; // line count
-}
-echo number_format(getLineCount('StatsJeu.txt'), 0, ',', ' ');?></p>
-
 <h2>Le code</h2>
 <h3>À propos du code</h3>
 <p>Je commence à bien m'amuser avec Actionscript 3, et le code est... disons, pas trop sale ;)</p>
