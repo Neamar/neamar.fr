@@ -7,11 +7,6 @@ ErrorDocument 500 /Erreur.php?Erreur=500
   Header set Cache-Control "max-age=604800, public"
 </FilesMatch>
 
-<FilesMatch "^mount/">
-Order allow, deny
-Deny from all
-</FilesMatch>
-
 
 RedirectPermanent /OT2J/online.php http://neamar.fr/Res/OT2J
 RedirectPermanent /Retrospective2008.php http://blog.neamar.fr/component/content/article/5-looking-back/30-retrospective-2007-2008-neamar

@@ -22,7 +22,7 @@ function AfficherListe($NumID)
 		else
 			$Abstract='';
 
-		echo '<li><a href="'. $Ligne['Lien'] . '" title="' . $Ligne['Caption'] . '">' . $Ligne['Caption'] . '</a><span class="petitTexte">(' . getLineCount(str_replace('http://neamar.fr/Res/','',$Ligne['Lien']) . "/Stats.txt") . ')</span>' . $Abstract . '</li>';
+		echo '<li><a href="'. $Ligne['Lien'] . '" title="' . $Ligne['Caption'] . '">' . $Ligne['Caption'] . '</a><span class="petitTexte">(' . getLineCount(str_replace('http://neamar.fr/Res/','/app/mount/neamar/Res/',$Ligne['Lien']) . "/Stats.txt") . ')</span>' . $Abstract . '</li>';
 	}
 	echo '</ul>';
 }
@@ -33,7 +33,7 @@ function getLineCount($file)
 	$lines = 0;
 
 	$fh = fopen($file, 'r');
-	while (!feof($fh)) 
+	while (!feof($fh))
 	{
 		fgets($fh);
 		$lines++;
