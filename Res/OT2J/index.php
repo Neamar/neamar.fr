@@ -6,8 +6,8 @@ include('../header.php');
 ?>
 <h1><?php echo $Titre; ?></h1>
 <p class="auteur">Neamar</p>
-<p class="erreur">Cette page vous permet de transformer vos textes en image, afin de les passer sur votre baladeur.</p>
-
+<p class="erreur">Cette page a été supprimée. Les baladeurs qui n'affichent que des images n'existent plus depuis belle lurette.</p>
+<!--
 <form method="post" action="converter.php">
 	<fieldset><legend>Document</legend>
 		<label for="titre">Titre du document :</label>
@@ -59,6 +59,6 @@ include('../header.php');
 	<p class="petitTexte">En utilisant cet outil, vous avez conscience que le texte devient librement accessible sur Internet ; les données envoyées depuis ce formulaire perdront toute confidentialité.<br />
 	Cet outil en ligne ne convertit pas les textes ayant une taille supérieure à 50 000 caractères, et ne supporte pas la mise en forme du texte. Pour abolir ces limites, tournez vous vers le logiciel gratuit <a href="http://neamar.free.fr/txt2jpg">TXT2JPG</a>.</p>
 </form>
-
+-->
 <?php
 include('../footer.php');
