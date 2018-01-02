@@ -22,34 +22,20 @@ function AfficherListe($NumID)
 		else
 			$Abstract='';
 
-		echo '<li><a href="'. $Ligne['Lien'] . '" title="' . $Ligne['Caption'] . '">' . $Ligne['Caption'] . '</a><span class="petitTexte">(' . getLineCount(str_replace('http://neamar.fr/Res/','',$Ligne['Lien']) . "/Stats.txt") . ')</span>' . $Abstract . '</li>';
+		echo '<li><a href="'. $Ligne['Lien'] . '" title="' . $Ligne['Caption'] . '">' . $Ligne['Caption'] . '</a>' . $Abstract . '</li>';
 	}
 	echo '</ul>';
-}
-
-//Remplace count(file()) qui ne fonctionne pas sur les gros fichiers
-function getLineCount($file)
-{
-	$lines = 0;
-
-	$fh = fopen($file, 'r');
-	while (!feof($fh)) 
-	{
-		fgets($fh);
-		$lines++;
-	}
-	return $lines; // line count
 }
 ?>
 <h1>Plan des ressources de http://neamar.fr</h1>
 <p class="centre">
-	<a href="http://neamar.fr"><img class="nonflottant" src="http://neamar.fr/Pics/NeamarStampLittle.png" alt="Une production Neamar" /></a>
+	<a href="https://neamar.fr"><img class="nonflottant" src="http://neamar.fr/Pics/NeamarStampLittle.png" alt="Une production Neamar" /></a>
 </p>
 <p>Le site neamar.fr contient plusieurs dossiers classifiés comme ressources. Il s'agit majoritairement de codes sources et de tutoriaux, mais il existe aussi quelques articles traitant de sujets divers et variés.</p>
 <p>L'ensemble des pages sont valides XHTML 1.0.</p>
 <h3>Recherche</h3>
 <p>Moins fatigant que de rechercher un sujet dans la liste, vous pouvez utiliser la recherche !</p>
-<form action="http://www.google.fr/cse" id="cse-search-box">
+<form action="//www.google.fr/cse" id="cse-search-box">
   <div>
     <input type="hidden" name="cx" value="partner-pub-4506683949348156:g5irco-o1uv" />
     <input type="hidden" name="ie" value="ISO-8859-1" />
@@ -57,7 +43,7 @@ function getLineCount($file)
     <input type="submit" name="sa" value="Rechercher" />
   </div>
 </form>
-<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=fr"></script>
+<script type="text/javascript" src="//www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=fr"></script>
 
 <h2 id="Outils">Utilitaires et outils</h2>
 <?php AfficherListe(144); ?>
