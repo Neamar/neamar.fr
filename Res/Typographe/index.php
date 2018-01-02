@@ -14,9 +14,9 @@ include('../Typo/Typo.php');
 
 if(isset($_POST['texte']))
 {//Enregistrer le nouveau texte.
-	if($_POST['deux'] != 'deux')) {
+	if($_POST['deux'] != 'deux')
 		exit("Pas de spams, merci.");
-	}
+
 	if(strpos($_POST['texte'],'<a href=')!==false)
 		exit("Pas de spams, merci.");
 
