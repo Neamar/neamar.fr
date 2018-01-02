@@ -55,21 +55,20 @@ $keyWords='';
 	<meta name="rating" content="general" />
 	<meta name="reply-to" content="neamar@neamar.fr" />
 	<meta name="copyright" content="Copyright © - Some Right Reserved - 2006-<?php echo date("Y"); ?>" />
-	<meta name="keywords" content="<?php echo $keyWords ?>" />
 	<?php
 	if(isset($Abstract))
 		echo '<meta name="description" content="' . str_replace("\n",'',str_replace('<br />','',str_replace('"','\'',htmlentities($Abstract)))) . '" />' . "\n";
 	?>
 
-	<link href="http://neamar.fr/Res/ressources.css" rel="stylesheet" type="text/css" media="screen, handheld" />
-	<link href="http://neamar.fr/Res/ressources_print.css" rel="stylesheet" type="text/css" media="print" />
+	<link href="//neamar.fr/Res/ressources.css" rel="stylesheet" type="text/css" media="screen, handheld" />
+	<link href="//neamar.fr/Res/ressources_print.css" rel="stylesheet" type="text/css" media="print" />
 
 
-	<link href="http://neamar.fr/Res/Office.css" rel="stylesheet" title="Office" type="text/css" media="screen, handheld" />
+	<link href="//neamar.fr/Res/Office.css" rel="stylesheet" title="Office" type="text/css" media="screen, handheld" />
 
-	<link href="http://neamar.fr/Res/dream.css" rel="alternate stylesheet" title="Dream" type="text/css" />
+	<link href="//neamar.fr/Res/dream.css" rel="alternate stylesheet" title="Dream" type="text/css" />
 
-	<link rel="stylesheet" type="text/css" href="http://neamar.fr/Res/Codes.css" />
+	<link rel="stylesheet" type="text/css" href="//neamar.fr/Res/Codes.css" />
 	<?php if(isset($AddLine)) echo $AddLine; ?>
 	<link rel="icon" type="image/x-icon" href="http://neamar.fr/favicon.ico" />
 	<script type="text/javascript" src="<?php if(!isset($ScriptURI)){ echo 'http://neamar.fr/Res/ressources.js';} else { echo $ScriptURI; }?>"></script>
@@ -82,6 +81,7 @@ if(isset($Abstract) && preg_match('#^/Res/(.+)/$#U',$_SERVER['REQUEST_URI']))//N
 	echo '<p class="abstract erreur"><q>' .$Abstract . '</q></p>';
 
 //enregistrer les infos sur le Referrer dans le fichier Stats :
+var_dump($_SERVER);
 $fichier = fopen('Stats.txt', 'a'); //Ouvrir le fichier
 if(!isset($_SERVER['HTTP_REFERER']))
 	$_SERVER['HTTP_REFERER']='';
