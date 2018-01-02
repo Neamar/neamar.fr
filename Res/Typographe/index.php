@@ -7,15 +7,19 @@ if(isset($_POST['texte']))
 $Titre='Le typographe';
 $Box = array("Auteur" => "Neamar","Date" => "2009");
 
-$AddLine='<link rel="stylesheet" type="text/css" href="http://neamar.fr/Res/Typo/Typo.css" />';
+$AddLine='<link rel="stylesheet" type="text/css" href="//neamar.fr/Res/Typo/Typo.css" />';
 $UseMath=true;
 include('../header.php');
 include('../Typo/Typo.php');
 
 if(isset($_POST['texte']))
 {//Enregistrer le nouveau texte.
+	if($_POST['deux'] != 'deux')) {
+		exit("Pas de spams, merci.");
+	}
 	if(strpos($_POST['texte'],'<a href=')!==false)
 		exit("Pas de spams, merci.");
+
 	include('../../ConnectBDD.php');
 	mysql_query('INSERT INTO TYPO_Textes VALUES
 	(
@@ -48,15 +52,15 @@ Vous pouvez aussi mettre en forme votre texte : du gras aux images en passant pa
 
 <h2>Quels sites utilisent le Typographe ?</h2>
 <ul>
-	<li><a href="http://neamar.fr/Res">La section des ressources de neamar.fr</a> ;</li>
-	<li><a href="http://omnilogie.fr">Le site d'omnilogie : culture générale quotidienne pour tous</a> ;</li>
-	<li><a href="http://lachal.neamar.fr">Lachal : les mots exhumés des catacombes du dictionnaire français</a> ;</li>
+	<li><a href="https://neamar.fr/Res">La section des ressources de neamar.fr</a> ;</li>
+	<li><a href="https://omnilogie.fr">Le site d'omnilogie : culture générale quotidienne pour tous</a> ;</li>
+	<li><a href="https://lachal.neamar.fr">Lachal : les mots exhumés des catacombes du dictionnaire français</a> ;</li>
 	<li><a href="http://laparoleestalaccusation.fr">La parole est à l'accusation</a> ;</li>
 	<li><a href="http://histoiredunlivre.tarna.fr/">Histoire d'un livre</a>.</li>
 </ul>
 
 <h2>Crédits</h2>
-<p>Le Typographe est développé par <a href="http://neamar.fr">Neamar</a>.<br />
+<p>Le Typographe est développé par <a href="https://neamar.fr">Neamar</a>.<br />
 Le langage de balise utilisé se base sur <a href="http://www.latex-project.org/">LaTeX</a>.<br />
 L'outil d'édition de texte se base sur l'excellente librairie <a href="http://markitup.jaysalvat.com/home/">MarkItUp</a>.<br />
 Les icones de l'éditeur proviennent de <a href="http://www.famfamfam.com/lab/icons/silk/">fam fam fam</a>.</p>
@@ -65,6 +69,7 @@ Les icones de l'éditeur proviennent de <a href="http://www.famfamfam.com/lab/ico
 <form method="post" action="">
 <p>
 <label for="titre">Titre : </label><input type="text" name="titre" id="titre" /><br />
+<label for="titre">Anti robot, marquez "deux" : </label><input type="text" name="deux" id="deux" /><br />
 <?php
 Typo::setTexte('');
 Typo::renderIDE(array('Name'=>'texte','Rows'=>17));
