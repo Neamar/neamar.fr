@@ -81,8 +81,9 @@ if(isset($Abstract) && preg_match('#^/Res/(.+)/$#U',$_SERVER['REQUEST_URI']))//N
 	echo '<p class="abstract erreur"><q>' .$Abstract . '</q></p>';
 
 //enregistrer les infos sur le Referrer dans le fichier Stats :
-var_dump($_SERVER);
-$fichier = fopen('Stats.txt', 'a'); //Ouvrir le fichier
+
+echo '/app/mount/Res/' . $_SERVER['REQUEST_URI'] . '/Stats.txt';
+$fichier = fopen('/app/mount/Res/' . $_SERVER['REQUEST_URI'] . '/Stats.txt', 'a'); //Ouvrir le fichier
 if(!isset($_SERVER['HTTP_REFERER']))
 	$_SERVER['HTTP_REFERER']='';
 $Chaine = time() . '|' .  $_SERVER['REMOTE_ADDR'] . '|' . $_SERVER['HTTP_REFERER'] . '|';	//Formater la chaine : Date|IP|Referrer
