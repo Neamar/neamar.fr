@@ -22,7 +22,7 @@ function AfficherListe($NumID)
 		else
 			$Abstract='';
 
-		echo '<li><a href="'. $Ligne['Lien'] . '" title="' . $Ligne['Caption'] . '">' . $Ligne['Caption'] . '</a><span class="petitTexte">(' . getLineCount(str_replace('http://neamar.fr/Res/','/app/mount/Res/',$Ligne['Lien']) . "/Stats.txt") . ')</span>' . $Abstract . '</li>';
+		echo '<li><a href="'. $Ligne['Lien'] . '" title="' . $Ligne['Caption'] . '">' . $Ligne['Caption'] . '</a><span class="petitTexte">(' . getLineCount(str_replace('https://neamar.fr/Res/','/app/mount/Res/',$Ligne['Lien']) . "/Stats.txt") . ')</span>' . $Abstract . '</li>';
 	}
 	echo '</ul>';
 }
