@@ -9,12 +9,6 @@
 - $ScriptURI contient une adresse vers un script. S'il n'est pas fourni, c'est le script par défaut qui est appelé.
 */
 
-if(isset($UseMath))
-{
-	include(__FILE__ . '/../../Latex/regexp_callback.php');
-	ob_start('ParseMath');//À la fin de l'éxecution du script, le contenu de la page sera envoyé à la fonction ParseMath qui se chargera de convertir les entités mathématiques.
-}
-
 
 function InclureCode($URL,$LNG="AUCUN",$Discret=false,$UseClass=true)
 {
@@ -49,38 +43,6 @@ if(file_exists('Abstract.htm'))
 	$Abstract=file_get_contents('Abstract.htm');
 
 $keyWords='';
-if(file_exists('.kw'))
-	$keyWords=file_get_contents('.kw');
-elseif(!isset($noKeyWords))
-{
-	function setKeyWord($buffer)
-	{
-		$Raw=strtolower(preg_replace('#\<([^\<]+)\>#','',$buffer));
-
-		$Words=preg_split('(\s|[-,\'\.«»:\(\)\?!;"&])',$Raw);
-		array_map('trim',$Words);
-		$Freq=array_count_values($Words);//Équivalent du GROUP BY.
-		arsort($Freq,SORT_NUMERIC);//Trier par nombre d'apparition du mot.
-
-		$KeyWords=array();
-		foreach($Freq as $Word=>$Nb)
-		{
-			if(strlen($Word)>4)
-			{
-				$KeyWords[]=$Word;
-				if(count($KeyWords)>30)
-					break;
-			}
-		}
-		$KeyWord=addslashes(implode(', ',$KeyWords));
-
-		file_put_contents('.kw',$KeyWord);
-		$buffer .='<!--stats keyWord générées-->';
-		return $buffer;
-	}
-	ob_start('setKeyWord');
-}
-
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
