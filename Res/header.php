@@ -80,4 +80,13 @@ $keyWords='';
 <?php
 if(isset($Abstract) && preg_match('#^/Res/(.+)/$#U',$_SERVER['REQUEST_URI']))//N'afficher le résumé que sur la page d'index.
 	echo '<p class="abstract erreur"><q>' .$Abstract . '</q></p>';
+
+//enregistrer les infos sur le Referrer dans le fichier Stats :
+$fichier = fopen('Stats.txt', 'a'); //Ouvrir le fichier
+if(!isset($_SERVER['HTTP_REFERER']))
+	$_SERVER['HTTP_REFERER']='';
+$Chaine = time() . '|' .  $_SERVER['REMOTE_ADDR'] . '|' . $_SERVER['HTTP_REFERER'] . '|';	//Formater la chaine : Date|IP|Referrer
+fputs($fichier, $Chaine);//Puis enregistrer les données
+fputs($fichier, "\n");
+fclose($fichier); //Et fermer le fichier
 ?>
