@@ -21,7 +21,7 @@ Pour l'humour, n'hésitez pas à visiter : <a href="http://hacks.atrus.org/factor_
 </ul>
 <h3>Version EXE</h3>
 <ul>
-<li><a href="Release/DecoFact.exe">EXE</a></li>
+<li><a href="Release/Decofact.exe">EXE</a></li>
 <li><a href="Release/vb6fr.dll">VB6FR.dll</a> : à placer dans le même dossier que le fichier EXE</li>
 </ul>
 <h2>Code source</h2>

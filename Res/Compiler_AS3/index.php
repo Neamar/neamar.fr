@@ -14,7 +14,7 @@ include('../header.php');
 		<li><a href="../AGraphe">AGraphe</a></li>
 		<li><a href="../BGraphe">BGraphe</a></li>
 		<li><a href="../CGraphe">CGraphe</a></li>
-		<li><a href="../Dgraphe">DGraphe</a></li>
+		<li><a href="../DGraphe">DGraphe</a></li>
 	</ul>
 </li>
 <li><a href="../SkyFire">Un petit peu de graphisme : des feux d'artifice</a></li>

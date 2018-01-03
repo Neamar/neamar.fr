@@ -176,7 +176,6 @@ include('../header.php');
 <li><img src="Images/image_118.jpeg" alt="" class="nonflottant " style="vertical-align: middle;"/></li>
 <li><img src="Images/image_366.jpeg" alt="" class="nonflottant " style="vertical-align: middle;"/></li>
 <li><img src="Images/image_045.jpeg" alt="Voila la technique developpee par les nageurs pour aller plus vite plus loin..." class="nonflottant " style="vertical-align: middle;"/></li>
-<li><img src="Images/image_399.jpeg" alt="Et maintentant Edgar a disparu...il y a quelque chose qui nous tombe dessus, disent les pingouins" class="nonflottant " style="vertical-align: middle;"/></li>
 <li><img src="Images/image_259.jpeg" alt="" class="nonflottant " style="vertical-align: middle;"/></li>
 <li><img src="Images/image_311.jpeg" alt="" class="nonflottant " style="vertical-align: middle;"/></li>
 <li><img src="Images/image_142.jpeg" alt="" class="nonflottant " style="vertical-align: middle;"/></li>
@@ -287,7 +286,6 @@ include('../header.php');
 <li><img src="Images/image_209.jpeg" alt="" class="nonflottant " style="vertical-align: middle;"/></li>
 <li><img src="Images/image_150.jpeg" alt="" class="nonflottant " style="vertical-align: middle;"/></li>
 <li><img src="Images/image_307.jpeg" alt="" class="nonflottant " style="vertical-align: middle;"/></li>
-<li><img src="Images/image_396.jpeg" alt="Une piece de monnaie de deux euros..banal ?" class="nonflottant " style="vertical-align: middle;"/></li>
 <li><img src="Images/image_123.jpeg" alt="" class="nonflottant " style="vertical-align: middle;"/></li>
 <li><img src="Images/image_096.jpeg" alt="" class="nonflottant " style="vertical-align: middle;"/></li>
 <li><img src="Images/image_063.jpeg" alt="" class="nonflottant " style="vertical-align: middle;"/></li>
@@ -306,7 +304,6 @@ include('../header.php');
 <li><img src="Images/image_343.jpeg" alt="" class="nonflottant " style="vertical-align: middle;"/></li>
 <li><img src="Images/image_038.jpeg" alt="Windows Vista et Windows 95 se rejoignent..la boucle est bouclee !" class="nonflottant " style="vertical-align: middle;"/></li>
 <li><img src="Images/image_229.jpeg" alt="" class="nonflottant " style="vertical-align: middle;"/></li>
-<li><img src="Images/image_395.jpeg" alt="Miaou, fait le chat !" class="nonflottant " style="vertical-align: middle;"/></li>
 <li><img src="Images/image_349.jpeg" alt="" class="nonflottant " style="vertical-align: middle;"/></li>
 <li><img src="Images/image_303.jpeg" alt="" class="nonflottant " style="vertical-align: middle;"/></li>
 <li><img src="Images/image_183.jpeg" alt="" class="nonflottant " style="vertical-align: middle;"/></li>
