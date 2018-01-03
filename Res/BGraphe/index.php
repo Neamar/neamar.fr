@@ -55,7 +55,7 @@ include('../header.php');
 <p>La règle de B-Graphe est extrêmement simple : il faut et il suffit de supprimer toutes les intersections entre les lignes. Pour cela, il faut agir sur les noeuds (representés par un rond). Rien de bien compliqué...et pourtant !</p>
 <p>Les arêtes en rouge sont les arêtes avec une intersection, il faut les corriger.</p>
 <h3>A propos du concept</h3>
-<p><img src="http://upload.wikimedia.org/wikipedia/fr/a/a2/Graphe_K5.png" alt="K5" /><img src="http://upload.wikimedia.org/wikipedia/fr/3/3c/Graphe_K3%2C3.png" alt="K3,3" />Ce jeu utilise un graphe non-orienté, et cherche à le representer sous forme planaire.<br />
+<p><img src="https://upload.wikimedia.org/wikipedia/fr/a/a2/Graphe_K5.png" alt="K5" /><img src="https://upload.wikimedia.org/wikipedia/fr/3/3c/Graphe_K3%2C3.png" alt="K3,3" />Ce jeu utilise un graphe non-orienté, et cherche à le representer sous forme planaire.<br />
 Le concept est extrêmement simple, mais la solution n'est pas toujours facile, loin de là !</p>
 <p>D'un point de vue mathématique, deux algorithmes «connus» permettant de déterminer la planarité d'un graphe. L'un deux, relativement simple à comprendre, se limite à montrer que le graphe n'est une expansion ni de K<sub>5</sub>, ni de K<sub>3,3</sub> (les deux graphes représentés ci-contre). Pour des explications plus mathématiques, je vous invite à consulter <a href="http://fr.wikipedia.org/wiki/Graphe_planaire" rel="nofollow">cette page</a>.</p>
 

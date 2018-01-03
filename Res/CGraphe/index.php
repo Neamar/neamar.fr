@@ -53,7 +53,7 @@ Pendant son tour, <strong>Coupheur</strong> supprime un trait existant.</p>
 <p>Si Paintre réussit à connecter les deux extremités par des arêtes colorées, il remporte le jeu.</p>
 
 <h3>A propos du concept</h3>
-<p><img src="http://upload.wikimedia.org/wikipedia/en/thumb/3/38/Shannon_game_graph.svg/175px-Shannon_game_graph.svg.png" alt="Un jeu en cours" /></p>
+<p><img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/38/Shannon_game_graph.svg/175px-Shannon_game_graph.svg.png" alt="Un jeu en cours" /></p>
 <p>Ce jeu est directement inspiré d'un jeu de graphe : «Shannon Switching Game». Le jeu est le même, les deux joueurs se prénommant dans la version originale Short et Cut.</p>
 <p><a href="http://en.wikipedia.org/wiki/Shannon_switching_game" rel="no follow"></a></p>
 

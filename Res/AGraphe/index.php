@@ -20,15 +20,15 @@ $Flash = 'Agraphe.swf';
 <p>Passez votre souris par dessus une image pour l'afficher.</p>
 <h4>Version pré-&alpha;</h4>
 <p>
-	<img src="Images/Alpha-1.png" class="miniatureFlash" alt="Capture d'A-Graphe" />
-	<img src="Images/Alpha-2.png" class="miniatureFlash" alt="Capture d'A-Graphe" />
+	<img src="Images/ALPHA-1.png" class="miniatureFlash" alt="Capture d'A-Graphe" />
+	<img src="Images/ALPHA-2.png" class="miniatureFlash" alt="Capture d'A-Graphe" />
 </p>
 <h4>Version &beta;</h4>
 <p>
-	<img src="Images/Beta-1.png" class="miniatureFlash" alt="Capture d'A-Graphe" />
-	<img src="Images/Beta-2.png" class="miniatureFlash" alt="Capture d'A-Graphe" /></p><hr /><p>
-	<img src="Images/Beta-3.png" class="miniatureFlash" alt="Capture d'A-Graphe" />
-	<img src="Images/Beta-4.png" class="miniatureFlash" alt="Capture d'A-Graphe" />
+	<img src="Images/BETA-1.png" class="miniatureFlash" alt="Capture d'A-Graphe" />
+	<img src="Images/BETA-2.png" class="miniatureFlash" alt="Capture d'A-Graphe" /></p><hr /><p>
+	<img src="Images/BETA-3.png" class="miniatureFlash" alt="Capture d'A-Graphe" />
+	<img src="Images/BETA-4.png" class="miniatureFlash" alt="Capture d'A-Graphe" />
 </p>
 
 <h4>Fonds créés :</h4>
@@ -37,7 +37,6 @@ $Flash = 'Agraphe.swf';
 
 	<img src="Images/Fonds/Fond1.png" class="miniatureFlash" alt="Deuxième fond crée (A-Graphe ArtWork)" />
 	<img src="Images/Fonds/Fond2.png" class="miniatureFlash" alt="Troisième fond crée (A-Graphe ArtWork)" /></p><hr /><p>
-	<img src="Images/Fonds/Fond3.png" class="miniatureFlash" alt="Premier fond crée (A-Graphe ArtWork)" />
 	<img src="Images/Fonds/Fond4.png" class="miniatureFlash" alt="Premier fond crée (A-Graphe ArtWork)" /></p><hr /><p>
 	<img src="Images/Fonds/Fond5.png" class="miniatureFlash" alt="Premier fond crée (A-Graphe ArtWork)" />
 </p>
