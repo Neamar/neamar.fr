@@ -41,20 +41,7 @@ You are presented with a dynamic level, which is basically a spring-and-magnet s
 <p>Thanks to Licoti for the beautiful design.</p>
 
 <h2>Stats...</h2>
-<p>Player count : <?php
-function getLineCount($file)
-{
-	$lines = 0;
-
-	$fh = fopen($file, 'r');
-	while (!feof($fh))
-	{
-		fgets($fh);
-		$lines++;
-	}
-	return $lines; // line count
-}
-echo number_format(getLineCount('StatsJeu.txt'), 0, ',', ' ');?></p>
+<p>Player count : <?php flashPlayerStats() ?></p>
 
 <?php
 include('../footer.php');

@@ -89,4 +89,20 @@ $Chaine = time() . '|' .  $_SERVER['HTTP_X_FORWARDED_FOR'] . '|' . $_SERVER['HTT
 fputs($fichier, $Chaine);//Puis enregistrer les données
 fputs($fichier, "\n");
 fclose($fichier); //Et fermer le fichier
+
+function getLineCount($file)
+{
+	$lines = 0;
+
+	$fh = fopen($file, 'r');
+	while (!feof($fh))
+	{
+		fgets($fh);
+		$lines++;
+	}
+	return $lines; // line count
+}
+function flashPlayerStats() {
+	echo number_format(getLineCount('/app/mount/' . $_SERVER['REQUEST_URI'] . '/StatsJeu.txt'), 0, ',', ' ');
+}
 ?>
