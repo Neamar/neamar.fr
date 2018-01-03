@@ -22,13 +22,13 @@ function AfficherListe($NumID)
 		else
 			$Abstract='';
 
-		echo '<li><a href="'. $Ligne['Lien'] . '" title="' . $Ligne['Caption'] . '">' . $Ligne['Caption'] . '</a><span class="petitTexte">(' . getLineCount(str_replace('https://neamar.fr/Res/','/app/mount/Res/',$Ligne['Lien']) . "/Stats.txt") . ')</span>' . $Abstract . '</li>';
+		echo '<li><a href="'. $Ligne['Lien'] . '" title="' . $Ligne['Caption'] . '">' . $Ligne['Caption'] . '</a><span class="petitTexte">(' . getLineCountForRes(str_replace('https://neamar.fr/Res/','/app/mount/Res/',$Ligne['Lien']) . "/Stats.txt") . ')</span>' . $Abstract . '</li>';
 	}
 	echo '</ul>';
 }
 
 //Remplace count(file()) qui ne fonctionne pas sur les gros fichiers
-function getLineCount($file)
+function getLineCountForRes($file)
 {
 	$lines = 0;
 	$fh = fopen($file, 'r');
