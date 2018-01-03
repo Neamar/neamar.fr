@@ -40,7 +40,7 @@ function getLineCount($file)
 	return $lines; // line count
 }
 ?>
-<h1>Plan des ressources de http://neamar.fr</h1>
+<h1>Plan des ressources sur neamar.fr</h1>
 <p class="centre">
 	<a href="http://neamar.fr"><img class="nonflottant" src="http://neamar.fr/Pics/NeamarStampLittle.png" alt="Une production Neamar" /></a>
 </p>
