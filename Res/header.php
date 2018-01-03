@@ -63,9 +63,8 @@ $keyWords='';
 
 	<link href="//neamar.fr/Res/ressources.css" rel="stylesheet" type="text/css" media="screen, handheld" />
 	<link href="//neamar.fr/Res/ressources_print.css" rel="stylesheet" type="text/css" media="print" />
-	<link href="//neamar.fr/Res/dream.css" rel="alternate stylesheet" title="Dream" type="text/css" />
-
 	<link rel="stylesheet" type="text/css" href="//neamar.fr/Res/Codes.css" />
+
 	<?php if(isset($AddLine)) echo $AddLine; ?>
 	<link rel="icon" type="image/x-icon" href="https://neamar.fr/favicon.ico" />
 	<script type="text/javascript" src="<?php if(!isset($ScriptURI)){ echo 'https://neamar.fr/Res/ressources.js';} else { echo $ScriptURI; }?>"></script>
