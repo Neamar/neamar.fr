@@ -13,7 +13,7 @@ EOF;
 include('../header.php');
 include('../Typo/Typo.php');
 ?>
-<div style="background:white url('Images/Ouroboros_light.jpg') no-repeat fixed bottom;">
+<div style="background:white url('/Res/Zombie/Images/Ouroboros_light.jpg') no-repeat fixed bottom;">
 <h1>À la recherche de &pi;</h1>
 <p class="auteur">Neamar, traduit de <a href="http://www-groups.dcs.st-and.ac.uk/~history/HistTopics/Pi_through_the_ages.html">J J O'Connor et E F Robertson</a></p>
 

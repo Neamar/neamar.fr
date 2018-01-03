@@ -5,7 +5,7 @@ $AddLine='<link rel="stylesheet" type="text/css" href="https://neamar.fr/lib/Typ
 include('../header.php');
 include('../Typo/Typo.php');
 ?>
-<div style="background:white url('Images/Ouroboros_light.jpg') no-repeat fixed bottom;">
+<div style="background:white url('/Res/Zombie/Images/Ouroboros_light.jpg') no-repeat fixed bottom;">
 <h1>Relations entre Fight Club et Calvin &amp; Hobbes</h1>
 <p class="auteur">Neamar</p>
 
