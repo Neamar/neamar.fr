@@ -67,8 +67,8 @@ $Liens=array(
 <h1>Timeline Neamar</h1>
 
 <div style="width:20%; float:right; border:1px solid black; padding:5px;">
-<script type="text/javascript" src="http://www.google.com/reader/ui/publisher-fr.js"></script>
-<script type="text/javascript" src="http://www.google.com/reader/public/javascript/user/16820300681529559932/label/NeamarWorld?n=5&callback=GRC_p(%7Bc%3A%22-%22%2Ct%3A%22%5C%22NeamarWorld%5C%22%20via%20Neamar%22%2Cs%3A%22false%22%2Cn%3A%22true%22%2Cb%3A%22false%22%7D)%3Bnew%20GRC"></script>
+<script type="text/javascript" src="//www.google.com/reader/ui/publisher-fr.js"></script>
+<script type="text/javascript" src="//www.google.com/reader/public/javascript/user/16820300681529559932/label/NeamarWorld?n=5&callback=GRC_p(%7Bc%3A%22-%22%2Ct%3A%22%5C%22NeamarWorld%5C%22%20via%20Neamar%22%2Cs%3A%22false%22%2Cn%3A%22true%22%2Cb%3A%22false%22%7D)%3Bnew%20GRC"></script>
 </div>
 
 <p>Cette page recense jour par jour les modifications faites sur l'ensemble des productions Neamar.<br />

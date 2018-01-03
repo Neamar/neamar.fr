@@ -368,7 +368,7 @@ Les points cardinaux, par eux et par des couleurs sont désignés:
 			L'Ouest désigné par le rouge ou \i{Kyzyl},
 				Est désigné par le vert ou \i{Yeshil}.
 \end{indented}
-(via \l[http://omnilogie.fr/5K]{Mers blanche, rouge ou noire})
+(via \l[https://omnilogie.fr/5K]{Mers blanche, rouge ou noire})
 		"
 		),
 	   array
@@ -491,7 +491,7 @@ Code PHP :
 
 		  "L'environnement \b{dialog} vous permet d'insérer un dialogue dans votre texte. Il se veut naturel et sépare texte et auteurs par un symbole deux points.
 		  Un texte peut s'étendre sur plusieurs lignes, attention cependant s'il contient un symbole \":\" le début de la phrase sera considéré comme un auteur. Pour éviter ce comportement, échappez le deux points en le précédant d'un antislash (voir exemple).
-		  
+
 		  Note sur la sémantique : HTML ne définit pas de structure pour les dialogues. En conséquence, le texte est placé dans un div et les auteurs dans une classe auteur. Le Typographe ne style pas ces balises.",
 
 		  '\begin{dialog}

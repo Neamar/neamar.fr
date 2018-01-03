@@ -75,7 +75,7 @@ for($i=1;$i<=$NBEpisode;$i++)
 	$IMGValue .= round(100*$Taille[$i]/$MAX) . ',';
 	$IMG2Value .= round(100*$NBRef[$i]/$MAXRef) . ',';
 }
-echo '<p><img class="floatR" src="http://chart.apis.google.com/chart?cht=lc&amp;chs=730x350&amp;chd=t:' . substr($IMGValue,0,-1) . '|' . substr($IMG2Value,0,-1) . '&amp;chxt=x,y&amp;chxl=0:|' . $IMGCaption .  '1:||' . round($MAX/2) . '|' . $MAX . '+\/+' . $MAXRef . '&amp;chco=FF0000,AAFFAA&amp;chdl=Repliques|References" alt="Taille en nombre de répliques" /></p>' . "\n";
+echo '<p><img class="floatR" src="https://chart.apis.google.com/chart?cht=lc&amp;chs=730x350&amp;chd=t:' . substr($IMGValue,0,-1) . '|' . substr($IMG2Value,0,-1) . '&amp;chxt=x,y&amp;chxl=0:|' . $IMGCaption .  '1:||' . round($MAX/2) . '|' . $MAX . '+\/+' . $MAXRef . '&amp;chco=FF0000,AAFFAA&amp;chdl=Repliques|References" alt="Taille en nombre de répliques" /></p>' . "\n";
 echo '<p>Lignes/ Réf.</p><ol>' . $ListValue . '</ol>';
 echo '<p class="erreur">ATTENTION : L\'échelle indique le nombre de répliques, et non le nombre de références, qui utilise une autre échelle.<br />Les deux courbes ne sont mises sur le même graphique qu\'afin de mettre en relation le nombre de références et la taille des épisodes.</p>';
 ?>

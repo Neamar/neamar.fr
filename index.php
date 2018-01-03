@@ -36,7 +36,7 @@ Vous n'y trouverez qu'une liste des applications et sites web, et des rétrospect
 <hr />
 <h2>Liste des liens Neamar</h2>
 <h3>Live</h3>
-<p><a href="http://twitter.com/neamar">Follow me on Twitter.</a><br />
+<p><a href="https://twitter.com/neamar">Follow me on Twitter.</a><br />
 <a href="http://blog.neamar.fr">Blog ?</a><br />
 <a href="http://www.google.com/profiles/neamar.fr">Who am I ?</a></p>
 

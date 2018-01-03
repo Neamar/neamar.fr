@@ -8,6 +8,6 @@ ErrorDocument 500 /Erreur.php?Erreur=500
 </FilesMatch>
 
 
-RedirectPermanent /OT2J/online.php http://neamar.fr/Res/OT2J
+RedirectPermanent /OT2J/online.php https://neamar.fr/Res/OT2J
 RedirectPermanent /Retrospective2008.php http://blog.neamar.fr/component/content/article/5-looking-back/30-retrospective-2007-2008-neamar
 RedirectPermanent /Retrospective2009.php http://blog.neamar.fr/component/content/article/5-looking-back/37-retrospective-2008-2009-neamar

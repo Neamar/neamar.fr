@@ -33,7 +33,7 @@ $Lines=array(
 Avec \i{ae}, il s'agit des deux ligatures linguistiques\\footnote{Et non typographiques, les ligatures typographiques rapprochant deux lettres dans un simple souci d'esthétisme (\i{ff} par exemple).} de la langue française, ce qui signifie que "oe" et "\oe" ne se prononcent pas de la même façon (comparez oeufs et m\oelleux par exemple !).
 
 Dans l'ordre alphabétique, "oe" est classé comme un o et un e indépendants ("oenoché" est donc entre "odyssée" et "off"), bien que l'ensemble ne forme qu'un unique caractère : la mise en majuscule de oe est OE et non \Oe.
-(\l[http://omnilogie.fr/5T]{source})
+(\l[https://omnilogie.fr/5T]{source})
 EOD
 	),
 	array
@@ -54,7 +54,7 @@ EOD
 Avec \i{ae}, il s'agit des deux ligatures linguistiques\\footnote{Et non typographiques, les ligatures typographiques rapprochant deux lettres dans un simple souci d'esthétisme (\i{ff} par exemple).} de la langue française, ce qui signifie que "oe" et "\oe" ne se prononcent pas de la même façon (comparez oeufs et m\oelleux par exemple !).
 
 Dans l'ordre alphabétique, "oe" est classé comme un o et un e indépendants ("oenoché" est donc entre "odyssée" et "off"), bien que l'ensemble ne forme qu'un unique caractère : la mise en majuscule de oe est OE et non \Oe.
-(\l[http://omnilogie.fr/5T]{source})
+(\l[https://omnilogie.fr/5T]{source})
 EOD
 	),
 );

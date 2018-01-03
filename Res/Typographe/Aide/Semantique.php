@@ -26,7 +26,7 @@ $Lines=array(
 		\item @Signification est le texte que représente @Acronyme.',
 
 		"La balise \b{acronym} définit un acronyme, c'est-à-dire une abréviation qui se prononce comme un seul mot : il n'y a donc pas de \".\" séparant les différentes lettres.
-		Pour plus d'informations sur la différence entre un sigle, une abréviation  et un acronyme, consultez \l[http://omnilogie.fr/O/Abr%C3%A9viation,_acronyme_ou_sigle_?]{cette page}.",
+		Pour plus d'informations sur la différence entre un sigle, une abréviation  et un acronyme, consultez \l[https://omnilogie.fr/O/Abr%C3%A9viation,_acronyme_ou_sigle_?]{cette page}.",
 
 		'Le \acronym[light amplification by stimulated emission of radiation]{laser} est un appareil émettant de la lumière.'
 	),
@@ -41,7 +41,7 @@ $Lines=array(
 		\item @Signification est le texte que représente @Abrev.',
 
 		"La balise \b{abrev} définit une abréviation, c'est à dire un groupe de lettre utilisé pour raccourcir l'écriture d'un terme.
-		Pour plus d'informations sur la différence entre un sigle, une abréviation et un acronyme, consultez \l[http://omnilogie.fr/O/Abr%C3%A9viation,_acronyme_ou_sigle_?]{cette page}.",
+		Pour plus d'informations sur la différence entre un sigle, une abréviation et un acronyme, consultez \l[https://omnilogie.fr/O/Abr%C3%A9viation,_acronyme_ou_sigle_?]{cette page}.",
 
 		'La \abrev[Bande dessinée]{BD} est le neuvième art.'
 	),
@@ -82,7 +82,7 @@ Des rebondissements rocambolesques mènent à l'arrestation de six hommes : \emph[
 
 \emph[3]{Lesurques} ne cesse de clamer son innocence, arguant qu'il s'agit d'un terrible malentendu et persuadé que le procès fera toute la lumière sur cette sombre histoire.
 Quant à \emph[2]{Couriol}, on découvre que son porte monnaie contient l'énorme somme de 1170460 livres en assignats... étrange.
-(extrait de \l[http://omnilogie.fr/O/L%27affaire_du_courrier_de_Lyon]{L'affaire du courrier de Lyon})"
+(extrait de \l[https://omnilogie.fr/O/L%27affaire_du_courrier_de_Lyon]{L'affaire du courrier de Lyon})"
 	),
 	array
 	(
@@ -97,7 +97,7 @@ Quant à \emph[2]{Couriol}, on découvre que son porte monnaie contient l'énorme s
 
 	\i{Note} : Pensez à fermer vos notes de bas de page par un point, il s'agit d'une phrase complète et indépendante qui doit à ce titre être terminée correctement.",
 
-	"On nous dit\\footnote{cf. \l[http://neamar.fr]{cette page web}.} que nous sommes bêtes : c'est vrai.
+	"On nous dit\\footnote{cf. \l[https://neamar.fr]{cette page web}.} que nous sommes bêtes : c'est vrai.
 
 	J'en veux pour preuve que nous descendons du singe !"
 	),
@@ -145,7 +145,7 @@ Quant à \emph[2]{Couriol}, on découvre que son porte monnaie contient l'énorme s
 
 		"La balise \b{image} permet d'afficher une image de l'internet dans votre texte. Pour utiliser une image de votre disque, vous devez utiliser un service d'envoi d'image - tel que \l[http://tinypic.com/]{http://tinypic.com/} --, puis mettre l'adresse obtenue en tant que paramètre @URL.",
 
-		"\image[Mon favicon !]{http://neamar.fr/favicon.ico} Le favicon de ce site"
+		"\image[Mon favicon !]{https://neamar.fr/favicon.ico} Le favicon de ce site"
 	),
 	array
 	(
@@ -158,7 +158,7 @@ Quant à \emph[2]{Couriol}, on découvre que son porte monnaie contient l'énorme s
 
 	"La balise \b{labelimage} permet d'afficher une image de l'internet dans votre texte et de la mettre en valeur par rapport au texte en la séparant. Pour utiliser une image de votre disque, vous devez utiliser un service d'envoi d'image - tel que \l[http://tinypic.com/]{http://tinypic.com/} --, puis mettre l'adresse obtenue en tant que paramètre @URL.",
 
-	"\labelimage[Voici un favicon !]{http://neamar.fr/favicon.ico}
+	"\labelimage[Voici un favicon !]{https://neamar.fr/favicon.ico}
 
 Le favicon est une toute petite icône permettant de personaliser les favoris et les onglets en leur donnant une petite touche spéciale. À l'origine, les favicons étaient forcément au format \\textss{ico}, mais a plupart des navigateurs acceptent maintenant tous les formats, même animés, comme le montre l'image ci contre.
 
@@ -278,7 +278,7 @@ Napoléon dit alors : ..."
 
 	'Aucun paramètre.',
 
-"Les majuscules doivent comporter les accents\\footnote{Contrairement à une vieille légende qui affirme le contraire, \lien[http://omnilogie.fr/55]{héritée des temps où les caractères en plomb composant la police ne pouvait effectivement pas contenir l'accent.}}, mais l'accès à ces symboles est complexe sur un clavier Windows. Vous pouvez donc vous servir directement des symboles intégrés dans le typographe.",
+"Les majuscules doivent comporter les accents\\footnote{Contrairement à une vieille légende qui affirme le contraire, \lien[https://omnilogie.fr/55]{héritée des temps où les caractères en plomb composant la police ne pouvait effectivement pas contenir l'accent.}}, mais l'accès à ces symboles est complexe sur un clavier Windows. Vous pouvez donc vous servir directement des symboles intégrés dans le typographe.",
 
 	"À,É,È,Ê,Ô,Ù,Â"
 	),

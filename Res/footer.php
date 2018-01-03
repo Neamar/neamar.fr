@@ -2,7 +2,7 @@
 <div id="Box">
 	<dl>
 	<?php
-	$Box['Menu'] = '<a href="http://neamar.fr/Res" title="Retour à l\'accueil des ressources">Index des ressources</a>';
+	$Box['Menu'] = '<a href="https://neamar.fr/Res" title="Retour à l\'accueil des ressources">Index des ressources</a>';
 	foreach ($Box as $Titre => $Valeur)
 	{
 		echo '

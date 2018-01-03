@@ -49,7 +49,7 @@ if(!isset($description))
 	if(!isset($NoWelcomeCenter))
 	{?>
 <dl>
-		<dt class="Single_Item"><a href="http://<?php echo $_SERVER['SERVER_NAME']; ?>" title="Retour à l'accueil">Accueil</a></dt>
+		<dt class="Single_Item"><a href="https://<?php echo $_SERVER['SERVER_NAME']; ?>" title="Retour à l'accueil">Accueil</a></dt>
 	</dl>
 
 <?php
@@ -91,7 +91,7 @@ if(!isset($description))
 	if(isset($GoogleSearch))
 	{?>
 <div style="position:absolute; right:0px; top:5px;" id="GoogleSearch">
-	<form action="http://www.google.fr/cse" id="cse-search-box">
+	<form action="//www.google.fr/cse" id="cse-search-box">
 	<div>
 		<input type="hidden" name="cx" value="partner-pub-<?php echo $GoogleSearch; ?>" />
 		<input type="hidden" name="ie" value="ISO-8859-1" />
@@ -99,7 +99,7 @@ if(!isset($description))
 		<input type="submit" name="sa" value="Rechercher" />
 	</div>
 	</form>
-	<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=fr"></script>
+	<script type="text/javascript" src="//www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=fr"></script>
 </div>
 	<?php
 	}
