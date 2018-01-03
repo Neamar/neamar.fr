@@ -5,7 +5,7 @@ include('../header.php');
 ?>
 
 <h1>Comment pense un extraterrestre ?</h1>
-<p class="centre"><img class="nonflottant" style="width:75%;" src="Images/ETEtNous.png" alt="Bonjour, je suis un ET..." /></p>
+<p class="centre"><img class="nonflottant" style="width:75%;" src="Images/EtEtNous.png" alt="Bonjour, je suis un ET..." /></p>
 <h2>Introduction</h2>
 <p>Depuis quelques années, grâce aux progrès de la technique, de nombreuses personnes, scientifiques et particuliers, se sont mises à la recherche d'une vie extra-terrestre.</p>
 <p>Cette quête, toujours sans résultat, est toute neuve à l'échelle de la civilisation humaine.<br />

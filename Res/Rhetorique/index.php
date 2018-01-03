@@ -27,16 +27,16 @@ $Erreurs=array
 'Le \i{Non sequitur}'=>array
 	(
 		'Desc'=>"Tirer une conclusion ne suivant pas logiquement les prémisses (mais la conclusion peut être vraie). Deux types :
-\begin[2]{column}
-\begin{enumerate}
-\li Si A est vraie, alors B est vraie ;
+\\begin[2]{column}
+\\begin{enumerate}
+\\li Si A est vraie, alors B est vraie ;
 or, B est vraie ;
 donc A est vraie.
-\li Si A est vraie, alors B est vraie ;
+\\li Si A est vraie, alors B est vraie ;
 or, A est fausse ;
 donc B est fausse.
-\end{enumerate}
-\end{column}",
+\\end{enumerate}
+\\end{column}",
 		'Ex'=>array
 		(
 			'Si la psychokinèse existe, alors cette cuiller peut être tordue. Comme cette cuiller a été tordue, c\'est que la psychokinèse existe.',
@@ -51,9 +51,9 @@ donc B est fausse.
 'Le raisonnement par analogie'=>array
 	(
 		'Desc'=>"Utiliser une situation de référence pour effectuer la démonstration ; l'analogie peut être valide ou invalide.
-\item situation de référence : A et B sont vraies ;
-\item situation présente : A est vraie ; donc B est vraie.",
-		'Ex'=>array('Galilée a été condamné et avait raison. Vous procédez de même avec moi. \i{(sous-entendu : l\'avenir montrera que j\'ai raison, comme dans le cas de Galilée)}')
+\\item situation de référence : A et B sont vraies ;
+\\item situation présente : A est vraie ; donc B est vraie.",
+		'Ex'=>array('Galilée a été condamné et avait raison. Vous procédez de même avec moi. \\i{(sous-entendu : l\'avenir montrera que j\'ai raison, comme dans le cas de Galilée)}')
 	),
 'La généralisation'=>array
 	(
@@ -68,8 +68,8 @@ donc B est fausse.
 'Le sophisme \i{post hoc, ergo propter hoc}'=>array
 	(
 		'Desc'=>'Après cela, donc à cause de cela. Confondre conséquence et postériorité :
-\item B est arrivé après A ;
-\item donc B a été causée par A.',
+\\item B est arrivé après A ;
+\\item donc B a été causée par A.',
 		'Ex'=>array("J'ai bu une tisane, puis mon rhume a disparu ; donc c'est grâce à la tisane.")
 	),
 );
@@ -85,7 +85,7 @@ $Attaques=array
 				'Comment peut-on adhérer aux positions de Rousseau sur l\'éducation, alors qu\'il a abandonné ses propres enfants ?'
 			)
 	),
-"Le déshonneur par association (cas particulier : \i{reductio ad hitlerum})"=>array
+"Le déshonneur par association (cas particulier : \\i{reductio ad hitlerum})"=>array
 	(
 		'Desc'=>"Comparer l'interlocuteur ou ses positions à une situation servant de repoussoir.",
 		'Ex'=>array
@@ -108,7 +108,7 @@ $Attaques=array
 		'Desc'=>"Travestir la position de l'interlocuteur en une autre, plus facile à réfuter ou à ridiculiser.",
 		'Ex'=>array("Les adversaires de l'astrologie prétendent que les astres n'ont pas d'influence sur nous. Allez donc demander aux marins si la Lune n'a pas d'influence sur les marées !")
 	),
-"L'argument du silence (\i{argumentum a silentio})"=>array
+"L'argument du silence (\\i{argumentum a silentio})"=>array
 	(
 		'Desc'=>"Accuser l'interlocuteur d'ignorance d'un sujet parce qu'il ne dit rien dessus.",
 		'Ex'=>array("Je vois que vous ne connaissez pas la parapsychologie puisque vous passez sous silence les travaux de Bem et Honorton.")
@@ -145,12 +145,12 @@ $Travestissements=array
 		'Desc='=>"Déplacer le débat vers une position intenable par l'interlocuteur.",
 		'Ex'=>array("Et tous ces gens qui utilisent l'acupuncture, ce sont des imbéciles, peut-être ?")
 	),
-"L'argument d'autorité (\i{argumentum ad verecundiam})"=>array
+"L'argument d'autorité (\\i{argumentum ad verecundiam})"=>array
 	(
 		'Desc'=>'Invoquer une personnalité faisant ou semblant faire autorité dans le domaine concerné.',
 		'Ex'=>array("Quand un scientifique du niveau de d'Espagnat m'écrit que ce livre est le GPS de la science actuelle, c'est savoureux de voir un étudiant en zététique dire que c'est de la pseudo-science.\\footnote{Jean Staune, UIP, communication personnelle à Richard Monvoisin, 13 juin 2007.}")
 	),
-"L'appel à la popularité (\i{argumentum ad populum})"=>array
+"L'appel à la popularité (\\i{argumentum ad populum})"=>array
 	(
 		'Desc'=>'Invoquer le grand nombre de personnes qui adhèrent à une idée.',
 		'Ex'=>array('Les millions de personnes utilisant l\'homéopathie ne peuvent pas tous avoir tort.')
@@ -168,14 +168,14 @@ $Contenu = '\section{' . $Titre . '}' . "\n";
 
 	foreach($V as $Nom=>$Def)
 	{
-		$Contenu .='\subsection{' . $Nom . '})' . "\n";
+		$Contenu .='\\subsection{' . $Nom . '})' . "\n";
 		$Contenu .= $Def['Desc'] . "\n\n";
-		$Contenu .='\begin{quote}' . "\n" . '\begin{itemize}' . "\n";
+		$Contenu .='\\begin{quote}' . "\n" . '\\begin{itemize}' . "\n";
 		foreach($Def['Ex'] as $Exemple)
 		{
-			$Contenu .='\li ' . $Exemple . "\n";
+			$Contenu .='\\li ' . $Exemple . "\n";
 		}
-		$Contenu .='\end{itemize}' . "\n" . '\end{quote}' . "\n";
+		$Contenu .='\\end{itemize}' . "\n" . '\\end{quote}' . "\n";
 	}
 	return $Contenu;
 }
