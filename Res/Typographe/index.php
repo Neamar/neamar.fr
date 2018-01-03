@@ -28,9 +28,9 @@ if(isset($_POST['texte']))
 	\'' . $_POST['texte'] . '\',
 	\'' . $_SERVER['REMOTE_ADDR'] . '\',
 	\'' . date('l jS \of F Y h:i:s A') . '\'
-	)');
+	)') or die(mysql_error());
 	header('Location:show.php?ID=' . mysql_insert_id());
-	ob_end_clean;
+	ob_end_clean();
 	exit();
 }
 
