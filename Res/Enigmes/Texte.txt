@@ -132,11 +132,11 @@ Et si les points avaient été plus larges, le problème devenait facile : il me su
 
 Au moment même ou cette idée - \i{au dehors} - me vint à l'esprit, la solution s'imposa à moi : c'était pourtant évident ! Comment avais-je pu ne pas le voir jusqu'ici ? Il suffisait de penser autrement... j'écrivis immédiatement la solution, comme si je craignais de l'oublier. Mais c'était fort peu probable : je venais de comprendre quelque chose d'important.
 
-\image[Il suffit de sortir un peu du carré pour résoudre le problème]{http://neamar.fr/Res/Enigmes/Images/Solution4.png}
+\image[Il suffit de sortir un peu du carré pour résoudre le problème]{https://neamar.fr/Res/Enigmes/Images/Solution4.png}
 
 Inconsciemment, je m'étais contraint à rester à l'intérieur du tableau défini par les trois points. Mais c'était une mauvaise utilisation de l'espace qui m'était alloué : après tout, aucune règle ne me donnait une limite de taille ! Je m'étais auto-bridé, j'avais laissé mon subconscient décider à ma place ! Et je venais de comprendre mon erreur : chaque vérité n'est vraie que dans un cadre donné. Il suffit de changer un minimum les règles pour que ce qui était vrai devienne faux, et \i{vice versa}. Cela faisait pourtant des années que j'aurais dû comprendre : les bouquins remplis illusions d'optique m'avaient déjà préparé le terrain, en me montrant que certaines fois, mes sens me mentaient. Mais je n'avais jamais vraiment réfléchi au fait que cette règle s'appliquait même aux schémas les plus abstraits.
 Les mathématiques, par exemple, n'étaient pas si parfaites que cela, elles étaient juste.... réelles.
-\image[Selon la courbure de l'espace, on obtient une somme des angles différentes...]{http://neamar.fr/Res/Enigmes/Images/Triangle.png}
+\image[Selon la courbure de l'espace, on obtient une somme des angles différentes...]{https://neamar.fr/Res/Enigmes/Images/Triangle.png}
 \small{\emph{Crédit image : \lien[http://map.gsfc.nasa.gov/universe/bb_concepts.html]{map Nasa}}}
 Même le sacro-saint théorème de Pythagore n'est pas complet ! Il ne s'applique que dans le cas d'un espace euclidien, plan. Qu'on courbe un peu la surface de travail, et la somme des angles ne vaut plus 180°, le théorème de Pythagore ne s'applique plus, et les distances que l'on calcule avec les coordonnées sont faussées (ce qui est logique, puisqu'elles dérivent d'une certaine façon du théorème de Pythagore).
 En quelques secondes, ma vision simpliste des maths "parfaites » s'était transformée ; les maths étaient un édifice en construction, avec ses faiblesses, ses lacunes - mais où chacun pouvait participer. Chaque brique posée nous rapprochait d'un objectif inatteignable, et pourtant tellement désiré...
