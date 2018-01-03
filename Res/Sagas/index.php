@@ -1,4 +1,6 @@
 <?php
+date_default_timezone_set("Europe/Paris");
+
 //Vérifier qu'il n'y a pas d'erreur et qu'on vient bien d'une page à Saga.
 if(!isset($_Nom))
 	exit();
@@ -40,7 +42,6 @@ function showBeforeAfter()
 //Afficher la base du HTML
 include('../header.php');
 
-//echo '<p style="color:red;">Épisode 14 de Reflets d\'Acide disponible depuis le 4 octobre, les <a href="/Res/Reflets/Episode-14">références</a> sont disponibles !<br /><span class="petitTexte" style="color:black;">Vous aimez Reflets d\'Acide ? Vous devriez jeter un &oelig;il sur <a href="http://omnilogie.fr">omnilogie</a> pour continuer de vous cultiver !</p>';
 ?>
 <script type="text/javascript">
 function gID(Item)
@@ -74,7 +75,7 @@ if(!isset( $_GET['E']) || (is_numeric($_GET['E']) && $_GET['E']>$NBEpisode))
 
 	?>
 	<h1>Statistiques globales sur <?php echo  $_Nom; ?></h1>
-	<form action="http://www.google.fr/cse" id="cse-search-box" class="centre">
+	<form action="//www.google.fr/cse" id="cse-search-box" class="centre">
 	<div>
 		<input type="hidden" name="cx" value="partner-pub-4506683949348156:g5irco-o1uv" />
 
@@ -83,7 +84,7 @@ if(!isset( $_GET['E']) || (is_numeric($_GET['E']) && $_GET['E']>$NBEpisode))
 		<input type="submit" name="sa" value="Rechercher" />
 	</div>
 	</form>
-	<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=fr"></script>
+	<script type="text/javascript" src="//www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=fr"></script>
 
 
 	<?php
@@ -152,8 +153,8 @@ else
 
 	$Episode->OutputIntro();
 	?>
-	<p class="erreur"><img src="http://i.creativecommons.org/l/by-nc/2.0/fr/88x31.png" alt="CC BY-NC" />Cette &oelig;uvre est un travail collaboratif basé sur l'ouvrage de <?php echo $_Auteur; ?>. Les internautes ayant participé sont listés sur la <a href="./">page d'accueil</a> du projet.<br /><br />
-	Une subtilité n'est pas référencée ? N'hésitez pas à la <a rel="nofollow" href="http://neamar.fr/Mail.php">signaler</a> !</p>
+	<p class="erreur"><img src="//i.creativecommons.org/l/by-nc/2.0/fr/88x31.png" alt="CC BY-NC" />Cette &oelig;uvre est un travail collaboratif basé sur l'ouvrage de <?php echo $_Auteur; ?>. Les internautes ayant participé sont listés sur la <a href="./">page d'accueil</a> du projet.<br /><br />
+	Une subtilité n'est pas référencée ? N'hésitez pas à la <a rel="nofollow" href="https://github.com/Neamar/sagas-mp3/issues">signaler</a> !</p>
 	<?php
 
 	showBeforeAfter();
@@ -172,7 +173,7 @@ else
 	?>
 	<p class="centre"><a href="./">Retour à l'index et affichage des statistiques</a></p>
 
-	<script type="text/javascript" src="http://neamar.fr/Res/Sagas/Edit.js"></script>
+	<script type="text/javascript" src="//neamar.fr/Res/Sagas/Edit.js"></script>
 
 	<?php
 	include('../footer.php');
