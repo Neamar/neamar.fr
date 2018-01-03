@@ -100,7 +100,8 @@ Un couple, comme dit plus haut, est défini par deux noeuds. On prend pour conven
 <li>Version RC1 : 21/09/08</li>
 </ul>
 <h2>Statistiques...</h2>
-<p>Nombre de joueurs : <?php echo count(file('StatsJeu.txt'));?></p>
+<p>Player count : <?php flashPlayerStats() ?></p>
+
 <h2>Le code</h2>
 <h3>À propos du code</h3>
 <p>Le code est réparti en classes claires et nettes.<br />L'ensemble du fichier représente moins de 10ko !</p>

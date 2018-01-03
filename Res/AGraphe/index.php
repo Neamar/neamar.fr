@@ -3,13 +3,7 @@ $Titre='Un jeu de graphe';
 $Box = array("Auteur" => "Neamar","Date" => "Aout 2008", "But" =>"Finir le jeu","Voir aussi"=>'<a href="../Compiler_AS3">Compiler l\'AS3</a>',"Voir aussi"=>'<a href="../Graphe">Jeux de graphe</a>');
 include('../header.php');
 
-if(isset($_GET['en']))
-	$Flash ='http://games.mochiads.com/c/g/agraphe/Agraphe.swf';
-else if(isset($_GET['cn']))
-	$Flash ='http://games.mochiads.com/c/g/agraphe_cn/Agraphe.swf';
-else
-	$Flash = 'Agraphe.swf';
-
+$Flash = 'Agraphe.swf';
 ?>
 <h1>Un jeu de logique en Flash</h1>
 <h2>Le résultat</h2>
@@ -130,7 +124,7 @@ De plus, il est interdit de recompiler le jeu "tel quel" en supprimant le lien «
 <li><a href="Release/A-graphe_SVG0.zip">Sauvegarde du 27/07/08</a></li>
 </ul>
 <h2>Statistiques...</h2>
-<p>Nombre de joueurs : <?php echo count(file('StatsJeu.txt'));?></p>
+<p>Player count : <?php flashPlayerStats() ?></p>
 <h2>Le code</h2>
 <h3>À propos du code</h3>
 <p>Le code est réparti en classes claires et nettes.<br />L'ensemble du fichier représente moins de 10ko !</p>

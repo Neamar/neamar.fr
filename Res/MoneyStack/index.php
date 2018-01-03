@@ -77,9 +77,9 @@ include('../header.php');
 <ul>
 	<li>Les 8 pièces sont équiréparties (il y en a autant de chaque type)&nbsp;; </li>
 	<li><span class="TexTexte">0.01 + 0.02 + 0.05 + 0.1 + 0.2 + 0.5 + 1 + 2 + 5 + 10 + 20 + 50 + 100 + 200 + 500 = 888.88</span>&nbsp;; </li>
-	<li>il y a 500 éléments en jeu soit <img src="http://neamar.fr/Latex/TEX.php?m=%5C%2C%5Clfloor%5C%2C%5Cfrac%7B500%7D%7B15%7D%5C%2C%5C%2C%5Crfloor%5C%2C%3D%5C%2C60" alt="\left \lfloor \frac{500}{15} \right \rfloor = 33" class="TexPic" /> fois l'ensemble des objets. </li>
+	<li>il y a 500 éléments en jeu soit <img src="https://neamar.fr/Latex/TEX.php?m=%5C%2C%5Clfloor%5C%2C%5Cfrac%7B500%7D%7B15%7D%5C%2C%5C%2C%5Crfloor%5C%2C%3D%5C%2C60" alt="\left \lfloor \frac{500}{15} \right \rfloor = 33" class="TexPic" /> fois l'ensemble des objets. </li>
 </ul>
-<p>On en déduit donc que le score maximal théorique est de <span class="TexTexte">888.88 &times; 33 = 29 333</span>. Comme une partie dure une minute, cela impliquerait de ramasser <img src="http://neamar.fr/Latex/TEX.php?m=%5Cfrac%7B500%7D%7B60%7D%5C%2C%5C%2C%5Csimeq%5C%2C%5C%2C%5C%2C8.3" alt="\frac{500}{60}\, \simeq \, 8.3" class="TexPic" /> objets à la seconde&nbsp;! </p>
+<p>On en déduit donc que le score maximal théorique est de <span class="TexTexte">888.88 &times; 33 = 29 333</span>. Comme une partie dure une minute, cela impliquerait de ramasser <img src="https://neamar.fr/Latex/TEX.php?m=%5Cfrac%7B500%7D%7B60%7D%5C%2C%5C%2C%5Csimeq%5C%2C%5C%2C%5C%2C8.3" alt="\frac{500}{60}\, \simeq \, 8.3" class="TexPic" /> objets à la seconde&nbsp;! </p>
 
 
 <h3>Historique</h3>
@@ -93,20 +93,7 @@ include('../header.php');
 <p>Voir le fichier SWF, et le code.</p>
 
 <h2>Statistiques...</h2>
-<p>Nombre de joueurs : <?php
-function getLineCount($file)
-{
-	$lines = 0;
-
-	$fh = fopen($file, 'r');
-	while (!feof($fh))
-	{
-		fgets($fh);
-		$lines++;
-	}
-	return $lines; // line count
-}
-echo number_format(getLineCount('StatsJeu.txt'), 0, ',', ' ');?></p>
+<p>Player count : <?php flashPlayerStats() ?></p>
 <h2>Le code</h2>
 <h3>À propos du code</h3>
 <p>L'ensemble des fichiers représente moins de 10ko !</p>

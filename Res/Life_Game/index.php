@@ -87,7 +87,7 @@ Les touches :</p>
 <a href="LifeGameIX.swf">Pour l'enregistrement local</a></p>
 
 <h2>Statistiques...</h2>
-<p>Nombre de joueurs : <?php echo count(file('StatsJeu.txt'));?></p>
+<p>Player count : <?php flashPlayerStats() ?></p>
 <h2>Le code</h2>
 <h3>À propos du code</h3>
 <p>L'ensemble des fichiers représente moins de 10ko !</p>

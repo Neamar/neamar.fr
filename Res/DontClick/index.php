@@ -47,7 +47,7 @@ include('../header.php');
 <p>Voir le fichier SWF, et le code.</p>
 
 <h2>Statistiques...</h2>
-<p>Nombre de joueurs : <?php echo count(file('StatsJeu.txt'));?></p>
+<p>Nombre de joueurs : <?php flashPlayerStats() ?></p>
 <h2>Le code</h2>
 <h3>À propos du code</h3>
 <p>L'ensemble des fichiers représente moins de 10ko !</p>

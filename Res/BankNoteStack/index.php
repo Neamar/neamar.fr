@@ -73,20 +73,7 @@ include('../header.php');
 <p>Voir le fichier SWF, et le code.</p>
 
 <h2>Statistiques...</h2>
-<p>Nombre de joueurs : <?php
-function getLineCount($file)
-{
-	$lines = 0;
-
-	$fh = fopen($file, 'r');
-	while (!feof($fh))
-	{
-		fgets($fh);
-		$lines++;
-	}
-	return $lines; // line count
-}
-echo number_format(getLineCount('StatsJeu.txt'), 0, ',', ' ');?></p>
+<p>Player count : <?php flashPlayerStats() ?></p>
 <h2>Le code</h2>
 <h3>À propos du code</h3>
 <p>L'ensemble des fichiers représente moins de 10ko !</p>

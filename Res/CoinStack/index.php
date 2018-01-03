@@ -3,12 +3,7 @@ $Titre='CoinStack : la pile de pièces';
 $Box = array("Auteur" => "Neamar","Date" => "Aout 2008", "But" =>"Ramasser les pièces !","Voir aussi"=>'<a href="../Compiler_AS3">Compiler l\'AS3</a>',"Voir aussi "=>'<a href="../MoneyStack">MoneyStack</a>',"Voir aussi  "=>'<a href="../BankNoteStack">BankNoteStack</a>');
 include('../header.php');
 
-if(isset($_GET['en']))
-	$Flash ='http://games.mochiads.com/c/g/coin-stack/CoinStack_en.swf';
-else if(isset($_GET['cn']))
-	$Flash ='http://games.mochiads.com/c/g/coin-stack-cn/CoinStack_cn.swf';
-else
-	$Flash = 'CoinStack.swf';
+$Flash = 'CoinStack_en.swf';
 ?>
 <h1><img src="Images/CoinStack.png" class="nonflottant" alt="Aide au jeu CoinStack"/></h1>
 
@@ -90,20 +85,8 @@ else
 <p>Voir le fichier SWF, et le code.</p>
 
 <h2>Statistiques...</h2>
-<p>Nombre de joueurs : <?php
-function getLineCount($file)
-{
-	$lines = 0;
+<p>Player count : <?php flashPlayerStats() ?></p>
 
-	$fh = fopen($file, 'r');
-	while (!feof($fh))
-	{
-		fgets($fh);
-		$lines++;
-	}
-	return $lines; // line count
-}
-echo number_format(getLineCount('StatsJeu.txt'), 0, ',', ' ');?></p>
 <h2>Le code</h2>
 <h3>À propos du code</h3>
 <p>L'ensemble des fichiers représente moins de 10ko !</p>
