@@ -49,7 +49,7 @@ if(!isset($description))
 	<?php
 	if(!isset($NoWelcomeCenter))
 	{?>
-<dl class="menu-accueil">
+<dl id="menu-accueil">
 		<dt class="Single_Item"><a href="https://<?php echo $_SERVER['SERVER_NAME']; ?>" title="Retour à l'accueil">Accueil</a></dt>
 	</dl>
 
