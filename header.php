@@ -16,6 +16,7 @@ if(!isset($description))
 <head>
 	<title><?php echo $titre; ?></title>
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="owner" content="Neamar" />
 	<meta name="author" content="Neamar" />
 	<meta name="robots" content="all" />
@@ -63,7 +64,7 @@ if(!isset($description))
 	{
 // 		Donner le nom du menu
 		echo '	<!--Menu ' . $element . ' -->' . "\n";
-		echo '	<dl>' . "\n" . '		<dt><a href="https://neamar.fr/NoJS.php?Menu=' . $element . '" rel="nofollow" onclick="return false">' . $element . '</a></dt>' . "\n";
+		echo '	<dl id="menu-' . strtolower($element) . '">' . "\n" . '		<dt><a href="https://neamar.fr/NoJS.php?Menu=' . $element . '" rel="nofollow" onclick="return false">' . $element . '</a></dt>' . "\n";
 		echo '		<dd>' . "\n";
 // 		Faire une requete qui prend en compte les relations parents enfants
 		echo '			<ul>' . "\n";

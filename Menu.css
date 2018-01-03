@@ -175,3 +175,22 @@ body
 	position:absolute;
 	top:65px;
 }
+
+
+@media screen and (max-width: 699px) {
+  #menu-misc {
+    display: none;
+  }
+
+  #menu-accueil {
+    display: none;
+  }
+
+  #GoogleSearch {
+    display: none;
+  }
+
+  #menu dl {
+    width: auto;
+  }
+}
