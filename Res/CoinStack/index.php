@@ -37,7 +37,7 @@ $Flash = 'CoinStack_en.swf';
 </p>
 <h4>Les centimes dorés</h4>
 <p>
-	<img src="Images/10Centime.png" alt="10 centimes" />
+	<img src="Images/10Centimes.png" alt="10 centimes" />
 	<img src="Images/20Centimes.png" alt="20 centimes" />
 	<img src="Images/50Centimes.png" alt="50 centimes" />
 </p>

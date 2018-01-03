@@ -35,7 +35,7 @@ include('../header.php');
 </p>
 <h5 style="clear:both;">Les centimes dorés</h5>
 <p>
-	<img src="../CoinStack/Images/10Centime.png" alt="10 centimes" />
+	<img src="../CoinStack/Images/10Centimes.png" alt="10 centimes" />
 	<img src="../CoinStack/Images/20Centimes.png" alt="20 centimes" />
 	<img src="../CoinStack/Images/50Centimes.png" alt="50 centimes" />
 </p>
