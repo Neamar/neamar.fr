@@ -1,6 +1,14 @@
 <?php
 $Titre='Un (autre) jeu de graphe';
-$Box = array("Auteur" => "Neamar","Date" => "Aout 2008", "But" =>"Démêler les n&oelig;uds","Voir aussi"=>'<a href="../Compiler_AS3">Compiler l\'AS3</a>',"Voir aussi"=>'<a href="../Graphe">Jeux de graphe</a>');
+$Box = array("Auteur" => "Neamar","Date" => "Aout 2008", "But" =>"Démêler les n&oelig;uds","Voir aussi"=>'<a href="../Compiler_AS3/">Compiler l\'AS3</a>',"Voir aussi"=>'<a href="../Graphe/">Jeux de graphe</a>');
+$AddLine=<<<EOF
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['\\\\(','\\\\)']]}
+    });
+    </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+EOF;
 include('../header.php');
 ?>
 <h1>Un jeu de reflexion en Flash</h1>
@@ -61,7 +69,7 @@ Le concept est extrêmement simple, mais la solution n'est pas toujours facile, l
 
 <h3>Estimation de la complexité</h3>
 <p>Un mini algorithme tente d'attribuer à chaque niveau une complexité. Cette complexité est calculée de façon très empirique. Elle prend en compte le nombre de noeuds, mais aussi le nombre moyen d'arcs par sommet, et attribue un bonus aux niveaux ayant un fort ratio :<br />
-<img src="http://neamar.fr/Latex/TEX.php?m=<?php echo urlencode('\frac{3}{2} * \frac{Nb_{Liens}}{Nb_{Noeuds}} + \frac{Nb_{Noeuds}}{35} + \frac{Nb_{Liens}}{30} + \frac{1}{5}*(\frac{Nb_{Liens}}{2.2} - Nb_{Noeuds})');?>" alt="1.5*All_Liens.length/All_Noeuds.length + All_Noeuds.length/35 + All_Liens.length/30 + 0.2*(All_Liens.length/2.2 - All_Noeuds.length)" /></p>
+\(\frac{3}{2} * \frac{Nb_{Liens}}{Nb_{Noeuds}} + \frac{Nb_{Noeuds}}{35} + \frac{Nb_{Liens}}{30} + \frac{1}{5}*(\frac{Nb_{Liens}}{2.2} - Nb_{Noeuds})'\)</p>
 
 <h2>Mods</h2>
 <h3 id="Createur">Création de niveau</h3>
