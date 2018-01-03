@@ -567,3 +567,14 @@ input:focus, textarea:focus
 {
 	color:#44007E;
 }
+
+@media screen and (max-width: 767px) {
+  #Box, #Sommaire {
+    display: none;
+  }
+
+  body {
+  	padding: 0;
+  }
+}
+
