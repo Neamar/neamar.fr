@@ -8,7 +8,7 @@ include('header.php');
 ?>
 <h1>Bienvenue sur neamar.fr</h1>
 <p style="float:left; padding:10px;"><img src="Pics/NeamarStampLittle.png" alt="Made In NEAMAR" /></p>
-<form action="http://www.google.fr/cse" id="cse-search-box">
+<form action="//www.google.fr/cse" id="cse-search-box">
   <div style="margin:auto;">
     <input type="hidden" name="cx" value="partner-pub-4506683949348156:h5hsp0-otsa" />
     <input type="hidden" name="ie" value="ISO-8859-1" />
@@ -16,7 +16,7 @@ include('header.php');
     <input type="submit" name="sa" value="Rechercher" />
   </div>
 </form>
-<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=fr"></script>
+<script type="text/javascript" src="//www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=fr"></script>
 
 <p>Neamar.fr n'est pas mis à jour depuis quelques années.<br />
 Seule la <a href="/Res">section Ressources</a>, le <a href="//blog.neamar.fr">blog</a> et <a href="//omnilogie.fr">Omnilogie</a> continuent de recevoir régulièrement du nouveau contenu.</p>
