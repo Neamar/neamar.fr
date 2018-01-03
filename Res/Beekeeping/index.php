@@ -2,7 +2,7 @@
 $Titre='Two months with the bees';
 $Box = array("Author" => "Benoît-Joseph Pascal","Date" => "2009",'PDF Version'=>'<a href="Beekeeping.pdf">PDF</a>');
 
-$AddLine='<link rel="stylesheet" type="text/css" href="http://neamar.fr/lib/Typo/Typo.css" />';
+$AddLine='<link rel="stylesheet" type="text/css" href="https://neamar.fr/lib/Typo/Typo.css" />';
 include('../header.php');
 include('../../lib/Typo.php');
 ?>

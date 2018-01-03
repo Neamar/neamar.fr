@@ -1,7 +1,7 @@
 <?php
 $Titre='Je suis la jeunesse volée de Jack : relations entre Fight Club et Calvin &amp; Hobbes';
 $Box = array("Auteur" => "18th Candidate","Date" => "2010","Traducteur"=>'Neamar');
-$AddLine='<link rel="stylesheet" type="text/css" href="http://neamar.fr/lib/Typo/Typo.css" />';
+$AddLine='<link rel="stylesheet" type="text/css" href="https://neamar.fr/lib/Typo/Typo.css" />';
 include('../header.php');
 include('../Typo/Typo.php');
 ?>

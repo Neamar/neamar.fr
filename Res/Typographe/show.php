@@ -13,7 +13,7 @@ $Texte=mysql_fetch_assoc($Texte);
 $Titre=$Texte['Titre'] . ' &ndash; Le typographe';
 // $Box = array("Auteur" => "Neamar","Date" => "2009");
 
-$AddLine='<link rel="stylesheet" type="text/css" href="http://neamar.fr/lib/Typo/Typo.css" />';
+$AddLine='<link rel="stylesheet" type="text/css" href="https://neamar.fr/lib/Typo/Typo.css" />';
 $UseMath=true;
 include('../header.php');
 include('../Typo/Typo.php');

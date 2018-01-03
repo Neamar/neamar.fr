@@ -1,6 +1,6 @@
 <?php
 $Titre="Recueil de moisissures argumentatives";
-$AddLine='<link rel="stylesheet" type="text/css" href="http://neamar.fr/lib/Typo/Typo.css" />';
+$AddLine='<link rel="stylesheet" type="text/css" href="https://neamar.fr/lib/Typo/Typo.css" />';
 $Box = array("Auteur" => "<strong>Stanislas Antczak</strong> et <strong>Richard Monvoisin</strong>","Date" => "2008",'Version ODT'=>'<a href="Sophismes.odt">ODT</a>');
 
 $Auteurs="Stanislas Antczak, Richard Monvoisin et Nicolas Vivant, 2007-2008";

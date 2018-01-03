@@ -4,7 +4,7 @@ $UseMath=true;
 $Titre='Le langage corporel';
 $Box = array("Auteur" => "Neamar","Date" => "Nov. 2008", "But" =>"Divertissement");
 
-$AddLine='<link rel="stylesheet" type="text/css" href="http://neamar.fr/lib/Typo/Typo.css" />';
+$AddLine='<link rel="stylesheet" type="text/css" href="https://neamar.fr/lib/Typo/Typo.css" />';
 
 include('../header.php');
 include('../Typo/Typo.php');

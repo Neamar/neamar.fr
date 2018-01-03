@@ -2,7 +2,7 @@
 $Titre='Le problème de l\'harmonisation des notes';
 $Box = array("Auteur" => "Neamar","Date" => "2010");
 
-$AddLine='<link rel="stylesheet" type="text/css" href="http://neamar.fr/lib/Typo/Typo.css" />';
+$AddLine='<link rel="stylesheet" type="text/css" href="https://neamar.fr/lib/Typo/Typo.css" />';
 $UseMath=true;
 include('../header.php');
 include('../Typo/Typo.php');
