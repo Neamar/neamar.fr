@@ -85,7 +85,7 @@ Quant à la rapidité, c'est acceptable : pour un DL de 5000 termes, le temps d'ex
 <li><a href="Release/Calc.exe">Fichier EXE</a></li>
 <li><a href="Release/vb6fr.dll">vb6fr.DLL</a> : En cas de problème, la mettre à coté de l'application</li>
 <li><a href="Release/vb6fr.zip">vb6fr.DLL.zip</a> : La même, zippée</li>
-<li><a href="Release/RICHTX32.ocx">RICHTX32.OCX.zip</a> : Vous aurez peut être besoin de ce composant, toujours à placer à côté. (inclus dans le premier zip)</li>
+<li><a href="Release/RICHTX32.OCX">RICHTX32.OCX.zip</a> : Vous aurez peut être besoin de ce composant, toujours à placer à côté. (inclus dans le premier zip)</li>
 </ul>
 <h2>Code source</h2>
 <h3>Feuille</h3>
