@@ -1,6 +1,14 @@
 <?php
 $Titre='CoinStack : la pile de pièces';
 $Box = array("Auteur" => "Neamar","Date" => "Aout 2008", "But" =>"Ramasser les pièces !","Voir aussi"=>'<a href="../Compiler_AS3">Compiler l\'AS3</a>',"Voir aussi "=>'<a href="../MoneyStack">MoneyStack</a>',"Voir aussi  "=>'<a href="../BankNoteStack">BankNoteStack</a>');
+$AddLine=<<<EOF
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$']]}
+    });
+    </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+EOF;
 include('../header.php');
 
 $Flash = 'CoinStack_en.swf';
@@ -66,10 +74,10 @@ $Flash = 'CoinStack_en.swf';
 <p>Un peu de mathématiques :</p>
 <ul>
 	<li>Les 8 pièces sont équiréparties (il y en a autant de chaque type)&nbsp;; </li>
-	<li><span class="TexTexte">1+2+5+10+20+50+100+200 = 388</span>&nbsp;; </li>
-	<li>il y a 500 pièces en jeu soit <img src="http://neamar.fr/Latex/TEX.php?m=%5C%2C%5Clfloor%5C%2C%5Cfrac%7B500%7D%7B8%7D%5C%2C%5C%2C%5Crfloor%5C%2C%3D%5C%2C60" alt="\lfloor \frac{500}{8} \rfloor = 60" class="TexPic" /> fois l'ensemble des pièces. </li>
+	<li>\(1+2+5+10+20+50+100+200 = 388\)&nbsp;; </li>
+	<li>il y a 500 pièces en jeu soit\(\lfloor \frac{500}{8} \rfloor = 60\) fois l'ensemble des pièces. </li>
 </ul>
-<p>On en déduit donc que le score maximal théorique est de <span class="TexTexte">388 &times; 60 = 23 280</span>. Comme une partie dure une minute, cela impliquerait de ramasser <img src="http://neamar.fr/Latex/TEX.php?m=%5Cfrac%7B500%7D%7B60%7D%5C%2C%5C%2C%5Csimeq%5C%2C%5C%2C%5C%2C8.3" alt="\frac{500}{60}\, \simeq \, 8.3" class="TexPic" /> pièces à la seconde&nbsp;! </p>
+<p>On en déduit donc que le score maximal théorique est de \(388 &times; 60 = 23 280\). Comme une partie dure une minute, cela impliquerait de ramasser\(\frac{500}{60}\, \simeq \, 8.3\) pièces à la seconde&nbsp;! </p>
 
 <h3>Remerciements</h3>
 <p>Merci à Anthony ISTAR pour la composition du logo de ce jeu.</p>

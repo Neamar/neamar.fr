@@ -1,6 +1,14 @@
 <?php
 $Titre='BankNoteStack : la pile de billets';
-$Box = array("Auteur" => "Neamar","Date" => "Aout 2008", "But" =>"Ramasser les billets !","Voir aussi"=>'<a href="../Compiler_AS3">Compiler l\'AS3</a>',"Voir aussi "=>'<a href="../CoinStack">CoinStack</a>',"Voir aussi  "=>'<a href="../MoneyStack">MoneyStack</a>');
+$Box = array("Auteur" => "Neamar","Date" => "Aout 2008", "But" =>"Ramasser les billets !","Voir aussi"=>'<a href="../Compiler_AS3/">Compiler l\'AS3</a>',"Voir aussi "=>'<a href="../CoinStack/">CoinStack</a>',"Voir aussi  "=>'<a href="../MoneyStack/">MoneyStack</a>');
+$AddLine=<<<EOF
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$']]}
+    });
+    </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+EOF;
 include('../header.php');
 ?>
 <h1><img src="Images/BankNoteStack.png" class="nonflottant" alt="Aide au jeu BankNoteStack"/></h1>
@@ -55,10 +63,10 @@ include('../header.php');
 <p>Un peu de mathématiques :</p>
 <ul>
 	<li>Les 7 billets sont équiréparties (il y en a autant de chaque type)&nbsp;; </li>
-	<li><span class="TexTexte">5+10+20+50+100+200+500 = 885</span>&nbsp;; </li>
-	<li>il y a 500 billets en jeu soit <img src="http://neamar.fr/Latex/TEX.php?m=%5C%2C%5Clfloor%5C%2C%5Cfrac%7B500%7D%7B8%7D%5C%2C%5C%2C%5Crfloor%5C%2C%3D%5C%2C60" alt="\left \lfloor \frac{500}{8} \right \rfloor = 60" class="TexPic" /> fois l'ensemble des billets. </li>
+	<li>\(5+10+20+50+100+200+500 = 885\)&nbsp;; </li>
+	<li>il y a 500 billets en jeu soit \(\left \lfloor \frac{500}{8} \right \rfloor = 60\) fois l'ensemble des billets. </li>
 </ul>
-<p>On en déduit donc que le score maximal théorique est de <span class="TexTexte">885 &times; 60 = 53 100</span>. Comme une partie dure une minute, cela impliquerait de ramasser <img src="http://neamar.fr/Latex/TEX.php?m=%5Cfrac%7B500%7D%7B60%7D%5C%2C%5C%2C%5Csimeq%5C%2C%5C%2C%5C%2C8.3" alt="\frac{500}{60}\, \simeq \, 8.3" class="TexPic" /> billets à la seconde&nbsp;! </p>
+<p>On en déduit donc que le score maximal théorique est de \(885 &times; 60 = 53 100\). Comme une partie dure une minute, cela impliquerait de ramasser \(\frac{500}{60}\, \simeq \, 8.3\) billets à la seconde&nbsp;! </p>
 
 
 <h3>Historique</h3>
