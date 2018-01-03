@@ -93,12 +93,14 @@ if(isset($Abstract) && preg_match('#^/Res/(.+)/$#U',$_SERVER['REQUEST_URI']))//N
 //enregistrer les infos sur le Referrer dans le fichier Stats :
 
 $fichier = fopen('/app/mount/' . $_SERVER['REQUEST_URI'] . '/Stats.txt', 'a'); //Ouvrir le fichier
-if(!isset($_SERVER['HTTP_REFERER']))
-	$_SERVER['HTTP_REFERER']='';
-$Chaine = time() . '|' .  $_SERVER['HTTP_X_FORWARDED_FOR'] . '|' . $_SERVER['HTTP_REFERER'] . '|';	//Formater la chaine : Date|IP|Referrer
-fputs($fichier, $Chaine);//Puis enregistrer les données
-fputs($fichier, "\n");
-fclose($fichier); //Et fermer le fichier
+if($fichier) {
+	if(!isset($_SERVER['HTTP_REFERER']))
+		$_SERVER['HTTP_REFERER']='';
+	$Chaine = time() . '|' .  $_SERVER['HTTP_X_FORWARDED_FOR'] . '|' . $_SERVER['HTTP_REFERER'] . '|';	//Formater la chaine : Date|IP|Referrer
+	fputs($fichier, $Chaine);//Puis enregistrer les données
+	fputs($fichier, "\n");
+	fclose($fichier); //Et fermer le fichier
+}
 
 function getLineCount($file)
 {
