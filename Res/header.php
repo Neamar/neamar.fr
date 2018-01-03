@@ -62,10 +62,6 @@ $keyWords='';
 
 	<link href="//neamar.fr/Res/ressources.css" rel="stylesheet" type="text/css" media="screen, handheld" />
 	<link href="//neamar.fr/Res/ressources_print.css" rel="stylesheet" type="text/css" media="print" />
-
-
-	<link href="//neamar.fr/Res/Office.css" rel="stylesheet" title="Office" type="text/css" media="screen, handheld" />
-
 	<link href="//neamar.fr/Res/dream.css" rel="alternate stylesheet" title="Dream" type="text/css" />
 
 	<link rel="stylesheet" type="text/css" href="//neamar.fr/Res/Codes.css" />

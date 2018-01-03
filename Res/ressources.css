@@ -3,6 +3,7 @@ body
 	padding:0 10%;
 	margin-top:0;
 	font-family: FreeSerif, Sylfaen, Optima, "Times New Roman", Arial, serif;
+	background: #88aad6 url("ImagesCSS/Fond.png") no-repeat fixed top left;
 }
 
 #Abstract
@@ -22,6 +23,7 @@ body
 {
 	padding:5%;
 	padding-bottom:55px;
+	background:white url('ImagesCSS/Abstract.jpg') no-repeat scroll right bottom;
 }
 
 #Main dd
@@ -146,6 +148,7 @@ body
 	max-height:84%;/*Eviter le sommaire qui sort de l'écran */
 	border:1px solid white;
 	overflow:hidden;/*Ce qui dépasse (des 84% de l'écran) est CACHE en position repliée. */
+	background:rgb(57,97,140) url("ImagesCSS/Table.png") no-repeat top right;
 }
 #Sommaire:hover
 {
@@ -153,6 +156,7 @@ body
 	width:327px;
 	border:2px dotted red;
 	overflow:auto;/*Rajoute des ascenseurs verticaux si besoin est (i.e si on a dépassé le max-width */
+	background:rgb(136,170,214);/*Ne plus afficher "Table des matières" */
 }
 
 .insideTOC
