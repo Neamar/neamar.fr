@@ -2,7 +2,7 @@
 $Titre='Regexp with brace matching';
 $Box = array("Auteur" => "Neamar","Date" => "2009");
 
-$AddLine='<link rel="stylesheet" type="text/css" href="http://neamar.fr/Res/Typo/Typo.css" />';
+$AddLine='<link rel="stylesheet" type="text/css" href="https://neamar.fr/Res/Typo/Typo.css" />';
 include('../header.php');
 //include('../Typo/Typo.php');
 ?>

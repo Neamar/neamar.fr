@@ -33,7 +33,7 @@ Si vous cherchez des informations sur le capitaine haddock par exemple, la requê
 <p>Il suffit de marquer de matière très naturelle la conversion à faire : 100 $ en euros, ou 100 dollars en €... (Réponse : <cite class="comment">100 $ US = 67,8472081 euros</cite>). Les taux sont mis à jour en temps réel, et cela fonctionne pour la grande majorité des devises. </p>
 
 <h3>Calcul</h3>
-<p><img src="Images/calc.gif" alt="Calculatrice" />Google intègre une calculatrice convertisseur assez pratique. Que vous demandiez le calcul trivial (1256+126-456)*2, ou le calcul un peu plus complexe ? e^(i*pi) + 2^(1/2), la calculatrice vous rendra des services innombrables).<br />
+<p><img src="Images/Calc.gif" alt="Calculatrice" />Google intègre une calculatrice convertisseur assez pratique. Que vous demandiez le calcul trivial (1256+126-456)*2, ou le calcul un peu plus complexe ? e^(i*pi) + 2^(1/2), la calculatrice vous rendra des services innombrables).<br />
 (Réponse : <cite class="comment">(e^(i * pi)) + (2^(1 / 2)) = 0,414213562)</cite>. Surtout qu'elle est plus simple à utiliser que celle de Windows ! De plus, vous pouvez aussi convertir des unités (100 km en m), et la calculatrice de google.com (pas celle de google.fr malheureusement) permet même des opérations telles que 34 in binary ou 16548 bytes in kilobytes.</p>
 <h4>En bonus</h4>
 <p>@uguste fait remarquer que la calculatrice Google ne s'arrête pas là ! Elle répond même aux questions les plus complexes. Vous ne croyez pas ? Demandez lui "answer to life the universe and everything" (référence à l’oeuvre de Douglas Adams <em>H2G2, Le Guide du voyageur galactique</em>) !</p>
@@ -42,7 +42,7 @@ Si vous cherchez des informations sur le capitaine haddock par exemple, la requê
 <p>Enfin une fonction vraiment pratique ! Vous vous êtes toujours demandés la signification de sycophante, thuriféraire, ou pandémonium ? Google.fr connait ! Il suffit de lui demander define:Mot. (Résultat : <cite class="comment">Definitions of sycophante on the Web in French: Un sycophante (en grec ancien / sukophántês) est, dans l'Athènes antique, un délateur professionnel.</cite>) </p>
 
 <h3>L'heure <span class="comment">[Uniquement sur google.com]</span></h3>
-<p><img src="Images/clock.png" alt="Horloge" />Google connait l'heure de n'importe quelle ville du monde ! Une requête what time is it renverra l'heure actuelle dans votre pays, tandis que what time is it Hong Kong donnera l'heure de Hong Kong. On ne sait jamais, ça peut servir !</p>
+<p><img src="Images/Clock.png" alt="Horloge" />Google connait l'heure de n'importe quelle ville du monde ! Une requête what time is it renverra l'heure actuelle dans votre pays, tandis que what time is it Hong Kong donnera l'heure de Hong Kong. On ne sait jamais, ça peut servir !</p>
 
 <h3>La recherche avancée de Google</h3>
 <p>Sur la page d'accueil de Google se trouve un petit lien "Recherche Avancée". CLiquez dessus.<br />
