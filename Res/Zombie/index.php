@@ -1,7 +1,7 @@
 <?php
 $Titre='Nouvelle : Vous les zombies &ndash; Texte intégral';
 $Box = array("Auteur" => "Robert A. Heinlein","Date" => "1958","Versions"=>'<a href="Vous les Zombies.pdf">PDF</a>');
-$AddLine='<link rel="stylesheet" type="text/css" href="https://neamar.fr/Res/Typo/Typo.css" />';
+$AddLine='<link rel="stylesheet" type="text/css" href="https://neamar.fr/lib/Typo/Typo.css" />';
 include('../header.php');
 include('../Typo/Typo.php');
 ?>

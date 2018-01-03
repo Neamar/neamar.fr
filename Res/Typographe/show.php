@@ -13,7 +13,7 @@ $Texte=mysql_fetch_assoc($Texte);
 $Titre=$Texte['Titre'] . ' &ndash; Le typographe';
 // $Box = array("Auteur" => "Neamar","Date" => "2009");
 
-$AddLine='<link rel="stylesheet" type="text/css" href="http://neamar.fr/Res/Typo/Typo.css" />';
+$AddLine='<link rel="stylesheet" type="text/css" href="http://neamar.fr/lib/Typo/Typo.css" />';
 $UseMath=true;
 include('../header.php');
 include('../Typo/Typo.php');
@@ -37,7 +37,7 @@ if(!isset($_GET['Source']))
 	<div id="Typo_cut_container" style="position:relative">
 		<div id="Typo_cut"><a href='#' onclick="return false;">Copier le code HTML dans le presse-papier</a></div>
 	</div>
-	
+
 	<script type="text/javascript" src="http://neamar.fr/lib/ZeroClipboard/ZeroClipboard.js"></script>
 	<script type="text/javascript">
 	ZeroClipboard.setMoviePath( 'http://neamar.fr/lib/ZeroClipboard/ZeroClipboard10.swf' );
@@ -46,7 +46,7 @@ if(!isset($_GET['Source']))
 	clip.glue('Typo_cut','Typo_cut_container');
 	//window.onresize=new function(){alert('move'); clip.reposition();}
 	</script>
-	
+
 	<?php
 }
 else

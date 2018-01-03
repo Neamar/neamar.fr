@@ -8,7 +8,7 @@ $AddLine=<<<EOF
     });
     </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-  <link rel="stylesheet" type="text/css" href="//neamar.fr/Res/Typo/Typo.css" />
+  <link rel="stylesheet" type="text/css" href="//neamar.fr/lib/Typo/Typo.css" />
 EOF;
 include('../header.php');
 include('../Typo/Typo.php');

@@ -2,7 +2,7 @@
 $Titre='Roman : Stropovitch, le Pèlerinage du Démon';
 $Box = array("Auteur" => "Stropovitch","Date" => "2007-2008","Voir aussi"=>'<a href="http://forums.wow-europe.com/thread.html?topicId=298635138" rel="nofollow">Forum associé</a>');
 
-$AddLine='<link rel="stylesheet" type="text/css" href="http://neamar.fr/Res/Typo/Typo.css" />';
+$AddLine='<link rel="stylesheet" type="text/css" href="http://neamar.fr/lib/Typo/Typo.css" />';
 
 include('../header.php');
 include("Parse.php");

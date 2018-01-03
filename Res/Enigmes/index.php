@@ -4,7 +4,7 @@ $UseMath=true;
 $Titre='Les 10 plus belles énigmes';
 $Box = array("Auteur" => "Neamar","Date" => "Nov. 2008", "But" =>"Divertissement");
 
-$AddLine='<link rel="stylesheet" type="text/css" href="http://neamar.fr/Res/Typo/Typo.css" />';
+$AddLine='<link rel="stylesheet" type="text/css" href="http://neamar.fr/lib/Typo/Typo.css" />';
 
 include('../header.php');
 include('../../lib/Typo.php');

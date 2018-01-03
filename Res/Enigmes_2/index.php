@@ -4,7 +4,7 @@ $UseMath=true;
 $Titre='Les 10 plus belles énigmes &ndash; Tome 2';
 $Box = array("Auteur" => "Neamar","Date" => "Nov. 2008", "But" =>"Divertissement",'Analyse'=>'<a href="http://blog.neamar.fr/component/content/article/5-looking-back/22-retour-sur-les-10-plus-belles-enigmes-deuxieme-saison">Notes de l\'auteur</a>');
 
-$AddLine='<link rel="stylesheet" type="text/css" href="http://neamar.fr/Res/Typo/Typo.css" />';
+$AddLine='<link rel="stylesheet" type="text/css" href="http://neamar.fr/lib/Typo/Typo.css" />';
 
 include('../header.php');
 include('../../lib/Typo.php');

@@ -2,7 +2,7 @@
 $Titre='Hommes et objets technologiques, quelles relations ?';
 $Box = array("Auteur" => "Neamar","Date" => "2009");
 
-$AddLine='<link rel="stylesheet" type="text/css" href="http://neamar.fr/Res/Typo/Typo.css" />';
+$AddLine='<link rel="stylesheet" type="text/css" href="http://neamar.fr/lib/Typo/Typo.css" />';
 include('../header.php');
 include('../Typo/Typo.php');
 ?>

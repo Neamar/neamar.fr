@@ -2,7 +2,7 @@
 $Titre='Afficher des mathématiques dans du HTML avec TeX';
 $Box = array("Auteur" => "Neamar","Date" => "2009");
 
-$AddLine='<link rel="stylesheet" type="text/css" href="https://neamar.fr/Res/Typo/Typo.css" />';
+$AddLine='<link rel="stylesheet" type="text/css" href="https://neamar.fr/lib/Typo/Typo.css" />';
 $UseMath=true;
 include('../header.php');
 include('../Typo/Typo.php');

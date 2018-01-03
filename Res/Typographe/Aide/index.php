@@ -10,7 +10,7 @@ if(isset($_GET['b']))
 
 $Box = array("Auteur" => "Neamar","Date" => "2009");
 
-$AddLine='<link rel="stylesheet" type="text/css" href="https://neamar.fr/Res/Typo/Typo.css" />
+$AddLine='<link rel="stylesheet" type="text/css" href="https://neamar.fr/lib/Typo/Typo.css" />
 <style type="text/css">
 .code_box
 {

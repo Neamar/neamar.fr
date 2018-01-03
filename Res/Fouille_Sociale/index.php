@@ -1,7 +1,7 @@
 <?php
 $Titre='Fouille de données dans les réseaux sociaux : synthèse bibliographique';
 $Box = array("Date" => "2012", 'PDF'=>'<a href="fouille_donnees.pdf">Version PDF</a>');
-$AddLine='<link rel="stylesheet" type="text/css" href="http://neamar.fr/Res/Typo/Typo.css" />';
+$AddLine='<link rel="stylesheet" type="text/css" href="http://neamar.fr/lib/Typo/Typo.css" />';
 $UseMath=true;
 include('../header.php');
 include('../Typo/Typo.php');

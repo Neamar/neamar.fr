@@ -2,7 +2,7 @@
 $Titre='EasySQL pour l\'administration facile de tables de données relationnelles';
 $Box = array("Auteur" => "Neamar","Date" => "2010");
 
-//$AddLine='<link rel="stylesheet" type="text/css" href="http://neamar.fr/Res/Typo/Typo.css" />';
+//$AddLine='<link rel="stylesheet" type="text/css" href="http://neamar.fr/lib/Typo/Typo.css" />';
 include('../header.php');
 //include('../../lib/Typo.php');
 ?>

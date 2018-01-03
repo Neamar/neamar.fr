@@ -46,7 +46,7 @@ Vous devriez avoir alors des messages vous informant de la progression de la mis
 <ul>
 	<li>Inclure le code source du Typographe au début de chaque page qui doit l'utiliser (ou dans votre <tt>header.php</tt> pour une utilisation sur toutes les pages) : <?php Source('Inclusion Typographe',"include('Chemin/Vers/Typo/Typo.php');"); ?></li>
 	<li>Inclure la feuille de style de base du Typographe dans votre HTML (<tt>Chemin/Vers/Typo/Typo.css</tt>). Notez que son utilisation n'est pas obligatoire mais fortement recommandée ; en effet la feuille ne définit pas de mise en forme au sens graphique mais plus les conventions typographiques : par exemple, afficher un "Résumé" au dessus des environnements abstracts, enlever l'emphase à l'intérieur d'une autre emphase, <em>etc.</em> :
-	<?php Source('CSS Typographe','<link rel="stylesheet" type="text/css" href="http://neamar.fr/Res/Typo/Typo.css" />'); ?></li>
+	<?php Source('CSS Typographe','<link rel="stylesheet" type="text/css" href="http://neamar.fr/lib/Typo/Typo.css" />'); ?></li>
 </ul>
 
 <h3>Utilisation</h3>
