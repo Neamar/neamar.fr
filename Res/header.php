@@ -72,6 +72,16 @@ $keyWords='';
 	<?php if(isset($AddLine)) echo $AddLine; ?>
 	<link rel="icon" type="image/x-icon" href="https://neamar.fr/favicon.ico" />
 	<script type="text/javascript" src="<?php if(!isset($ScriptURI)){ echo 'https://neamar.fr/Res/ressources.js';} else { echo $ScriptURI; }?>"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-4257957-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-4257957-1');
+	</script>
+
 </head>
 
 <body>

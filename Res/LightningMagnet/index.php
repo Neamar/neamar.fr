@@ -3,7 +3,7 @@ $Titre='LightningMagnet : of springs, lightning and magnets.';
 $Box = array("Author" => "Neamar","Release" => "May 2012", "Goal" =>"Reach level 15","See also"=>'<a href="../Icosien">Icosien</a>',"See also "=>'<a href="../Graphe">Graph games</a>');
 include('../header.php');
 
-$Flash ='http://games.mochiads.com/c/g/lightning-magnet/Dgraphe.swf';
+$Flash ='Dgraphe.swf';
 
 ?>
 <h1 style="text-align:center;">LightningMagnet</h1>
