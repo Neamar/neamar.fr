@@ -1,6 +1,6 @@
 <?php
 $Titre='Life Game IX';
-$Box = array("Auteur" => "Neamar","Date" => "Juin 2009", "But" =>"Aucun","Voir aussi"=>'<a href="../Compiler_AS3">Compiler l\'AS3</a>',"Voir aussi "=>'<a href="../VBLifeGame/">Life Game VII</a>');
+$Box = array("Auteur" => "Neamar","Date" => "Juin 2009", "But" =>"Aucun","Voir aussi"=>'<a href="../Compiler_AS3">Compiler l\'AS3</a>',"Voir aussi "=>'<a href="../VBLife_Game/">Life Game VII</a>');
 include('../header.php');
 ?>
 <h1>Life Game, version 9 : Flash release</h1>
