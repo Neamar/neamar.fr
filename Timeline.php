@@ -52,14 +52,14 @@ function ListIt($Items)
 
 $Liens=array(
 "Blog"=>"http://blog.neamar.fr",
-"CCDS"=>"http://ccds.neamar.fr",
-"Stacks"=>"http://neamar.fr/Res/CoinStack",
-"LifeGameIX"=>"http://neamar.fr/Res/LifeGame",
-"Typo"=>"http://neamar.fr/Res/Typo",
-"Omnilogie"=>"http://omnilogie.fr",
-"Res"=>"http://neamar.fr/Res",
-"Neamar.fr"=>"http//neamar.fr",
-'EasySQL'=>'http://neamar.fr',
+"CCDS"=>"https://ccds.neamar.fr",
+"Stacks"=>"https://neamar.fr/Res/CoinStack",
+"LifeGameIX"=>"https://neamar.fr/Res/LifeGame",
+"Typo"=>"https://neamar.fr/Res/Typo",
+"Omnilogie"=>"https://omnilogie.fr",
+"Res"=>"https://neamar.fr/Res",
+"Neamar.fr"=>"https//neamar.fr",
+'EasySQL'=>'https://neamar.fr',
 );
 
 ?>

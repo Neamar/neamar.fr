@@ -80,7 +80,7 @@ table
 th
 {
 	background-color:rgb(255,202,149);
-	background-image:url("http://neamar.fr/Pics/CSS/tile.jpg");
+	background-image:url("https://neamar.fr/Pics/CSS/tile.jpg");
 	color: white;
 	font-size: 1.1em;
 }
@@ -193,7 +193,7 @@ a.infobulle:hover
 a.infobulle:hover span
 {
    display: inline; /* on affiche l'infobulle */
-   background-image:url('http://neamar.fr/Pics/infobulle.png');
+   background-image:url('https://neamar.fr/Pics/infobulle.png');
    width:266px;
    padding-top:43px;
    padding-left:5px;

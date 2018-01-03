@@ -48,6 +48,6 @@ $envContent .='
 </form>
 ';
 
-$envContent .= '<script type="text/javascript" src="http://neamar.fr/lib/Typo/Env/qcm.js"></script>';
+$envContent .= '<script type="text/javascript" src="https://neamar.fr/lib/Typo/Env/qcm.js"></script>';
 
 ?>

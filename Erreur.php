@@ -12,7 +12,7 @@ if(!is_numeric($_GET['Erreur']) || $_GET['Erreur']>600)
 <meta name="robots" content="all" />
 <meta name="rating" content="general" />
 
-<link rel="start" title="Accueil" href="http://neamar.fr/" />
+<link rel="start" title="Accueil" href="https://neamar.fr/" />
 </head>
 
 <body>
@@ -20,10 +20,10 @@ if(!is_numeric($_GET['Erreur']) || $_GET['Erreur']>600)
 <h1 style="font-family:monospace; font-size:5em;"><?php echo $_GET['Erreur']; ?></h1>
 <img src="/Pics/CSS/404.png" alt="Erreur 404" />
 <ul>
-	<li><a href="http://neamar.fr">Portail Neamar.fr</a></li>
-	<li><a href="http://lachal.neamar.fr">Le dictionnaire</a></li>
+	<li><a href="https://neamar.fr">Portail Neamar.fr</a></li>
+	<li><a href="https://lachal.neamar.fr">Le dictionnaire</a></li>
 	<li><a href="http://ccds.neamar.fr">Ça coule de source</a></li>
-	<li><a href="http://neamar.fr/Res">Ressources</a></li>
+	<li><a href="https://neamar.fr/Res">Ressources</a></li>
 </ul>
 </div>
 </body>

@@ -22,7 +22,7 @@
 	if(!isset($NoPub))
 	{?>
 	<script type="text/javascript"
-	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
 	</script>
 	<?php
 	}?>
@@ -43,7 +43,7 @@
 	//-->
 	</script>
 	<script type="text/javascript"
-	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
 	</script>
 	<!--Ressource sous licence Creative Commons BY-->
 	<p class="centre cliquable">

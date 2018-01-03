@@ -10,6 +10,6 @@ AfficherBoiteSaga($Episode);
 <li>À Fatalis, Neamar, chevalier_m et les anonymes pour leurs ajouts ;
 <li>Et bien sûr à Nico &amp; Matt, créateurs de la saga !</li>
 </ul>
-<p class="petitTexte">(vous aussi, n'hésitez pas à contribuer en ajoutant une référence, une anecdote...<a href="http://neamar.fr/Mail.php">contactez-moi</a> !)</p>
+<p class="petitTexte">(vous aussi, n'hésitez pas à contribuer en ajoutant une référence, une anecdote...<a href="https://neamar.fr/Mail.php">contactez-moi</a> !)</p>
 <hr style="clear:none;"/>
 <p>Des heures de lecture en perspective !</p>

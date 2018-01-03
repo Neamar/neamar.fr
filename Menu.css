@@ -7,7 +7,7 @@ body
 
 #menu
 {
-	background:transparent url("http://neamar.fr/Pics/CSS/tile.png") repeat-x;
+	background:transparent url("https://neamar.fr/Pics/CSS/tile.png") repeat-x;
 	position:fixed;
 	top:0;
 	left:0;
@@ -32,11 +32,11 @@ body
 	cursor: pointer;
 	text-align:center;
 	width:130px;
-	background:url("http://neamar.fr/Pics/CSS/menu.png") no-repeat right 2px;
+	background:url("https://neamar.fr/Pics/CSS/menu.png") no-repeat right 2px;
 }
 #menu dl:hover dt
 {
-	background-image:url("http://neamar.fr/Pics/CSS/menu_hover.png");
+	background-image:url("https://neamar.fr/Pics/CSS/menu_hover.png");
 }
 
 #menu dl .Single_Item
@@ -46,7 +46,7 @@ body
 }
 #menu dl:hover .Single_Item
 {
-	background-image:url("http://neamar.fr/Pics/CSS/single_menu_hover.png");
+	background-image:url("https://neamar.fr/Pics/CSS/single_menu_hover.png");
 }
 
 /* Les liens */
@@ -99,12 +99,12 @@ body
 	padding-left:5px;
 	height:22px;
 	background-color:rgb(101,155,177);
-	background-image:url("http://neamar.fr/Pics/CSS/sous_menu_bleu.png");
+	background-image:url("https://neamar.fr/Pics/CSS/sous_menu_bleu.png");
 }
 #menu dl dd li:hover
 {
 	background-color:rgb(75,143,0);
-	background-image:url("http://neamar.fr/Pics/CSS/sous_menu_bleu_hover.png");
+	background-image:url("https://neamar.fr/Pics/CSS/sous_menu_bleu_hover.png");
 	padding-left:25px;
 	opacity:1;
 	width:234px;
@@ -113,13 +113,13 @@ body
 /* Les améliorations graphiques : le conteneur de fin de liste */
 #menu dl dd ul .fin_liste
 {
-	background-image:url("http://neamar.fr/Pics/CSS/sous_menu_bleu_fin.png");
+	background-image:url("https://neamar.fr/Pics/CSS/sous_menu_bleu_fin.png");
 	height:14px;
 	background-color:transparent;
 }
 #menu dl dd ul .fin_liste:hover
 {
-	background-image:url("http://neamar.fr/Pics/CSS/sous_menu_bleu_fin.png");
+	background-image:url("https://neamar.fr/Pics/CSS/sous_menu_bleu_fin.png");
 	background-color:transparent;
 }
 
@@ -141,7 +141,7 @@ body
 
 #menu dl dd li li
 {
-	background-image:url("http://neamar.fr/Pics/CSS/sous_menu_bleu_reversed_tiny.png");
+	background-image:url("https://neamar.fr/Pics/CSS/sous_menu_bleu_reversed_tiny.png");
 }
 
 #menu #PayPal

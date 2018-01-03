@@ -16,7 +16,7 @@ function AfficherListe($NumID)
 	$donnees=mysql_query('EXECUTE Listeur USING @ID');
 	while($Ligne=mysql_fetch_assoc($donnees))
 	{
-		$Titre=str_replace('/','',str_replace('http://neamar.fr/Res/','',$Ligne['Lien']));
+		$Titre=str_replace('/','',str_replace('https://neamar.fr/Res/','',$Ligne['Lien']));
 		if(file_exists($Titre . '/Abstract.htm'))
 			$Abstract='<blockquote><p>' . file_get_contents($Titre . '/Abstract.htm') . '</p></blockquote>';
 		else
@@ -42,13 +42,13 @@ function getLineCount($file)
 ?>
 <h1>Plan des ressources sur neamar.fr</h1>
 <p class="centre">
-	<a href="http://neamar.fr"><img class="nonflottant" src="http://neamar.fr/Pics/NeamarStampLittle.png" alt="Une production Neamar" /></a>
+	<a href="https://neamar.fr"><img class="nonflottant" src="https://neamar.fr/Pics/NeamarStampLittle.png" alt="Une production Neamar" /></a>
 </p>
 <p>Le site neamar.fr contient plusieurs dossiers classifiés comme ressources. Il s'agit majoritairement de codes sources et de tutoriaux, mais il existe aussi quelques articles traitant de sujets divers et variés.</p>
 <p>L'ensemble des pages sont valides XHTML 1.0.</p>
 <h3>Recherche</h3>
 <p>Moins fatigant que de rechercher un sujet dans la liste, vous pouvez utiliser la recherche !</p>
-<form action="http://www.google.fr/cse" id="cse-search-box">
+<form action="https://www.google.fr/cse" id="cse-search-box">
   <div>
     <input type="hidden" name="cx" value="partner-pub-4506683949348156:g5irco-o1uv" />
     <input type="hidden" name="ie" value="ISO-8859-1" />
@@ -56,7 +56,7 @@ function getLineCount($file)
     <input type="submit" name="sa" value="Rechercher" />
   </div>
 </form>
-<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=fr"></script>
+<script type="text/javascript" src="https://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=fr"></script>
 
 <h2 id="Outils">Utilitaires et outils</h2>
 <?php AfficherListe(144); ?>

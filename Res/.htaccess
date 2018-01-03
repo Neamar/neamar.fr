@@ -20,5 +20,5 @@ RewriteEngine on
 RewriteRule ^(.+)/-Stats$  /Res/Stats.php?For=$1 [L]
 
 #Faire attention à ne pas rediriger le fichier CSS du Typographe !
-RewriteRule Typo/([^T].+[^s]$) http://neamar.fr/Res/Typographe/$1 [L]
-RewriteRule Typo/$ http://neamar.fr/Res/Typographe/ [L]
+RewriteRule Typo/([^T].+[^s]$) https://neamar.fr/Res/Typographe/$1 [L]
+RewriteRule Typo/$ https://neamar.fr/Res/Typographe/ [L]

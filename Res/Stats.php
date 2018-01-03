@@ -89,7 +89,7 @@ if(file_exists($_GET['For'] . "/StatsJeu.txt"))
 if($EXCEED)
 echo '<p class="erreur">La génération des statistiques Referrer a été tronquée : trop de données à manipuler.<br />(Stats tronquées aux 45 000 derniers enregistrements)</p>';
 ?>
-<p>Les pages suivantes lient vers <a href="http://neamar.fr/Res/<?php echo $_GET['For']; ?>/"><?php echo $_GET['For']; ?></a></p>
+<p>Les pages suivantes lient vers <a href="https://neamar.fr/Res/<?php echo $_GET['For']; ?>/"><?php echo $_GET['For']; ?></a></p>
 
 <ol>
 <?php

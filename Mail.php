@@ -17,10 +17,10 @@ $_SESSION['Captcha']=rand(1,100);
 Votre adresse mail : <input type="text" name="Expediteur" /><br />
 Le site dont vous souhaitez parler :<br />
 <input type="radio" name="Site" value="CCDS" id="CCDS"/> <label for="CCDS"><a href="http://ccds.neamar.fr">Ca coule de source</a></label><br />
-<input type="radio" name="Site" value="FREE" id="FREE" /> <label for="FREE"><a href="http://neamar.free.fr/txt2jpg">TXT2JPG</a></label><br />
+<input type="radio" name="Site" value="FREE" id="FREE" /> <label for="FREE"><a href="https://neamar.free.fr/txt2jpg">TXT2JPG</a></label><br />
 <input type="radio" name="Site" value="INSA" id="INSA"/> <label for="INSA"><a href="http://insa.neamar.fr">INSA</a></label><br />
-<input type="radio" name="Site" value="LACHAL" id="LACHAL"/> <label for="LACHAL"><a href="http://lachal.neamar.fr">Dictionnaire lachalien</a></label><br />
-<input type="radio" name="Site" value="RES" id="RES"/> <label for="RES"><a href="http://neamar.fr/res">Section ressources de neamar.fr</a></label><br />
+<input type="radio" name="Site" value="LACHAL" id="LACHAL"/> <label for="LACHAL"><a href="https://lachal.neamar.fr">Dictionnaire lachalien</a></label><br />
+<input type="radio" name="Site" value="RES" id="RES"/> <label for="RES"><a href="https://neamar.fr/Res">Section ressources de neamar.fr</a></label><br />
 <input type="radio" name="Site" value="REFLETS" id="REFLETS"/><label for="REFLETS">La liste des ressources concernant Reflets d'acide</label><br />
 <input type="radio" name="Site" value="ADOPRIXTOXIS" id="ADOPRIXTOXIS"/><label for="ADOPRIXTOXIS">La liste des ressources concernant Adoprixtoxis</label><br />
 <input type="radio" name="Site" value="JEU" id="JEU"/><label for="JEU">Les jeux flash sur le site</label><br />
