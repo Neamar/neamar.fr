@@ -47,7 +47,7 @@
 	</script>
 	<!--Ressource sous licence Creative Commons BY-->
 	<p class="centre cliquable">
-		<img src="http://i.creativecommons.org/l/by/3.0/88x31.png" alt="Licence Creative Commons : BY" class="nonflottant" onclick="document.location='http://creativecommons.org/licenses/by/3.0/deed.fr';" title="Cliquez pour plus d'informations"/>
+		<img src="https://licensebuttons.net/l/by/3.0/88x31.png" alt="Licence Creative Commons : BY" class="nonflottant" onclick="document.location='http://creativecommons.org/licenses/by/3.0/deed.fr';" title="Cliquez pour plus d'informations"/>
 	</p>
 	<script type="text/javascript">
 	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
