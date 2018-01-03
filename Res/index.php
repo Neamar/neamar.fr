@@ -31,7 +31,6 @@ function AfficherListe($NumID)
 function getLineCount($file)
 {
 	$lines = 0;
-  echo $file;
 	$fh = fopen($file, 'r');
 	while (!feof($fh))
 	{
