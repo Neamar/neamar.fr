@@ -23,7 +23,7 @@ if(isset($_POST['texte']))
 	include('../../ConnectBDD.php');
 	mysql_query('INSERT INTO TYPO_Textes VALUES
 	(
-	\'\',
+	0,
 	\'' . $_POST['titre'] . '\',
 	\'' . $_POST['texte'] . '\',
 	\'' . $_SERVER['REMOTE_ADDR'] . '\',
