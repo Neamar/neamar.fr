@@ -11,14 +11,12 @@ include('../header.php');
 <li><img src="Images/image_328.jpeg" alt="" class="nonflottant " style="vertical-align: middle;"/></li>
 <li><img src="Images/image_358.jpeg" alt="" class="nonflottant " style="vertical-align: middle;"/></li>
 <li><img src="Images/image_227.jpeg" alt="" class="nonflottant " style="vertical-align: middle;"/></li>
-<li><img src="Images/image_398.jpeg" alt="Le nouveau contraceptif masculin : rapide et définitif !" class="nonflottant " style="vertical-align: middle;"/></li>
 <li><img src="Images/image_009.jpeg" alt="ours polaire putain j adore ces trucs croquants a l exterieur et moelleux a l interieur pole nord sud alaska igloo bd" class="nonflottant " style="vertical-align: middle;"/></li>
 <li><img src="Images/image_099.jpeg" alt="" class="nonflottant " style="vertical-align: middle;"/></li>
 <li><img src="Images/image_284.jpeg" alt="" class="nonflottant " style="vertical-align: middle;"/></li>
 <li><img src="Images/image_372.jpeg" alt="" class="nonflottant " style="vertical-align: middle;"/></li>
 <li><img src="Images/image_305.jpeg" alt="" class="nonflottant " style="vertical-align: middle;"/></li>
 <li><img src="Images/image_076.jpeg" alt="" class="nonflottant " style="vertical-align: middle;"/></li>
-<li><img src="Images/image_394.jpeg" alt="Faut il vraiment avoir confiance en son miroir ? gros et maigre..." class="nonflottant " style="vertical-align: middle;"/></li>
 <li><img src="Images/image_092.jpeg" alt="" class="nonflottant " style="vertical-align: middle;"/></li>
 <li><img src="Images/image_309.jpeg" alt="" class="nonflottant " style="vertical-align: middle;"/></li>
 <li><img src="Images/image_334.jpeg" alt="" class="nonflottant " style="vertical-align: middle;"/></li>
@@ -97,7 +95,6 @@ include('../header.php');
 <li><img src="Images/image_221.jpeg" alt="" class="nonflottant " style="vertical-align: middle;"/></li>
 <li><img src="Images/image_219.jpeg" alt="" class="nonflottant " style="vertical-align: middle;"/></li>
 <li><img src="Images/image_157.jpeg" alt="" class="nonflottant " style="vertical-align: middle;"/></li>
-<li><img src="Images/image_397.jpeg" alt="Une superbe partie de Boxhead..non enregistree malheureusement !" class="nonflottant " style="vertical-align: middle;"/></li>
 <li><img src="Images/image_262.jpeg" alt="" class="nonflottant " style="vertical-align: middle;"/></li>
 <li><img src="Images/image_161.jpeg" alt="" class="nonflottant " style="vertical-align: middle;"/></li>
 <li><img src="Images/image_243.jpeg" alt="" class="nonflottant " style="vertical-align: middle;"/></li>
