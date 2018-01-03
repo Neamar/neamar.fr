@@ -576,5 +576,9 @@ input:focus, textarea:focus
   body {
   	padding: 0;
   }
+
+  img {
+  	max-width: 90%;
+  }
 }
 
