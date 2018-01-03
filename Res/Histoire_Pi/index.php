@@ -1,8 +1,15 @@
 <?php
 $Titre='Le calcul de pi &pi; à travers l\'Histoire';
-$UseMath=true;
 $Box = array("Auteur" => "18th Candidate","Date" => "2010","Traducteur"=>'Neamar');
-$AddLine='<link rel="stylesheet" type="text/css" href="http://neamar.fr/Res/Typo/Typo.css" />';
+$AddLine=<<<EOF
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['\\\\(','\\\\)']]}
+    });
+    </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  <link rel="stylesheet" type="text/css" href="//neamar.fr/Res/Typo/Typo.css" />
+EOF;
 include('../header.php');
 include('../Typo/Typo.php');
 ?>
@@ -14,7 +21,7 @@ include('../Typo/Typo.php');
 Typo::addOption(PARSE_MATH);
 Typo::setTexteFromFile('Pi.tex');
 // Typo::addOption(P_UNGREEDY);
-echo Typo::Parse();
+echo str_replace('<math>', '\\(', str_replace('</math>', '\\)', Typo::Parse()));
 ?>
 </div>
 <p class="petitTexte centre">Mis en forme avec <a href="../Typo">le Typographe</a></p>
