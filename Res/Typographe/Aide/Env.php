@@ -19,19 +19,19 @@ array
 'Liste à puce',
  'begin, liste, puces, itemize',
 
- "\begin{itemize}
+ "\\begin{itemize}
  \li @PremierItem
  \li @SecondItem
  ...
  \li @NItem
- \end{itemize}",
+ \\end{itemize}",
  "\item @PremierItem, @SecondItem et @NItem sont les élements composant la liste à puce.",
 
  "L'environnement \b{itemize} vous permet de mettre en forme des listes non numérotées. Pour les listes numérotées, consultez \lien[?b=enumerate]{enumerate}. L'utilisation d'itemize offre plus de souplesse que la balise \lien[?b=item]{item} : vous pouvez en effet mettre plusieurs paragraphes de texte dans chaque élement de la liste.
 
  \b{Notes sur les conventions} : Rappelons à toutes fins utiles que si vous souhaitez utiliser une liste, les règles de ponctuation continuent de s'appliquer. Veillez donc à finir vos éléments de liste par un point ou un point vigule ; s'il s'agit d'un point virgule, on ne met pas en majuscule l'item suivant.",
 
- "\begin{itemize}
+ "\\begin{itemize}
  \li Voilà un item de texte.
 
  \li Un second item. Notez que les sauts de ligne entre les \\i{li} sont facultatifs
@@ -46,28 +46,28 @@ array
  \item Nouvel item
  \item Second item imbriqué
  \item Et ainsi \i{ad lib.}.
-\end{itemize}"
+\\end{itemize}"
  ),
  array
  (
  'Liste à numéros',
  'begin, liste, numéros, enumerate',
 
-  "\begin{enumerate}
+  "\\begin{enumerate}
   \li @PremierItem
   \li @SecondItem
   ...
   \li @NItem
-  \end{enumerate}",
+  \\end{enumerate}",
   "\item @PremierItem, @SecondItem et @NItem sont les élements composant la liste numérotée.",
 
   "L'environnement \b{enumerate} vous permet de mettre en forme des listes numérotées. Pour les listes non numérotées, consultez \lien[?b=itemize]{itemize}.
 
   \b{Notes sur les conventions} : Rappelons à toutes fins utiles que si vous souhaitez utiliser une liste, les règles de ponctuation continuent de s'appliquer. Veillez donc à finir vos éléments de liste par un point ou un point vigule ; s'il s'agit d'un point virgule, on ne met pas en majuscule l'item suivant.
 
-  \b{Avancé} : Vous pouvez utiliser un argument optionnel pour indiquer que la liste ne doit pas commencer à 1 : par exemple, \\verbatim{\begin[5]{enumerate}} fera commencer la liste à 5.",
+  \b{Avancé} : Vous pouvez utiliser un argument optionnel pour indiquer que la liste ne doit pas commencer à 1 : par exemple, \\verbatim{\\begin[5]{enumerate}} fera commencer la liste à 5.",
 
-  "\begin{enumerate}
+  "\\begin{enumerate}
   \li Voilà un premier item de texte.
 
   \li Un second item. Notez que les sauts de ligne entre les \\i{li} sont facultatifs
@@ -82,14 +82,14 @@ array
   \item Nouvel item
   \item Second item imbriqué
   \item Et ainsi \i{ad lib.}.
-\end{enumerate}"
+\\end{enumerate}"
   ),
   array
   (
   'Graphique',
   'begin, graphiques, charts, googleAPI, diagramme, figure',
 
-   "\begin{chart}
+   "\\begin{chart}
    Type:@Type
    Size:@Size
    Data:@Data
@@ -98,7 +98,7 @@ array
    Axis:@Axis
    AxisLabel:@AxisLabel
    Color:@Color
-\end{chart}",
+\\end{chart}",
    "Vous n'êtes \b{pas} obligés d'utiliser tous ces paramètres. Seuls @Type, @Size et @Data sont nécessaires. Les autres paramètres sont facultatifs.
    \item @Type (alias de cht) décrit le type de graphique : lc, ls, lxy, bhs, bvs, bhg, ... tous les types supportés par l'API Google (cf. lien ci-dessous) peuventêtre utilisés. Les plus courants sont lc (ligne) et p3 (camembert) ;
    \item @Size (alias de chs) donne la taille du graphique sous la forme Largeur\b{x}Hauteur ;
@@ -113,16 +113,16 @@ array
    "L'environnement \b{chart} vous permet de mettre en forme des données sous forme de graphique. Il s'agit d'un environnement extrêmement complet (et complexe), gérant plusieurs dizaines de paramètres. Il utilise l'API Google, dont vous trouverez une description détaillée sur \lien[http://code.google.com/apis/chart/]{cette page}.",
 
    "Qui parle dans Reflets d'Acide Épisode 1 ?
-\begin{chart}
+\\begin{chart}
 	Type:p3
 	Size:400x150
 	Legend:Narrateur|Wrandrall|Enoriel|ZarakaI|Zehirmann|Guertrude|Roger|Inconnu|Tous
 	Color:FFFFFF,FF0000,00FF00,0000FF,000000
 	Data:26,26,13,11,10,5,2,2,2
-\end{chart}
+\\end{chart}
 
 Et que dit le narrateur ?
-\begin{chart}
+\\begin{chart}
 	Type:lc
 	Size:400x150
 	Title:Narrateur
@@ -130,16 +130,16 @@ Et que dit le narrateur ?
 	Axis:x,y
 	AxisLabel:0:|Ep.+1|Ep.+2|Ep.+3|Ep.+4|Ep.+5|Ep.+6|Ep.+7|Ep.+8|Ep.+9|Ep.+10|Ep.+11|Ep.+12|Ep.+13|1:||13%|26%
 	Color:ABCDFF
-\end{chart}
+\\end{chart}
 
 Notez bien que vous pouvez aussi utiliser directement les paramètres Google, la seule contrainte étant d'utiliser un encodage brut (type \i{t}).
-\begin{chart}
+\\begin{chart}
 Type:t
 Size:440x200
 Data:0
 chtm:world
 chf:bg,s,EAF7FE
-\end{chart}
+\\end{chart}
 "
 ),
 array
@@ -148,16 +148,16 @@ array
 	'begin, tableaux, tabular, cellules',
 
 "Utilisation simple :
-\begin{tabular}
+\\begin{tabular}
 @Cellule & @Cellule & @Cellule \\\\
 @Cellule & @Cellule & @Cellule \\\\
 @Cellule & @Cellule & @Cellule
-\end{tabular}
+\\end{tabular}
 
 <hr />
 Utilisation avancée :
 
-\begin[@Classes]{tabular}
+\\begin[@Classes]{tabular}
 \\caption @TitreTableau
 \\head
 	@Titre & @Titre & @Titre
@@ -167,7 +167,7 @@ Utilisation avancée :
 	@Cellule & @Cellule & @Cellule
 \\foot
 	@Fin & @Fin & @Fin
-\end{tabular}",
+\\end{tabular}",
 	"\item @Cellule contient la cellule courante. @Cellule peut être un simple mot, une phrase avec ou sans balises, voire un environnement complexe. Vous pouvez utiliser le caractère & à l'intérieur de votre texte en les précédant d'un backslash : \\;
 	\item @Classes (facultatif) permet de spécifier une classe CSS à appliquer à chaque cellule (les classes doivent être séparées par un pipe). Par exemple, ss|ms mettra en \lien[?b=sans-serif]{sans serif} la première cellule de chaque ligne, et en \lien[?b=monospace]{monospace} la seconde cellule. Les autres cellules conserveront la mise en forme standard.
 	\item @TitreTableau (facultatif) permet de spécifier le titre du tableau.
@@ -181,15 +181,15 @@ Utilisation avancée :
 	L'attribut \big{@Classes} ne devrait pas être utilisé par les rédacteurs de contenu, et être reservé pour les webmasters.",
 
 	"\subsubsection{Exemple simple d'utilisation :}
-\begin{tabular}
+\\begin{tabular}
 Du texte & Une autre colonne \\\\
 Une nouvelle ligne & Deuxième ligne, deuxième colonne \\\\
 \i{etc.} & ...
-\end{tabular}
+\\end{tabular}
 
 \subsubsection{Un tableau plus avancé :}
 Les tabulations sont optionnelles. L'ordre des paramètres n'est pas important (caption, head et foot ou foot, head, body et caption).
-\begin{tabular}
+\\begin{tabular}
 	\\caption Titre du tableau
 	\\head
 		Nom & Âge
@@ -200,36 +200,36 @@ Les tabulations sont optionnelles. L'ordre des paramètres n'est pas important (c
 		Benoît & 21
 	\\foot
 		Nom & Âge
-\end{tabular}
+\\end{tabular}
 
 \subsubsection{Exemple d'utilisation des classes:}
-\begin[ss|centre]{tabular}
+\\begin[ss|centre]{tabular}
 La première cellule de chaque ligne est en sans-serif & La seconde est centrée. \\\\
 Échappez l'esperluette pour l'utiliser : \\& & Vous pouvez avoir autant & de colonnes & que nécessaires \\\\
 Toutes les lignes n'ont pas obligatoirement... & ... le même nombre de cellules. & Mais dans ce cas là, les bordures seront mal tracées. \\\\
 Vous pouvez utiliser des balises complexes
 \\item Comme des élements de liste
 \\item \i{etc.} & Ou \i{de la mise en forme} & Voire des maths : $\\frac{125}{25}=25=5^2$\\\\
-\end{tabular}"
+\\end{tabular}"
 ),
  array
  (
  'Quizz',
  'begin, quizz, questions, réponses',
 
-  "\begin{quizz}
+  "\\begin{quizz}
 \question @Question
 \answer @Reponse
 
 \question @Question
 \answer @Reponse
-\end{quizz}",
+\\end{quizz}",
   "\item @Question est une question du quizz.
   \item @Reponse est la réponse à la balise \question précédente.",
 
   "L'environnement \b{quizz} vous permet de mettre un quizz interactif dans vos pages.",
 
-  "\begin{quizz}
+  "\\begin{quizz}
   \question Quel est l'os le plus long du corps humain ?
   \answer Le fémur
 
@@ -241,57 +241,57 @@ Vous pouvez utiliser des balises complexes
 
   \question Comment se nomment les os du pied ?
   \answer Tarse, métatarse, phalange
-  \end{quizz}"
+  \\end{quizz}"
   ),
   array
   (
   'Citations de plusieurs lignes',
   'begin, quote, citation',
 
-   "\begin[@Auteur]{quote}
+   "\\begin[@Auteur]{quote}
 @Citation
-\end{quote}",
+\\end{quote}",
    "\item @Auteur est l'auteur de la citation. Son utilisation n'est pas obligatoire, vous pouvez laisser ce paramètre vide (enlevez les crochets dans ce cas là) ;
    \item @Citation est la citation à mettre en forme.",
 
    "L'environnement \b{quote} vous permet de mettre une citation de plusieurs phrases.",
 
-   "\begin[Le Petit Chaperon rouge]{quote}
+   "\\begin[Le Petit Chaperon rouge]{quote}
    Le Loup lui cria en adoucissant un peu sa voix :
    \"Tire la chevillette, la bobinette cherra\".
    Le Petit Chaperon rouge tira la chevillette, et la porte s'ouvrit.
-\end{quote}"
+\\end{quote}"
    ),
    array
    (
    'Résumé',
    'begin, abstract, résumé, chapeau',
 
-	"\begin{abstract}
+	"\\begin{abstract}
 @Abstrait
-\end{abstract}",
+\\end{abstract}",
 	"\item @Abstrait est un résumé en quelques lignes de votre article.",
 
 	"L'environnement \b{abstract} vous permet de placer un chapeau en haut de vos textes ; un petit résumé de quelques lignes qui décrit ce dont vous allez parler.",
 
-	"\begin{abstract}
+	"\\begin{abstract}
 Dans cet article, nous étudierons différentes formes de vie cellulaire non reproductibles par la méthode \"in\".
 Différents points de vue seront abordés, ainis que la vision de Jean Marie du Mollay.
-\end{abstract}"
+\\end{abstract}"
 	),
 	array
 	(
 	'Code non mis en forme',
 	'begin, code, verbatim',
 
-	 "\begin{verbatim}
+	 "\\begin{verbatim}
 	 @Texte
-\end{verbatim}",
+\\end{verbatim}",
 	 "\item @Texte est un texte qui ne sera pas mis en forme et affiché sous forme sans-serif.",
 
 	 "L'environnement \b{verbatim} vous permet de placer du code informatique dans vos articles, sans que celui là soit mis en forme (tirets, espaces devant la ponctuation). Voir aussi  \lien[?b=code]{code} qui colorie les codes sources.",
 
-	 '\begin{verbatim}
+	 '\\begin{verbatim}
 Private Declare Function GetKeyState Lib "user32" (ByVal nVirtKey As Long) As Integer
 Private Declare Function GetCursorPos Lib "user32" (lpPoint As Point) As Long
 Private Declare Function ScreenToClient Lib "user32" (ByVal hwnd As Long, lpPoint As Point) As Long
@@ -301,7 +301,7 @@ Private Declare Function GetCurrentProcess Lib "kernel32" () As Long
 Private Declare Function TextOut Lib "gdi32" Alias "TextOutA" (ByVal hdc As Long, ByVal x As Long, ByVal y As Long, ByVal lpString As String, ByVal nCount As Long) As Long
 Private Declare Function SetPixelV Lib "gdi32" (ByVal hdc As Long, ByVal x As Long, ByVal y As Long, ByVal crColor As Long) As Long
 
-\end{verbatim}'
+\\end{verbatim}'
 	 ),
 	 array
 	 (
@@ -323,20 +323,20 @@ Private Declare Function SetPixelV Lib "gdi32" (ByVal hdc As Long, ByVal x As Lo
 	  'Poésie',
 	   'verse, vers, poésie',
 
-	   "\begin{verse}
+	   "\\begin{verse}
 @Vers
-\end{verse}",
+\\end{verse}",
 	   "\item @Vers est un ensemble de phrases représentant la poésie.",
 
 	   "L'environnement \b{verse} permet de mettre en forme de la poésie dans vos textes.",
 
 	   "
-\begin{verse}
+\\begin{verse}
 Je fus le noir souci des orgues infernales :
 Elles hurlaient parfois et roucoulaient toujours.
 Dites-moi la beauté des ombres sépulcrales
 Pour que leur fils revienne en leurs froides amours
-\end{verse}
+\\end{verse}
 	   "
 	   ),
 	   array
@@ -344,15 +344,15 @@ Pour que leur fils revienne en leurs froides amours
 	   'Indentation',
 		'indented, indentation',
 
-		"\begin{indented}
+		"\\begin{indented}
 @TexteIndente
-\end{indented}",
+\\end{indented}",
 		"\item @TexteIndente est un ensemble de phrases contenant des tabulations qui seront rendues telles quelles.",
 
 		"Par défaut, les tabulations dans le texte ne sont pas rendues à l'écran pour clarifier votre code. Si vous souhaiter imposer une indentation particulière, vous pouvez utiliser l'environnement \i{indented}.",
 
 		"
-\begin{indented}
+\\begin{indented}
 Bien sûr mille raisons d'expliquer le nom de « Mer Blanche »
 Et depuis longtemps sur ce nom beaucoup se penchent.
 
@@ -367,7 +367,7 @@ Les points cardinaux, par eux et par des couleurs sont désignés:
 		\i{Ak} ou blanc désigne le sud,
 			L'Ouest désigné par le rouge ou \i{Kyzyl},
 				Est désigné par le vert ou \i{Yeshil}.
-\end{indented}
+\\end{indented}
 (via \l[https://omnilogie.fr/5K]{Mers blanche, rouge ou noire})
 		"
 		),
@@ -376,16 +376,16 @@ Les points cardinaux, par eux et par des couleurs sont désignés:
 	   'Colonnes',
 		'colonnes, column',
 
-		"\begin[%NbColonnes]{column}
+		"\\begin[%NbColonnes]{column}
 @Texte
-\end{column}",
+\\end{column}",
 		"\item @NbColonnes est le nombre de colonnes à mettre en place ;
 		\item @Texte est le texte qui doit être placé dans les colonnes.",
 
 		"L'environnement \b{column} permet une mise en forme \i{en colonnes}, comme dans les magazines. Cette fonctionalité n'est pas supportée par tous les navigateurs (la spécification officielle est encore en brouillon) : sous Internet Explorer et Opera, le contenu s'affichera donc sans modifications. Les colonnes sont balancées au maximum (le texte se répartit au mieux). L'ensemble des balises reste utilisable dans cet environnement.",
 
 		"
-\begin[3]{column}
+\\begin[3]{column}
 \section{Lorem Ipsum}
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at vehicula ligula. Proin a nisi purus, in molestie nisl. Nulla sed massa lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id augue id augue fringilla consequat non sed metus. Donec ac tortor vel purus tincidunt pretium quis eget dui. Integer massa leo, congue eget commodo eu, rhoncus nec risus. Mauris eros magna, fringilla a tristique nec, viverra vel elit. Phasellus laoreet, nisl ac mattis consequat, libero nunc fringilla risus, nec laoreet orci metus vitae nisl. Etiam vel ante enim.
 
@@ -399,20 +399,20 @@ Donec dignissim auctor ante, sit amet scelerisque risus eleifend eu. Etiam egest
 ~
 
 Vestibulum non sem magna, id pulvinar felis. Donec sed vestibulum urna. Nullam id orci tortor, id ultricies eros. Nulla tincidunt est ut nibh porta tempor non ac nulla. Duis fermentum magna massa. Curabitur congue sodales ligula et dapibus. Sed sit amet felis justo, sed tincidunt augue. In vel risus ipsum. Proin eget nulla a odio dictum mattis. Quisque vitae aliquam leo. Pellentesque risus neque, rutrum vel commodo non, viverra ac libero. Nunc ut tortor velit. Aliquam quis sapien quis nibh vulputate ornare id quis nibh. Pellentesque enim sem, aliquam sed molestie quis, tempor vel nisi. Duis pharetra justo sit amet arcu egestas consectetur. Mauris venenatis vulputate adipiscing. Nunc tempor purus eget libero porttitor et lobortis arcu consectetur. Nam vel sapien enim, at scelerisque libero. Suspendisse potenti. Proin viverra sapien nec ante mollis cursus nec at mauris.
-\end{column}",
+\\end{column}",
 		),
 		array
 		(
 		'Questionnaire à choix multiple',
 		 'qcm, questionnaire',
 
-		 "\begin{qcm}
+		 "\\begin{qcm}
 \question @Question
 \answer Réponse fausse
 \answer Réponse fausse
 ...
 \answer[right] Réponse juste
-\end{qcm}",
+\\end{qcm}",
 		 "\item @Question est la question ;
 		 \item La bonne réponse doit être précédée de \\textms{[right]}",
 
@@ -422,7 +422,7 @@ Vestibulum non sem magna, id pulvinar felis. Donec sed vestibulum urna. Nullam i
 
 		 Sur les navigateurs modernes, le  QCM s'affichera sur deux colonnes.",
 		 "
-\begin{qcm}
+\\begin{qcm}
 
 \question Combien vaut $\sqrt{6+3}$ ?
 \answer[right] $3$
@@ -441,7 +441,7 @@ Vestibulum non sem magna, id pulvinar felis. Donec sed vestibulum urna. Nullam i
 \answer apopathodiaphulatophobie
 \answer déconstitutionnalisassions
 \answer Hippopotomonstrosesquippedaliophobie
-\end{qcm}
+\\end{qcm}
 		 "
 		 ),
 		 array
@@ -449,16 +449,16 @@ Vestibulum non sem magna, id pulvinar felis. Donec sed vestibulum urna. Nullam i
 		 'Code',
 		  'begin, code, geshi',
 
-		  "\begin[@Lang]{code}
+		  "\\begin[@Lang]{code}
 	@CodeSource
-\end{code}",
+\\end{code}",
 		  "\item @Lang est le mot-clé caractérisant le langage dans l'implémentation Geshi (exemple : HTML4, PHP, AS3)
 			\item @CodeSource est le texte à mettre en forme.",
 
 		  "L'environnement \b{code} vous permet de placer du code informatique colorié dans vos articles, sans qu'il soit mis en forme (tirets, espaces devant la ponctuation). Voir aussi  \lien[?b=verbatim]{verbatim} qui ne colorie pas les codes sources.",
 
 		  'Code Visual Basic :
-\begin[vb]{code}
+\\begin[vb]{code}
 Private Declare Function GetKeyState Lib "user32" (ByVal nVirtKey As Long) As Integer
 Private Declare Function GetCursorPos Lib "user32" (lpPoint As Point) As Long
 Private Declare Function ScreenToClient Lib "user32" (ByVal hwnd As Long, lpPoint As Point) As Long
@@ -467,25 +467,25 @@ Private Declare Function SetPriorityClass Lib "kernel32" (ByVal hProcess As Long
 Private Declare Function GetCurrentProcess Lib "kernel32" () As Long
 Private Declare Function TextOut Lib "gdi32" Alias "TextOutA" (ByVal hdc As Long, ByVal x As Long, ByVal y As Long, ByVal lpString As String, ByVal nCount As Long) As Long
 Private Declare Function SetPixelV Lib "gdi32" (ByVal hdc As Long, ByVal x As Long, ByVal y As Long, ByVal crColor As Long) As Long
-\end{code}
+\\end{code}
 
 Code PHP :
-\begin[php]{code}
+\\begin[php]{code}
 <?php
 	echo "Hello World ";
 ?>
-\end{code}'
+\\end{code}'
 		  ),
 		  array
 		 (
 		 'Dialogue',
 		  'begin, dialogue, dialog',
 
-		  "\begin{dialog}
+		  "\\begin{dialog}
 	@Auteur : @Texte
 	@Auteur2 : @Texte2
 	...
-\end{dialog}",
+\\end{dialog}",
 		  "\item @Auteur, @Auteur2 sont les personnes qui s'expriment dans le dialogue.
 		  \item @Texte, @Texte2 sont les phrases prononcées.",
 
@@ -494,12 +494,12 @@ Code PHP :
 
 		  Note sur la sémantique : HTML ne définit pas de structure pour les dialogues. En conséquence, le texte est placé dans un div et les auteurs dans une classe auteur. Le Typographe ne style pas ces balises.",
 
-		  '\begin{dialog}
+		  '\\begin{dialog}
 améthyst : Ont à tous un prof qui nous à rien apprit...
 Midori : Quelque chose me dit que tu parles de ta/ton prof de français...
 améthyst : Coment tu sait ?
 Midori : L\'intuition...
-\end{dialog}
+\\end{dialog}
 Note : le style de l\'exemple peut varier selon le site où est intégré le Typographe.'
 		  ),
  );

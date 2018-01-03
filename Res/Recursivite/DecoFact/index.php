@@ -17,7 +17,7 @@ Pour l'humour, n'hésitez pas à visiter : <a href="http://hacks.atrus.org/factor_
 <h2>Téléchargement</h2>
 <h3>Version Zippée : EXE + Code source</h3>
 <ul>
-<li><a href="Release/DecoFact.zip">ZIP</a></li>
+<li><a href="Release/Decofact.zip">ZIP</a></li>
 </ul>
 <h3>Version EXE</h3>
 <ul>
