@@ -86,19 +86,7 @@ $keyWords='';
 if(isset($Abstract) && preg_match('#^/Res/(.+)/$#U',$_SERVER['REQUEST_URI']))//N'afficher le résumé que sur la page d'index.
 	echo '<p class="abstract erreur"><q>' .$Abstract . '</q></p>';
 
-function getLineCount($file)
-{
-	$lines = 0;
-
-	$fh = fopen($file, 'r');
-	while (!feof($fh))
-	{
-		fgets($fh);
-		$lines++;
-	}
-	return $lines; // line count
-}
 function flashPlayerStats() {
-	echo number_format(getLineCount('/app/mount/' . $_SERVER['REQUEST_URI'] . '/StatsJeu.txt'), 0, ',', ' ');
+	echo '(non disponible)';
 }
 ?>
