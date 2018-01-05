@@ -87,6 +87,8 @@ if(isset($Abstract) && preg_match('#^/Res/(.+)/$#U',$_SERVER['REQUEST_URI']))//N
 	echo '<p class="abstract erreur"><q>' .$Abstract . '</q></p>';
 
 //enregistrer les infos sur le Referrer dans le fichier Stats :
+include_once('../ConnectBDD.php');
+mysql_query("INSERT INTO RES_Access VALUES(0, '" . mysql_real_escape_string($_SERVER['HTTP_X_FORWARDED_FOR']) . "', '" . mysql_real_escape_string($_SERVER['REQUEST_URI']) . "', '" . mysql_real_escape_string($_SERVER['HTTP_REFERER']) . "', NOW())") or die(mysql_error());
 
 $fichier = fopen('/app/mount/' . $_SERVER['REQUEST_URI'] . '/Stats.txt', 'a'); //Ouvrir le fichier
 if($fichier) {
