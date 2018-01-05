@@ -87,7 +87,7 @@ ListIt($Liste);
 /**Liste complète*/
 echo '<hr />';
 echo '<h2 style="margin-top:50px;">Par projet</h2>';
-$Projets=mysql_query('SELECT DISTINCT Projet FROM _TimeLine ORDER BY ID DESC') or die(mysql_error());
+$Projets=mysql_query('SELECT DISTINCT Projet FROM _TimeLine ORDER BY Projet') or die(mysql_error());
 while($Projet=mysql_fetch_assoc($Projets))
 {
 	echo '<h3><a href="' . $Liens[$Projet['Projet']] . '">' . $Projet['Projet']  . '</a></h3>';
