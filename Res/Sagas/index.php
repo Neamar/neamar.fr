@@ -131,56 +131,45 @@ if(!isset( $_GET['E']) || (is_numeric($_GET['E']) && $_GET['E']>$NBEpisode))
 if(isset($DisableEpisodes))
 	exit('L\'accès aux épisodes n\'est pas disponible pour l\'instant, merci.');
 
-//Dans ce cas, il suffit de charger un seul fichier et de l'envoyer.
-$cache='.cache-' . $_GET['E'];
-if(file_exists($cache) && date('d',filemtime($cache)) == date('d') && !isset($_POST['Envoi']) && 0)
-	readfile($cache);
-else
+if(is_numeric($_GET['E']))
 {
-// 	ob_start();
-	if(is_numeric($_GET['E']))
-	{
-		$Episode = new Dialogue("Épisode n°" .  $_GET['E']);
-		$Episode->CreateFromFile('Textes/' . $_Prefix . '-' . $_GET['E'] . '.html');
-	}
-	elseif(is_file('Textes/' . $_GET['E'] . '.html'))
-	{
-		$Episode = new Dialogue('');
-		$Episode->CreateFromFile('Textes/' . $_GET['E'] . '.html');
-	}
-	else
-		exit('WTF ar u doing ? (Sagas/index.php, ligne 151)');
-
-	$Episode->OutputIntro();
-	?>
-	<p class="erreur"><img src="//i.creativecommons.org/l/by-nc/2.0/fr/88x31.png" alt="CC BY-NC" />Cette &oelig;uvre est un travail collaboratif basé sur l'ouvrage de <?php echo $_Auteur; ?>. Les internautes ayant participé sont listés sur la <a href="./">page d'accueil</a> du projet.<br /><br />
-	Une subtilité n'est pas référencée ? N'hésitez pas à la <a rel="nofollow" href="https://github.com/Neamar/sagas-mp3/issues">signaler</a> !</p>
-	<?php
-
-	showBeforeAfter();
-	?>
-	<p class="centre"><a href="./">Index et statistiques</a></p>
-	<?php
-	echo '<h2>Statistiques de l\'épisode</h2>';
-
-	$Episode->OutputStats();
-
-	echo '<h2>Texte de l\'épisode</h2>';
-	$Episode->OutputText();
-
-
-	showBeforeAfter();
-	?>
-	<p class="centre"><a href="./">Retour à l'index et affichage des statistiques</a></p>
-
-	<script type="text/javascript" src="//neamar.fr/Res/Sagas/Edit.js"></script>
-
-	<?php
-	include('../footer.php');
-// 	$page = ob_get_contents(); // copie du contenu du tampon dans une chaîne
-// 	file_put_contents($cache, $page) ; // on écrit la chaîne précédemment récupérée ($page) dans un fichier ($cache)
-// 	ob_flush();
+	$Episode = new Dialogue("Épisode n°" .  $_GET['E']);
+	$Episode->CreateFromFile('Textes/' . $_Prefix . '-' . $_GET['E'] . '.html');
 }
+elseif(is_file('Textes/' . $_GET['E'] . '.html'))
+{
+	$Episode = new Dialogue('');
+	$Episode->CreateFromFile('Textes/' . $_GET['E'] . '.html');
+}
+else
+	exit('WTF ar u doing ? (Sagas/index.php, ligne 151)');
+
+$Episode->OutputIntro();
+?>
+<p class="erreur"><img src="//i.creativecommons.org/l/by-nc/2.0/fr/88x31.png" alt="CC BY-NC" />Cette &oelig;uvre est un travail collaboratif basé sur l'ouvrage de <?php echo $_Auteur; ?>. Les internautes ayant participé sont listés sur la <a href="./">page d'accueil</a> du projet.<br /><br />
+Une subtilité n'est pas référencée ? N'hésitez pas à la <a rel="nofollow" href="https://github.com/Neamar/sagas-mp3/issues">signaler</a> !</p>
+<?php
+
+showBeforeAfter();
+?>
+<p class="centre"><a href="./">Index et statistiques</a></p>
+<?php
+echo '<h2>Statistiques de l\'épisode</h2>';
+
+$Episode->OutputStats();
+
+echo '<h2>Texte de l\'épisode</h2>';
+$Episode->OutputText();
+
+
+showBeforeAfter();
+?>
+<p class="centre"><a href="./">Retour à l'index et affichage des statistiques</a></p>
+
+<script type="text/javascript" src="//neamar.fr/Res/Sagas/Edit.js"></script>
+
+<?php
+include('../footer.php');
 
 
 ?>

@@ -37,3 +37,8 @@
 </div>
 </body>
 </html>
+
+<?php
+//enregistrer les infos sur le Referrer :
+include_once(substr(__FILE__,0,strrpos(__FILE__,'/')) . '/../ConnectBDD.php');
+mysql_query("INSERT INTO RES_Access VALUES(0, '" . mysql_real_escape_string($_SERVER['HTTP_X_FORWARDED_FOR']) . "', '" . mysql_real_escape_string($_SERVER['REQUEST_URI']) . "', '" . mysql_real_escape_string($_SERVER['HTTP_REFERER']) . "', NOW())") or die(mysql_error());
