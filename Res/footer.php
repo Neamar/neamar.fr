@@ -20,14 +20,14 @@
 
 <div id="Footer" class="centre">
 	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- neamar.fr Res footer -->
 	<ins class="adsbygoogle"
-	     style="display:block; text-align:center;"
-	     data-ad-layout="in-article"
-	     data-ad-format="fluid"
+	     style="display:block"
 	     data-ad-client="ca-pub-4506683949348156"
-	     data-ad-slot="2991235901"></ins>
+	     data-ad-slot="9524303321"
+	     data-ad-format="auto"></ins>
 	<script>
-	     (adsbygoogle = window.adsbygoogle || []).push({});
+	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script>
 
 	<!--Ressource sous licence Creative Commons BY-->
