@@ -4,4 +4,4 @@ This is a port from a 2005 website. I've tried to adapt it to work with Dokku to
 
 * Add `DATABASE_URL` as an environment variable
 * Link to a SQL database with all the tables
-* `dokku storage:mount neamar /var/lib/dokku/data/storage/neamar:/app/mount`
+* There is a dump in Dropbox which can be restored directly (also contains the tables for [omnilogie.fr](https://omnilogie.fr))
