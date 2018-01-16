@@ -1,4 +1,5 @@
 <?php
+@ini_set('default_charset', 'ISO-8859-1');
 $Titre='404 Images drôles, comiques, blasantes, choquantes !';
 $Box = array("Auteurs" => "Neamar","Date" => "2006-2008", "But" =>"(sou-)Rire un peu");
 include('../header.php');
