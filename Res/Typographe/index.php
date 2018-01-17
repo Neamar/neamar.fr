@@ -70,7 +70,6 @@ Les icones de l'éditeur proviennent de <a href="http://www.famfamfam.com/lab/ico
 <h2>Testez le typographe</h2>
 <p>Cette fonctionnalité a été désactivée.</p>
 
-<!--
 <form method="post" action="">
 <p>
 <label for="titre">Titre : </label><input type="text" name="titre" id="titre" /><br />
@@ -79,10 +78,9 @@ Les icones de l'éditeur proviennent de <a href="http://www.famfamfam.com/lab/ico
 Typo::setTexte('');
 Typo::renderIDE(array('Name'=>'texte','Rows'=>17));
 ?>
-<input type="submit" value="Valider" />
+<input type="submit" value="Valider (Désactivé)" disabled />
 </p>
 </form>
--->
 <?php
 include('../footer.php');
 ?>
