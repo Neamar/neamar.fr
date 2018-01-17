@@ -1,4 +1,9 @@
 <?php
+http_response_code(404);
+echo 'Contenu utilisateur désactivé.'
+exit();
+
+
 include('../../ConnectBDD.php');
 $ID=intval($_GET['ID']);
 $Texte=mysql_query('SELECT Titre, Texte,Misc FROM TYPO_Textes WHERE ID=' . $ID);
@@ -7,6 +12,7 @@ if(mysql_num_rows($Texte)!=1)
 	echo 'Ressource non trouvée.';
 	exit();
 }
+
 
 $Texte=mysql_fetch_assoc($Texte);
 

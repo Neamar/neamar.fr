@@ -12,7 +12,7 @@ $UseMath=true;
 include('../header.php');
 include('../Typo/Typo.php');
 
-if(isset($_POST['texte']))
+if(isset($_POST['texte']) && false)
 {//Enregistrer le nouveau texte.
 	if($_POST['deux'] != 'deux')
 		exit("Pas de spams, merci.");
@@ -36,6 +36,8 @@ if(isset($_POST['texte']))
 
 Typo::addOption(PARSE_MATH);
 ?>
+<p class="erreur">Le Typographe ne permet plus de créer ses textes directement en ligne depuis cette page.</p>
+
 <p class="auteur"><q style="font-family: Monospace;">Séduire le lecteur et faciliter la lecture résument les qualités d'une bonne typographie</q></p>
 <h1>Le typographe</h1>
 <p class="auteur">Neamar</p>
@@ -66,6 +68,9 @@ L'outil d'édition de texte se base sur l'excellente librairie <a href="http://ma
 Les icones de l'éditeur proviennent de <a href="http://www.famfamfam.com/lab/icons/silk/">fam fam fam</a>.</p>
 
 <h2>Testez le typographe</h2>
+<p>Cette fonctionnalité a été désactivée.</p>
+
+<!--
 <form method="post" action="">
 <p>
 <label for="titre">Titre : </label><input type="text" name="titre" id="titre" /><br />
@@ -77,6 +82,7 @@ Typo::renderIDE(array('Name'=>'texte','Rows'=>17));
 <input type="submit" value="Valider" />
 </p>
 </form>
+-->
 <?php
 include('../footer.php');
 ?>
