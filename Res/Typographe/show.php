@@ -1,6 +1,6 @@
 <?php
 http_response_code(404);
-echo 'Contenu utilisateur désactivé.'
+echo 'Contenu utilisateur désactivé.';
 exit();
 
 
