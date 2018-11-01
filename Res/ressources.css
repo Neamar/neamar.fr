@@ -487,6 +487,8 @@ legend
 	margin-left:3px;
 	width:20%;
 	padding:5px;
+	font-size: 90%;
+	line-height: 1;
 }
 
 .ReferenceParent
