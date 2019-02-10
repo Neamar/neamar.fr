@@ -1,5 +1,5 @@
 <?php
-//  exit("L'intégralité des sites Neamar est en maintenance pour quelques minutes. Nous serons de retour pour 15h !");
+  require_once __DIR__ . '/vendor/autoload.php';
   @ini_set('default_charset', 'ISO-8859-1');
   error_reporting(E_ALL ^ E_DEPRECATED);
 
