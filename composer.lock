@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "ce9b89dad429cf0d630802a3eb8baeab",
+    "content-hash": "73efbeca9d55c45d2375ff25bc7b7a34",
     "packages": [
         {
             "name": "dshafik/php7-mysql-shim",
@@ -57,7 +57,6 @@
     "prefer-lowest": false,
     "platform": {
         "php": "~7.3.0",
-        "ext-mysql": "*",
         "ext-mbstring": "*"
     },
     "platform-dev": []
