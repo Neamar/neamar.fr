@@ -7,6 +7,4 @@ RewriteEngine on
 #--------------------------------------------------
 # Règles de réécriture d'URL :
 #--------------------------------------------------
-RewriteRule ^Episode-([0-9])$ /Res/Xantah/index.php?E=$1 [L]
-#RewriteRule ^(Joyeux_Noyel|Petite_Pub_Bonus|Ununktapalach|Bande_Annonce|Hiver_Dernier)$ /Res/Adoprixtoxis/index.php?E=$1 [L]
-RewriteRule ^-Stats$ /Res/Stats.php?For=Xantah [L]
+RewriteRule ^Episode-([0-9])$  https://sagas.neamar.fr/Xantah/Xantah-$1/ [R=permanent,L]

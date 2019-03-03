@@ -7,6 +7,5 @@ RewriteEngine on
 #--------------------------------------------------
 # Règles de réécriture d'URL :
 #--------------------------------------------------
-RewriteRule ^Episode-([1-9]?[0-9])$ /Res/Adoprixtoxis/index.php?E=$1 [L]
-RewriteRule ^(Joyeux_Noyel|Petite_Pub_Bonus|Ununktapalach|Bande_Annonce|Hiver_Dernier)$ /Res/Adoprixtoxis/index.php?E=$1 [L]
-RewriteRule ^-Stats$ /Res/Stats.php?For=Adoprixtoxis [L]
+RewriteRule ^Episode-([1-9]?[0-9])$ https://sagas.neamar.fr/Adoprixtoxis/Adoprixtoxis-$1/ [R=permanent,L]
+RewriteRule ^(Joyeux_Noyel|Petite_Pub_Bonus|Ununktapalach|Bande_Annonce|Hiver_Dernier)$ https://sagas.neamar.fr/Adoprixtoxis/$1/ [R=permanent,L]
