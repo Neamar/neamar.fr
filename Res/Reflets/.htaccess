@@ -7,6 +7,5 @@ RewriteEngine on
 #--------------------------------------------------
 # Règles de réécriture d'URL :
 #--------------------------------------------------
-RewriteRule ^Episode-([1-9]?[0-9])$ /Res/Reflets/index.php?E=$1 [L]
-RewriteRule ^(Krak|Avril|BoitePerdue|BoitePerdue_2|Noel_d_Acide|Joyeux_Noel|Franconie|Fleau|Narrateur_Avril|Alkoor|Mordave|Cadeau_Acide|Cadeau_Accidentel)$ /Res/Reflets/index.php?E=$1 [L]
-RewriteRule ^-Stats$ /Res/Stats.php?For=Reflets [L]
+RewriteRule ^Episode-([1-9]?[0-9])$ https://sagas.neamar.fr/Reflets/Reflets-$1/ [R=permanent,L]
+RewriteRule ^(Krak|Avril|BoitePerdue|BoitePerdue_2|Noel_d_Acide|Joyeux_Noel|Franconie|Fleau|Narrateur_Avril|Alkoor|Mordave|Cadeau_Acide|Cadeau_Accidentel)$  https://sagas.neamar.fr/Reflets/$1/ [R=permanent,L]
