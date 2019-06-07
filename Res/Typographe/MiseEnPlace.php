@@ -8,7 +8,7 @@ function Source($Titre,$Source)
 	<fieldset style="width:90%;">
 	<legend>Code source : ' . $Titre.  '</legend>';
 	include_once('../../lib/geshi.php');
-	$RessourceCode =& new GeSHi($Source,'PHP');
+	$RessourceCode = new GeSHi($Source,'PHP');
 	$RessourceCode->enable_classes();//Utiliser des classes, c'est moins lourd
 	$RessourceCode->enable_keyword_links(false);
 	echo $RessourceCode->parse_code();
