@@ -1,5 +1,5 @@
 <?php
-$Titre="IntÃ©gration du Typographe sur votre site Web";
+$Titre="Intégration du Typographe sur votre site Web";
 $Box = array("Auteur" => "Neamar","Date" => "2009","Accueil"=>'<a href="./">Le Typographe</a>');
 include('../header.php');
 function Source($Titre,$Source)
@@ -8,7 +8,7 @@ function Source($Titre,$Source)
 	<fieldset style="width:90%;">
 	<legend>Code source : ' . $Titre.  '</legend>';
 	include_once('../../lib/geshi.php');
-	$RessourceCode = new GeSHi($Source,'PHP');
+	$RessourceCode =& new GeSHi($Source,'PHP');
 	$RessourceCode->enable_classes();//Utiliser des classes, c'est moins lourd
 	$RessourceCode->enable_keyword_links(false);
 	echo $RessourceCode->parse_code();
@@ -19,46 +19,46 @@ function Source($Titre,$Source)
 <p class="important">Pour des raisons d'ordre pratique (affichage des codes sources d'un serveur), cette page n'est pas mise en forme avec le Typographe. Vous pouvez donc y trouver des aberrations que le Typographe corrige normalement.</p>
 <div class="TOC floatR insideTOC"></div>
 
-<p>Vous voulez utiliser <a href="./">le Typographe</a> sur votre site Web ? C'est trÃ¨s simple, suivez le guide !<br />
+<p>Vous voulez utiliser <a href="./">le Typographe</a> sur votre site Web ? C'est très simple, suivez le guide !<br />
 
 <h2 style="clear:right;">Installation</h2>
-<h3>Ã‰tape 1 : crÃ©ation du conteneur</h3>
-<p>Il vous suffit de crÃ©er un nouveau dossier sur votre site qui contiendra l'ensemble des fichiers. Nommez-le par exemple "Typo".</p>
+<h3>Étape 1 : création du conteneur</h3>
+<p>Il vous suffit de créer un nouveau dossier sur votre site qui contiendra l'ensemble des fichiers. Nommez-le par exemple "Typo".</p>
 
-<h3>Ã‰tape 2 : rÃ©cupÃ©ration du contenu</h3>
-<p>Le Typographe inclut un module de mise Ã Â  jour automatique. Il vous suffit donc de tÃ©lÃ©charger le fichier gÃ©rant la Mise Ã€ Jour pour rÃ©cupÃ©rer la version la plus Ã  jour du Typographe. Le code source du fichier est juste en-dessous :</p>
+<h3>Étape 2 : récupération du contenu</h3>
+<p>Le Typographe inclut un module de mise à  jour automatique. Il vous suffit donc de télécharger le fichier gérant la Mise À Jour pour récupérer la version la plus à jour du Typographe. Le code source du fichier est juste en-dessous :</p>
 
 <?php Source('MAJ_client.php',file_get_contents('../../lib/Typo/MAJ_client.php')); ?>
 
-<p>Enregistrez ce document sous le nom <tt>MAJ_client.php</tt> dans votre rÃ©pÃ©rtoire crÃ©e Ã  l'Ã©tape 1.</p>
+<p>Enregistrez ce document sous le nom <tt>MAJ_client.php</tt> dans votre répértoire crée à l'étape 1.</p>
 
-<h3>Ã‰tape 3 : tÃ©lÃ©chargement des donnÃ©es</h3>
-<p>ExÃ©cutez maintenant le fichier <tt>MAJ_client.php</tt> en l'appelant depuis votre navigateur (e.g. http://votresite.fr/Typo/MAJ_client.php).<br />
-Vous devriez avoir alors des messages vous informant de la progression de la mise Ã  jour. Une fois le script terminÃ©, regardez dans votre FTP le dossier Typo qui a dÃ» se remplir de donnÃ©es.</p>
+<h3>Étape 3 : téléchargement des données</h3>
+<p>Exécutez maintenant le fichier <tt>MAJ_client.php</tt> en l'appelant depuis votre navigateur (e.g. http://votresite.fr/Typo/MAJ_client.php).<br />
+Vous devriez avoir alors des messages vous informant de la progression de la mise à jour. Une fois le script terminé, regardez dans votre FTP le dossier Typo qui a dû se remplir de données.</p>
 
-<p class="important">L'installation est alors terminÃ©e.</p>
+<p class="important">L'installation est alors terminée.</p>
 
 
 
 <h2>Utilisation</h2>
 <h3>Initialisation</h3>
-<p>Sur chaque page oÃ¹ vous souhaitez utiliser le Typographe, vous devrez :</p>
+<p>Sur chaque page où vous souhaitez utiliser le Typographe, vous devrez :</p>
 <ul>
-	<li>Inclure le code source du Typographe au dÃ©but de chaque page qui doit l'utiliser (ou dans votre <tt>header.php</tt> pour une utilisation sur toutes les pages) : <?php Source('Inclusion Typographe',"include('Chemin/Vers/Typo/Typo.php');"); ?></li>
-	<li>Inclure la feuille de style de base du Typographe dans votre HTML (<tt>Chemin/Vers/Typo/Typo.css</tt>). Notez que son utilisation n'est pas obligatoire mais fortement recommandÃ©e ; en effet la feuille ne dÃ©finit pas de mise en forme au sens graphique mais plus les conventions typographiques : par exemple, afficher un "RÃ©sumÃ©" au dessus des environnements abstracts, enlever l'emphase Ã  l'intÃ©rieur d'une autre emphase, <em>etc.</em> :
+	<li>Inclure le code source du Typographe au début de chaque page qui doit l'utiliser (ou dans votre <tt>header.php</tt> pour une utilisation sur toutes les pages) : <?php Source('Inclusion Typographe',"include('Chemin/Vers/Typo/Typo.php');"); ?></li>
+	<li>Inclure la feuille de style de base du Typographe dans votre HTML (<tt>Chemin/Vers/Typo/Typo.css</tt>). Notez que son utilisation n'est pas obligatoire mais fortement recommandée ; en effet la feuille ne définit pas de mise en forme au sens graphique mais plus les conventions typographiques : par exemple, afficher un "Résumé" au dessus des environnements abstracts, enlever l'emphase à l'intérieur d'une autre emphase, <em>etc.</em> :
 	<?php Source('CSS Typographe','<link rel="stylesheet" type="text/css" href="https://neamar.fr/lib/Typo/Typo.css" />'); ?></li>
 </ul>
 
 <h3>Utilisation</h3>
-<p>L'utilisation du Typographe se fait en deux temps : premiÃ¨rement, rÃ©gler le texte, ensuite, demander une sortie mise en forme.</p>
-<h4>RÃ©gler le texte</h4>
-<p>Deux mÃ©thodes sont disponibles : <tt>Typo::setTexte($Texte);</tt> et <tt>Typo::setTexteFromFile($Fichier);</tt>. Si le texte n'est pas un string, ou si le fichier n'existe pas, une erreur sera dÃ©clenchÃ©e : vous pouvez supprimer ce comportement en activant l'option <tt>RAISE_NO_ERROR</tt>, mais ceci est fortement dÃ©conseillÃ©.</p>
-<h4>RÃ©cupÃ©rer la sortie</h4>
-<p>Une fois le texte enregistrÃ© en mÃ©moire, vous pouvez le rÃ©cupÃ©rer de trois faÃ§ons diffÃ©rentes :</p>
+<p>L'utilisation du Typographe se fait en deux temps : premièrement, régler le texte, ensuite, demander une sortie mise en forme.</p>
+<h4>Régler le texte</h4>
+<p>Deux méthodes sont disponibles : <tt>Typo::setTexte($Texte);</tt> et <tt>Typo::setTexteFromFile($Fichier);</tt>. Si le texte n'est pas un string, ou si le fichier n'existe pas, une erreur sera déclenchée : vous pouvez supprimer ce comportement en activant l'option <tt>RAISE_NO_ERROR</tt>, mais ceci est fortement déconseillé.</p>
+<h4>Récupérer la sortie</h4>
+<p>Une fois le texte enregistré en mémoire, vous pouvez le récupérer de trois façons différentes :</p>
 <ol>
-	<li>La premiÃ¨re et la plus courante se fait avec <tt>Typo::Parse()</tt> qui renverra alors un chaine de caractÃ¨res au format HTML.</li>
-	<li>La seconde option est de rÃ©cupÃ©rer un texte "plat" : toutes les balises seront alors nÃ©gligÃ©es, mais les ligatures, tirets, guillemets et autres seront correctement formatÃ©s. Ceci peut Ãªtre utile pour afficher une version "light" du texte.</li>
-	<li>DerniÃ¨re option : afficher le texte en mode Ã©dition avec <tt>Typo::renderIDE()</tt>. Le Typographe dessine alors un IDE complet pour mettre en forme le texte. L'intÃ©gration de l'IDE est dÃ©finie plus loin, ainsi que les options disponibles.</li>
+	<li>La première et la plus courante se fait avec <tt>Typo::Parse()</tt> qui renverra alors un chaine de caractères au format HTML.</li>
+	<li>La seconde option est de récupérer un texte "plat" : toutes les balises seront alors négligées, mais les ligatures, tirets, guillemets et autres seront correctement formatés. Ceci peut être utile pour afficher une version "light" du texte.</li>
+	<li>Dernière option : afficher le texte en mode édition avec <tt>Typo::renderIDE()</tt>. Le Typographe dessine alors un IDE complet pour mettre en forme le texte. L'intégration de l'IDE est définie plus loin, ainsi que les options disponibles.</li>
 </ol>
 
 <h3>Exemple d'utilisation</h3>
@@ -75,65 +75,65 @@ echo Typo::Parse();");
 ?>
 
 <h2>Pour aller plus loin...</h2>
-<p class="important">Cette Ã©tape est facultative.</p>
-<h3>Mise Ã  jour</h3>
+<p class="important">Cette étape est facultative.</p>
+<h3>Mise à jour</h3>
 <p>Le Typographe est en mutation constante.<br />
-Vous pouvez remettre Ã  jour la version dont vous disposer en appelant Ã  nouveau le fichier <tt>MAJ_client.php</tt> : si des nouveautÃ©s sont disponibles, la mise Ã  jour sera automatiquement effectuÃ©e.<br />
-<strong>Si vous ne souhaitez pas laisser un accÃ¨s Ã  votre site, pensez Ã  supprimer le fichier <tt>MAJ_client.php</tt> qui peut potentiellement Ãªtre une faille de sÃ©curitÃ©.</strong></p>
+Vous pouvez remettre à jour la version dont vous disposer en appelant à nouveau le fichier <tt>MAJ_client.php</tt> : si des nouveautés sont disponibles, la mise à jour sera automatiquement effectuée.<br />
+<strong>Si vous ne souhaitez pas laisser un accès à votre site, pensez à supprimer le fichier <tt>MAJ_client.php</tt> qui peut potentiellement être une faille de sécurité.</strong></p>
 <h3>Configuration</h3>
-<p>Il se peut que la configuration par dÃ©faut ne vous plaise pas. Vous disposez d'un ensemble d'options pour transformer le Typographe en module agrÃ©able.</p>
-<p>Consultez les premiÃ¨res lignes du fichier <tt>Typo.php</tt> pour voir les options disponibles.</p>
-<p>Voici par exemple la configuration pour Ã©crire un texte en anglais, en interdisant les balises titres, en utilisant le moteur mathÃ©matique et en affichant les footnotes entre parenthÃ¨ses:</p>
+<p>Il se peut que la configuration par défaut ne vous plaise pas. Vous disposez d'un ensemble d'options pour transformer le Typographe en module agréable.</p>
+<p>Consultez les premières lignes du fichier <tt>Typo.php</tt> pour voir les options disponibles.</p>
+<p>Voici par exemple la configuration pour écrire un texte en anglais, en interdisant les balises titres, en utilisant le moteur mathématique et en affichant les footnotes entre parenthèses:</p>
 <?php Source('Configuration d\'exemple','
 Typo::switchLanguage("en");
 
-//Les textes entre $ seront remplacÃ©s par leur Ã©quivalent LaTeX.
+//Les textes entre $ seront remplacés par leur équivalent LaTeX.
 Typo::addOption(PARSE_MATH);
 
-//removeOption supprime l\'option : les \\section, \\subsection et autres ne seront pas remplacÃ©s.
+//removeOption supprime l\'option : les \\section, \\subsection et autres ne seront pas remplacés.
 Typo::removeOption(ALLOW_SECTIONING);
 
-//Pour que les notes de bas de page soient entourÃ©es de parenthÃ¨ses,
-//ce qui Ã©vite de les confondre avec des puissances mathÃ©matiques.
+//Pour que les notes de bas de page soient entourées de parenthèses,
+//ce qui évite de les confondre avec des puissances mathématiques.
 Typo::addOption(ALLOW_FOOTNOTE,FOOTNOTE_SCIENCE);'); ?>
 
 <h3>Langage</h3>
-<p>Chaque langue a ses propres rÃ¨gles typographiques. Le Typographe fournit des fichiers de configuration indiquant de quelle faÃ§on le texte doit Ãªtre rendu.<br />
-Par dÃ©faut, le Typographe charge les fichiers de configuration pour la langue franÃ§aise.</p>
+<p>Chaque langue a ses propres règles typographiques. Le Typographe fournit des fichiers de configuration indiquant de quelle façon le texte doit être rendu.<br />
+Par défaut, le Typographe charge les fichiers de configuration pour la langue française.</p>
 <?php Source('Exemple d\'utilisation des langues',"
-Typo::setTexte('Une phrase,sans rÃ¨gles;qui sera correctement - enfin normalement - mise en forme selon les standards du pays !');
+Typo::setTexte('Une phrase,sans règles;qui sera correctement - enfin normalement - mise en forme selon les standards du pays !');
 echo Typo::parseLinear();
 Typo::switchLanguage('en');
 echo Typo::parseLinear(); ");?>
 <p>Ce qui renverra :<br />
-<tt>Une phrase, sans rÃ¨gles&nbsp;; qui sera correctement &ndash; enfin normalement &ndash; mise en forme selon les standards du pays&nbsp;!<br />
-Une phrase, sans rÃ¨gles; qui sera correctement&mdash;enfin normalement&mdash;mise en forme selon les standards du pays!</tt></p>
+<tt>Une phrase, sans règles&nbsp;; qui sera correctement &ndash; enfin normalement &ndash; mise en forme selon les standards du pays&nbsp;!<br />
+Une phrase, sans règles; qui sera correctement&mdash;enfin normalement&mdash;mise en forme selon les standards du pays!</tt></p>
 
 <h3>Ajout de balises</h3>
-<p>Si vous le souhaitez, vous pouvez ajouter de nouvelles balises ou en supprimer certaines. Attention, ceci nÃ©cessite une connaissance des expressions rÃ©guliÃ¨res !<br />
-La liste des balises par dÃ©faut se trouve dans le fichier <tt>Lng/fr.php</tt>. Ne modifiez pas cette liste, car le fichier peut Ãªtre Ã©crasÃ© Ã  tout moment par une mise Ã  jour : prÃ©fÃ©rez donc utiliser la mÃ©thode <tt>addBalise()</tt>.</p>
+<p>Si vous le souhaitez, vous pouvez ajouter de nouvelles balises ou en supprimer certaines. Attention, ceci nécessite une connaissance des expressions régulières !<br />
+La liste des balises par défaut se trouve dans le fichier <tt>Lng/fr.php</tt>. Ne modifiez pas cette liste, car le fichier peut être écrasé à tout moment par une mise à jour : préférez donc utiliser la méthode <tt>addBalise()</tt>.</p>
 <?php Source('Exemple de configuration des balises',"
-//RedÃ©finir la balise \\ref pour effectuer un lien vers un article prÃ©cis plutÃ´t que vers une section de la page.
+//Redéfinir la balise \\ref pour effectuer un lien vers un article précis plutôt que vers une section de la page.
 Typo::addBalise('#\\\\ref\[(.+)\]{(.+)}#isU','<a href=\"/O/$1\">$2</a>');
 
-//DÃ©finir une nouvelle balise.
+//Définir une nouvelle balise.
 Typo::addBalise('#\\\\sagaref\[(.+)\]{(.+)}#isU','<a href=\"/Liste/$1\">$2</a>');");?>
 
 <h3>IDE</h3>
-<p>L'affichage de l'IDE peut Ãªtre personnalisÃ© en envoyant en paramÃ¨tres un tableau d'options. Ceci permet par exemple de dÃ©finir un bouton affichant dynamiquement un apercu du texte.</p>
+<p>L'affichage de l'IDE peut être personnalisé en envoyant en paramètres un tableau d'options. Ceci permet par exemple de définir un bouton affichant dynamiquement un apercu du texte.</p>
 <?php Source('Exemple de configuration de l\'IDE',"
 Typo::setTexteFromFile('UnFichierTexte.txt');
-//Si aucun paramÃ¨tre n'est spÃ©cifiÃ©, l'IDE est affichÃ© avec le name Texte, 10 lignes et 25 colonnes.
-//Ici, on Ã©crase les paramÃ¨tres par dÃ©faut.
+//Si aucun paramètre n'est spécifié, l'IDE est affiché avec le name Texte, 10 lignes et 25 colonnes.
+//Ici, on écrase les paramètres par défaut.
 Typo::renderIDE(array('Name'=>'Editeur','Rows'=>20,'Cols'=>15));
 ");?>
-<p>Comme dit plus haut, vous pouvez configurer un module d'affichage pour un aperÃ§u. Ceci se passe via l'option Preview du tableau d'options :</p>
+<p>Comme dit plus haut, vous pouvez configurer un module d'affichage pour un aperçu. Ceci se passe via l'option Preview du tableau d'options :</p>
 <?php Source('Exemple de configuration de l\'IDE',"
 Typo::setTexte(\$News);
-//Les paramÃ¨tres doivent inclure :
-// - L'url Ã  appeler (les donnÃ©es sont fournies via la mÃ©thode POST, variable Texte : c'est Ã  vous de les traiter.
+//Les paramètres doivent inclure :
+// - L'url à appeler (les données sont fournies via la méthode POST, variable Texte : c'est à vous de les traiter.
 //  Le plus souvent, un simple Typo::Parse(); suffit.
-// - L'ID de l'Ã©lÃ©ment  HTML dans lequel le rÃ©sultat doit Ãªtre affichÃ©.
+// - L'ID de l'élément  HTML dans lequel le résultat doit être affiché.
 Typo::renderIDE(array(
 	'Name'=>'texte-' . \$ID,
 	'Rows'=>30,
@@ -146,7 +146,7 @@ Typo::renderIDE(array(
 ");?>
 
 <h2>Pour aller plus loin...</h2>
-<p>Si vous ne trouviez pas votre bonheur dans cette rapide prÃ©sentation, <a href="/Mail.php">vous pouvez me contacter</a>.</p>
+<p>Si vous ne trouviez pas votre bonheur dans cette rapide présentation, <a href="/Mail.php">vous pouvez me contacter</a>.</p>
 
 <?php
 include('../footer.php');
