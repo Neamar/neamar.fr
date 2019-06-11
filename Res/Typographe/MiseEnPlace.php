@@ -8,7 +8,7 @@ function Source($Titre,$Source)
 	<fieldset style="width:90%;">
 	<legend>Code source&nbsp;: ' . $Titre.  '</legend>';
 
-	echo '<tt>' . nl2br($Source) . '</tt>';
+	echo '<pre>' . nl2br(htmlspecialchars($Source)) . '</pre>';
 	echo '</fieldset>';
 }
 ?>
