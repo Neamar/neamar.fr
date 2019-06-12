@@ -22,11 +22,9 @@ function InclureCode($URL,$LNG="AUCUN",$Discret=false,$UseClass=true)
 	{
 		if(!$Discret)
 		{
-			$RessourceCode->set_header_content('<ul><li>Langage : <em>{LANGUAGE}</em></li><li>&Delta;T : <em>{TIME}s</em></li><li>Taille :' . filesize('Codes/' . $URL) . ' caractères</li></ul>');
-			$RessourceCode->set_header_type(GESHI_HEADER_DIV);
+			echo '<ul><li>Langage : <em>' . $LNG . '</em></li><li>Taille : ' . filesize('Codes/' . $URL) . ' caractères</li></ul>';
 		}
-		$CodeColorie=$RessourceCode->parse_code();
-		echo '<pre>' . nl2br(htmlspecialchars($Source)) . '</pre>';
+		echo '<pre>' . nl2br(htmlspecialchars($CodeSource)) . '</pre>';
 	}
 	else
 		echo $CodeSource;
