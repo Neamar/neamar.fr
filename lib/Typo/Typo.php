@@ -11,7 +11,6 @@ define('PARSE_MATH',4);//Utiliser le parseur mathématique
 define('RAISE_NO_ERROR',5);//Option pour ne pas afficher les erreurs. Déconseillée dans la majorité des cas !
 define('FIX_MISMATCHED_DELIMITERS',6);//Option pour tenter une correction des accolades mal fermées. Déconseillée dans la majorité des cas !
 define('DEBUG_MODE',7);
-define('GESHI_PATH',substr(__FILE__,0,strrpos(__FILE__,'/')) . '/../../lib/geshi.php');
 
 class Typo
 {

@@ -17,22 +17,16 @@ function InclureCode($URL,$LNG="AUCUN",$Discret=false,$UseClass=true)
 	if(isset($codeAreUTF8))
 		$CodeSource=utf8_decode($CodeSource);
 
-	//Charger la libraire GeShi
-	include_once(substr(__FILE__,0,strrpos(__FILE__,'/')) . '/../lib/geshi.php');
 	echo '<fieldset>' . "\n" . '<legend>Code source : <a href="Codes/' . $URL . '" title="Télecharger le fichier">' . $URL . '</a></legend>'. "\n";
 	if($LNG!="AUCUN")
 	{
-		$RessourceCode = new GeSHi($CodeSource,$LNG);
-		if($UseClass)
-			$RessourceCode->enable_classes();//Utiliser des classes, c'est moins lourd
 		if(!$Discret)
 		{
 			$RessourceCode->set_header_content('<ul><li>Langage : <em>{LANGUAGE}</em></li><li>&Delta;T : <em>{TIME}s</em></li><li>Taille :' . filesize('Codes/' . $URL) . ' caractères</li></ul>');
 			$RessourceCode->set_header_type(GESHI_HEADER_DIV);
 		}
-		$RessourceCode->enable_keyword_links(false);
 		$CodeColorie=$RessourceCode->parse_code();
-		echo $CodeColorie;
+		echo '<pre>' . nl2br(htmlspecialchars($Source)) . '</pre>';
 	}
 	else
 		echo $CodeSource;

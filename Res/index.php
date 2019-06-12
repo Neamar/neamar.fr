@@ -53,7 +53,6 @@ function AfficherListe($NumID)
 <p class="erreur">Les fichiers listés ici ne sont que les applications les plus importantes.<br />
 D'autres codes sources existent dans cette section, mais afin de ne pas l'encombrer, ils n'aparaissent pas ici.</p>
 <?php AfficherListe(80); ?>
-<p>Les codes sources sont colorés à l'aide de Geshi.</p>
 <h2 id="Tutoriaux">Tutoriaux</h2>
 <?php AfficherListe(81); ?>
 <h2 id="Articles">Articles</h2>
