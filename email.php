@@ -19,18 +19,18 @@ if(!in_array($_SERVER['HTTP_ORIGIN'], $allowedDomains)) {
 
 
 $email = new \SendGrid\Mail\Mail();
-$email->setFrom($emails[$domain], $domain);
+$email->setFrom($emails[$domain]);
 $email->setSubject($_POST['_subject']);
 $email->addTo($_POST['_replyto']);
 $email->addContent("text/plain", $_POST['message']);
 $sendgrid = new \SendGrid(getenv('SENDGRID_API_KEY'));
 try {
     $response = $sendgrid->send($email);
-    if($response->statusCode() != 200) {
+    if($response->statusCode() >= 300) {
       $errEmail = new \SendGrid\Mail\Mail();
       $errEmail->setFrom('neamar@neamar.fr');
       $errEmail->setSubject("Error sending email from neamar.fr");
-      $errEmail->addTo("neamart@gmail.com", "Example User");
+      $errEmail->addTo("neamart@gmail.com", "Neamar Bot");
       $errEmail->addContent("text/plain", $response->body());
       $sendgrid->send($errEmail);
       echo "Impossible d'envoyer votre message. Merci de contacter directement neamar@neamar.fr";
