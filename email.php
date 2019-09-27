@@ -35,6 +35,9 @@ try {
       $sendgrid->send($errEmail);
       echo "Impossible d'envoyer votre message. Merci de contacter directement neamar@neamar.fr";
     }
+    else {
+      echo "Merci, votre message a bien été envoyé."
+    }
 } catch (Exception $e) {
     echo 'Caught exception: '. $e->getMessage() ."\n";
 }
