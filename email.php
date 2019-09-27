@@ -11,7 +11,6 @@ $emails = array(
 $allowedDomains = array_keys($emails);
 
 $domain = $_SERVER['HTTP_ORIGIN'];
-echo $_SERVER['HTTP_ORIGIN'];
 
 if(!in_array($_SERVER['HTTP_ORIGIN'], $allowedDomains)) {
   echo "Invalid domain.";
@@ -27,9 +26,15 @@ $email->addContent("text/plain", $_POST['message']);
 $sendgrid = new \SendGrid(getenv('SENDGRID_API_KEY'));
 try {
     $response = $sendgrid->send($email);
-    print $response->statusCode() . "\n";
-    print_r($response->headers());
-    print $response->body() . "\n";
+    if($response->statusCode() != 200) {
+      $errEmail = new \SendGrid\Mail\Mail();
+      $errEmail->setFrom('neamar@neamar.fr');
+      $errEmail->setSubject("Error sending email from neamar.fr");
+      $errEmail->addTo("neamart@gmail.com", "Example User");
+      $errEmail->addContent("text/plain", $response->body());
+      $sendgrid->send($errEmail);
+      echo "Impossible d'envoyer votre message. Merci de contacter directement neamar@neamar.fr";
+    }
 } catch (Exception $e) {
     echo 'Caught exception: '. $e->getMessage() ."\n";
 }
