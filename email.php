@@ -2,11 +2,11 @@
 require 'vendor/autoload.php';
 
 $emails = array(
-  "neamar.fr" => "contact@neamar.fr",
-  "omnilogie.fr" => "contact@neamar.fr",
-  "cruciverbe.fr" => "contact@neamar.fr",
-  "choltraiteur.fr" => "contact@choltraiteur.fr",
-  "endonymous" => "contact@endonymous.fr"
+  "https://neamar.fr" => "contact@neamar.fr",
+  "https://omnilogie.fr" => "contact@neamar.fr",
+  "https://cruciverbe.fr" => "contact@neamar.fr",
+  "https://choltraiteur.fr" => "contact@choltraiteur.fr",
+  "https://endonymous.fr" => "contact@endonymous.fr"
 );
 $allowedDomains = array_keys($emails);
 
