@@ -10,7 +10,7 @@ $emails = array(
 );
 $allowedDomains = array_keys($emails);
 
-$domain = $_SERVER['HTTP_ORIGIN']
+$domain = $_SERVER['HTTP_ORIGIN'];
 echo $_SERVER['HTTP_ORIGIN'];
 
 if(!in_array($_SERVER['HTTP_ORIGIN'], $allowedDomains)) {
