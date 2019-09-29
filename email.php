@@ -5,8 +5,8 @@ $emails = array(
   "https://neamar.fr" => "contact@neamar.fr",
   "https://omnilogie.fr" => "contact@neamar.fr",
   "https://cruciverbe.fr" => "contact@neamar.fr",
-  "https://choltraiteur.fr" => "contact@choltraiteur.fr",
-  "https://endonymous.fr" => "contact@endonymous.fr"
+  "https://choltraiteur.fr" => "contact@neamar.fr",
+  "https://endonymous.fr" => "contact@neamar.fr"
 );
 $allowedDomains = array_keys($emails);
 
