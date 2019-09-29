@@ -15,13 +15,19 @@ $domain = $_SERVER['HTTP_ORIGIN'];
 if(!in_array($_SERVER['HTTP_ORIGIN'], $allowedDomains)) {
   http_response_code(400);
   echo "Invalid domain: " . $_SERVER['HTTP_ORIGIN'];
-  die();
+  exit(0);
 }
 
 // Access-Control headers are received during OPTIONS requests
 if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
-  header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
+  header("Access-Control-Allow-Methods: POST, OPTIONS");
   header("Access-Control-Allow-Headers: Content-Type, Accept, Origin");
+  exit(0);
+}
+
+if($_SERVER['REQUEST_METHOD'] != 'POST') {
+  http_response_code(404);
+  echo "Aucun message.";
   exit(0);
 }
 
