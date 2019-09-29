@@ -44,7 +44,7 @@ try {
       echo "Impossible d'envoyer votre message. Merci de contacter directement neamar@neamar.fr";
     }
     else {
-      echo "Merci, votre message a bien été envoyé."
+      echo "Merci, votre message a bien été envoyé.";
     }
 } catch (Exception $e) {
     http_response_code(500);
