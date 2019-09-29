@@ -13,10 +13,17 @@ $allowedDomains = array_keys($emails);
 $domain = $_SERVER['HTTP_ORIGIN'];
 
 if(!in_array($_SERVER['HTTP_ORIGIN'], $allowedDomains)) {
-  echo "Invalid domain.";
+  http_response_code(400);
+  echo "Invalid domain: " . $_SERVER['HTTP_ORIGIN'];
   die();
 }
 
+// Access-Control headers are received during OPTIONS requests
+if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
+  header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
+  header("Access-Control-Allow-Headers: Content-Type, Accept, Origin");
+  exit(0);
+}
 
 $email = new \SendGrid\Mail\Mail();
 $email->setFrom($emails[$domain]);
@@ -33,11 +40,13 @@ try {
       $errEmail->addTo("neamart@gmail.com", "Neamar Bot");
       $errEmail->addContent("text/plain", $response->body());
       $sendgrid->send($errEmail);
+      http_response_code(500);
       echo "Impossible d'envoyer votre message. Merci de contacter directement neamar@neamar.fr";
     }
     else {
       echo "Merci, votre message a bien été envoyé."
     }
 } catch (Exception $e) {
+    http_response_code(500);
     echo 'Caught exception: '. $e->getMessage() ."\n";
 }
