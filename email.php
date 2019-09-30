@@ -34,8 +34,8 @@ if($_SERVER['REQUEST_METHOD'] != 'POST') {
 
 $email = new \SendGrid\Mail\Mail();
 $email->setFrom($_POST['_replyto']);
-$email->setSubject(isset($_POST['_to']) ? $_POST['_to'] : $_POST['_subject']);
-$email->addTo($emails[$domain]);
+$email->setSubject($_POST['_subject']);
+$email->addTo(isset($_POST['_to']) ? $_POST['_to'] : $emails[$domain]);
 $email->addContent("text/plain", $_POST['message']);
 $sendgrid = new \SendGrid(getenv('SENDGRID_API_KEY'));
 try {
