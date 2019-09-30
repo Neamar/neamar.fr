@@ -2,17 +2,18 @@
 require 'vendor/autoload.php';
 
 $emails = array(
-  "https://neamar.fr" => "contact@neamar.fr",
-  "https://omnilogie.fr" => "contact@neamar.fr",
-  "https://cruciverbe.fr" => "contact@neamar.fr",
+  "https://neamar.fr" => "neamar@neamar.fr",
+  "https://omnilogie.fr" => "neamar@neamar.fr",
+  "https://cruciverbe.fr" => "neamar@neamar.fr",
   "https://choltraiteur.fr" => "contact@choltraiteur.fr",
   "https://endonymous.fr" => "contact@endonymous.fr"
 );
 $allowedDomains = array_keys($emails);
+$allowedTo = array_values($emails);
 
 $domain = $_SERVER['HTTP_ORIGIN'];
 
-if(!in_array($_SERVER['HTTP_ORIGIN'], $allowedDomains)) {
+if(!in_array($_SERVER['HTTP_ORIGIN'], $allowedDomains) && !in_array($_POST['_to'], $allowedTo)) {
   http_response_code(400);
   echo "Invalid domain: " . $_SERVER['HTTP_ORIGIN'];
   exit(0);
@@ -32,9 +33,9 @@ if($_SERVER['REQUEST_METHOD'] != 'POST') {
 }
 
 $email = new \SendGrid\Mail\Mail();
-$email->setFrom($emails[$domain]);
-$email->setSubject($_POST['_subject']);
-$email->addTo($_POST['_replyto']);
+$email->setFrom($_POST['_replyto']);
+$email->setSubject(isset($_POST['_to']) ? $_POST['_to'] : $_POST['_subject']);
+$email->addTo($emails[$domain]);
 $email->addContent("text/plain", $_POST['message']);
 $sendgrid = new \SendGrid(getenv('SENDGRID_API_KEY'));
 try {
