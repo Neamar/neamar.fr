@@ -33,7 +33,8 @@ if($_SERVER['REQUEST_METHOD'] != 'POST') {
 }
 
 $email = new \SendGrid\Mail\Mail();
-$email->setFrom($_POST['_replyto']);
+$email->setFrom('contact@neamar.fr');
+$email->setReplyTo($_POST['_replyto']);
 $email->setSubject($_POST['_subject']);
 $email->addTo(isset($_POST['_to']) ? $_POST['_to'] : $emails[$domain]);
 $email->addContent("text/plain", $_POST['message']);
