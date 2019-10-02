@@ -2,6 +2,7 @@
 require 'vendor/autoload.php';
 
 $emails = array(
+  "http://localhost" => "contact@neamar.fr",
   "https://neamar.fr" => "neamar@neamar.fr",
   "https://omnilogie.fr" => "neamar@neamar.fr",
   "https://cruciverbe.fr" => "neamar@neamar.fr",
