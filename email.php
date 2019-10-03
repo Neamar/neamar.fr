@@ -39,7 +39,7 @@ if($_SERVER['REQUEST_METHOD'] != 'POST') {
 $email = new \SendGrid\Mail\Mail();
 $email->setFrom('contact@neamar.fr');
 $email->setReplyTo($_POST['_replyto']);
-$email->setSubject($_POST['_subject'] || 'Prise de contact');
+$email->setSubject(isset($_POST['_subject']) ? $_POST['_subject'] : 'Prise de contact');
 $email->addTo(isset($_POST['_to']) ? $_POST['_to'] : $emails[$domain]);
 $email->addContent("text/plain", $_POST['message']);
 $sendgrid = new \SendGrid(getenv('SENDGRID_API_KEY'));
