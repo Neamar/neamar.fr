@@ -1,6 +1,10 @@
 <?php
 require 'vendor/autoload.php';
 
+// Support for CORS
+header("Access-Control-Allow-Methods: POST, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type, Accept, Origin");
+
 $emails = array(
   "http://localhost" => "contact@neamar.fr",
   "https://neamar.fr" => "neamar@neamar.fr",
@@ -22,8 +26,6 @@ if(!in_array($_SERVER['HTTP_ORIGIN'], $allowedDomains) && !in_array($_POST['_to'
 
 // Access-Control headers are received during OPTIONS requests
 if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
-  header("Access-Control-Allow-Methods: POST, OPTIONS");
-  header("Access-Control-Allow-Headers: Content-Type, Accept, Origin");
   exit(0);
 }
 
