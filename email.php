@@ -4,6 +4,7 @@ require 'vendor/autoload.php';
 // Support for CORS
 header("Access-Control-Allow-Methods: POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type, Accept, Origin");
+header("Access-Control-Allow-Origin: *");
 
 $emails = array(
   "http://localhost" => "contact@neamar.fr",
