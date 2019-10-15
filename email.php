@@ -36,15 +36,9 @@ if($_SERVER['REQUEST_METHOD'] != 'POST') {
   exit(0);
 }
 
-if(!isset($_POST['protection_1']) || $_POST['protection_1'] != '2') {
+if(!isset($_POST['protection']) || $_POST['protection'] != '2') {
   http_response_code(403);
   echo "Code robot invalide.";
-  exit(0);
-}
-
-if(isset($_POST['protection_2'])) {
-  http_response_code(403);
-  echo "Vous ressemblez beaucoup à un robot.";
   exit(0);
 }
 
