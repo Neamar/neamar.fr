@@ -19,7 +19,7 @@ $allowedTo = array_values($emails);
 
 $domain = $_SERVER['HTTP_ORIGIN'];
 
-if(!in_array($_SERVER['HTTP_ORIGIN'], $allowedDomains) && !in_array($_POST['_to'], $allowedTo)) {
+if(!in_array($_SERVER['HTTP_ORIGIN'], $allowedDomains) || !in_array($_POST['_to'], $allowedTo)) {
   http_response_code(400);
   echo "Invalid domain: " . $_SERVER['HTTP_ORIGIN'];
   exit(0);
