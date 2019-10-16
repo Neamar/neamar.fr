@@ -21,7 +21,7 @@ $domain = $_SERVER['HTTP_ORIGIN'];
 
 if(!in_array($_SERVER['HTTP_ORIGIN'], $allowedDomains) || !in_array($_POST['_to'], $allowedTo)) {
   http_response_code(400);
-  echo "Invalid domain: " . $_SERVER['HTTP_ORIGIN'];
+  echo "Invalid domain: " . htmlspecialchars($_SERVER['HTTP_ORIGIN']);
   exit(0);
 }
 
@@ -56,7 +56,7 @@ try {
       $errEmail->setFrom('neamar@neamar.fr');
       $errEmail->setSubject("Error sending email from neamar.fr");
       $errEmail->addTo("neamart@gmail.com", "Neamar Bot");
-      $errEmail->addContent("text/plain", $response->body());
+      $errEmail->addContent("text/plain", $response->body() . "\n\n" . json_encode($_POST));
       $sendgrid->send($errEmail);
       http_response_code(500);
       echo "Impossible d'envoyer votre message. Merci de contacter directement neamar@neamar.fr";
