@@ -12,7 +12,8 @@ $emails = array(
   "https://omnilogie.fr" => "neamar@neamar.fr",
   "https://cruciverbe.fr" => "neamar@neamar.fr",
   "https://choltraiteur.fr" => "contact@choltraiteur.fr",
-  "https://endonymous.fr" => "contact@endonymous.fr"
+  "https://endonymous.fr" => "contact@endonymous.fr",
+  "https://1001fenetres.com" => "contact@neamar.fr"
 );
 $allowedDomains = array_keys($emails);
 $allowedTo = array_values($emails);
