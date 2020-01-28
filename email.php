@@ -13,7 +13,7 @@ $emails = array(
   "https://cruciverbe.fr" => "neamar@neamar.fr",
   "https://choltraiteur.fr" => "contact@choltraiteur.fr",
   "https://endonymous.fr" => "contact@endonymous.fr",
-  "https://1001fenetres.com" => "contact@neamar.fr"
+  "https://1001fenetres.com" => "contact@1001fenetres.com"
 );
 $allowedDomains = array_keys($emails);
 $allowedTo = array_values($emails);
