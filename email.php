@@ -6,23 +6,12 @@ header("Access-Control-Allow-Methods: POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type, Accept, Origin");
 header("Access-Control-Allow-Origin: *");
 
-$emails = array(
-  "http://localhost" => "contact@neamar.fr",
-  "https://neamar.fr" => "neamar@neamar.fr",
-  "https://omnilogie.fr" => "neamar@neamar.fr",
-  "https://cruciverbe.fr" => "neamar@neamar.fr",
-  "https://choltraiteur.fr" => "contact@choltraiteur.fr",
-  "https://endonymous.fr" => "contact@endonymous.fr",
-  "https://1001fenetres.com" => "contact@1001fenetres.com"
-);
-$allowedDomains = array_keys($emails);
-$allowedTo = array_values($emails);
+$emails = array("contact@neamar.fr", "neamar@neamar.fr", "contact@choltraiteur.fr", "contact@endonymous.fr", "contact@1001fenetres.com");
 
-$domain = $_SERVER['HTTP_ORIGIN'];
-
-if(!in_array($_SERVER['HTTP_ORIGIN'], $allowedDomains) || !in_array($_POST['_to'], $allowedTo)) {
+if(!in_array($_POST['_to'], $allowedTo)) {
   http_response_code(400);
-  echo "Invalid domain: " . htmlspecialchars($_SERVER['HTTP_ORIGIN']);
+  $domain = $_SERVER['HTTP_ORIGIN'];
+  echo "Invalid domain: " . htmlspecialchars($domain);
   exit(0);
 }
 
