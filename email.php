@@ -10,8 +10,7 @@ $emails = array("contact@neamar.fr", "neamar@neamar.fr", "contact@choltraiteur.f
 
 if(!in_array($_POST['_to'], $allowedTo)) {
   http_response_code(400);
-  $domain = $_SERVER['HTTP_ORIGIN'];
-  echo "Invalid domain: " . htmlspecialchars($domain);
+  echo "Invalid recipient: " . $_POST['_to'];
   exit(0);
 }
 
