@@ -8,7 +8,7 @@ header("Access-Control-Allow-Origin: *");
 
 $emails = array("contact@neamar.fr", "neamar@neamar.fr", "contact@choltraiteur.fr", "contact@endonymous.fr", "contact@1001fenetres.com");
 
-if(!in_array($_POST['_to'], $allowedTo)) {
+if(!in_array($_POST['_to'], $emails)) {
   http_response_code(400);
   echo "Invalid recipient: " . $_POST['_to'];
   exit(0);
