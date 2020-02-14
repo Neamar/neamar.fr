@@ -31,29 +31,35 @@ if(!isset($_POST['protection']) || $_POST['protection'] != '2') {
   exit(0);
 }
 
+
 $email = new \SendGrid\Mail\Mail();
 $email->setFrom('contact@neamar.fr');
 $email->setReplyTo($_POST['_replyto']);
 $email->setSubject(empty($_POST['_subject']) ? $_POST['_subject'] : 'Prise de contact');
-$email->addTo(isset($_POST['_to']) ? $_POST['_to'] : $emails[$domain]);
+$email->addTo($_POST['_to']);
 $email->addContent("text/plain", $_POST['message']);
 $sendgrid = new \SendGrid(getenv('SENDGRID_API_KEY'));
 try {
-    $response = $sendgrid->send($email);
-    if($response->statusCode() >= 300) {
-      $errEmail = new \SendGrid\Mail\Mail();
-      $errEmail->setFrom('neamar@neamar.fr');
-      $errEmail->setSubject("Error sending email from neamar.fr");
-      $errEmail->addTo("neamart@gmail.com", "Neamar Bot");
-      $errEmail->addContent("text/plain", $response->body() . "\n\n" . json_encode($_POST));
-      $sendgrid->send($errEmail);
-      http_response_code(500);
-      echo "Impossible d'envoyer votre message. Merci de contacter directement neamar@neamar.fr";
-    }
-    else {
-      echo "Merci, votre message a bien été envoyé.";
-    }
-} catch (Exception $e) {
+  $response = $sendgrid->send($email);
+  if($response->statusCode() >= 300) {
+    $errEmail = new \SendGrid\Mail\Mail();
+    $errEmail->setFrom('neamar@neamar.fr');
+    $errEmail->setSubject("Error sending email from neamar.fr");
+    $errEmail->addTo("neamart@gmail.com", "Neamar Bot");
+    $errEmail->addContent("text/plain", $response->body() . "\n\n" . json_encode($_POST));
+    $sendgrid->send($errEmail);
     http_response_code(500);
-    echo 'Caught exception: '. $e->getMessage() ."\n";
+    echo "Impossible d'envoyer votre message. Merci de contacter directement neamar@neamar.fr";
+  }
+  else {
+    echo "Merci, votre message a bien été envoyé.";
+  }
+} catch (Exception $e) {
+  http_response_code(500);
+  echo 'Caught exception: '. $e->getMessage() ."\n";
 }
+
+
+// Keep logs
+$append = "---------------\nTo: " . $_POST['_to'] . "\nReply-To: " . $email->getReplyTo() . "\nSubject: " . $email->getSubject() . "\n\n" . $_POST['message'] . "\n--------------\n";
+file_put_contents('/app/email_archive/archive.txt', $append, FILE_APPEND);
