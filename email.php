@@ -31,11 +31,12 @@ if(!isset($_POST['protection']) || $_POST['protection'] != '2') {
   exit(0);
 }
 
+$subject = empty($_POST['_subject']) ? $_POST['_subject'] : 'Prise de contact';
 
 $email = new \SendGrid\Mail\Mail();
 $email->setFrom('contact@neamar.fr');
 $email->setReplyTo($_POST['_replyto']);
-$email->setSubject(empty($_POST['_subject']) ? $_POST['_subject'] : 'Prise de contact');
+$email->setSubject($subject);
 $email->addTo($_POST['_to']);
 $email->addContent("text/plain", $_POST['message']);
 $sendgrid = new \SendGrid(getenv('SENDGRID_API_KEY'));
@@ -61,5 +62,5 @@ try {
 
 
 // Keep logs
-$append = "---------------\nTo: " . $_POST['_to'] . "\nReply-To: " . $_POST['_replyto'] . "\nSubject: " . $email->getSubject() . "\n\n" . $_POST['message'] . "\n--------------\n";
+$append = "---------------\nTo: " . $_POST['_to'] . "\nReply-To: " . $_POST['_replyto'] . "\nSubject: " . $subject . "\n\n" . $_POST['message'] . "\n--------------\n";
 file_put_contents('/app/email_archive/archive.txt', $append, FILE_APPEND);
