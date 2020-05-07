@@ -44,9 +44,9 @@ try {
   $response = $sendgrid->send($email);
   if($response->statusCode() >= 300) {
     $errEmail = new \SendGrid\Mail\Mail();
-    $errEmail->setFrom('neamar@neamar.fr');
+    $errEmail->setFrom('contact@neamar.fr');
     $errEmail->setSubject("Error sending email from neamar.fr");
-    $errEmail->addTo("neamart@gmail.com", "Neamar Bot");
+    $errEmail->addTo("neamar@neamar.fr", "Neamar Bot");
     $errEmail->addContent("text/plain", $response->body() . "\n\n" . json_encode($_POST));
     $sendgrid->send($errEmail);
     http_response_code(500);
