@@ -38,7 +38,7 @@ Typo::addOption(PARSE_MATH);
 ?>
 <p class="erreur">Le Typographe ne permet plus de créer ses textes directement en ligne depuis cette page.</p>
 
-<p class="auteur"><q style="font-family: Monospace;">Séduire le lecteur et faciliter la lecture résument les qualités d'une bonne typographie</q></p>
+<p class="auteur"><q style="font-family: Monospace;">&nbsp;Séduire le lecteur et faciliter la lecture résument les qualités d'une bonne typographie&nbsp;</q></p>
 <h1>Le typographe</h1>
 <p class="auteur">Neamar</p>
 <h2>Qu'est ce que le Typographe ?</h2>
