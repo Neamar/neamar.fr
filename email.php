@@ -62,5 +62,5 @@ try {
 
 
 // Keep logs
-$append = "---------------\nTo: " . $_POST['_to'] . "\nReply-To: " . $_POST['_replyto'] . "\nSubject: " . $subject . "\n\n" . $_POST['message'] . "\n--------------\n";
+$append = "---------------\nDate: " . date(DATE_RFC2822) . "\nTo: " . $_POST['_to'] . "\nReply-To: " . $_POST['_replyto'] . "\nSubject: " . $subject . "\n\n" . $_POST['message'] . "\n--------------\n";
 file_put_contents('/app/email_archive/archive.txt', $append, FILE_APPEND);
