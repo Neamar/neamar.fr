@@ -197,4 +197,7 @@ footer {
 	.container {
 		grid-template-columns: repeat(1, 90%);
 	}
+	.mobile h2, .site h2 {
+		max-height: none;
+	}
 }
