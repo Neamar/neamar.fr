@@ -169,6 +169,10 @@ footer {
 }
 
 @media (min-width: 1201px) {
+	body {
+		margin: 0 2em;
+	}
+
 	.container {
 	grid-template-columns: repeat(3, 33%);
 	}
