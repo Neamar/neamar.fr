@@ -59,7 +59,7 @@ footer a { justify-content: center; font-family: "Quicksand", sans-serif; font-w
 
 footer a:hover { background-color: #333333; color: #fff; padding: 0.2em 0.7em; }
 
-@media (min-width: 1201px) { body { margin: 0 2em; } .container { grid-template-columns: repeat(3, 33%); } }
+@media (min-width: 1201px) { .container { margin: 0 2em; grid-template-columns: repeat(3, 33%); } }
 
 @media (max-width: 1200px) { body { margin: 0 2em; } .container { grid-template-columns: repeat(2, 50%); } }
 
