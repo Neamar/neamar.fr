@@ -1,219 +1,69 @@
-/* Le corps principal du document. */
-#Main
-{
-	position:absolute;
-	top:65px;
-}
+body { max-width: 1200px; display: flex; flex-direction: column; margin: 0 auto; }
 
-#Main ul ol
-{
-	list-style-type:decimal;
-	list-style-image:url("");
-}
+body p { font-family: "Montserrat", sans-serif; color: #333333; font-size: 1em; line-height: 1.5em; }
 
-#Main ol ol
-{
-	list-style-type:upper-roman;
-	list-style-image:url("");
-}
+h1, h2 { font-family: "Quicksand", sans-serif; font-weight: 500; }
 
-#Main ol ol ol
-{
-	list-style-type:lower-alpha;
-	list-style-image:url("");
-}
+.intro { max-width: 800px; margin: 0 auto; text-align: center; margin-bottom: 2em; }
 
-#Flotteur
-{
-	float:right;
-	border:1px solid black;
-	margin:4px;
-	padding:4px;
-	width:200px;
-}
+.intro h1 { color: "Montserrat", sans-serif; font-size: 3em; }
 
-h3
-{
-	margin: auto;
-	font-variant:small-caps;
-	text-decoration:underline;
-	margin-top:50px;
-}
+.intro p { text-align: left; }
 
-a
-{
-	text-decoration: none;
-	color: #851e1e;
-}
-table a
-{
-	color:red;
-	font-variant:small-caps;
-}
-a:hover
-{
-	color:blue;
-	text-decoration: underline;
-}
-a img
-{
-	border:none;
-}
+.intro a { font-family: "Quicksand", sans-serif; font-weight: 500; font-size: 1.3em; color: #333333; text-decoration: none; border: solid 2px #333333; padding: 0.2em 0.5em; margin: 0 0.3em; line-height: 2em; }
 
-caption /* Titre du tableau */
-{
-	margin: auto; /* Centre le titre du tableau */
-	font-family: Arial, Times, "Times New Roman", serif;
-	font-weight: bold;
-	font-size: 1.2em;
-	color: #009900;
-	margin-bottom: 20px; /* Pour éviter que le titre ne soit trop collé au tableau en-dessous */
-}
+.intro a:hover { background-color: #333333; color: #fff; padding: 0.2em 0.7em; }
 
-table
-{
-	margin: auto;
-	border: 4px inset black;
-	border-collapse: collapse;
-}
+h2 { font-size: 2em; margin: 0; }
 
-th
-{
-	background-color:rgb(255,202,149);
-	background-image:url("https://neamar.fr/Pics/CSS/tile.jpg");
-	color: white;
-	font-size: 1.1em;
-}
+.container { display: grid; justify-content: center; row-gap: 3em; column-gap: 1em; margin-bottom: 2em; }
 
-td /* Les cellules normales */
-{
-	border: 1px solid rgb(79,129,189);
-	font-family: "Trebuchet MS", Times, "Times New Roman", serif;
-	text-align: center;
-	padding: 5px;
-}
+.container .project { border-bottom: solid 1px #eee; display: grid; }
 
-/*/////////////////////////////
-Les couleurs des tableaux
-////////////////////////////*/
-.blanc
-{
-	background-color:white;
-	color:black;
-}
+.container .buttons { display: grid; align-self: stretch; margin-bottom: 1em; }
 
-.bleu
-{
-	background-color:rgb(211,223,238);
-	color:black;
-}
+.container .buttons a { justify-self: end; align-self: end; }
 
-.or
-{
-	background-color:yellow;
-	color:black;
-}
+a { transition: all 0.2s cubic-bezier(0.1, 0.7, 1, 0.1); }
 
-.rouge
-{
-	background-color:red;
-	color:black;
-}
+.mobile { color: #589f46; }
 
-.blanc:hover
-{
-	background-color:rgb(111,245,71);
-}
+.mobile h2 { display: flex; align-content: center; max-height: 40px; }
 
-.bleu:hover
-{
-	background-color:rgb(111,245,71);
-}
+.mobile h2:before { content: url("/svg/mobile.svg"); width: 40px; display: inline-block; padding-right: 0.3em; }
 
-.or:hover
-{
-	background-color:rgb(111,245,71);
-}
+.mobile .buttons { font-family: "Quicksand", sans-serif; font-size: 1.2em; }
 
-.Icone
-{
-	width:75px;
-}
+.mobile .buttons a { color: #589f46; text-decoration: none; border: solid 2px #589f46; padding: 0.2em 0.5em; }
 
-.infos
-{
-	color:rgb(128,128,128);
-	font-weight:lighter;
-	font-size:75%;
-}
+.mobile .buttons a:hover { background-color: #589f46; color: #fff; padding: 0.2em 0.7em; }
 
-/*Les mathématiques "inline"*/
-.TexTexte
-{
-	white-space:nowrap;
-	font-style:italic;
-	font-size:0.9em;
-	color:rgb(30,30,30);
-}
+.site { color: #326e9a; }
 
-.TexTexte sub
-{
-	font-size:.75em;
-}
+.site h2 { display: flex; align-content: center; max-height: 40px; }
 
-.TexPic
-{
-	vertical-align:middle;
-}
+.site h2:before { content: url("/svg/site.svg"); width: 40px; display: inline-block; padding-right: 0.3em; }
 
-.petitTexte
-{
-	font-size:.7em;
-}
+.site .buttons { font-family: "Quicksand", sans-serif; font-size: 1.2em; }
 
-/* Pourles infobulles : */
-a.infobulle
-{
-   position: relative;
-   color: black;
-   text-decoration: none;
-   border-bottom: 1px gray dashed; /* on souligne le texte */
-}
-a.infobulle span
-{
-   display: none; /* on masque l'infobulle */
-}
-a.infobulle:hover
-{
-   background: none; /* correction d'un bug IE */
-   z-index: 500; /* on définit une valeur pour l'ordre d'affichage */
+.site .buttons a { color: #326e9a; text-decoration: none; border: solid 2px #326e9a; padding: 0.2em 0.5em; }
 
-   cursor: help; /* on change le curseur par défaut en curseur d'aide */
-}
-a.infobulle:hover span
-{
-   display: inline; /* on affiche l'infobulle */
-   background-image:url('https://neamar.fr/Pics/infobulle.png');
-   width:266px;
-   padding-top:43px;
-   padding-left:5px;
-   height:64px;
-   position: absolute;
-   top: 5px; /* on positionne notre infobulle */
-   left: -20px;
-}
-a.IMG_Interactive img
-{
-	margin:16px;
-	width:64px;
-}
-a.IMG_Interactive img:hover
-{
-	margin:0px;
-	width:80px;
-}
+.site .buttons a:hover { background-color: #326e9a; color: #fff; padding: 0.2em 0.7em; }
 
-table li
-{
-	text-align:left;
-}
+footer { margin-bottom: 1em; max-width: 1200px; display: inline-flex; justify-content: space-between; }
+
+footer img { width: 30px; margin-right: 2em; }
+
+footer a { justify-content: center; font-family: "Quicksand", sans-serif; font-weight: 500; font-size: 1em; color: #333333; text-decoration: none; border: solid 2px #333333; padding: 0.2em 0.5em; line-height: 2em; }
+
+footer a:hover { background-color: #333333; color: #fff; padding: 0.2em 0.7em; }
+
+@media (min-width: 1201px) { .container { margin-left: 2em; margin-right: 2em; grid-template-columns: repeat(3, 33%); } }
+
+@media (max-width: 1200px) { body { margin: 0 2em; } .container { grid-template-columns: repeat(2, 50%); } }
+
+@media (max-width: 900px) { .container { grid-template-columns: repeat(1, 70%); } }
+
+@media (max-width: 600px) { .container { grid-template-columns: repeat(1, 90%); } }
+
+/*# sourceMappingURL=design.css.map */

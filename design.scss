@@ -45,6 +45,7 @@ h2 {
 		border: solid 2px $font-color;
 		padding: 0.2em 0.5em;
 		margin: 0 0.3em;
+		line-height: 2em;
 		&:hover {
 			background-color: $font-color;
 			color: #fff;
@@ -160,6 +161,7 @@ footer {
 		text-decoration: none;
 		border: solid 2px $font-color;
 		padding: 0.2em 0.5em;
+		line-height: 2em;
 		&:hover {
 			background-color: $font-color;
 			color: #fff;
@@ -169,9 +171,10 @@ footer {
 }
 
 @media (min-width: 1201px) {
-	.container {
-		margin: 0 2em;
-		grid-template-columns: repeat(3, 33%);
+.container {
+	margin-left: 2em;
+	margin-right: 2em;
+	grid-template-columns: repeat(3, 33%);
 	}
 }
 

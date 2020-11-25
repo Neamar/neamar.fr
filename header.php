@@ -24,12 +24,12 @@ if(!isset($description))
 	<meta name="reply-to" content="neamar@neamar.fr" />
 	<meta name="keywords" content="<?php echo $keywords; ?>" />
 	<meta name="description" content="<?php echo $description; ?>" />
-	<meta name="copyright" content="Copyright © - Some Right Reserved - 2006-<?php echo date("Y"); ?>" />
+	<meta name="copyright" content="Copyright ï¿½ - Some Right Reserved - 2006-<?php echo date("Y"); ?>" />
 	<?php echo $AdditionelMetas . "\n"; ?>
 	<link rel="start" title="Accueil" href="https://neamar.fr/index.php" />
 	<?php echo $AddLine . "\n"; ?>
 	<?php if(!isset($NoDefaultDesign)) {?>
-	<link href="/design.css" rel="stylesheet" title="Design par défaut. (Vista)" type="text/css" media="screen" />
+	<link href="/design-old.css" rel="stylesheet" title="Design par dï¿½faut. (Vista)" type="text/css" media="screen" />
 	<?php } ?>
 	<link href="/Menu.css" rel="stylesheet" type="text/css" media="screen" />
 	<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -50,7 +50,7 @@ if(!isset($description))
 	if(!isset($NoWelcomeCenter))
 	{?>
 <dl id="menu-accueil">
-		<dt class="Single_Item"><a href="https://<?php echo $_SERVER['SERVER_NAME']; ?>" title="Retour à l'accueil">Accueil</a></dt>
+		<dt class="Single_Item"><a href="https://<?php echo $_SERVER['SERVER_NAME']; ?>" title="Retour ï¿½ l'accueil">Accueil</a></dt>
 	</dl>
 
 <?php
@@ -69,7 +69,7 @@ if(!isset($description))
 // 		Faire une requete qui prend en compte les relations parents enfants
 		echo '			<ul>' . "\n";
 
-		//Bien que moins propre, la requête suivante est près de 100 fois plus rapide !
+		//Bien que moins propre, la requï¿½te suivante est prï¿½s de 100 fois plus rapide !
 		$donnees=mysql_query('SELECT _Menus.Caption,_Menus.Lien,CONCAT("\n<ul>\n",SousMenus,"\n</ul>") As SousMenu
 		FROM _Menus
 		LEFT JOIN
@@ -105,7 +105,7 @@ if(!isset($description))
 	<?php
 	}
 	?>
-<noscript><p style="color:red; text-decoration: blink; font-weight:800;"><br /><br /><br />Afin de pouvoir profiter au maximum des sites sur neamar.fr, il est fortement recommandé d'activer JavaScript.</p></noscript>
+<noscript><p style="color:red; text-decoration: blink; font-weight:800;"><br /><br /><br />Afin de pouvoir profiter au maximum des sites sur neamar.fr, il est fortement recommandï¿½ d'activer JavaScript.</p></noscript>
 </div>
 
 <div id="Main">
