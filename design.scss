@@ -84,8 +84,9 @@ a {
 }
 
 .mobile {
-	color: $mobile-color;
-	h2 {
+	h2 a {
+		color: $mobile-color;
+		text-decoration: none;
 		display: flex;
 		align-content: center;
 		max-height: 40px;
@@ -94,6 +95,9 @@ a {
 			width: 40px;
 			display: inline-block;
 			padding-right: 0.3em;
+		}
+		&:hover {
+			text-decoration: underline;
 		}
 	}
 	.buttons {
@@ -114,8 +118,9 @@ a {
 }
 
 .site {
-	color: $site-color;
-	h2 {
+	h2 a {
+		color: $site-color;
+		text-decoration: none;
 		display: flex;
 		align-content: center;
 		max-height: 40px;
@@ -124,6 +129,9 @@ a {
 			width: 40px;
 			display: inline-block;
 			padding-right: 0.3em;
+		}
+		&:hover {
+			text-decoration: underline;
 		}
 	}
 	.buttons {

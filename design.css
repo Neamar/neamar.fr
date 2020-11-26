@@ -26,11 +26,11 @@ h2 { font-size: 2em; margin: 0; }
 
 a { transition: all 0.2s cubic-bezier(0.1, 0.7, 1, 0.1); }
 
-.mobile { color: #589f46; }
+.mobile h2 a { color: #589f46; text-decoration: none; display: flex; align-content: center; max-height: 40px; }
 
-.mobile h2 { display: flex; align-content: center; max-height: 40px; }
+.mobile h2 a:before { content: url("/svg/mobile.svg"); width: 40px; display: inline-block; padding-right: 0.3em; }
 
-.mobile h2:before { content: url("/svg/mobile.svg"); width: 40px; display: inline-block; padding-right: 0.3em; }
+.mobile h2 a:hover { text-decoration: underline; }
 
 .mobile .buttons { font-family: "Quicksand", sans-serif; font-size: 1.2em; }
 
@@ -38,11 +38,11 @@ a { transition: all 0.2s cubic-bezier(0.1, 0.7, 1, 0.1); }
 
 .mobile .buttons a:hover { background-color: #589f46; color: #fff; padding: 0.2em 0.7em; }
 
-.site { color: #326e9a; }
+.site h2 a { color: #326e9a; text-decoration: none; display: flex; align-content: center; max-height: 40px; }
 
-.site h2 { display: flex; align-content: center; max-height: 40px; }
+.site h2 a:before { content: url("/svg/site.svg"); width: 40px; display: inline-block; padding-right: 0.3em; }
 
-.site h2:before { content: url("/svg/site.svg"); width: 40px; display: inline-block; padding-right: 0.3em; }
+.site h2 a:hover { text-decoration: underline; }
 
 .site .buttons { font-family: "Quicksand", sans-serif; font-size: 1.2em; }
 
