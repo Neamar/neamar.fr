@@ -54,7 +54,9 @@ footer { margin-bottom: 1em; max-width: 1200px; display: inline-flex; justify-co
 
 footer img { width: 30px; margin-right: 2em; }
 
-footer a { justify-content: center; font-family: "Quicksand", sans-serif; font-weight: 500; font-size: 1em; color: #333333; text-decoration: none; border: solid 2px #333333; padding: 0.2em 0.5em; line-height: 2em; }
+footer div { display: flex; flex-direction: row; }
+
+footer a { justify-content: center; text-align: center; font-family: "Quicksand", sans-serif; font-weight: 500; font-size: 1em; color: #333333; text-decoration: none; border: solid 2px #333333; padding: 0.2em 0.5em; line-height: 2em; margin-right: 0.5em; }
 
 footer a:hover { background-color: #333333; color: #fff; padding: 0.2em 0.7em; }
 
@@ -64,6 +66,8 @@ footer a:hover { background-color: #333333; color: #fff; padding: 0.2em 0.7em; }
 
 @media (max-width: 900px) { .container { grid-template-columns: repeat(1, 70%); } }
 
-@media (max-width: 600px) { .container { grid-template-columns: repeat(1, 90%); } .mobile h2, .site h2 { max-height: none; } }
+@media (max-width: 600px) { .container { grid-template-columns: repeat(1, 90%); } .mobile h2, .site h2 { max-height: none; } footer div { display: flex; flex-direction: column; align-content: center; } footer div a { margin-bottom: 0.5em; } }
+
+@media (max-width: 600px) { footer { display: flex; flex-direction: column; justify-content: center; } footer img { margin: 0 auto; margin-bottom: 0.5em; } }
 
 /*# sourceMappingURL=design.css.map */

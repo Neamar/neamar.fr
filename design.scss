@@ -152,8 +152,13 @@ footer {
 		width: 30px;
 		margin-right: 2em;
 	}
+	div{
+		display: flex;
+		flex-direction: row;
+	}
 	a {
 		justify-content: center;
+		text-align: center;
 		font-family: $title-font;
 		font-weight: 500;
 		font-size: 1em;
@@ -162,6 +167,7 @@ footer {
 		border: solid 2px $font-color;
 		padding: 0.2em 0.5em;
 		line-height: 2em;
+		margin-right: 0.5em;
 		&:hover {
 			background-color: $font-color;
 			color: #fff;
@@ -199,5 +205,22 @@ footer {
 	}
 	.mobile h2, .site h2 {
 		max-height: none;
+	}
+	footer{
+		div{
+			display: flex;
+			flex-direction: column;
+			align-content:center;
+			a{margin-bottom: 0.5em;}
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	footer{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		img{margin: 0 auto;margin-bottom:0.5em;}
 	}
 }
