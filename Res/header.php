@@ -69,7 +69,7 @@ $keyWords='';
 
 	  gtag('config', 'UA-4257957-1');
 	</script>
-	<script async defer data-domain="neamar.fr" src="http://plausible.neamar.fr/js/plausible.js"></script>
+	<script async defer data-domain="neamar.fr" src="http://a.neamar.fr/js/plausible.js"></script>
 
 </head>
 
