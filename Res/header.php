@@ -2,11 +2,11 @@
 @ini_set('default_charset', 'ISO-8859-1');
 
 /*
-- $Titre permet de donner un titre à la page.
+- $Titre permet de donner un titre ï¿½ la page.
 - $UseMath=true active le parseur LaTeX
-- $noKeyWords=true empeche la génération dynamique des mots clés
-- $AddLine contient des lignes à ajouter dans la partie <head> de la page.
-- $ScriptURI contient une adresse vers un script. S'il n'est pas fourni, c'est le script par défaut qui est appelé.
+- $noKeyWords=true empeche la gï¿½nï¿½ration dynamique des mots clï¿½s
+- $AddLine contient des lignes ï¿½ ajouter dans la partie <head> de la page.
+- $ScriptURI contient une adresse vers un script. S'il n'est pas fourni, c'est le script par dï¿½faut qui est appelï¿½.
 */
 
 
@@ -17,12 +17,12 @@ function InclureCode($URL,$LNG="AUCUN",$Discret=false,$UseClass=true)
 	if(isset($codeAreUTF8))
 		$CodeSource=utf8_decode($CodeSource);
 
-	echo '<fieldset>' . "\n" . '<legend>Code source : <a href="Codes/' . $URL . '" title="Télecharger le fichier">' . $URL . '</a></legend>'. "\n";
+	echo '<fieldset>' . "\n" . '<legend>Code source : <a href="Codes/' . $URL . '" title="Tï¿½lecharger le fichier">' . $URL . '</a></legend>'. "\n";
 	if($LNG!="AUCUN")
 	{
 		if(!$Discret)
 		{
-			echo '<ul><li>Langage : <em>' . $LNG . '</em></li><li>Taille : ' . filesize('Codes/' . $URL) . ' caractères</li></ul>';
+			echo '<ul><li>Langage : <em>' . $LNG . '</em></li><li>Taille : ' . filesize('Codes/' . $URL) . ' caractï¿½res</li></ul>';
 		}
 		echo '<pre>' . nl2br(htmlspecialchars($CodeSource)) . '</pre>';
 	}
@@ -47,7 +47,7 @@ $keyWords='';
 	<meta name="robots" content="all" />
 	<meta name="rating" content="general" />
 	<meta name="reply-to" content="neamar@neamar.fr" />
-	<meta name="copyright" content="Copyright © - Some Right Reserved - 2006-<?php echo date("Y"); ?>" />
+	<meta name="copyright" content="Copyright ï¿½ - Some Right Reserved - 2006-<?php echo date("Y"); ?>" />
 	<?php
 	if(isset($Abstract))
 		echo '<meta name="description" content="' . str_replace("\n",'',str_replace('<br />','',str_replace('"','\'',htmlentities($Abstract)))) . '" />' . "\n";
@@ -69,13 +69,14 @@ $keyWords='';
 
 	  gtag('config', 'UA-4257957-1');
 	</script>
+	<script async defer data-domain="neamar.fr" src="http://plausible.neamar.fr/js/plausible.js"></script>
 
 </head>
 
 <body>
 <div id="Main">
 <?php
-if(isset($Abstract) && preg_match('#^/Res/(.+)/$#U',$_SERVER['REQUEST_URI']))//N'afficher le résumé que sur la page d'index.
+if(isset($Abstract) && preg_match('#^/Res/(.+)/$#U',$_SERVER['REQUEST_URI']))//N'afficher le rï¿½sumï¿½ que sur la page d'index.
 	echo '<p class="abstract erreur"><q>' .$Abstract . '</q></p>';
 
 function flashPlayerStats() {

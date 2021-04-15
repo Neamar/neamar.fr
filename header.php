@@ -41,7 +41,7 @@ if(!isset($description))
 
 	  gtag('config', 'UA-4257957-1');
 	</script>
-
+	<script async defer data-domain="neamar.fr" src="http://plausible.neamar.fr/js/plausible.js"></script>
 </head>
 
 <body>
