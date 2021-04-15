@@ -32,15 +32,7 @@ if(!isset($description))
 	<link href="/design-old.css" rel="stylesheet" title="Design par d�faut. (Vista)" type="text/css" media="screen" />
 	<?php } ?>
 	<link href="/Menu.css" rel="stylesheet" type="text/css" media="screen" />
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-4257957-1"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
 
-	  gtag('config', 'UA-4257957-1');
-	</script>
 	<script async defer data-domain="neamar.fr" src="https://a.neamar.fr/js/plausible.js"></script>
 </head>
 
