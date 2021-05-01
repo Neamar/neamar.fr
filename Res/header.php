@@ -61,7 +61,7 @@ $keyWords='';
 	<link rel="icon" type="image/x-icon" href="https://neamar.fr/favicon.ico" />
 	<script type="text/javascript" src="<?php if(!isset($ScriptURI)){ echo 'https://neamar.fr/Res/ressources.js';} else { echo $ScriptURI; }?>"></script>
 
-	<script async defer data-domain="neamar.fr" src="https://t.neamar.fr/js/plausible.js"></script>
+	<script async defer data-domain="neamar.fr" src="https://t.neamar.fr/js/pls.js"></script>
 
 </head>
 

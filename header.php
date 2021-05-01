@@ -33,7 +33,7 @@ if(!isset($description))
 	<?php } ?>
 	<link href="/Menu.css" rel="stylesheet" type="text/css" media="screen" />
 
-	<script async defer data-domain="neamar.fr" src="https://t.neamar.fr/js/plausible.js"></script>
+	<script async defer data-domain="neamar.fr" src="https://t.neamar.fr/js/pls.js"></script>
 </head>
 
 <body>
