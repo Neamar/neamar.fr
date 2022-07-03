@@ -8,8 +8,8 @@ include('../header.php');
 <h2>Le résultat</h2>
 <h3>Fichier Flash :</h3>
 <div style="border:1px solid black; width:800px; height:600px; margin:auto;">
-	<object type="application/x-shockwave-flash" data="http://games.mochiads.com/c/g/wallnumber/Wallnumber.swf" width="800" height="600" >
-		<param name="movie" value="http://games.mochiads.com/c/g/wallnumber/Wallnumber.swf" />
+	<object type="application/x-shockwave-flash" data="Wallnumber.swf" width="800" height="600" >
+		<param name="movie" value="Wallnumber.swf" />
 		<param name="quality" value="high" />
 		<param name="wmode" value="transparent" />
 		<p>Installez le plugin Flash pour voir l'animation : <a href="http://www.adobe.com/go/gntray_dl_getflashplayer_fr" >Cliquez ici pour le télécharger</a></p>
