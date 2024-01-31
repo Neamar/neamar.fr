@@ -1,6 +1,6 @@
 {
   "require": {
-    "php": "~7.3.0",
+    "php": "~8.3.2",
     "dshafik/php7-mysql-shim": "0.2.0",
     "ext-mbstring": "*",
     "sendgrid/sendgrid": "~7"
