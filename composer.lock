@@ -165,7 +165,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "~7.3.0",
+        "php": "~8.3.2",
         "ext-mbstring": "*"
     },
     "platform-dev": []
