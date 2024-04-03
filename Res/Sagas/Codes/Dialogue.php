@@ -241,7 +241,7 @@ class Dialogue
 
 	private function AddLine($Auteur,$Phrase)
 	{//Ajouter une phrase :
-		$Phrase=strtoupper($Phrase{0}) . substr($Phrase,1);
+		$Phrase=strtoupper($Phrase[0]) . substr($Phrase,1);
 		array_push($this->Phrases,array($Auteur=>$Phrase));
 		$this->DernierInterlocuteur=$Auteur;
 
