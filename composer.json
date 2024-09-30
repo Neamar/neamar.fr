@@ -1,6 +1,9 @@
 {
+  "name": "neamar/neamar",
+  "description": "a port from a very old project",
+  "license": "proprietary",
   "require": {
-    "php": "~8.2.14",
+    "php": "~8.3.10",
     "dshafik/php7-mysql-shim": "1.0.0beta4",
     "ext-mbstring": "*",
     "sendgrid/sendgrid": "~7"
