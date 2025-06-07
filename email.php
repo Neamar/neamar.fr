@@ -1,5 +1,6 @@
 <?php
 require 'vendor/autoload.php';
+require_once "Mail.php";
 
 // Support for CORS
 header("Access-Control-Allow-Methods: POST, OPTIONS");
@@ -31,35 +32,40 @@ if(!isset($_POST['protection']) || $_POST['protection'] != '2') {
   exit(0);
 }
 
+$smtpHost = getenv('SMTP_HOST');
+$smtpUser = getenv('SMTP_USER');
+$smtpPass = getenv('SMTP_PASS');
+
+$from = 'contact@neamar.fr';
+$to = $_POST['_replyto'];
 $subject = empty($_POST['_subject']) ? $_POST['_subject'] : 'Prise de contact';
 
-$email = new \SendGrid\Mail\Mail();
-$email->setFrom('contact@neamar.fr');
-$email->setReplyTo($_POST['_replyto']);
-$email->setSubject($subject);
-$email->addTo($_POST['_to']);
-$email->addContent("text/plain", $_POST['message']);
-$sendgrid = new \SendGrid(getenv('SENDGRID_API_KEY'));
-try {
-  $response = $sendgrid->send($email);
-  if($response->statusCode() >= 300) {
-    $errEmail = new \SendGrid\Mail\Mail();
-    $errEmail->setFrom('contact@neamar.fr');
-    $errEmail->setSubject("Error sending email from neamar.fr");
-    $errEmail->addTo("neamar@neamar.fr", "Neamar Bot");
-    $errEmail->addContent("text/plain", $response->body() . "\n\n" . json_encode($_POST));
-    $sendgrid->send($errEmail);
+
+$smtp = Mail::factory('smtp', [
+  'host'     => $smtpHost,
+  'auth'     => true,
+  'username' => $smtpUser,
+  'password' => $smtpPass,
+  'port'     => 465,
+  'debug'    => false
+]);
+
+// Set up SMTP parameters
+$headers = [
+  'From'    => $from,
+  'To'      => $to,
+  'Subject' => $subject
+];
+$mail = $smtp->send($to, $headers, $body);
+
+// Check for errors
+if (PEAR::isError($mail)) {
     http_response_code(500);
     echo "Impossible d'envoyer votre message. Merci de contacter directement neamar@neamar.fr";
-  }
-  else {
-    echo "Merci, votre message a bien été envoyé.";
-  }
-} catch (Exception $e) {
-  http_response_code(500);
-  echo 'Caught exception: '. $e->getMessage() ."\n";
 }
-
+else {
+  echo "Merci, votre message a bien été envoyé.";
+}
 
 // Keep logs
 $append = "---------------\nDate: " . date(DATE_RFC2822) . "\nTo: " . $_POST['_to'] . "\nReply-To: " . $_POST['_replyto'] . "\nSubject: " . $subject . "\n\n" . $_POST['message'] . "\n--------------\n";
