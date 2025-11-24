@@ -34,6 +34,13 @@ if(!isset($_POST['protection']) || $_POST['protection'] != '2') {
   exit(0);
 }
 
+// Reject messages that are just random characters (bot spam)
+if(preg_match('/^[A-Za-z]{15,}$/', trim($_POST['message']))) {
+  http_response_code(400);
+  echo "Message invalide.";
+  exit(0);
+}
+
 $smtpHost = getenv('SMTP_HOST');
 $smtpUser = getenv('SMTP_USER');
 $smtpPass = getenv('SMTP_PASS');
