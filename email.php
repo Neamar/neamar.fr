@@ -11,9 +11,9 @@ header("Access-Control-Allow-Origin: *");
 
 $emails = array("contact@neamar.fr", "neamar@neamar.fr", "contact@choltraiteur.fr", "contact@endonymous.fr", "contact@1001fenetres.com");
 
-if(!in_array($_POST['_to'], $emails)) {
+if(!in_array($_POST['_to'] ?? '', $emails)) {
   http_response_code(400);
-  echo "Invalid recipient: " . $_POST['_to'];
+  echo "Invalid recipient: " . ($_POST['_to'] ?? '');
   exit(0);
 }
 
@@ -35,7 +35,7 @@ if(!isset($_POST['protection']) || $_POST['protection'] != '2') {
 }
 
 // Reject messages that are just random characters (bot spam)
-if(preg_match('/^[A-Za-z]{15,}$/', trim($_POST['message']))) {
+if(preg_match('/^[A-Za-z]{15,}$/', trim($_POST['message'] ?? ''))) {
   http_response_code(400);
   echo "Message invalide.";
   exit(0);
@@ -46,9 +46,9 @@ $smtpUser = getenv('SMTP_USER');
 $smtpPass = getenv('SMTP_PASS');
 
 $from = 'contact@neamar.fr';
-$to = $_POST['_replyto'];
-$subject = empty($_POST['_subject']) ? $_POST['_subject'] : 'Prise de contact';
-$body = $_POST['message'];
+$to = $_POST['_replyto'] ?? '';
+$subject = !empty($_POST['_subject']) ? $_POST['_subject'] : 'Prise de contact';
+$body = $_POST['message'] ?? '';
 
 
 $mailer = new PHPMailer(true);
@@ -62,10 +62,11 @@ try {
   $mailer->Password   = $smtpPass;
   $mailer->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
   $mailer->Port       = 465;
+  $mailer->CharSet    = PHPMailer::CHARSET_UTF8;
 
   //Recipients
   $mailer->setFrom($from);
-  $mailer->addAddress($_POST['_to']);
+  $mailer->addAddress($_POST['_to'] ?? '');
   $mailer->addReplyTo($to);
 
   //Content
@@ -80,5 +81,5 @@ try {
 }
 
 // Keep logs
-$append = "---------------\nDate: " . date(DATE_RFC2822) . "\nTo: " . $_POST['_to'] . "\nReply-To: " . $_POST['_replyto'] . "\nSubject: " . $subject . "\n\n" . $_POST['message'] . "\n--------------\n";
+$append = "---------------\nDate: " . date(DATE_RFC2822) . "\nTo: " . ($_POST['_to'] ?? '') . "\nReply-To: " . ($_POST['_replyto'] ?? '') . "\nSubject: " . $subject . "\n\n" . ($_POST['message'] ?? '') . "\n--------------\n";
 file_put_contents('/workspace/email_archive/archive.txt', $append, FILE_APPEND);
