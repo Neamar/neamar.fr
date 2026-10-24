@@ -9,7 +9,7 @@ header("Access-Control-Allow-Methods: POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type, Accept, Origin");
 header("Access-Control-Allow-Origin: *");
 
-$emails = array("contact@neamar.fr", "neamar@neamar.fr", "contact@choltraiteur.fr", "contact@endonymous.fr", "contact@1001fenetres.com");
+$emails = array("contact@neamar.fr", "neamar@neamar.fr", "contact@choltraiteur.fr", "contact@endonymous.fr", "contact@1001fenetres.com", "couture@izzdesign.fr");
 
 if(!in_array($_POST['_to'] ?? '', $emails)) {
   http_response_code(400);
